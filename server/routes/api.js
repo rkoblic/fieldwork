@@ -3,7 +3,8 @@ const router = express.Router();
 const fs = require('fs').promises;
 const path = require('path');
 const multer = require('multer');
-const pdfParse = require('pdf-parse');
+// Note: pdf-parse is loaded lazily in the route handler to avoid
+// initialization issues in Vercel serverless environment
 
 const dataDir = path.join(__dirname, '../../data');
 
@@ -103,6 +104,7 @@ router.post('/resume/extract-skills', upload.single('resume'), async (req, res) 
 
     // Extract text from PDF
     if (req.file.mimetype === 'application/pdf') {
+      const pdfParse = require('pdf-parse');
       const pdfData = await pdfParse(req.file.buffer);
       textContent = pdfData.text;
     } else {
