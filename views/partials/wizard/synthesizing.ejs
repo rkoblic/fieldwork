@@ -80,7 +80,16 @@ function synthesisAnimation() {
       return 'Complete!';
     },
     init() {
-      this.runAnimation();
+      // Only start animation when we're actually on the synthesizing step
+      this.$watch('$store.app.currentStep', (step) => {
+        if (step === 'synthesizing' && this.currentStep === 0 && this.progress === 0) {
+          this.runAnimation();
+        }
+      });
+      // Also check if we're already on the synthesizing step when initialized
+      if (Alpine.store('app').currentStep === 'synthesizing') {
+        this.runAnimation();
+      }
     },
     async runAnimation() {
       const stepDuration = 600;
