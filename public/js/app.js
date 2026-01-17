@@ -76,11 +76,29 @@ document.addEventListener('alpine:init', () => {
     // Raw text for learning outcomes textarea (parsed on blur)
     learningOutcomesText: '',
 
+    // Coursework options for multi-select
+    courseworkOptions: [
+      'Research Methods',
+      'Statistics / Data Analysis',
+      'Business Fundamentals',
+      'Marketing Principles',
+      'Communication / Writing',
+      'Project Management',
+      'Public Speaking',
+      'Psychology / Behavioral Science',
+      'Computer Science / Programming',
+      'Design / Visual Media',
+      'Economics / Finance',
+      'Ethics / Social Responsibility'
+    ],
+
     // UI state
     isInitializing: true,
     isLoading: false,
     error: null,
     resultsActiveTab: 'objectives',
+    resumeUploading: false,
+    resumeError: null,
 
     // Computed helpers
     get currentStepIndex() {
@@ -253,6 +271,91 @@ document.addEventListener('alpine:init', () => {
         this.customEmployer = JSON.parse(JSON.stringify(this.blankEmployer));
       } else if (type === 'student') {
         this.customStudent = JSON.parse(JSON.stringify(this.blankStudent));
+        this.resumeError = null;
+      }
+    },
+
+    // Upload resume and extract skills via API
+    async uploadResume(file) {
+      if (!file) return;
+
+      // Validate file type
+      const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      if (!allowedTypes.includes(file.type)) {
+        this.resumeError = 'Please upload a PDF, DOC, or DOCX file';
+        return;
+      }
+
+      // Validate file size (5MB max)
+      if (file.size > 5 * 1024 * 1024) {
+        this.resumeError = 'File size must be less than 5MB';
+        return;
+      }
+
+      this.resumeUploading = true;
+      this.resumeError = null;
+
+      try {
+        const formData = new FormData();
+        formData.append('resume', file);
+
+        const response = await fetch('/api/resume/extract-skills', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.message || 'Failed to extract skills');
+        }
+
+        const result = await response.json();
+        this.customStudent.resumeFileName = result.fileName;
+        this.customStudent.extractedSkills = result.skills;
+      } catch (e) {
+        console.error('Resume upload error:', e);
+        this.resumeError = e.message || 'Failed to process resume';
+      }
+
+      this.resumeUploading = false;
+    },
+
+    // Clear uploaded resume
+    clearResume() {
+      this.customStudent.resumeFileName = '';
+      this.customStudent.extractedSkills = [];
+      this.resumeError = null;
+    },
+
+    // Add a skill to extracted skills
+    addSkill(skill) {
+      if (!skill || !skill.trim()) return;
+      const trimmed = skill.trim();
+      if (!this.customStudent.extractedSkills) {
+        this.customStudent.extractedSkills = [];
+      }
+      if (!this.customStudent.extractedSkills.includes(trimmed)) {
+        this.customStudent.extractedSkills.push(trimmed);
+      }
+    },
+
+    // Remove a skill by index
+    removeSkill(index) {
+      if (this.customStudent.extractedSkills && index >= 0) {
+        this.customStudent.extractedSkills.splice(index, 1);
+      }
+    },
+
+    // Toggle coursework in relevant coursework array
+    toggleCoursework(course) {
+      if (!this.customStudent.relevantCoursework) {
+        this.customStudent.relevantCoursework = [];
+      }
+      const index = this.customStudent.relevantCoursework.indexOf(course);
+      if (index === -1) {
+        this.customStudent.relevantCoursework.push(course);
+      } else {
+        this.customStudent.relevantCoursework.splice(index, 1);
       }
     },
 

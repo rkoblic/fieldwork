@@ -66,6 +66,7 @@ fieldwork/
 | GET | `/api/data/students` | Demo student profiles |
 | GET | `/api/synthesis/demo/:key` | Pre-generated output (e.g., `inst-1-emp-1-stu-1`) |
 | POST | `/api/synthesis/custom` | Claude API synthesis |
+| POST | `/api/resume/extract-skills` | Upload resume and extract skills via Claude |
 
 ## Application Modes
 - **Demo Mode**: All fields locked, users switch between pre-configured profiles. Uses pre-generated synthesis outputs.
@@ -155,6 +156,53 @@ Text fields include example placeholders to guide input:
 - **Success Criteria**: Bulleted examples of success metrics
 - **Expected Deliverables**: Bulleted examples of tangible outputs
 - **Resources Provided**: Bulleted examples of employer-provided resources
+
+## Student Form Features
+The student profile form (custom mode) uses improved field types for better UX:
+
+### Field Types
+| Field | Type | Details |
+|-------|------|---------|
+| Full Name | Text input | Placeholder example provided |
+| Major | Dropdown | 17 common majors + Other |
+| Minor | Dropdown | Same options + "None" |
+| Year | Dropdown | Freshman, Sophomore, Junior, Senior |
+| Resume | File upload | PDF, DOC, DOCX (max 5MB) with LLM skill extraction |
+| Extracted Skills | Editable badges | Click to remove, input to add |
+| Relevant Coursework | Multi-select checkboxes | 12 course categories |
+| Learning Goals | Textarea | Placeholder with examples |
+| Career Interests | Textarea | Placeholder with examples |
+
+### Major/Minor Dropdown Options
+Psychology, Business Administration, Communications, Marketing, Computer Science, Data Science, Economics, English, Political Science, Sociology, Engineering, Biology, Environmental Science, Public Health, Graphic Design, Digital Media, Other
+
+### Coursework Multi-Select Options
+- Research Methods
+- Statistics / Data Analysis
+- Business Fundamentals
+- Marketing Principles
+- Communication / Writing
+- Project Management
+- Public Speaking
+- Psychology / Behavioral Science
+- Computer Science / Programming
+- Design / Visual Media
+- Economics / Finance
+- Ethics / Social Responsibility
+
+### Resume Upload & Skill Extraction
+- Accepts PDF, DOC, DOCX files up to 5MB
+- Extracts text from uploaded resume
+- Sends to Claude API to identify 4-8 relevant professional skills
+- Skills displayed as editable badges (click to remove)
+- Manual skill addition via text input
+
+### Helper Functions in app.js
+- `uploadResume(file)` - Handles file upload and API call for skill extraction
+- `clearResume()` - Clears uploaded resume and extracted skills
+- `addSkill(skill)` - Adds a skill to the extracted skills array
+- `removeSkill(index)` - Removes a skill by index
+- `toggleCoursework(course)` - Toggles a course in the relevant coursework array
 
 ## NACE Competency Tagging
 Each learning objective is tagged with **2 primary NACE competencies** to reflect the multi-dimensional nature of professional skill development:

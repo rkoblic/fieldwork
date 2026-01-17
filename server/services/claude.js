@@ -87,4 +87,53 @@ Generate a complete learning experience that:
 Respond with the complete JSON synthesis output only.`;
 }
 
-module.exports = { synthesize };
+async function extractSkillsFromResume(resumeText) {
+  const response = await client.messages.create({
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: 1000,
+    system: `You are an expert at analyzing resumes and identifying key professional skills. Extract skills that would be relevant for experiential learning and professional work experience.
+
+Focus on:
+- Technical skills (software, tools, methodologies, programming languages)
+- Research and analytical skills
+- Communication and writing abilities
+- Leadership and teamwork experience
+- Industry-specific knowledge
+
+Return ONLY a valid JSON array of 4-8 concise skill descriptions (each 2-6 words). No explanation or markdown.
+
+Example output:
+["Data analysis with Excel", "Technical writing", "Survey design and analysis", "Team leadership", "Python programming"]`,
+    messages: [
+      {
+        role: 'user',
+        content: `Analyze this resume and extract the most relevant professional skills:\n\n${resumeText.substring(0, 8000)}`
+      }
+    ]
+  });
+
+  const content = response.content[0].text.trim();
+
+  // Parse the JSON array
+  let jsonStr = content;
+  const jsonMatch = content.match(/\[[\s\S]*\]/);
+  if (jsonMatch) {
+    jsonStr = jsonMatch[0];
+  }
+
+  try {
+    const skills = JSON.parse(jsonStr);
+    if (Array.isArray(skills)) {
+      return skills.slice(0, 8); // Limit to 8 skills max
+    }
+  } catch (e) {
+    console.error('Failed to parse skills JSON:', e);
+    // Fallback: try to extract skills from plain text
+    const lines = content.split('\n').filter(l => l.trim()).slice(0, 8);
+    return lines.map(l => l.replace(/^[-*•]\s*/, '').trim()).filter(l => l.length > 0);
+  }
+
+  return [];
+}
+
+module.exports = { synthesize, extractSkillsFromResume };
