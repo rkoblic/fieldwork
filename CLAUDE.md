@@ -138,6 +138,24 @@ The 4-type assessment model with research-based weighting:
 - **Checkpoints**: Ungraded weekly milestones displayed in sample week view
 - **Learning Resources**: Curated materials for conceptualization activities (articles, videos, AI-generated personalized insights)
 
+## Employer Form Features
+The employer project form (custom mode) uses dropdowns and placeholder examples to improve UX:
+
+### Dropdown Fields
+| Field | Options |
+|-------|---------|
+| Industry | Nonprofit / Community Development, Professional Services / Consulting, Technology / Software, Healthcare / Medical, Education / Academic, Financial Services, Government / Public Sector, Media / Communications, Retail / Consumer Goods, Manufacturing / Engineering, Other |
+| Project Type | Research & Analysis, Process Improvement, Marketing / Communications, Software Development, Data Analysis, Strategic Planning, Community Outreach, Content Creation, Event Planning, Product Development, Other |
+| Hours per Week | 3-5 hours, 6-8 hours, 8-10 hours, 10-15 hours, 15-20 hours, 20+ hours |
+| Mentor Support | Weekly check-ins (30 min), Weekly check-ins (1 hour), Bi-weekly meetings, Daily standups, As-needed availability, Structured mentorship program |
+
+### Textarea Placeholders
+Text fields include example placeholders to guide input:
+- **Project Brief**: Example describing project context and goals
+- **Success Criteria**: Bulleted examples of success metrics
+- **Expected Deliverables**: Bulleted examples of tangible outputs
+- **Resources Provided**: Bulleted examples of employer-provided resources
+
 ## NACE Competency Tagging
 Each learning objective is tagged with **2 primary NACE competencies** to reflect the multi-dimensional nature of professional skill development:
 

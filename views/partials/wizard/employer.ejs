@@ -22,14 +22,23 @@
   <!-- Custom Mode Template Selector -->
   <div x-show="$store.app.mode === 'custom'" class="mb-6">
     <label class="label">Start from template (optional)</label>
-    <div class="flex gap-2">
+    <div class="flex flex-wrap gap-2">
       <template x-for="emp in $store.app.employers" :key="emp.id">
         <button
           @click="$store.app.useAsTemplate('employer', emp.id)"
-          class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          class="px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          :class="$store.app.customEmployer?.companyName === emp.companyName
+            ? 'bg-primary-600 text-white'
+            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
           x-text="'Use ' + emp.companyName">
         </button>
       </template>
+      <button
+        x-show="$store.app.customEmployer?.companyName"
+        @click="$store.app.resetCustomForm('employer')"
+        class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-50 text-slate-500 hover:bg-slate-100 border border-slate-200 transition-colors">
+        Clear Form
+      </button>
     </div>
   </div>
 
@@ -47,12 +56,32 @@
       </div>
       <div>
         <label class="label">Industry</label>
-        <input
-          type="text"
-          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-          :readonly="$store.app.mode === 'demo'"
-          :value="$store.app.activeEmployer?.industry"
-          @input="$store.app.mode === 'custom' && ($store.app.customEmployer.industry = $event.target.value)">
+        <template x-if="$store.app.mode === 'demo'">
+          <input
+            type="text"
+            class="input-readonly"
+            readonly
+            :value="$store.app.activeEmployer?.industry">
+        </template>
+        <template x-if="$store.app.mode === 'custom'">
+          <select
+            class="input"
+            :value="$store.app.customEmployer?.industry"
+            @change="$store.app.customEmployer.industry = $event.target.value">
+            <option value="">Select industry...</option>
+            <option value="Nonprofit / Community Development">Nonprofit / Community Development</option>
+            <option value="Professional Services / Consulting">Professional Services / Consulting</option>
+            <option value="Technology / Software">Technology / Software</option>
+            <option value="Healthcare / Medical">Healthcare / Medical</option>
+            <option value="Education / Academic">Education / Academic</option>
+            <option value="Financial Services">Financial Services</option>
+            <option value="Government / Public Sector">Government / Public Sector</option>
+            <option value="Media / Communications">Media / Communications</option>
+            <option value="Retail / Consumer Goods">Retail / Consumer Goods</option>
+            <option value="Manufacturing / Engineering">Manufacturing / Engineering</option>
+            <option value="Other">Other</option>
+          </select>
+        </template>
       </div>
     </div>
 
@@ -69,74 +98,165 @@
       </div>
       <div>
         <label class="label">Project Type</label>
-        <input
-          type="text"
-          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-          :readonly="$store.app.mode === 'demo'"
-          :value="$store.app.activeEmployer?.projectType"
-          @input="$store.app.mode === 'custom' && ($store.app.customEmployer.projectType = $event.target.value)">
+        <template x-if="$store.app.mode === 'demo'">
+          <input
+            type="text"
+            class="input-readonly"
+            readonly
+            :value="$store.app.activeEmployer?.projectType">
+        </template>
+        <template x-if="$store.app.mode === 'custom'">
+          <select
+            class="input"
+            :value="$store.app.customEmployer?.projectType"
+            @change="$store.app.customEmployer.projectType = $event.target.value">
+            <option value="">Select project type...</option>
+            <option value="Research & Analysis">Research & Analysis</option>
+            <option value="Process Improvement">Process Improvement</option>
+            <option value="Marketing / Communications">Marketing / Communications</option>
+            <option value="Software Development">Software Development</option>
+            <option value="Data Analysis">Data Analysis</option>
+            <option value="Strategic Planning">Strategic Planning</option>
+            <option value="Community Outreach">Community Outreach</option>
+            <option value="Content Creation">Content Creation</option>
+            <option value="Event Planning">Event Planning</option>
+            <option value="Product Development">Product Development</option>
+            <option value="Other">Other</option>
+          </select>
+        </template>
       </div>
     </div>
 
     <!-- Project Brief -->
     <div class="mb-6">
       <label class="label">Project Brief</label>
-      <textarea
-        rows="4"
-        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-        :readonly="$store.app.mode === 'demo'"
-        x-text="$store.app.activeEmployer?.projectBrief"
-        @input="$store.app.mode === 'custom' && ($store.app.customEmployer.projectBrief = $event.target.value)"></textarea>
+      <template x-if="$store.app.mode === 'demo'">
+        <textarea
+          rows="4"
+          class="input-readonly"
+          readonly
+          x-text="$store.app.activeEmployer?.projectBrief"></textarea>
+      </template>
+      <template x-if="$store.app.mode === 'custom'">
+        <textarea
+          rows="4"
+          class="input"
+          placeholder="Describe the project context and goals. For example:&#10;&#10;&quot;We need to analyze customer feedback from the past year to identify patterns and develop recommendations for improving our product. The insights will inform our product roadmap for Q3.&quot;"
+          :value="$store.app.customEmployer?.projectBrief"
+          @input="$store.app.customEmployer.projectBrief = $event.target.value"></textarea>
+      </template>
     </div>
 
     <!-- Success Criteria -->
     <div class="mb-6">
       <label class="label">Success Criteria</label>
-      <textarea
-        rows="4"
-        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-        :readonly="$store.app.mode === 'demo'"
-        x-text="$store.app.activeEmployer?.successCriteria?.map(c => '• ' + c).join('\n')"></textarea>
+      <template x-if="$store.app.mode === 'demo'">
+        <textarea
+          rows="4"
+          class="input-readonly"
+          readonly
+          x-text="$store.app.activeEmployer?.successCriteria?.map(c => '• ' + c).join('\n')"></textarea>
+      </template>
+      <template x-if="$store.app.mode === 'custom'">
+        <textarea
+          rows="4"
+          class="input"
+          placeholder="What does success look like? Examples:&#10;• Clear findings supported by data&#10;• Actionable recommendations we can implement&#10;• A presentation for leadership&#10;• Documented process or methodology"
+          :value="$store.app.customEmployer?.successCriteria"
+          @input="$store.app.customEmployer.successCriteria = $event.target.value"></textarea>
+      </template>
     </div>
 
     <!-- Deliverables -->
     <div class="mb-6">
       <label class="label">Expected Deliverables</label>
-      <textarea
-        rows="4"
-        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-        :readonly="$store.app.mode === 'demo'"
-        x-text="$store.app.activeEmployer?.deliverables?.map((d, i) => (i + 1) + '. ' + d).join('\n')"></textarea>
+      <template x-if="$store.app.mode === 'demo'">
+        <textarea
+          rows="4"
+          class="input-readonly"
+          readonly
+          x-text="$store.app.activeEmployer?.deliverables?.map((d, i) => (i + 1) + '. ' + d).join('\n')"></textarea>
+      </template>
+      <template x-if="$store.app.mode === 'custom'">
+        <textarea
+          rows="4"
+          class="input"
+          placeholder="What tangible outputs should the student produce? Examples:&#10;• Research report with findings&#10;• Presentation deck for stakeholders&#10;• Process documentation&#10;• Prototype or proof of concept"
+          :value="$store.app.customEmployer?.deliverables"
+          @input="$store.app.customEmployer.deliverables = $event.target.value"></textarea>
+      </template>
     </div>
 
     <!-- Timeline & Support -->
     <div class="grid sm:grid-cols-2 gap-4 mb-6">
       <div>
         <label class="label">Hours per Week</label>
-        <input
-          type="text"
-          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-          :readonly="$store.app.mode === 'demo'"
-          :value="$store.app.activeEmployer?.hoursPerWeek + ' hours'">
+        <template x-if="$store.app.mode === 'demo'">
+          <input
+            type="text"
+            class="input-readonly"
+            readonly
+            :value="$store.app.activeEmployer?.hoursPerWeek + ' hours'">
+        </template>
+        <template x-if="$store.app.mode === 'custom'">
+          <select
+            class="input"
+            :value="$store.app.customEmployer?.hoursPerWeek"
+            @change="$store.app.customEmployer.hoursPerWeek = $event.target.value">
+            <option value="">Select hours...</option>
+            <option value="3-5 hours">3-5 hours</option>
+            <option value="6-8 hours">6-8 hours</option>
+            <option value="8-10 hours">8-10 hours</option>
+            <option value="10-15 hours">10-15 hours</option>
+            <option value="15-20 hours">15-20 hours</option>
+            <option value="20+ hours">20+ hours</option>
+          </select>
+        </template>
       </div>
       <div>
         <label class="label">Mentor Support</label>
-        <input
-          type="text"
-          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-          :readonly="$store.app.mode === 'demo'"
-          :value="$store.app.activeEmployer?.mentorSupport">
+        <template x-if="$store.app.mode === 'demo'">
+          <input
+            type="text"
+            class="input-readonly"
+            readonly
+            :value="$store.app.activeEmployer?.mentorSupport">
+        </template>
+        <template x-if="$store.app.mode === 'custom'">
+          <select
+            class="input"
+            :value="$store.app.customEmployer?.mentorSupport"
+            @change="$store.app.customEmployer.mentorSupport = $event.target.value">
+            <option value="">Select mentor support...</option>
+            <option value="Weekly check-ins (30 min)">Weekly check-ins (30 min)</option>
+            <option value="Weekly check-ins (1 hour)">Weekly check-ins (1 hour)</option>
+            <option value="Bi-weekly meetings">Bi-weekly meetings</option>
+            <option value="Daily standups">Daily standups</option>
+            <option value="As-needed availability">As-needed availability</option>
+            <option value="Structured mentorship program">Structured mentorship program</option>
+          </select>
+        </template>
       </div>
     </div>
 
     <!-- Resources Provided -->
     <div>
       <label class="label">Resources Provided</label>
-      <textarea
-        rows="2"
-        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
-        :readonly="$store.app.mode === 'demo'"
-        x-text="$store.app.activeEmployer?.resourcesProvided?.join(', ')"></textarea>
+      <template x-if="$store.app.mode === 'demo'">
+        <textarea
+          rows="2"
+          class="input-readonly"
+          readonly
+          x-text="$store.app.activeEmployer?.resourcesProvided?.join(', ')"></textarea>
+      </template>
+      <template x-if="$store.app.mode === 'custom'">
+        <textarea
+          rows="3"
+          class="input"
+          placeholder="What will you provide? Examples:&#10;• Access to internal data/systems&#10;• Staff time for interviews&#10;• Software licenses&#10;• Industry research reports"
+          :value="$store.app.customEmployer?.resourcesProvided"
+          @input="$store.app.customEmployer.resourcesProvided = $event.target.value"></textarea>
+      </template>
     </div>
   </div>
 </div>
