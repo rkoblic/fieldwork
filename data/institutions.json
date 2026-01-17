@@ -16,8 +16,7 @@
         "Reflect critically on personal and professional development",
         "Collaborate effectively with professionals and stakeholders"
       ],
-      "requiredNaceCompetencies": ["critical-thinking", "communication", "professionalism"],
-      "optionalNaceCompetencies": ["teamwork", "career-self-development"]
+      "additionalNaceCompetencies": ["teamwork"]
     },
     {
       "id": "inst-2",
@@ -35,8 +34,7 @@
         "Articulate learning and growth through structured reflection",
         "Demonstrate ethical and inclusive professional behavior"
       ],
-      "requiredNaceCompetencies": ["critical-thinking", "communication", "career-self-development", "equity-inclusion"],
-      "optionalNaceCompetencies": ["leadership", "technology"]
+      "additionalNaceCompetencies": ["teamwork", "equity-inclusion"]
     }
   ]
 }

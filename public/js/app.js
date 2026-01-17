@@ -195,7 +195,11 @@ document.addEventListener('alpine:init', () => {
     // Helper to get NACE competency name by ID
     getNaceCompetencyName(id) {
       if (!id || !this.framework?.naceCompetencies) return id;
-      const comp = this.framework.naceCompetencies.find(c => c.id === id);
+      const allComps = [
+        ...(this.framework.naceCompetencies.required || []),
+        ...(this.framework.naceCompetencies.optional || [])
+      ];
+      const comp = allComps.find(c => c.id === id);
       return comp ? comp.name : id;
     }
   });

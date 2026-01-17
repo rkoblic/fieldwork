@@ -38,16 +38,36 @@
     </h2>
     <p class="text-sm text-slate-500 mb-4">Industry-validated framework for professional skill development:</p>
 
-    <div class="grid sm:grid-cols-2 gap-3">
-      <template x-for="comp in $store.app.framework?.naceCompetencies" :key="comp.id">
-        <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
-          <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
-          <div>
-            <h3 class="font-medium text-slate-900 text-sm" x-text="comp.name"></h3>
-            <p class="text-xs text-slate-500" x-text="comp.description"></p>
+    <!-- Required by FieldWork -->
+    <div class="mb-4">
+      <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Required by FieldWork</h3>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <template x-for="comp in $store.app.framework?.naceCompetencies?.required" :key="comp.id">
+          <div class="flex items-start gap-3 p-3 rounded-lg bg-emerald-50 border border-emerald-100">
+            <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <h3 class="font-medium text-slate-900 text-sm" x-text="comp.name"></h3>
+              <p class="text-xs text-slate-500" x-text="comp.description"></p>
+            </div>
           </div>
-        </div>
-      </template>
+        </template>
+      </div>
+    </div>
+
+    <!-- Optional (Institution Choice) -->
+    <div>
+      <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Optional (Institution Choice)</h3>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <template x-for="comp in $store.app.framework?.naceCompetencies?.optional" :key="comp.id">
+          <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+            <div class="w-2 h-2 bg-slate-300 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <h3 class="font-medium text-slate-900 text-sm" x-text="comp.name"></h3>
+              <p class="text-xs text-slate-500" x-text="comp.description"></p>
+            </div>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 

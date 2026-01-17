@@ -21,48 +21,52 @@
       "description": "Articulating how learning applies to future contexts. The goal is developing capabilities that transfer to future academic, professional, and personal situations."
     }
   ],
-  "naceCompetencies": [
-    {
-      "id": "critical-thinking",
-      "name": "Critical Thinking",
-      "description": "Identify and respond to needs based on situational context and logical analysis"
-    },
-    {
-      "id": "communication",
-      "name": "Communication",
-      "description": "Clearly and effectively exchange information, ideas, and perspectives"
-    },
-    {
-      "id": "teamwork",
-      "name": "Teamwork",
-      "description": "Build and maintain collaborative relationships toward common goals"
-    },
-    {
-      "id": "professionalism",
-      "name": "Professionalism",
-      "description": "Understand and demonstrate effective work habits across contexts"
-    },
-    {
-      "id": "technology",
-      "name": "Technology",
-      "description": "Understand and leverage technologies ethically to enhance outcomes"
-    },
-    {
-      "id": "leadership",
-      "name": "Leadership",
-      "description": "Recognize and capitalize on personal and team strengths toward goals"
-    },
-    {
-      "id": "equity-inclusion",
-      "name": "Equity & Inclusion",
-      "description": "Demonstrate awareness and skills to equitably engage diverse perspectives"
-    },
-    {
-      "id": "career-self-development",
-      "name": "Career & Self Development",
-      "description": "Proactively develop oneself through continual learning"
-    }
-  ],
+  "naceCompetencies": {
+    "required": [
+      {
+        "id": "critical-thinking",
+        "name": "Critical Thinking",
+        "description": "Identify and respond to needs based on situational context and logical analysis"
+      },
+      {
+        "id": "communication",
+        "name": "Communication",
+        "description": "Clearly and effectively exchange information, ideas, and perspectives"
+      },
+      {
+        "id": "professionalism",
+        "name": "Professionalism",
+        "description": "Understand and demonstrate effective work habits across contexts"
+      },
+      {
+        "id": "career-self-development",
+        "name": "Career & Self Development",
+        "description": "Proactively develop oneself through continual learning"
+      }
+    ],
+    "optional": [
+      {
+        "id": "teamwork",
+        "name": "Teamwork",
+        "description": "Build and maintain collaborative relationships toward common goals"
+      },
+      {
+        "id": "technology",
+        "name": "Technology",
+        "description": "Understand and leverage technologies ethically to enhance outcomes"
+      },
+      {
+        "id": "leadership",
+        "name": "Leadership",
+        "description": "Recognize and capitalize on personal and team strengths toward goals"
+      },
+      {
+        "id": "equity-inclusion",
+        "name": "Equity & Inclusion",
+        "description": "Demonstrate awareness and skills to equitably engage diverse perspectives"
+      }
+    ]
+  },
   "assessmentArchitecture": [
     {
       "id": "deliverables",

@@ -120,18 +120,19 @@
 
     <!-- NACE Competencies -->
     <div>
-      <label class="label">Required NACE Competencies</label>
+      <label class="label">Required by FieldWork</label>
       <div class="flex flex-wrap gap-2 mb-4">
-        <template x-for="compId in $store.app.activeInstitution?.requiredNaceCompetencies" :key="compId">
-          <span class="badge badge-blue" x-text="$store.app.getNaceCompetencyName(compId)"></span>
+        <template x-for="comp in $store.app.framework?.naceCompetencies?.required" :key="comp.id">
+          <span class="badge badge-green" x-text="comp.name"></span>
         </template>
       </div>
 
-      <label class="label">Optional NACE Competencies</label>
+      <label class="label">Additional Competencies (Selected by Institution)</label>
       <div class="flex flex-wrap gap-2">
-        <template x-for="compId in $store.app.activeInstitution?.optionalNaceCompetencies" :key="compId">
-          <span class="badge bg-slate-100 text-slate-700" x-text="$store.app.getNaceCompetencyName(compId)"></span>
+        <template x-for="compId in $store.app.activeInstitution?.additionalNaceCompetencies" :key="compId">
+          <span class="badge badge-blue" x-text="$store.app.getNaceCompetencyName(compId)"></span>
         </template>
+        <span x-show="!$store.app.activeInstitution?.additionalNaceCompetencies?.length" class="text-sm text-slate-400 italic">None selected</span>
       </div>
     </div>
   </div>
