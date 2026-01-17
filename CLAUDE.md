@@ -95,7 +95,7 @@ Each synthesis output (`data/outputs/*.json`) contains:
 {
   "metadata": { "institutionId", "employerId", "studentId", "termLengthWeeks" },
   "learningObjectives": [
-    { "id", "text", "naceCompetency", "traceability": { "employerNeed", "studentGoal", "institutionalOutcome" } }
+    { "id", "text", "naceCompetency": ["competency-1", "competency-2"], "traceability": { "employerNeed", "studentGoal", "institutionalOutcome" } }
   ],
   "curriculum": {
     "weeks": [
@@ -138,6 +138,22 @@ The 4-type assessment model with research-based weighting:
 - **Checkpoints**: Ungraded weekly milestones displayed in sample week view
 - **Learning Resources**: Curated materials for conceptualization activities (articles, videos, AI-generated personalized insights)
 
+## NACE Competency Tagging
+Each learning objective is tagged with **2 primary NACE competencies** to reflect the multi-dimensional nature of professional skill development:
+
+| LO Pattern | Primary Competency | Secondary Competency | Rationale |
+|------------|-------------------|---------------------|-----------|
+| Research/Analysis | critical-thinking | technology | Uses analytical tools and software |
+| Stakeholder Interviews | communication | teamwork | Collaborative inquiry with others |
+| Presentations | communication | professionalism | Executive-level professional context |
+| Recommendations | critical-thinking | communication | Must articulate insights clearly |
+| Professional Behavior | professionalism | teamwork | Workplace collaboration |
+| Career Reflection | career-self-development | communication | Articulating growth |
+
+**Helper Functions in app.js:**
+- `getNaceCompetencies(obj)` - Normalizes `naceCompetency` to array (handles both string and array formats for backward compatibility)
+- `getNaceCompetenciesWithObjectives()` - Returns unique competencies with their linked LO numbers for alignment display
+
 ## Sample Week Features
 The sample week view includes:
 - **Header**: Week number, theme, total hours, checkpoint count, graded reflection indicator
@@ -147,8 +163,20 @@ The sample week view includes:
 - **Milestones**: Ungraded checkpoints (DEAL reflections filtered out as they're shown separately)
 - **DEAL Reflection Prompts**: Graded weekly reflection with Describe/Examine/Articulate Learning structure
 
+## Objectives Tab Features
+- **LO Cards**: Each learning objective displayed with numbered badge (1-6)
+- **NACE Competency Badges**: Multiple blue badges showing all tagged competencies per LO
+- **Traceability Panel**: Shows alignment to employer need, student goal, and institutional outcome
+
 ## Assessment Tab Features
 - **Weight Cards**: Visual display of the 4-component assessment weights
 - **Alignment Matrix**: Shows which learning objectives map to which assessment components (moved prominently under weight cards)
 - **LO Badges**: Display as "LO 1", "LO 2", etc. with hover tooltips showing full objective text
 - **Component Details**: Evaluation criteria and objective mappings for each assessment type
+
+## Alignment Tab Features
+- **FieldWork Framework**: Experiential competencies with descriptions of how they're addressed
+- **NACE Competencies**: Dynamic list showing each competency with linked LO badges (e.g., "Communication → LO 1, LO 2, LO 3")
+- **Employer Success Criteria**: Project requirements mapped to objectives, deliverables, and activities
+- **Student Learning Goals**: Personal goals mapped to how they're addressed
+- **Institutional Outcomes**: Academic outcomes with evidence of achievement
