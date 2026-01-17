@@ -774,14 +774,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Weekly project work including data analysis, stakeholder meetings, and report writing",
-        "reflection": "Weekly mentor check-ins and DEAL reflection processing of experiences",
-        "conceptualization": "Readings on nonprofit analytics, donor psychology, and professional communication",
-        "experimentation": "Iterative refinement of analysis, recommendations, and presentation materials"
-      },
-      "dealReflections": "Weekly structured reflections using Describe-Examine-Articulate Learning framework, building progressively toward comprehensive final reflection",
-      "competencies": "All four FieldWork experiential competencies addressed: Purposeful Engagement through authentic project work, Reflective Practice through DEAL reflections, Integrative Learning through connections to Psychology coursework, Transfer Capacity through career-focused final reflections"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Authentic project work with nonprofit stakeholders analyzing real donor data to inform organizational strategy"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections processing experiences and connecting practice to psychology theory"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Psychology coursework (research methods, consumer behavior) and donor retention analysis"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Career-focused reflections linking analytical and presentation skills to future professional roles"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

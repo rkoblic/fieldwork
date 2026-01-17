@@ -915,14 +915,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Process observation, stakeholder interviews, analysis, recommendation development, presentation",
-        "reflection": "Bi-weekly mentor meetings, DEAL reflections, stakeholder validation",
-        "conceptualization": "Readings on organizational psychology, consulting, equity practices, change management",
-        "experimentation": "Iterating on documentation, refining recommendations, adapting approaches"
-      },
-      "dealReflections": "Weekly reflections connecting consulting practice to organizational psychology theory and career development",
-      "competencies": "All FieldWork competencies with emphasis on equity and inclusion through organizational lens"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Authentic consulting work conducting stakeholder interviews and developing equitable process recommendations"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections connecting consulting practice to organizational psychology and equity considerations"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Psychology/OB coursework and organizational change through an equity lens"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Career-focused reflections exploring consulting, organizational development, and inclusive leadership paths"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

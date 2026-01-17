@@ -775,14 +775,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Creating professional communications, designing visualizations, conducting interviews, presenting to stakeholders",
-        "reflection": "Weekly mentor discussions, analyzing audience feedback, self-assessment of communication effectiveness",
-        "conceptualization": "Readings on strategic communication, data visualization, audience analysis, and professional writing",
-        "experimentation": "Iterating on designs, testing messages with audiences, refining presentation approaches"
-      },
-      "dealReflections": "Weekly reflections connecting communication practice to theory, building toward comprehensive portfolio reflection",
-      "competencies": "All four FieldWork competencies: Purposeful Engagement through client-facing work, Reflective Practice through DEAL model, Integrative Learning connecting to Communications coursework, Transfer Capacity through portfolio development"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Client-facing work creating professional communications and data visualizations for nonprofit stakeholders"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections analyzing communication effectiveness and audience feedback"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Communications coursework (visual design, strategic messaging) and nonprofit storytelling"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Portfolio development showcasing professional work samples for future career opportunities"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

@@ -786,14 +786,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Conducting interviews, mapping processes, developing recommendations, presenting to leadership",
-        "reflection": "Bi-weekly mentor check-ins, stakeholder validation sessions, self-assessment",
-        "conceptualization": "Readings on process improvement, organizational behavior, change management, consulting practices",
-        "experimentation": "Iterating on process maps, refining recommendations, adapting approaches based on feedback"
-      },
-      "dealReflections": "Weekly reflections connecting consulting practice to organizational behavior theory and professional development",
-      "competencies": "All four FieldWork competencies: Purposeful Engagement through authentic consulting work, Reflective Practice through DEAL model, Integrative Learning connecting to Psychology/OB coursework, Transfer Capacity through career-focused reflection"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Authentic consulting work conducting stakeholder interviews and developing process improvement recommendations"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections connecting consulting practice to organizational behavior theory"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Psychology/OB coursework and stakeholder interview analysis and change management"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Career-focused reflections exploring consulting and organizational development career paths"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

@@ -17,36 +17,36 @@
       </div>
 
       <div class="space-y-4">
+        <!-- Experiential Competencies -->
         <div>
-          <h4 class="text-sm font-semibold text-slate-700 mb-2">Kolb Phases Integration</h4>
-          <div class="space-y-2 text-sm">
-            <div class="flex items-start gap-2">
-              <span class="badge badge-blue flex-shrink-0" x-text="$store.app.getKolbPhaseName('experience')"></span>
-              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.experience"></span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="badge badge-green flex-shrink-0" x-text="$store.app.getKolbPhaseName('reflection')"></span>
-              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.reflection"></span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="badge badge-purple flex-shrink-0" x-text="$store.app.getKolbPhaseName('conceptualization')"></span>
-              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.conceptualization"></span>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="badge badge-amber flex-shrink-0" x-text="$store.app.getKolbPhaseName('experimentation')"></span>
-              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.experimentation"></span>
-            </div>
+          <h4 class="text-sm font-semibold text-slate-700 mb-2">Experiential Competencies</h4>
+          <div class="space-y-2">
+            <template x-for="comp in $store.app.synthesisOutput?.alignment?.frameworkElements?.experientialCompetencies" :key="comp.id">
+              <div class="p-3 bg-primary-50 rounded-lg border border-primary-100">
+                <div class="font-medium text-primary-900 text-sm mb-1" x-text="$store.app.getExperientialCompetencyName(comp.id)"></div>
+                <div class="text-xs text-primary-700" x-text="comp.addressedBy"></div>
+              </div>
+            </template>
           </div>
         </div>
 
+        <!-- NACE Competencies -->
         <div>
-          <h4 class="text-sm font-semibold text-slate-700 mb-2">DEAL Reflections</h4>
-          <p class="text-sm text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.dealReflections"></p>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-semibold text-slate-700 mb-2">Competencies</h4>
-          <p class="text-sm text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.competencies"></p>
+          <h4 class="text-sm font-semibold text-slate-700 mb-2">NACE Competencies</h4>
+          <div class="space-y-2">
+            <template x-for="comp in $store.app.getNaceCompetenciesWithObjectives()" :key="comp.id">
+              <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="flex items-center justify-between">
+                  <span class="font-medium text-slate-900 text-sm" x-text="comp.name"></span>
+                  <div class="flex flex-wrap gap-1">
+                    <template x-for="loNum in comp.objectives" :key="loNum">
+                      <span class="text-xs bg-primary-100 text-primary-700 px-2 py-0.5 rounded" x-text="'LO ' + loNum"></span>
+                    </template>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </div>
         </div>
       </div>
     </div>
@@ -68,7 +68,9 @@
             <div class="font-medium text-amber-900 text-sm mb-1" x-text="item.criterion"></div>
             <div class="flex flex-wrap gap-1">
               <template x-for="addr in item.addressedBy" :key="addr">
-                <span class="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded" x-text="addr"></span>
+                <span class="text-xs px-2 py-0.5 rounded"
+                      :class="$store.app.getAddressedByBadgeClasses(addr)"
+                      x-text="$store.app.formatAddressedByItem(addr)"></span>
               </template>
             </div>
           </div>
@@ -93,7 +95,9 @@
             <div class="font-medium text-violet-900 text-sm mb-1" x-text="item.goal"></div>
             <div class="flex flex-wrap gap-1">
               <template x-for="addr in item.addressedBy" :key="addr">
-                <span class="text-xs bg-violet-200 text-violet-800 px-2 py-0.5 rounded" x-text="addr"></span>
+                <span class="text-xs px-2 py-0.5 rounded"
+                      :class="$store.app.getAddressedByBadgeClasses(addr)"
+                      x-text="$store.app.formatAddressedByItem(addr)"></span>
               </template>
             </div>
           </div>
@@ -118,7 +122,9 @@
             <div class="font-medium text-emerald-900 text-sm mb-1" x-text="item.outcome"></div>
             <div class="flex flex-wrap gap-1">
               <template x-for="ev in item.evidence" :key="ev">
-                <span class="text-xs bg-emerald-200 text-emerald-800 px-2 py-0.5 rounded" x-text="ev"></span>
+                <span class="text-xs px-2 py-0.5 rounded"
+                      :class="$store.app.getAddressedByBadgeClasses(ev)"
+                      x-text="$store.app.formatAddressedByItem(ev)"></span>
               </template>
             </div>
           </div>

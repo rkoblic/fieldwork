@@ -902,14 +902,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Data analysis, stakeholder interviews, report writing, board presentation",
-        "reflection": "Weekly mentor check-ins, DEAL reflections, self-assessment",
-        "conceptualization": "Readings on research methods, psychology applications, equity practices, professional communication",
-        "experimentation": "Iterating on analysis, refining recommendations, testing presentations"
-      },
-      "dealReflections": "Weekly structured reflections building toward comprehensive final portfolio reflection",
-      "competencies": "All FieldWork competencies plus emphasis on equity and inclusion through applied lens"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Authentic research work analyzing real donor data with equity lens for nonprofit stakeholders"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections connecting research practice to psychology theory and equity considerations"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Psychology coursework (research methods, equity) and applied nonprofit analytics"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Portfolio reflection linking analytical skills and inclusive practices to future research careers"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

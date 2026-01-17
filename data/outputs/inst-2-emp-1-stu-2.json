@@ -903,14 +903,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Creating communications, conducting interviews, designing visualizations, presenting to stakeholders",
-        "reflection": "Weekly mentor meetings, feedback integration, self-assessment",
-        "conceptualization": "Readings on strategic communication, visual design, inclusive practices, storytelling",
-        "experimentation": "Iterating on designs, testing messages, refining approaches"
-      },
-      "dealReflections": "Weekly reflections with portfolio development focus, building to comprehensive career reflection",
-      "competencies": "All FieldWork competencies with emphasis on equity and inclusion through communication lens"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Creating professional communications and inclusive visual storytelling for nonprofit stakeholders"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections analyzing communication effectiveness and inclusive design choices"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Communications coursework (visual design, equity practices) and nonprofit storytelling"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Portfolio development showcasing inclusive design work for future communications careers"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

@@ -918,14 +918,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Creating visual documentation, conducting interviews, designing presentations, client delivery",
-        "reflection": "Bi-weekly mentor meetings, feedback integration, portfolio review",
-        "conceptualization": "Readings on visual communication, design thinking, inclusive practices, content strategy",
-        "experimentation": "Iterating on designs, testing visuals, refining based on feedback"
-      },
-      "dealReflections": "Weekly reflections with portfolio and career development focus, building to comprehensive final reflection",
-      "competencies": "All FieldWork competencies with emphasis on equity, inclusion, and visual communication"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Client-facing consulting work creating inclusive visual documentation and presentations for organizational change"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections on communication effectiveness and inclusive design practices"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Communications coursework (visual design, inclusive practices) and organizational consulting"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Portfolio development showcasing inclusive consulting deliverables for future creative careers"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

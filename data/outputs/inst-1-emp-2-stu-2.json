@@ -788,14 +788,24 @@
   },
   "alignment": {
     "frameworkElements": {
-      "kolbPhases": {
-        "experience": "Conducting interviews, creating visual documentation, designing presentations, delivering to clients",
-        "reflection": "Bi-weekly mentor meetings, feedback integration, self-assessment of communication effectiveness",
-        "conceptualization": "Readings on visual communication, storytelling, change communication, professional standards",
-        "experimentation": "Iterating on designs, testing narratives, refining presentations based on feedback"
-      },
-      "dealReflections": "Weekly reflections connecting communication practice to theory and portfolio development",
-      "competencies": "All four FieldWork competencies: Purposeful Engagement through client work, Reflective Practice through DEAL model, Integrative Learning connecting to Communications coursework, Transfer Capacity through portfolio development"
+      "experientialCompetencies": [
+        {
+          "id": "purposeful-engagement",
+          "addressedBy": "Client-facing consulting work creating visual documentation and presentations for process improvement"
+        },
+        {
+          "id": "reflective-practice",
+          "addressedBy": "Weekly DEAL reflections on communication effectiveness and visual storytelling approaches"
+        },
+        {
+          "id": "integrative-learning",
+          "addressedBy": "Connections between Communications coursework (visual design, strategic messaging) and organizational change communication"
+        },
+        {
+          "id": "transfer-capacity",
+          "addressedBy": "Portfolio development showcasing professional consulting deliverables for future career opportunities"
+        }
+      ]
     },
     "employerSuccessCriteria": [
       {

@@ -221,6 +221,58 @@ document.addEventListener('alpine:init', () => {
       if (!id || !this.synthesisOutput?.learningObjectives) return null;
       const index = this.synthesisOutput.learningObjectives.findIndex(obj => obj.id === id);
       return index >= 0 ? index + 1 : null;
+    },
+
+    // Get unique NACE competencies with their linked objectives
+    getNaceCompetenciesWithObjectives() {
+      const objectives = this.synthesisOutput?.learningObjectives || [];
+      const map = {};
+      objectives.forEach((obj, index) => {
+        const nace = obj.naceCompetency;
+        if (!map[nace]) map[nace] = [];
+        map[nace].push(index + 1); // LO numbers are 1-indexed
+      });
+      return Object.entries(map).map(([id, loNumbers]) => ({
+        id,
+        name: this.getNaceCompetencyName(id),
+        objectives: loNumbers
+      }));
+    },
+
+    // Get full name for experiential competency ID
+    getExperientialCompetencyName(id) {
+      const names = {
+        'purposeful-engagement': 'Purposeful Engagement',
+        'reflective-practice': 'Reflective Practice',
+        'integrative-learning': 'Integrative Learning',
+        'transfer-capacity': 'Transfer Capacity'
+      };
+      return names[id] || id;
+    },
+
+    // Categorize addressedBy items by type
+    getAddressedByType(item) {
+      if (item.startsWith('obj-')) return 'objective';
+      if (/Report|Analysis|Presentation/i.test(item)) return 'deliverable';
+      return 'activity';
+    },
+
+    // Get badge classes based on item type
+    getAddressedByBadgeClasses(item) {
+      const type = this.getAddressedByType(item);
+      if (type === 'objective') return 'bg-primary-100 text-primary-700';
+      if (type === 'deliverable') return 'bg-amber-100 text-amber-700';
+      return 'bg-slate-100 text-slate-600';
+    },
+
+    // Format addressedBy item for display
+    formatAddressedByItem(item) {
+      // Convert obj-N to LO N format
+      if (item.startsWith('obj-')) {
+        const num = item.replace('obj-', '');
+        return `LO ${num}`;
+      }
+      return item;
     }
   });
 });
