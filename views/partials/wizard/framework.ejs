@@ -89,8 +89,8 @@
     <div class="grid sm:grid-cols-2 gap-4 mb-4">
       <template x-for="item in $store.app.framework?.assessmentArchitecture" :key="item.id">
         <div class="flex items-start gap-3 p-3 rounded-lg bg-amber-50 border border-amber-100">
-          <div class="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center flex-shrink-0">
-            <span class="text-white font-bold text-base" x-text="item.weight + '%'"></span>
+          <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+            <span class="text-amber-800 font-bold text-xl" x-text="item.weight + '%'"></span>
           </div>
           <div class="flex-1">
             <h3 class="font-medium text-slate-900 text-sm" x-text="item.name"></h3>
