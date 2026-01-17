@@ -202,12 +202,12 @@ router.post('/resume/extract-skills', upload.single('resume'), async (req, res) 
       });
     }
 
-    // Call Claude to extract skills
+    // Call Claude to extract full profile from resume
     const claudeService = require('../services/claude');
-    const skills = await claudeService.extractSkillsFromResume(textContent);
+    const profile = await claudeService.extractProfileFromResume(textContent);
 
     res.json({
-      skills,
+      ...profile,
       fileName: req.file.originalname
     });
   } catch (error) {

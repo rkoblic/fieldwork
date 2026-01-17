@@ -87,53 +87,76 @@ Generate a complete learning experience that:
 Respond with the complete JSON synthesis output only.`;
 }
 
-async function extractSkillsFromResume(resumeText) {
+async function extractProfileFromResume(resumeText) {
   const response = await client.messages.create({
     model: 'claude-sonnet-4-20250514',
-    max_tokens: 1000,
-    system: `You are an expert at analyzing resumes and identifying key professional skills. Extract skills that would be relevant for experiential learning and professional work experience.
+    max_tokens: 1500,
+    system: `You are an expert at analyzing resumes and extracting student profile information for experiential learning placements.
 
-Focus on:
-- Technical skills (software, tools, methodologies, programming languages)
-- Research and analytical skills
-- Communication and writing abilities
-- Leadership and teamwork experience
-- Industry-specific knowledge
+Extract the following from the resume:
+1. **name**: The student's full name (if found)
+2. **major**: Their primary field of study. Must be one of: Psychology, Business Administration, Communications, Marketing, Computer Science, Data Science, Economics, English, Political Science, Sociology, Engineering, Biology, Environmental Science, Public Health, Graphic Design, Digital Media, or Other
+3. **minor**: Secondary field of study (if any), same options as major, or empty string
+4. **year**: Academic year (Freshman, Sophomore, Junior, Senior, or Graduate) - infer from graduation date or context
+5. **skills**: Array of 4-8 professional skills relevant for workplace learning (2-6 words each)
+6. **relevantCoursework**: Array of course categories they've likely taken based on their major/experience. Choose from: Research Methods, Statistics / Data Analysis, Business Fundamentals, Marketing Principles, Communication / Writing, Project Management, Public Speaking, Psychology / Behavioral Science, Computer Science / Programming, Design / Visual Media, Economics / Finance, Ethics / Social Responsibility
+7. **careerInterests**: Brief description of likely career interests based on their experience/education (1-2 sentences)
 
-Return ONLY a valid JSON array of 4-8 concise skill descriptions (each 2-6 words). No explanation or markdown.
+Return ONLY valid JSON with these fields. Use empty string "" for fields not found, empty array [] for list fields not determinable.
 
 Example output:
-["Data analysis with Excel", "Technical writing", "Survey design and analysis", "Team leadership", "Python programming"]`,
+{
+  "name": "Sarah Chen",
+  "major": "Psychology",
+  "minor": "Business Administration",
+  "year": "Junior",
+  "skills": ["Data analysis with SPSS", "Survey design", "Academic writing", "Team collaboration", "Research methodology"],
+  "relevantCoursework": ["Research Methods", "Statistics / Data Analysis", "Psychology / Behavioral Science", "Communication / Writing"],
+  "careerInterests": "Interested in market research, consumer behavior analysis, and organizational consulting roles."
+}`,
     messages: [
       {
         role: 'user',
-        content: `Analyze this resume and extract the most relevant professional skills:\n\n${resumeText.substring(0, 8000)}`
+        content: `Extract student profile information from this resume:\n\n${resumeText.substring(0, 8000)}`
       }
     ]
   });
 
   const content = response.content[0].text.trim();
 
-  // Parse the JSON array
+  // Parse the JSON object
   let jsonStr = content;
-  const jsonMatch = content.match(/\[[\s\S]*\]/);
+  const jsonMatch = content.match(/\{[\s\S]*\}/);
   if (jsonMatch) {
     jsonStr = jsonMatch[0];
   }
 
   try {
-    const skills = JSON.parse(jsonStr);
-    if (Array.isArray(skills)) {
-      return skills.slice(0, 8); // Limit to 8 skills max
+    const profile = JSON.parse(jsonStr);
+    // Ensure skills is limited to 8
+    if (profile.skills && Array.isArray(profile.skills)) {
+      profile.skills = profile.skills.slice(0, 8);
     }
+    return profile;
   } catch (e) {
-    console.error('Failed to parse skills JSON:', e);
-    // Fallback: try to extract skills from plain text
-    const lines = content.split('\n').filter(l => l.trim()).slice(0, 8);
-    return lines.map(l => l.replace(/^[-*•]\s*/, '').trim()).filter(l => l.length > 0);
+    console.error('Failed to parse profile JSON:', e);
+    // Return minimal fallback
+    return {
+      name: '',
+      major: '',
+      minor: '',
+      year: '',
+      skills: [],
+      relevantCoursework: [],
+      careerInterests: ''
+    };
   }
-
-  return [];
 }
 
-module.exports = { synthesize, extractSkillsFromResume };
+// Legacy function name for backward compatibility
+async function extractSkillsFromResume(resumeText) {
+  const profile = await extractProfileFromResume(resumeText);
+  return profile.skills || [];
+}
+
+module.exports = { synthesize, extractSkillsFromResume, extractProfileFromResume };

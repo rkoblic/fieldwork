@@ -596,7 +596,21 @@ document.addEventListener('alpine:init', () => {
 
         const result = await response.json();
         this.customStudent.resumeFileName = result.fileName;
-        this.customStudent.extractedSkills = result.skills;
+
+        // Populate all extracted fields (only if they have values)
+        if (result.name) this.customStudent.name = result.name;
+        if (result.major) this.customStudent.major = result.major;
+        if (result.minor) this.customStudent.minor = result.minor;
+        if (result.year) this.customStudent.year = result.year;
+        if (result.skills && result.skills.length > 0) {
+          this.customStudent.extractedSkills = result.skills;
+        }
+        if (result.relevantCoursework && result.relevantCoursework.length > 0) {
+          this.customStudent.relevantCoursework = result.relevantCoursework;
+        }
+        if (result.careerInterests) {
+          this.customStudent.careerInterestsNarrative = result.careerInterests;
+        }
       } catch (e) {
         console.error('Resume upload error:', e);
         this.resumeError = e.message || 'Failed to process resume';
