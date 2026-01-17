@@ -71,22 +71,30 @@
     {
       "id": "deliverables",
       "name": "Project Deliverables",
-      "description": "Artifacts that demonstrate skill application and create value for the employer"
+      "description": "Artifacts that demonstrate skill application and create value for the employer",
+      "weight": 40,
+      "rationale": "Tangible artifacts demonstrating competency application"
     },
     {
       "id": "presentation",
       "name": "Project Presentation",
-      "description": "Opportunity to communicate findings and recommendations to stakeholders"
+      "description": "Opportunity to communicate findings and recommendations to stakeholders",
+      "weight": 20,
+      "rationale": "Communication is a core NACE competency"
     },
     {
       "id": "reflections",
       "name": "Reflections",
-      "description": "Structured processing of experience using the DEAL model"
+      "description": "Structured processing of experience using the DEAL model",
+      "weight": 25,
+      "rationale": "Key mechanism for learning transfer per Kolb research"
     },
     {
       "id": "employer-evaluations",
       "name": "Employer Evaluations",
-      "description": "External validation of professional performance and contribution"
+      "description": "External validation of professional performance and contribution",
+      "weight": 15,
+      "rationale": "Validates professional behavior in authentic context"
     }
   ],
   "learningStrategies": {

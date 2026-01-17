@@ -84,21 +84,28 @@
       </div>
       Assessment Architecture
     </h2>
+    <p class="text-sm text-slate-500 mb-4">Recommended weighting model based on experiential learning research:</p>
 
-    <div class="grid sm:grid-cols-2 gap-4">
+    <div class="grid sm:grid-cols-2 gap-4 mb-4">
       <template x-for="item in $store.app.framework?.assessmentArchitecture" :key="item.id">
-        <div class="flex items-start gap-3">
-          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0">
-            <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
+        <div class="flex items-start gap-3 p-3 rounded-lg bg-amber-50 border border-amber-100">
+          <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-bold text-sm" x-text="item.weight + '%'"></span>
           </div>
-          <div>
-            <h3 class="font-medium text-slate-900" x-text="item.name"></h3>
-            <p class="text-sm text-slate-500" x-text="item.description"></p>
+          <div class="flex-1">
+            <h3 class="font-medium text-slate-900 text-sm" x-text="item.name"></h3>
+            <p class="text-xs text-slate-500" x-text="item.description"></p>
+            <p class="text-xs text-amber-700 mt-1 italic" x-text="item.rationale"></p>
           </div>
         </div>
       </template>
+    </div>
+
+    <!-- Rationale note -->
+    <div class="bg-slate-50 rounded-lg p-3 border border-slate-200">
+      <p class="text-xs text-slate-600 leading-relaxed">
+        <span class="font-medium text-slate-700">Rationale:</span> This weighting balances tangible work products (60%) with reflective practice and external validation (40%). Research shows reflection is essential for transforming experience into learning, while employer evaluation ensures assessment validity in authentic professional contexts.
+      </p>
     </div>
   </div>
 
@@ -109,21 +116,65 @@
       <h2 class="text-lg font-semibold text-slate-900 mb-2" x-text="$store.app.framework?.learningStrategies?.kolbCycle?.name"></h2>
       <p class="text-sm text-slate-500 mb-4" x-text="$store.app.framework?.learningStrategies?.kolbCycle?.description"></p>
 
-      <div class="space-y-3">
-        <template x-for="phase in $store.app.framework?.learningStrategies?.kolbCycle?.phases" :key="phase.id">
-          <div class="flex items-center gap-3">
-            <span class="badge"
-                  :class="{
-                    'badge-blue': phase.color === 'blue',
-                    'badge-green': phase.color === 'green',
-                    'badge-purple': phase.color === 'purple',
-                    'badge-amber': phase.color === 'amber'
-                  }"
-                  x-text="phase.name">
-            </span>
-            <span class="text-sm text-slate-600" x-text="phase.description"></span>
+      <!-- Circular Cycle Diagram -->
+      <div class="flex justify-center mb-4">
+        <div class="relative w-64 h-64">
+          <!-- Circular arrows SVG -->
+          <svg class="absolute inset-0 w-full h-full" viewBox="0 0 200 200">
+            <!-- Curved arrow paths connecting the phases -->
+            <defs>
+              <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8" />
+              </marker>
+            </defs>
+            <!-- Top to Right -->
+            <path d="M 115 35 Q 165 50 165 100" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+            <!-- Right to Bottom -->
+            <path d="M 165 115 Q 165 165 115 165" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+            <!-- Bottom to Left -->
+            <path d="M 85 165 Q 35 165 35 115" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+            <!-- Left to Top -->
+            <path d="M 35 85 Q 35 35 85 35" fill="none" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+          </svg>
+
+          <!-- Phase nodes positioned in a circle -->
+          <!-- Top: Experiencing (blue) -->
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 text-center">
+            <span class="badge badge-blue text-xs">Experiencing</span>
+            <p class="text-xs text-slate-500 mt-1 w-20 mx-auto leading-tight">Doing the actual work</p>
           </div>
-        </template>
+
+          <!-- Right: Reflecting (green) -->
+          <div class="absolute top-1/2 right-0 -translate-y-1/2 text-center">
+            <span class="badge badge-green text-xs">Reflecting</span>
+            <p class="text-xs text-slate-500 mt-1 w-20 mx-auto leading-tight">Processing what happened</p>
+          </div>
+
+          <!-- Bottom: Thinking (purple) -->
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 text-center">
+            <span class="badge badge-purple text-xs">Thinking</span>
+            <p class="text-xs text-slate-500 mt-1 w-20 mx-auto leading-tight">Connecting to theory</p>
+          </div>
+
+          <!-- Left: Acting (amber) -->
+          <div class="absolute top-1/2 left-0 -translate-y-1/2 text-center">
+            <span class="badge badge-amber text-xs">Acting</span>
+            <p class="text-xs text-slate-500 mt-1 w-20 mx-auto leading-tight">Applying insights</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Explanatory note -->
+      <div class="bg-slate-50 rounded-lg p-3 border border-slate-200">
+        <p class="text-xs text-slate-600 leading-relaxed">
+          <span class="font-medium text-slate-700">Note:</span> Learners may enter the cycle at any phase depending on their situation. This is a continuous cycle that repeats week to week—each iteration builds on the last rather than following a linear sequence with a fixed beginning and end.
+        </p>
+        <a href="https://experientiallearninginstitute.org/what-is-experiential-learning/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-primary-600 hover:text-primary-700 mt-2">
+          Learn more about experiential learning
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -140,6 +191,13 @@
           </div>
         </template>
       </div>
+
+      <a href="https://pressbooks.pub/etsu/chapter/the-deal-model-metacognitive-reflection-in-service-learning/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-violet-600 hover:text-violet-700 mt-4">
+        Learn more about the DEAL model
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
+      </a>
     </div>
   </div>
 </div>
