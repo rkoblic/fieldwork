@@ -80,10 +80,14 @@ Industry-validated framework for professional skill development:
 
 #### Assessment Architecture
 
-- **Project Deliverables:** Artifacts that demonstrate skill application and create value for the employer
-- **Project Presentation:** Opportunity to communicate findings and recommendations to stakeholders
-- **Reflections:** Structured processing of experience using the DEAL model (see below)
-- **Employer Evaluations:** External validation of professional performance and contribution
+The 4-type assessment model with research-based weighting:
+
+| Component | Weight | Description |
+|-----------|--------|-------------|
+| **Project Deliverables** | 40% | Tangible artifacts that demonstrate skill application and create value for the employer |
+| **Project Presentation** | 20% | Culminating opportunity to communicate findings and recommendations to stakeholders |
+| **Reflections** | 25% | Structured processing of experience using the DEAL model—the key mechanism for learning transfer |
+| **Employer Evaluations** | 15% | External validation of professional performance and contribution |
 
 #### Evidence-Based Learning Strategies
 
@@ -275,10 +279,10 @@ Tabbed display of synthesized experience:
   - NACE competency focus for that week
 
 **Tab: Assessment**
-- Assessment strategy overview
-- List of deliverables with evaluation criteria
-- Reflection schedule
-- Objective-to-Assessment matrix showing which deliverables assess which objectives
+- Assessment strategy overview with 4-type architecture
+- Weight distribution cards: Deliverables (40%), Presentation (20%), Reflections (25%), Employer (15%)
+- Detailed sections for each assessment type with criteria and mapped objectives
+- Objective-to-Assessment matrix showing which assessments address which objectives
 
 **Tab: Sample Week**
 - Detailed view of one week (e.g., Week 4) showing the full learning experience
@@ -302,37 +306,42 @@ This gives users a concrete sense of what the day-to-day experience looks like, 
 
 ## Demo Data Requirements
 
-### Institutions (3 pre-configured)
-Use fictional but plausible institution names and details (not real universities). Each institution should have distinct characteristics to show how synthesis adapts:
-- Different term lengths (e.g., 12 weeks vs 15 weeks)
-- Different competency selections
-- Different assessment approaches
+### Institutions (2 pre-configured)
+Fictional but plausible institution names with distinct characteristics:
 
-All institutions should focus on general professional skills suitable for students from any major.
+| Institution | Term | Credits | Hours/Week | Assessment |
+|-------------|------|---------|------------|------------|
+| Westbrook University | 12 weeks | 3 | 9 | Letter Grade (A-F) |
+| Pacific Coast College | 15 weeks | 4 | 12 | Pass/Fail with Portfolio |
 
-### Employer Projects (1 per institution)
-Use fictional but plausible company names and projects. All projects should be general professional skills projects that any major could contribute to:
-- Research and analysis projects
-- Process improvement initiatives
-- Communication and outreach efforts
-- Strategic planning support
+Each has different learning outcomes and NACE competency requirements to show how synthesis adapts.
 
-Avoid discipline-specific technical projects (no coding, engineering design, etc.). Focus on projects where critical thinking, communication, research, and professional skills are the core requirements.
+### Employer Projects (2)
+Fictional but plausible companies with general professional skills projects:
 
-### Student Profiles (3)
-Use fictional student names and backgrounds. Three demo students, each usable for any project:
-- Different majors (e.g., Psychology, Business, Communications)
-- Different skill sets based on their coursework
-- Different career interests
+| Employer | Industry | Project Type |
+|----------|----------|--------------|
+| Bridgewater Community Foundation | Nonprofit | Research & Analysis (donor engagement) |
+| Horizon Strategic Consulting | Professional Services | Process Improvement (client onboarding) |
+
+Projects avoid discipline-specific technical work. Focus on critical thinking, communication, research, and professional skills.
+
+### Student Profiles (2)
+Fictional students with different backgrounds, each usable for any project:
+
+| Student | Major | Minor | Focus |
+|---------|-------|-------|-------|
+| Anna Liu | Psychology | Business Administration | Research methods, data analysis, organizational behavior |
+| Ben Williams | Communications | Digital Media | Writing, storytelling, visual communication, client work |
 
 In custom build flow, users can select a demo student or enter their own student information.
 
-### Mock Outputs
-Pre-computed synthesis results for demo student/institution combinations:
-- Full curriculum for the term length
-- All objectives with traceability
-- Complete assessment strategy
-- Alignment crosswalk
+### Mock Outputs (8 combinations)
+Pre-computed synthesis results for all 2×2×2 combinations (inst-{1,2}-emp-{1,2}-stu-{1,2}):
+- Full curriculum matching institution's term length
+- 5-7 learning objectives with full traceability
+- Complete 4-type assessment strategy with weighted components
+- Alignment crosswalk connecting all four inputs
 
 ---
 
