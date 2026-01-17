@@ -633,22 +633,28 @@ document.addEventListener('alpine:init', () => {
         }
 
         const result = await response.json();
-        this.customStudent.resumeFileName = result.fileName;
+
+        // Build updated student object to trigger Alpine reactivity
+        const updatedStudent = { ...this.customStudent };
+        updatedStudent.resumeFileName = result.fileName;
 
         // Populate all extracted fields (only if they have values)
-        if (result.name) this.customStudent.name = result.name;
-        if (result.major) this.customStudent.major = result.major;
-        if (result.minor) this.customStudent.minor = result.minor;
-        if (result.year) this.customStudent.year = result.year;
+        if (result.name) updatedStudent.name = result.name;
+        if (result.major) updatedStudent.major = result.major;
+        if (result.minor) updatedStudent.minor = result.minor;
+        if (result.year) updatedStudent.year = result.year;
         if (result.skills && result.skills.length > 0) {
-          this.customStudent.extractedSkills = result.skills;
+          updatedStudent.extractedSkills = result.skills;
         }
         if (result.relevantCoursework && result.relevantCoursework.length > 0) {
-          this.customStudent.relevantCoursework = result.relevantCoursework;
+          updatedStudent.relevantCoursework = result.relevantCoursework;
         }
         if (result.careerInterests) {
-          this.customStudent.careerInterestsNarrative = result.careerInterests;
+          updatedStudent.careerInterestsNarrative = result.careerInterests;
         }
+
+        // Reassign entire object to ensure Alpine reactivity
+        this.customStudent = updatedStudent;
       } catch (e) {
         console.error('Resume upload error:', e);
         this.resumeError = e.message || 'Failed to process resume';

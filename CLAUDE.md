@@ -249,8 +249,9 @@ Psychology, Business Administration, Communications, Marketing, Computer Science
 
 ### Resume Upload & Skill Extraction
 - Accepts PDF, DOC, DOCX files up to 5MB
-- Extracts text from uploaded resume
-- Sends to Claude API to identify 4-8 relevant professional skills
+- Text extraction: `pdf-parse` for PDFs, `mammoth` for DOCX files
+- Sends to Claude API to extract full student profile (name, major, year, skills, coursework, career interests)
+- Extracted data auto-populates form fields via Alpine.js `x-effect` bindings
 - Skills displayed as editable badges (click to remove)
 - Manual skill addition via text input
 

@@ -206,8 +206,13 @@ router.post('/resume/extract-skills', upload.single('resume'), async (req, res) 
       const pdfParse = require('pdf-parse');
       const pdfData = await pdfParse(req.file.buffer);
       textContent = pdfData.text;
+    } else if (req.file.mimetype === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+      // DOCX files - use mammoth for proper extraction
+      const mammoth = require('mammoth');
+      const result = await mammoth.extractRawText({ buffer: req.file.buffer });
+      textContent = result.value;
     } else {
-      // For DOC/DOCX, extract basic text (simplified - in production use mammoth or similar)
+      // DOC files (legacy format) - basic extraction
       textContent = req.file.buffer.toString('utf8').replace(/[^\x20-\x7E\n]/g, ' ');
     }
 

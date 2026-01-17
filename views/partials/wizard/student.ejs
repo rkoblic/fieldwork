@@ -148,7 +148,7 @@
           type="text"
           :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
           :readonly="$store.app.mode === 'demo'"
-          :value="$store.app.activeStudent?.name"
+          x-effect="$el.value = $store.app.activeStudent?.name || ''"
           placeholder="e.g., Anna Liu"
           @input="$store.app.mode === 'custom' && ($store.app.customStudent.name = $event.target.value)">
       </div>
@@ -166,7 +166,7 @@
         <template x-if="$store.app.mode === 'custom'">
           <select
             class="input"
-            :value="$store.app.customStudent?.major"
+            x-effect="$el.value = $store.app.customStudent?.major || ''"
             @change="$store.app.customStudent.major = $event.target.value">
             <option value="">Select major...</option>
             <option value="Psychology">Psychology</option>
@@ -203,7 +203,7 @@
         <template x-if="$store.app.mode === 'custom'">
           <select
             class="input"
-            :value="$store.app.customStudent?.minor"
+            x-effect="$el.value = $store.app.customStudent?.minor || ''"
             @change="$store.app.customStudent.minor = $event.target.value">
             <option value="">None</option>
             <option value="Psychology">Psychology</option>
@@ -240,7 +240,7 @@
         <template x-if="$store.app.mode === 'custom'">
           <select
             class="input"
-            :value="$store.app.customStudent?.year"
+            x-effect="$el.value = $store.app.customStudent?.year || ''"
             @change="$store.app.customStudent.year = $event.target.value">
             <option value="">Select year...</option>
             <option value="Freshman">Freshman</option>
@@ -365,7 +365,7 @@
         <textarea
           rows="4"
           class="input"
-          :value="$store.app.customStudent?.learningGoalsNarrative"
+          x-effect="$el.value = $store.app.customStudent?.learningGoalsNarrative || ''"
           @input="$store.app.customStudent.learningGoalsNarrative = $event.target.value"
           placeholder="What do you hope to learn? Examples:
 - Develop stronger presentation skills
@@ -389,7 +389,7 @@
         <textarea
           rows="3"
           class="input"
-          :value="$store.app.customStudent?.careerInterestsNarrative"
+          x-effect="$el.value = $store.app.customStudent?.careerInterestsNarrative || ''"
           @input="$store.app.customStudent.careerInterestsNarrative = $event.target.value"
           placeholder="What careers interest you? Examples:
 - Corporate communications or PR
