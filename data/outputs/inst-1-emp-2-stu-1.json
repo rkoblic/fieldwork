@@ -10,7 +10,7 @@
     {
       "id": "obj-1",
       "text": "Apply organizational behavior principles to analyze and improve client onboarding processes",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "technology"],
       "traceability": {
         "employerNeed": "Comprehensive documentation of current onboarding process",
         "studentGoal": "Understand how organizations use data to make decisions",
@@ -20,7 +20,7 @@
     {
       "id": "obj-2",
       "text": "Design and conduct stakeholder interviews to gather qualitative insights on process pain points",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "teamwork"],
       "traceability": {
         "employerNeed": "Stakeholder feedback synthesized into key themes",
         "studentGoal": "Build confidence communicating with senior professionals",
@@ -30,7 +30,7 @@
     {
       "id": "obj-3",
       "text": "Synthesize research findings and stakeholder input into actionable process improvement recommendations",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "communication"],
       "traceability": {
         "employerNeed": "Research-backed recommendations for improvement",
         "studentGoal": "Explore applications of psychology in business settings",
@@ -40,7 +40,7 @@
     {
       "id": "obj-4",
       "text": "Develop a prioritized implementation roadmap considering organizational constraints and change management",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "teamwork"],
       "traceability": {
         "employerNeed": "Implementation roadmap with prioritized action items",
         "studentGoal": "Understand how organizations use data to make decisions",
@@ -50,7 +50,7 @@
     {
       "id": "obj-5",
       "text": "Demonstrate professional consulting behaviors including client communication and project management",
-      "naceCompetency": "professionalism",
+      "naceCompetency": ["professionalism", "teamwork"],
       "traceability": {
         "employerNeed": "Bi-weekly meetings with Operations Manager",
         "studentGoal": "Build confidence communicating with senior professionals",
@@ -60,7 +60,7 @@
     {
       "id": "obj-6",
       "text": "Reflect on professional identity development in consulting and organizational development contexts",
-      "naceCompetency": "career-self-development",
+      "naceCompetency": ["career-self-development", "communication"],
       "traceability": {
         "employerNeed": "Professional development opportunity",
         "studentGoal": "Explore applications of psychology in business settings",

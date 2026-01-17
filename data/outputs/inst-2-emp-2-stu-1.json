@@ -10,7 +10,7 @@
     {
       "id": "obj-1",
       "text": "Apply organizational psychology principles to analyze process inefficiencies and recommend human-centered improvements",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "technology"],
       "traceability": {
         "employerNeed": "Comprehensive documentation of current onboarding process",
         "studentGoal": "Explore applications of psychology in business settings",
@@ -20,7 +20,7 @@
     {
       "id": "obj-2",
       "text": "Design and conduct qualitative research using systematic interview and observation methods",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "teamwork"],
       "traceability": {
         "employerNeed": "Stakeholder feedback synthesized into key themes",
         "studentGoal": "Understand how organizations use data to make decisions",
@@ -30,7 +30,7 @@
     {
       "id": "obj-3",
       "text": "Communicate research findings and recommendations effectively to diverse professional audiences",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "professionalism"],
       "traceability": {
         "employerNeed": "Research-backed recommendations for improvement",
         "studentGoal": "Develop professional presentation skills",
@@ -40,7 +40,7 @@
     {
       "id": "obj-4",
       "text": "Develop implementation strategies that consider equity, inclusion, and diverse stakeholder needs",
-      "naceCompetency": "equity-inclusion",
+      "naceCompetency": ["equity-inclusion", "teamwork"],
       "traceability": {
         "employerNeed": "Implementation roadmap with prioritized action items",
         "studentGoal": "Apply ethical principles in organizational settings",
@@ -50,7 +50,7 @@
     {
       "id": "obj-5",
       "text": "Demonstrate consulting professionalism including client management, project planning, and professional communication",
-      "naceCompetency": "professionalism",
+      "naceCompetency": ["professionalism", "teamwork"],
       "traceability": {
         "employerNeed": "Bi-weekly meetings with Operations Manager",
         "studentGoal": "Build confidence communicating with senior professionals",
@@ -60,7 +60,7 @@
     {
       "id": "obj-6",
       "text": "Articulate professional identity and career direction in organizational consulting and applied psychology",
-      "naceCompetency": "career-self-development",
+      "naceCompetency": ["career-self-development", "communication"],
       "traceability": {
         "employerNeed": "Professional development opportunity",
         "studentGoal": "Explore applications of psychology in business settings",

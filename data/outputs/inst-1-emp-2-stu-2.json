@@ -10,7 +10,7 @@
     {
       "id": "obj-1",
       "text": "Apply strategic communication principles to document and improve client onboarding experiences",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "technology"],
       "traceability": {
         "employerNeed": "Comprehensive documentation of current onboarding process",
         "studentGoal": "Learn to translate complex information for different audiences",
@@ -20,7 +20,7 @@
     {
       "id": "obj-2",
       "text": "Conduct stakeholder interviews using professional journalistic and research techniques",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "teamwork"],
       "traceability": {
         "employerNeed": "Stakeholder feedback synthesized into key themes",
         "studentGoal": "Gain experience with client-facing professional work",
@@ -30,7 +30,7 @@
     {
       "id": "obj-3",
       "text": "Create compelling visual process documentation and improvement recommendations",
-      "naceCompetency": "technology",
+      "naceCompetency": ["technology", "communication"],
       "traceability": {
         "employerNeed": "Research-backed recommendations for improvement",
         "studentGoal": "Build a portfolio of professional work",
@@ -40,7 +40,7 @@
     {
       "id": "obj-4",
       "text": "Develop a communication strategy for implementing process changes across the organization",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "teamwork"],
       "traceability": {
         "employerNeed": "Implementation roadmap with prioritized action items",
         "studentGoal": "Learn to translate complex information for different audiences",
@@ -50,7 +50,7 @@
     {
       "id": "obj-5",
       "text": "Manage project deliverables, timelines, and client relationships professionally",
-      "naceCompetency": "professionalism",
+      "naceCompetency": ["professionalism", "teamwork"],
       "traceability": {
         "employerNeed": "Bi-weekly meetings with Operations Manager",
         "studentGoal": "Develop project management skills",
@@ -60,7 +60,7 @@
     {
       "id": "obj-6",
       "text": "Reflect on professional growth and articulate competencies for communications and consulting careers",
-      "naceCompetency": "career-self-development",
+      "naceCompetency": ["career-self-development", "communication"],
       "traceability": {
         "employerNeed": "Professional development opportunity",
         "studentGoal": "Build a portfolio of professional work",

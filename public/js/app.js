@@ -203,6 +203,12 @@ document.addEventListener('alpine:init', () => {
       return comp ? comp.name : id;
     },
 
+    // Helper to normalize naceCompetency to array (handles both string and array)
+    getNaceCompetencies(obj) {
+      if (!obj?.naceCompetency) return [];
+      return Array.isArray(obj.naceCompetency) ? obj.naceCompetency : [obj.naceCompetency];
+    },
+
     // Helper to get Kolb phase name by ID
     getKolbPhaseName(id) {
       if (!id || !this.framework?.learningStrategies?.kolbCycle?.phases) return id;
@@ -228,9 +234,11 @@ document.addEventListener('alpine:init', () => {
       const objectives = this.synthesisOutput?.learningObjectives || [];
       const map = {};
       objectives.forEach((obj, index) => {
-        const nace = obj.naceCompetency;
-        if (!map[nace]) map[nace] = [];
-        map[nace].push(index + 1); // LO numbers are 1-indexed
+        const competencies = this.getNaceCompetencies(obj);
+        competencies.forEach(nace => {
+          if (!map[nace]) map[nace] = [];
+          map[nace].push(index + 1); // LO numbers are 1-indexed
+        });
       });
       return Object.entries(map).map(([id, loNumbers]) => ({
         id,

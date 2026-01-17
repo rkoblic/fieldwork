@@ -10,7 +10,7 @@
     {
       "id": "obj-1",
       "text": "Apply strategic communication and storytelling techniques to transform donor data into compelling organizational narratives",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "critical-thinking"],
       "traceability": {
         "employerNeed": "A presentation our board can understand and act on",
         "studentGoal": "Learn to translate complex information for different audiences",
@@ -20,7 +20,7 @@
     {
       "id": "obj-2",
       "text": "Conduct qualitative research using professional interview techniques to understand donor perspectives and experiences",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "teamwork"],
       "traceability": {
         "employerNeed": "Stakeholder feedback synthesized into key themes",
         "studentGoal": "Gain experience with client-facing professional work",
@@ -30,7 +30,7 @@
     {
       "id": "obj-3",
       "text": "Create professional-quality visual communications including data visualizations, reports, and presentation materials",
-      "naceCompetency": "technology",
+      "naceCompetency": ["technology", "communication"],
       "traceability": {
         "employerNeed": "Clear analysis of donor retention patterns with supporting data",
         "studentGoal": "Build a portfolio of professional work",
@@ -50,7 +50,7 @@
     {
       "id": "obj-5",
       "text": "Articulate professional growth and develop a portfolio demonstrating career-ready communication competencies",
-      "naceCompetency": "career-self-development",
+      "naceCompetency": ["career-self-development", "teamwork"],
       "traceability": {
         "employerNeed": "Professional development opportunity",
         "studentGoal": "Build a portfolio of professional work",
@@ -60,7 +60,7 @@
     {
       "id": "obj-6",
       "text": "Manage complex projects with multiple stakeholders while maintaining professional relationships and quality standards",
-      "naceCompetency": "professionalism",
+      "naceCompetency": ["professionalism", "teamwork"],
       "traceability": {
         "employerNeed": "Weekly check-ins with Development Director",
         "studentGoal": "Develop project management skills",

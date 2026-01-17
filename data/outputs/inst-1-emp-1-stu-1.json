@@ -10,7 +10,7 @@
     {
       "id": "obj-1",
       "text": "Apply quantitative research methods to analyze donor behavior patterns and retention trends",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "technology"],
       "traceability": {
         "employerNeed": "Clear analysis of donor retention patterns with supporting data",
         "studentGoal": "Understand how organizations use data to make decisions",
@@ -20,7 +20,7 @@
     {
       "id": "obj-2",
       "text": "Translate analytical findings into clear, actionable recommendations for non-technical stakeholders",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "critical-thinking"],
       "traceability": {
         "employerNeed": "Evidence-based recommendations our development team can implement",
         "studentGoal": "Develop professional presentation skills",
@@ -30,7 +30,7 @@
     {
       "id": "obj-3",
       "text": "Design and deliver a professional presentation synthesizing research findings for board-level audiences",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "professionalism"],
       "traceability": {
         "employerNeed": "A presentation our board can understand and act on",
         "studentGoal": "Build confidence communicating with senior professionals",
@@ -40,7 +40,7 @@
     {
       "id": "obj-4",
       "text": "Apply psychological principles of motivation and behavior to understand donor engagement patterns",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "communication"],
       "traceability": {
         "employerNeed": "Identification of 3-5 actionable donor segments",
         "studentGoal": "Explore applications of psychology in business settings",
@@ -50,7 +50,7 @@
     {
       "id": "obj-5",
       "text": "Demonstrate professional workplace behaviors including initiative, time management, and responsive communication",
-      "naceCompetency": "professionalism",
+      "naceCompetency": ["professionalism", "teamwork"],
       "traceability": {
         "employerNeed": "Weekly check-ins with Development Director",
         "studentGoal": "Build confidence communicating with senior professionals",
@@ -60,7 +60,7 @@
     {
       "id": "obj-6",
       "text": "Reflect critically on professional development and articulate growth in career-relevant competencies",
-      "naceCompetency": "career-self-development",
+      "naceCompetency": ["career-self-development", "communication"],
       "traceability": {
         "employerNeed": "Ongoing professional development",
         "studentGoal": "Explore applications of psychology in business settings",

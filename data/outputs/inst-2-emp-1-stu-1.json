@@ -10,7 +10,7 @@
     {
       "id": "obj-1",
       "text": "Apply research methodology and statistical analysis to investigate donor behavior patterns and retention factors",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "technology"],
       "traceability": {
         "employerNeed": "Clear analysis of donor retention patterns with supporting data",
         "studentGoal": "Understand how organizations use data to make decisions",
@@ -20,7 +20,7 @@
     {
       "id": "obj-2",
       "text": "Communicate complex analytical findings to diverse audiences through written and oral presentations",
-      "naceCompetency": "communication",
+      "naceCompetency": ["communication", "professionalism"],
       "traceability": {
         "employerNeed": "A presentation our board can understand and act on",
         "studentGoal": "Develop professional presentation skills",
@@ -30,7 +30,7 @@
     {
       "id": "obj-3",
       "text": "Apply psychological theories of motivation and decision-making to develop donor engagement strategies",
-      "naceCompetency": "critical-thinking",
+      "naceCompetency": ["critical-thinking", "communication"],
       "traceability": {
         "employerNeed": "Evidence-based recommendations our development team can implement",
         "studentGoal": "Explore applications of psychology in business settings",
@@ -50,7 +50,7 @@
     {
       "id": "obj-5",
       "text": "Articulate professional growth and career direction through structured reflection and self-assessment",
-      "naceCompetency": "career-self-development",
+      "naceCompetency": ["career-self-development", "teamwork"],
       "traceability": {
         "employerNeed": "Professional development opportunity",
         "studentGoal": "Explore applications of psychology in business settings",
@@ -60,7 +60,7 @@
     {
       "id": "obj-6",
       "text": "Demonstrate professional workplace behaviors and build effective relationships with organizational stakeholders",
-      "naceCompetency": "professionalism",
+      "naceCompetency": ["professionalism", "teamwork"],
       "traceability": {
         "employerNeed": "Weekly check-ins with Development Director",
         "studentGoal": "Build confidence communicating with senior professionals",
