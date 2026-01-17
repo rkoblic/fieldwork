@@ -67,210 +67,14 @@
     </div>
   </div>
 
-  <!-- Project Deliverables Section -->
-  <div class="card p-6 mb-6">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
-        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold text-slate-900">Project Deliverables</h3>
-        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.deliverables?.description"></p>
-      </div>
-    </div>
-    <div class="space-y-4">
-      <template x-for="del in $store.app.synthesisOutput?.assessment?.deliverables?.items" :key="del.name">
-        <div class="border border-slate-200 rounded-lg p-4">
-          <div class="flex items-start justify-between mb-3">
-            <div>
-              <h4 class="font-medium text-slate-900" x-text="del.name"></h4>
-              <div class="text-sm text-slate-500">
-                Due: Week <span x-text="del.dueWeek"></span> &bull; Weight: <span x-text="del.weight"></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-3">
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Evaluation Criteria</div>
-            <ul class="space-y-1">
-              <template x-for="criterion in del.criteria" :key="criterion">
-                <li class="flex items-start gap-2 text-sm text-slate-600">
-                  <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                  </svg>
-                  <span x-text="criterion"></span>
-                </li>
-              </template>
-            </ul>
-          </div>
-
-          <div>
-            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
-            <div class="flex flex-wrap gap-1">
-              <template x-for="objId in del.objectivesMapped" :key="objId">
-                <span class="badge bg-primary-100 text-primary-700" x-text="objId"></span>
-              </template>
-            </div>
-          </div>
-        </div>
-      </template>
-    </div>
-  </div>
-
-  <!-- Project Presentation Section -->
-  <div class="card p-6 mb-6">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-        </svg>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold text-slate-900">Project Presentation</h3>
-        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.presentation?.description"></p>
-      </div>
-    </div>
-    <div class="border border-slate-200 rounded-lg p-4">
-      <div class="flex items-start justify-between mb-3">
-        <div>
-          <h4 class="font-medium text-slate-900" x-text="$store.app.synthesisOutput?.assessment?.presentation?.name"></h4>
-          <div class="text-sm text-slate-500">
-            Due: Week <span x-text="$store.app.synthesisOutput?.assessment?.presentation?.dueWeek"></span> &bull; Weight: <span x-text="$store.app.synthesisOutput?.assessment?.presentation?.weight"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Evaluation Criteria</div>
-        <ul class="space-y-1">
-          <template x-for="criterion in $store.app.synthesisOutput?.assessment?.presentation?.criteria" :key="criterion">
-            <li class="flex items-start gap-2 text-sm text-slate-600">
-              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-              </svg>
-              <span x-text="criterion"></span>
-            </li>
-          </template>
-        </ul>
-      </div>
-
-      <div>
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
-        <div class="flex flex-wrap gap-1">
-          <template x-for="objId in $store.app.synthesisOutput?.assessment?.presentation?.objectivesMapped" :key="objId">
-            <span class="badge bg-primary-100 text-primary-700" x-text="objId"></span>
-          </template>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Reflections Section -->
-  <div class="card p-6 mb-6">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="w-8 h-8 bg-violet-100 rounded-lg flex items-center justify-center">
-        <svg class="w-4 h-4 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
-        </svg>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold text-slate-900">Reflections</h3>
-        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.reflections?.description"></p>
-      </div>
-    </div>
-    <div class="border border-slate-200 rounded-lg p-4">
-      <div class="flex items-start justify-between mb-3">
-        <div>
-          <h4 class="font-medium text-slate-900">DEAL Reflections</h4>
-          <div class="text-sm text-slate-500">
-            <span x-text="$store.app.synthesisOutput?.assessment?.reflections?.schedule"></span> &bull; Weight: <span x-text="$store.app.synthesisOutput?.assessment?.reflections?.weight"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Evaluation Criteria</div>
-        <ul class="space-y-1">
-          <template x-for="criterion in $store.app.synthesisOutput?.assessment?.reflections?.criteria" :key="criterion">
-            <li class="flex items-start gap-2 text-sm text-slate-600">
-              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-              </svg>
-              <span x-text="criterion"></span>
-            </li>
-          </template>
-        </ul>
-      </div>
-
-      <div>
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
-        <div class="flex flex-wrap gap-1">
-          <template x-for="objId in $store.app.synthesisOutput?.assessment?.reflections?.objectivesMapped" :key="objId">
-            <span class="badge bg-primary-100 text-primary-700" x-text="objId"></span>
-          </template>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Employer Evaluation Section -->
-  <div class="card p-6 mb-6">
-    <div class="flex items-center gap-3 mb-4">
-      <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
-        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold text-slate-900">Employer Evaluation</h3>
-        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.employerEvaluation?.description"></p>
-      </div>
-    </div>
-    <div class="border border-slate-200 rounded-lg p-4">
-      <div class="flex items-start justify-between mb-3">
-        <div>
-          <h4 class="font-medium text-slate-900">Supervisor Assessment</h4>
-          <div class="text-sm text-slate-500">
-            <span x-text="$store.app.synthesisOutput?.assessment?.employerEvaluation?.timing?.join(' & ')"></span> &bull; Weight: <span x-text="$store.app.synthesisOutput?.assessment?.employerEvaluation?.weight"></span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mb-3">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Assessment Areas</div>
-        <ul class="space-y-1">
-          <template x-for="area in $store.app.synthesisOutput?.assessment?.employerEvaluation?.areas" :key="area">
-            <li class="flex items-start gap-2 text-sm text-slate-600">
-              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-              </svg>
-              <span x-text="area"></span>
-            </li>
-          </template>
-        </ul>
-      </div>
-
-      <div>
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
-        <div class="flex flex-wrap gap-1">
-          <template x-for="objId in $store.app.synthesisOutput?.assessment?.employerEvaluation?.objectivesMapped" :key="objId">
-            <span class="badge bg-primary-100 text-primary-700" x-text="objId"></span>
-          </template>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Assessment Matrix -->
-  <div class="card p-6">
-    <h3 class="text-lg font-semibold text-slate-900 mb-4">Objective-to-Assessment Matrix</h3>
+  <!-- Assessment Matrix - Moved up for visibility -->
+  <div class="card p-6 mb-8">
+    <h3 class="text-lg font-semibold text-slate-900 mb-4">Objective-to-Assessment Alignment</h3>
     <div class="overflow-x-auto">
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-slate-200">
-            <th class="text-left py-3 px-4 font-medium text-slate-700">Objective</th>
+            <th class="text-left py-3 px-4 font-medium text-slate-700">Learning Objective</th>
             <template x-for="del in $store.app.synthesisOutput?.assessment?.deliverables?.items" :key="del.name">
               <th class="text-center py-3 px-2 font-medium text-slate-700 text-xs" x-text="del.name.split(' ').slice(0, 2).join(' ')"></th>
             </template>
@@ -281,10 +85,12 @@
         </thead>
         <tbody>
           <template x-for="(obj, index) in $store.app.synthesisOutput?.learningObjectives" :key="obj.id">
-            <tr class="border-b border-slate-100">
+            <tr class="border-b border-slate-100 hover:bg-slate-50">
               <td class="py-3 px-4 text-slate-600">
-                <span class="font-medium" x-text="obj.id"></span>:
-                <span x-text="obj.text.substring(0, 40) + '...'"></span>
+                <div class="flex items-start gap-2">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-primary-100 text-primary-700 flex-shrink-0" x-text="'LO ' + (index + 1)"></span>
+                  <span class="text-sm" x-text="obj.text"></span>
+                </div>
               </td>
               <!-- Deliverables columns -->
               <template x-for="del in $store.app.synthesisOutput?.assessment?.deliverables?.items" :key="del.name">
@@ -336,6 +142,218 @@
           </template>
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- Project Deliverables Section -->
+  <div class="card p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900">Project Deliverables</h3>
+        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.deliverables?.description"></p>
+      </div>
+    </div>
+    <div class="space-y-4">
+      <template x-for="del in $store.app.synthesisOutput?.assessment?.deliverables?.items" :key="del.name">
+        <div class="border border-slate-200 rounded-lg p-4">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <h4 class="font-medium text-slate-900" x-text="del.name"></h4>
+              <div class="text-sm text-slate-500">
+                Due: Week <span x-text="del.dueWeek"></span> &bull; Weight: <span x-text="del.weight"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Evaluation Criteria</div>
+            <ul class="space-y-1">
+              <template x-for="criterion in del.criteria" :key="criterion">
+                <li class="flex items-start gap-2 text-sm text-slate-600">
+                  <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span x-text="criterion"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+
+          <div>
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
+            <div class="flex flex-wrap gap-1">
+              <template x-for="objId in del.objectivesMapped" :key="objId">
+                <span class="relative group">
+                  <span class="badge bg-primary-100 text-primary-700 cursor-help" x-text="'LO ' + $store.app.getObjectiveNumber(objId)"></span>
+                  <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal w-64 z-10 pointer-events-none"
+                        x-text="$store.app.synthesisOutput?.learningObjectives?.find(o => o.id === objId)?.text"></span>
+                </span>
+              </template>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- Project Presentation Section -->
+  <div class="card p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900">Project Presentation</h3>
+        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.presentation?.description"></p>
+      </div>
+    </div>
+    <div class="border border-slate-200 rounded-lg p-4">
+      <div class="flex items-start justify-between mb-3">
+        <div>
+          <h4 class="font-medium text-slate-900" x-text="$store.app.synthesisOutput?.assessment?.presentation?.name"></h4>
+          <div class="text-sm text-slate-500">
+            Due: Week <span x-text="$store.app.synthesisOutput?.assessment?.presentation?.dueWeek"></span> &bull; Weight: <span x-text="$store.app.synthesisOutput?.assessment?.presentation?.weight"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Evaluation Criteria</div>
+        <ul class="space-y-1">
+          <template x-for="criterion in $store.app.synthesisOutput?.assessment?.presentation?.criteria" :key="criterion">
+            <li class="flex items-start gap-2 text-sm text-slate-600">
+              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span x-text="criterion"></span>
+            </li>
+          </template>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
+        <div class="flex flex-wrap gap-1">
+          <template x-for="objId in $store.app.synthesisOutput?.assessment?.presentation?.objectivesMapped" :key="objId">
+            <span class="relative group">
+                  <span class="badge bg-primary-100 text-primary-700 cursor-help" x-text="'LO ' + $store.app.getObjectiveNumber(objId)"></span>
+                  <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal w-64 z-10 pointer-events-none"
+                        x-text="$store.app.synthesisOutput?.learningObjectives?.find(o => o.id === objId)?.text"></span>
+                </span>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflections Section -->
+  <div class="card p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 bg-violet-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900">Reflections</h3>
+        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.reflections?.description"></p>
+      </div>
+    </div>
+    <div class="border border-slate-200 rounded-lg p-4">
+      <div class="flex items-start justify-between mb-3">
+        <div>
+          <h4 class="font-medium text-slate-900">DEAL Reflections</h4>
+          <div class="text-sm text-slate-500">
+            <span x-text="$store.app.synthesisOutput?.assessment?.reflections?.schedule"></span> &bull; Weight: <span x-text="$store.app.synthesisOutput?.assessment?.reflections?.weight"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Evaluation Criteria</div>
+        <ul class="space-y-1">
+          <template x-for="criterion in $store.app.synthesisOutput?.assessment?.reflections?.criteria" :key="criterion">
+            <li class="flex items-start gap-2 text-sm text-slate-600">
+              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span x-text="criterion"></span>
+            </li>
+          </template>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
+        <div class="flex flex-wrap gap-1">
+          <template x-for="objId in $store.app.synthesisOutput?.assessment?.reflections?.objectivesMapped" :key="objId">
+            <span class="relative group">
+                  <span class="badge bg-primary-100 text-primary-700 cursor-help" x-text="'LO ' + $store.app.getObjectiveNumber(objId)"></span>
+                  <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal w-64 z-10 pointer-events-none"
+                        x-text="$store.app.synthesisOutput?.learningObjectives?.find(o => o.id === objId)?.text"></span>
+                </span>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Employer Evaluation Section -->
+  <div class="card p-6 mb-6">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-lg font-semibold text-slate-900">Employer Evaluation</h3>
+        <p class="text-sm text-slate-500" x-text="$store.app.synthesisOutput?.assessment?.employerEvaluation?.description"></p>
+      </div>
+    </div>
+    <div class="border border-slate-200 rounded-lg p-4">
+      <div class="flex items-start justify-between mb-3">
+        <div>
+          <h4 class="font-medium text-slate-900">Supervisor Assessment</h4>
+          <div class="text-sm text-slate-500">
+            <span x-text="$store.app.synthesisOutput?.assessment?.employerEvaluation?.timing?.join(' & ')"></span> &bull; Weight: <span x-text="$store.app.synthesisOutput?.assessment?.employerEvaluation?.weight"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Assessment Areas</div>
+        <ul class="space-y-1">
+          <template x-for="area in $store.app.synthesisOutput?.assessment?.employerEvaluation?.areas" :key="area">
+            <li class="flex items-start gap-2 text-sm text-slate-600">
+              <svg class="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span x-text="area"></span>
+            </li>
+          </template>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Maps to Objectives</div>
+        <div class="flex flex-wrap gap-1">
+          <template x-for="objId in $store.app.synthesisOutput?.assessment?.employerEvaluation?.objectivesMapped" :key="objId">
+            <span class="relative group">
+                  <span class="badge bg-primary-100 text-primary-700 cursor-help" x-text="'LO ' + $store.app.getObjectiveNumber(objId)"></span>
+                  <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-normal w-64 z-10 pointer-events-none"
+                        x-text="$store.app.synthesisOutput?.learningObjectives?.find(o => o.id === objId)?.text"></span>
+                </span>
+          </template>
+        </div>
+      </div>
     </div>
   </div>
 </div>

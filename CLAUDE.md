@@ -110,7 +110,11 @@ Each synthesis output (`data/outputs/*.json`) contains:
     "reflections": { "description", "schedule", "weight", "criteria", "objectivesMapped" },
     "employerEvaluation": { "description", "timing", "weight", "areas", "objectivesMapped" }
   },
-  "sampleWeek": { "weekNumber", "theme", "activities", "dealReflection", ... },
+  "sampleWeek": {
+    "weekNumber", "theme", "subtitle", "totalHours", "objectiveIds", "objectives",
+    "activities": [{ "description", "hours", "kolbPhase", "resources"?: [...] }],
+    "deliverables", "dealReflection", "naceCompetencyFocus"
+  },
   "alignment": { "frameworkElements", "employerSuccessCriteria", "studentLearningGoals", "institutionalOutcomes" }
 }
 ```
@@ -131,3 +135,20 @@ The 4-type assessment model with research-based weighting:
 - **NACE Competencies**: critical-thinking, communication, teamwork, professionalism, technology, leadership, equity-inclusion, career-self-development
 - **FieldWork Competencies**: Purposeful Engagement, Reflective Practice, Integrative Learning, Transfer Capacity
 - **Milestones**: Weekly curriculum deliverables (formerly called "deliverables" in curriculum context)
+- **Checkpoints**: Ungraded weekly milestones displayed in sample week view
+- **Learning Resources**: Curated materials for conceptualization activities (articles, videos, AI-generated personalized insights)
+
+## Sample Week Features
+The sample week view includes:
+- **Header**: Week number, theme, total hours, checkpoint count, graded reflection indicator
+- **Course LO Mapping**: Badges showing which course learning objectives the week addresses (sorted numerically)
+- **Activities**: Categorized by Kolb phase with time allocations
+- **Learning Resources Modal**: For "Thinking" activities, displays personalized insights first, followed by articles and videos
+- **Milestones**: Ungraded checkpoints (DEAL reflections filtered out as they're shown separately)
+- **DEAL Reflection Prompts**: Graded weekly reflection with Describe/Examine/Articulate Learning structure
+
+## Assessment Tab Features
+- **Weight Cards**: Visual display of the 4-component assessment weights
+- **Alignment Matrix**: Shows which learning objectives map to which assessment components (moved prominently under weight cards)
+- **LO Badges**: Display as "LO 1", "LO 2", etc. with hover tooltips showing full objective text
+- **Component Details**: Evaluation criteria and objective mappings for each assessment type

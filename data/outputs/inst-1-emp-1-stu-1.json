@@ -703,7 +703,7 @@
     "weekNumber": 4,
     "theme": "Pattern Recognition and Insight Development",
     "subtitle": "Moving from data to meaningful insights",
-    "totalHours": 6,
+    "totalHours": 9,
     "objectiveIds": ["obj-1", "obj-4", "obj-2"],
     "objectives": [
       "Identify significant patterns in donor retention data",
@@ -713,17 +713,17 @@
     "activities": [
       {
         "description": "Complete second analysis iteration with refined segmentation approach",
-        "hours": 3,
+        "hours": 4.5,
         "kolbPhase": "experience"
       },
       {
         "description": "Weekly mentor check-in: present initial patterns, gather practitioner feedback",
-        "hours": 0.5,
+        "hours": 1,
         "kolbPhase": "reflection"
       },
       {
         "description": "Read: From Data to Decisions - Building compelling analytical arguments",
-        "hours": 0.75,
+        "hours": 1.5,
         "kolbPhase": "conceptualization",
         "resources": [
           {
@@ -757,7 +757,7 @@
       },
       {
         "description": "Draft outline of key findings for interim report",
-        "hours": 1.75,
+        "hours": 2,
         "kolbPhase": "experimentation"
       }
     ],
