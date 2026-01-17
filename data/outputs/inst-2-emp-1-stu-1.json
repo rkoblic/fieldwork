@@ -894,9 +894,9 @@
       "Retention pattern analysis report"
     ],
     "dealReflection": {
-      "describe": "What retention patterns did you identify across segments? What distinguishes donors at risk of lapsing?",
-      "examine": "How do you balance statistical significance with practical significance in organizational contexts? What ethical considerations arise in predictive modeling of donor behavior?",
-      "articulate": "What have you learned about translating statistical analysis into actionable organizational insights? How does this connect to applied research careers?"
+      "describe": "Anna, what retention patterns did you identify? What distinguishes at-risk donors?",
+      "examine": "How do you balance statistical significance with practical significance? What are the ethical considerations?",
+      "articulate": "What have you learned about translating analysis into actionable insights?"
     },
     "naceCompetencyFocus": ["critical-thinking", "equity-inclusion"]
   },
