@@ -92,25 +92,25 @@
       "phases": [
         {
           "id": "experience",
-          "name": "Concrete Experience",
+          "name": "Experiencing",
           "description": "Doing the actual work",
           "color": "blue"
         },
         {
           "id": "reflection",
-          "name": "Reflective Observation",
+          "name": "Reflecting",
           "description": "Processing what happened",
           "color": "green"
         },
         {
           "id": "conceptualization",
-          "name": "Abstract Conceptualization",
+          "name": "Thinking",
           "description": "Connecting to theory/concepts",
           "color": "purple"
         },
         {
           "id": "experimentation",
-          "name": "Active Experimentation",
+          "name": "Acting",
           "description": "Applying insights to next iteration",
           "color": "amber"
         }
