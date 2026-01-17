@@ -834,6 +834,7 @@
     "theme": "Visual Storytelling Development",
     "subtitle": "Creating compelling data visualizations and visual narratives",
     "totalHours": 8,
+    "objectiveIds": ["obj-3", "obj-1", "obj-4"],
     "objectives": [
       "Create professional-quality data visualizations",
       "Develop cohesive visual narrative",
@@ -853,7 +854,36 @@
       {
         "description": "Read: Design principles for impact communication and nonprofit contexts",
         "hours": 1.5,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "Designing for Social Impact: Visual Communication in the Nonprofit Sector",
+            "source": "AIGA Eye on Design",
+            "url": "https://eyeondesign.aiga.org/design-for-social-impact/",
+            "relevance": "Explores how design choices can amplify nonprofit messaging and drive action",
+            "personalizationNote": "Ben, this connects your visual design training to the unique requirements of mission-driven communication."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "Data Visualization Best Practices",
+            "source": "Tableau",
+            "url": "https://www.youtube.com/watch?v=8fJxfzHBYw0",
+            "duration": "14 min",
+            "relevance": "Professional techniques for creating clear, accurate, and compelling data visualizations",
+            "personalizationNote": "This shows how to elevate your design skills into professional-quality data communication that boards and donors can act on."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Inclusive Visual Communication for Diverse Donor Audiences",
+            "relevance": "Personalized guidance on creating visuals that engage diverse stakeholders equitably",
+            "personalizationNote": "Created specifically for your project based on your coursework in Visual Communication and Digital Media Production",
+            "content": "As you develop your visual portfolio this week, consider how your design choices affect different audiences:\n\n**Accessibility in Data Visualization**\nApproximately 8% of men have some form of color vision deficiency. Use color as one layer of meaning, not the only layer. Add patterns, labels, or icons to ensure your visualizations communicate clearly to everyone.\n\n**Cultural Considerations**\nColor associations vary across cultures. While red often signals 'danger' or 'negative' in Western contexts, it represents prosperity in many Asian cultures. Consider the Foundation's donor demographics when making color choices.\n\n**Visual Complexity and Audiences**\nBoard members may have varying data literacy. Design visualizations with a clear primary message visible at first glance, with supporting detail available for those who want to dig deeper. The '5-second test': can someone understand the main point within 5 seconds?\n\n**Building Your Portfolio**\nDocument your design decisions and rationale. Future employers in strategic communication want to see your thinking process, not just the final product. Consider creating a 'design brief' for each major visualization explaining the problem, audience, and choices you made.\n\n**Questions for Your Design**\n- How can you test your visualizations with different audience members before finalizing?\n- What accessibility tools can you use to check color contrast and readability?\n- How will these pieces represent your professional capabilities to future employers?"
+          }
+        ]
       },
       {
         "description": "Iterate on visual designs based on feedback and principles",
@@ -869,10 +899,7 @@
       "examine": "How do visual design principles from your coursework enhance data communication in nonprofit contexts? What makes visualizations both beautiful and effective?",
       "articulate": "What have you learned about visual storytelling with data? How does this strengthen your professional portfolio and communication toolkit?"
     },
-    "naceCompetencyFocus": {
-      "primary": "technology",
-      "secondary": "communication"
-    }
+    "naceCompetencyFocus": ["technology", "communication"]
   },
   "alignment": {
     "frameworkElements": {

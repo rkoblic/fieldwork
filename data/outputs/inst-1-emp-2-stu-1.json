@@ -716,6 +716,7 @@
     "theme": "Stakeholder Interviews and Process Documentation",
     "subtitle": "Gathering diverse perspectives on process challenges",
     "totalHours": 6,
+    "objectiveIds": ["obj-2", "obj-1", "obj-3"],
     "objectives": [
       "Complete stakeholder interviews across organizational roles",
       "Finalize comprehensive current state documentation",
@@ -735,7 +736,36 @@
       {
         "description": "Read: Thematic analysis and qualitative data synthesis techniques",
         "hours": 0.75,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "How to Do Thematic Analysis: A Step-by-Step Guide",
+            "source": "Scribbr",
+            "url": "https://www.scribbr.com/methodology/thematic-analysis/",
+            "relevance": "Systematic approach to coding and analyzing qualitative interview data",
+            "personalizationNote": "Anna, this provides a structured framework that complements your Research Methods training for analyzing stakeholder interviews."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "Qualitative Analysis: Coding and Categorizing Data",
+            "source": "NVivo",
+            "url": "https://www.youtube.com/watch?v=DRL4PF2u9XA",
+            "duration": "15 min",
+            "relevance": "Practical demonstration of coding interview data for organizational research",
+            "personalizationNote": "This shows how to apply the qualitative methods from your coursework to real consulting data."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Organizational Psychology Lenses for Process Analysis",
+            "relevance": "Personalized framework connecting your psychology background to stakeholder interview analysis",
+            "personalizationNote": "Created specifically for your project based on your coursework in Organizational Behavior and Research Methods",
+            "content": "As you analyze stakeholder interview data this week, consider how organizational psychology concepts illuminate the patterns you're finding:\n\n**Role Theory and Perspective Variation**\nDifferent stakeholders experience the same process differently based on their organizational role. Look for how role expectations, status differences, and functional silos shape how people describe pain points. The same bottleneck might be invisible to one role and critical to another.\n\n**Attribution Patterns**\nNotice how stakeholders explain process problems. Do they attribute issues to individual behavior, systemic factors, or external constraints? Attribution patterns reveal underlying beliefs about change and responsibility that will affect how recommendations are received.\n\n**Psychological Safety Signals**\nPay attention to what stakeholders seem comfortable sharing versus hesitant to discuss. These signals indicate the organizational culture around feedback and change, which will be crucial for your implementation recommendations.\n\n**Questions for Your Analysis**\n- Where do stakeholder narratives converge, and where do they diverge? What explains the differences?\n- What emotions accompany different parts of the process (frustration, confusion, resignation)?\n- What have stakeholders already tried to improve the process, and why didn't it work?"
+          }
+        ]
       },
       {
         "description": "Complete process map and begin coding interview data for themes",
@@ -752,10 +782,7 @@
       "examine": "How do individual perspectives vary based on organizational role and position? What concepts from Organizational Behavior help explain these variations?",
       "articulate": "What have you learned about synthesizing diverse stakeholder perspectives? How does qualitative research in organizations differ from academic research contexts?"
     },
-    "naceCompetencyFocus": {
-      "primary": "communication",
-      "secondary": "critical-thinking"
-    }
+    "naceCompetencyFocus": ["communication", "critical-thinking"]
   },
   "alignment": {
     "frameworkElements": {

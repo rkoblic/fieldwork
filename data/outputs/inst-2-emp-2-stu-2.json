@@ -849,6 +849,7 @@
     "theme": "Recommendation Development and Design",
     "subtitle": "Creating compelling visual recommendations",
     "totalHours": 8,
+    "objectiveIds": ["obj-3", "obj-1", "obj-4"],
     "objectives": [
       "Develop actionable recommendations with strong visual support",
       "Create portfolio-quality communication materials",
@@ -868,7 +869,36 @@
       {
         "description": "Read: Persuasive design principles and inclusive visual communication",
         "hours": 1.5,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "Designing Inclusive Data Visualizations",
+            "source": "UX Collective",
+            "url": "https://uxdesign.cc/designing-inclusive-data-visualizations-2ae79d0e5d24",
+            "relevance": "Best practices for creating visuals that are accessible and equitable for diverse audiences",
+            "personalizationNote": "Ben, this addresses your equity-inclusion learning objective while building your portfolio of inclusive design work."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "Persuasion Through Design: Visual Communication That Drives Action",
+            "source": "Presentation Guild",
+            "url": "https://www.youtube.com/watch?v=MjPpxGX2GF8",
+            "duration": "22 min",
+            "relevance": "Techniques for creating recommendations that stakeholders will actually implement",
+            "personalizationNote": "This shows how to use your visual communication skills to drive organizational change, not just document findings."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Change Communication Through Visual Design",
+            "relevance": "Personalized framework for creating recommendation materials that drive organizational adoption",
+            "personalizationNote": "Created specifically for your project based on your coursework in Strategic Communication and Visual Communication",
+            "content": "As you develop your recommendation visuals this week, consider how design supports change adoption:\n\n**The Visualization of Change**\nEffective recommendation visuals don't just show what to do-they show the transformation from current state to future state. Use visual contrast (before/after, problem/solution) to make the value proposition immediate and compelling.\n\n**Cognitive Load in Recommendations**\nLeadership has limited attention. Design your recommendations with progressive disclosure: the core message visible immediately, supporting details available on demand. Consider a 'pyramid' structure with the key recommendation at the top.\n\n**Inclusive Design as Portfolio Differentiator**\nEmployers increasingly value inclusive design skills. Document how you considered accessibility (color contrast, alt text, multiple formats) and equity (whose voices are represented, who might be affected by recommendations). This demonstrates professional maturity.\n\n**Building Buy-In Through Visuals**\nStakeholders who see themselves in your visuals are more likely to support recommendations. Include quotes from interviews, represent diverse employee perspectives, and show how recommendations address specific pain points different groups identified.\n\n**Questions for Your Design**\n- How can your visuals show the 'why' behind recommendations, not just the 'what'?\n- What stakeholder quotes or data points would make recommendations feel grounded in real experience?\n- How will you test these visuals with different audience members before final presentation?\n- What makes these pieces portfolio-worthy? How do they demonstrate your unique value as a communicator?"
+          }
+        ]
       },
       {
         "description": "Refine designs and recommendation framing based on feedback",
@@ -884,10 +914,7 @@
       "examine": "How does visual design support persuasion and understanding? What principles from Visual Communication are most applicable?",
       "articulate": "What have you learned about visual recommendation development? How does this strengthen your professional portfolio and communication toolkit?"
     },
-    "naceCompetencyFocus": {
-      "primary": "technology",
-      "secondary": "communication"
-    }
+    "naceCompetencyFocus": ["technology", "communication"]
   },
   "alignment": {
     "frameworkElements": {

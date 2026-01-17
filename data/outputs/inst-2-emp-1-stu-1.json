@@ -833,6 +833,7 @@
     "theme": "Deep Pattern Analysis",
     "subtitle": "Identifying retention patterns and risk factors",
     "totalHours": 8,
+    "objectiveIds": ["obj-1", "obj-3", "obj-4"],
     "objectives": [
       "Analyze retention patterns by donor segment",
       "Identify key risk factors for donor attrition",
@@ -852,7 +853,36 @@
       {
         "description": "Read: Predictive analytics in nonprofit contexts and ethical considerations",
         "hours": 1.5,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "Using Predictive Analytics in Fundraising: Ethical Considerations",
+            "source": "Association of Fundraising Professionals",
+            "url": "https://afpglobal.org/using-predictive-analytics-fundraising",
+            "relevance": "Explores the ethical dimensions of using data to predict donor behavior",
+            "personalizationNote": "Anna, this addresses the equity considerations in your learning objectives-ensuring predictive models don't inadvertently exclude or disadvantage certain donor groups."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "Introduction to Predictive Analytics for Nonprofits",
+            "source": "Bloomerang",
+            "url": "https://www.youtube.com/watch?v=V_mHx_e3q7w",
+            "duration": "20 min",
+            "relevance": "Overview of how nonprofits use predictive models for donor retention",
+            "personalizationNote": "This shows how statistical methods from your Research Methods course translate to real nonprofit decision-making."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Psychology of Donor Retention: From Risk Factors to Interventions",
+            "relevance": "Personalized synthesis connecting your psychology background to donor attrition prediction",
+            "personalizationNote": "Created specifically for your project based on your coursework in Psychology and Research Methods",
+            "content": "Your psychology training provides valuable frameworks for understanding donor retention patterns. Here's how to apply them:\n\n**Behavioral Predictors and Warning Signs**\nDonor attrition rarely happens suddenly. Look for behavioral precursors: declining engagement frequency, reduced communication opens, longer gaps between gifts. These behavioral indicators often have stronger predictive power than demographic factors alone.\n\n**Commitment and Consistency Principles**\nDonors who've made public commitments (joining giving circles, attending events) show higher retention. In your analysis, look for engagement depth markers that indicate psychological commitment beyond just transaction frequency.\n\n**Loss Aversion in Retention**\nDonors may be more motivated to prevent the loss of their 'donor status' or recognition than to gain new benefits. Consider how the Foundation communicates with at-risk donors-are they framing messages around what donors might lose?\n\n**Equity Lens in Prediction**\nAs you develop risk indicators, critically examine whether your model might disadvantage certain donor populations. Younger donors or donors from different cultural backgrounds may have different engagement patterns that aren't inherently 'at-risk.'\n\n**Questions for Your Analysis**\n- What engagement behaviors are most predictive of retention vs. lapsing?\n- Are there donor segments where your risk model might be less accurate?\n- How can the Foundation intervene early without making donors feel surveilled?"
+          }
+        ]
       },
       {
         "description": "Develop retention risk indicators and early warning signals",
@@ -868,10 +898,7 @@
       "examine": "How do you balance statistical significance with practical significance in organizational contexts? What ethical considerations arise in predictive modeling of donor behavior?",
       "articulate": "What have you learned about translating statistical analysis into actionable organizational insights? How does this connect to applied research careers?"
     },
-    "naceCompetencyFocus": {
-      "primary": "critical-thinking",
-      "secondary": "equity-inclusion"
-    }
+    "naceCompetencyFocus": ["critical-thinking", "equity-inclusion"]
   },
   "alignment": {
     "frameworkElements": {

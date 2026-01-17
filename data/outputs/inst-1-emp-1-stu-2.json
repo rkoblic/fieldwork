@@ -705,6 +705,7 @@
     "theme": "Visual Storytelling Development",
     "subtitle": "Creating compelling data visualizations",
     "totalHours": 6,
+    "objectiveIds": ["obj-3", "obj-4", "obj-1"],
     "objectives": [
       "Create compelling data visualizations that communicate clearly",
       "Develop narrative framework connecting data to organizational mission",
@@ -724,7 +725,36 @@
       {
         "description": "Read: Visual design principles for effective data communication",
         "hours": 0.75,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "Data Visualization for Nonprofits: A Guide to Telling Your Story",
+            "source": "Nonprofit Quarterly",
+            "url": "https://nonprofitquarterly.org/data-visualization-for-nonprofits/",
+            "relevance": "Practical guidance on creating data visualizations that resonate with nonprofit stakeholders",
+            "personalizationNote": "Ben, this connects your visual communication skills to the specific context of nonprofit data storytelling."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "The Art of Data Storytelling",
+            "source": "Google",
+            "url": "https://www.youtube.com/watch?v=zBYX1bqxJog",
+            "duration": "12 min",
+            "relevance": "Learn how to craft narratives that make data memorable and actionable",
+            "personalizationNote": "This builds on your digital media background to help you create visuals that drive organizational decisions."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Visual Communication Principles for Donor Data",
+            "relevance": "Personalized framework connecting your communications training to nonprofit visual storytelling",
+            "personalizationNote": "Created specifically for your project based on your coursework in Visual Communication and Digital Media Production",
+            "content": "As you develop your data visualizations this week, draw on key principles from your Visual Communication coursework:\n\n**Hierarchy and Attention**\nYour training in visual hierarchy directly applies here. Donor data often has multiple dimensions (giving amount, frequency, tenure, engagement). Use visual hierarchy to guide the board's attention to the most important patterns first, then layer in supporting details.\n\n**Color Theory for Impact**\nConsider how color choices convey meaning in nonprofit contexts. Warm colors (red, orange) often signify urgency or risk (at-risk donors), while cool colors (blue, green) suggest stability or growth (loyal donors). Be intentional about color associations.\n\n**Visual Narrative Arc**\nYour digital storytelling background is a major asset. Structure your visualizations like a story: introduce the context (donor landscape), build tension (retention challenges), and resolve with insight (actionable segments). Each slide should advance this narrative.\n\n**Questions to Guide Your Design**\n- What's the single most important insight each visualization should convey?\n- How can you use before/after comparisons to show potential impact?\n- What visual metaphors might make abstract donor segments tangible for board members?"
+          }
+        ]
       },
       {
         "description": "Iterate on visualizations incorporating feedback and design principles",
@@ -741,10 +771,7 @@
       "examine": "How do you balance aesthetic appeal with data accuracy and clarity? What design principles from Visual Communication are most applicable here?",
       "articulate": "What have you learned about visual storytelling with data? How has this experience expanded your professional portfolio and skill set?"
     },
-    "naceCompetencyFocus": {
-      "primary": "communication",
-      "secondary": "technology"
-    }
+    "naceCompetencyFocus": ["communication", "technology"]
   },
   "alignment": {
     "frameworkElements": {

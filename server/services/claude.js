@@ -46,6 +46,7 @@ OUTPUT REQUIREMENTS:
 - Design an assessment strategy with specific deliverables and criteria
 - Provide a detailed sample week (Week 4 or appropriate mid-term week)
 - Create an alignment crosswalk showing connections to all four inputs
+- For sampleWeek: include objectiveIds array mapping to main learningObjectives, naceCompetencyFocus as array, and add 2-3 curated resources to the conceptualization activity (types: article, video, ai-generated with personalized content for the student)
 
 Respond ONLY with valid JSON matching this structure (no markdown, no explanation):
 {
@@ -53,7 +54,7 @@ Respond ONLY with valid JSON matching this structure (no markdown, no explanatio
   "learningObjectives": [ { "id": "obj-N", "text": "string", "naceCompetency": "competency-id", "traceability": { "employerNeed": "string", "studentGoal": "string", "institutionalOutcome": "string" } } ],
   "curriculum": { "weeks": [ { "weekNumber": number, "theme": "string", "objectives": ["string"], "activities": [ { "description": "string", "hours": number, "kolbPhase": "experience|reflection|conceptualization|experimentation" } ], "deliverables": ["string"], "dealReflection": { "describe": "string", "examine": "string", "articulate": "string" }, "naceCompetencyFocus": ["competency-id"] } ] },
   "assessment": { "overview": "string", "deliverables": [ { "name": "string", "dueWeek": number, "weight": "string", "criteria": ["string"], "objectivesMapped": ["obj-N"] } ], "reflections": { "schedule": "string", "weight": "string", "criteria": ["string"] }, "employerEvaluation": { "timing": ["string"], "weight": "string", "areas": ["string"] } },
-  "sampleWeek": { "weekNumber": number, "theme": "string", "subtitle": "string", "totalHours": number, "objectives": ["string"], "activities": [ { "description": "string", "hours": number, "kolbPhase": "string" } ], "deliverables": ["string"], "dealReflection": { "describe": "string", "examine": "string", "articulate": "string" }, "naceCompetencyFocus": { "primary": "competency-id", "secondary": "competency-id" } },
+  "sampleWeek": { "weekNumber": number, "theme": "string", "subtitle": "string", "totalHours": number, "objectiveIds": ["obj-N"], "objectives": ["string"], "activities": [ { "description": "string", "hours": number, "kolbPhase": "string", "resources": [ { "id": "res-N", "type": "article|video|ai-generated", "title": "string", "source": "string", "url": "string (for article/video)", "duration": "string (for video)", "content": "string (for ai-generated)", "relevance": "string", "personalizationNote": "string" } ] } ], "deliverables": ["string"], "dealReflection": { "describe": "string", "examine": "string", "articulate": "string" }, "naceCompetencyFocus": ["competency-id"] },
   "alignment": { "frameworkElements": { "kolbPhases": { "experience": "string", "reflection": "string", "conceptualization": "string", "experimentation": "string" }, "dealReflections": "string", "competencies": "string" }, "employerSuccessCriteria": [ { "criterion": "string", "addressedBy": ["string"] } ], "studentLearningGoals": [ { "goal": "string", "addressedBy": ["string"] } ], "institutionalOutcomes": [ { "outcome": "string", "evidence": ["string"] } ] }
 }`;
 }

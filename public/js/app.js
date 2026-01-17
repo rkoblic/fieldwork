@@ -208,6 +208,19 @@ document.addEventListener('alpine:init', () => {
       if (!id || !this.framework?.learningStrategies?.kolbCycle?.phases) return id;
       const phase = this.framework.learningStrategies.kolbCycle.phases.find(p => p.id === id);
       return phase ? phase.name : id;
+    },
+
+    // Helper to get learning objective by ID
+    getLearningObjective(id) {
+      if (!id || !this.synthesisOutput?.learningObjectives) return null;
+      return this.synthesisOutput.learningObjectives.find(obj => obj.id === id);
+    },
+
+    // Helper to get 1-based objective number by ID
+    getObjectiveNumber(id) {
+      if (!id || !this.synthesisOutput?.learningObjectives) return null;
+      const index = this.synthesisOutput.learningObjectives.findIndex(obj => obj.id === id);
+      return index >= 0 ? index + 1 : null;
     }
   });
 });

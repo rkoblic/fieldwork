@@ -846,6 +846,7 @@
     "theme": "Thematic Analysis",
     "subtitle": "Systematically analyzing stakeholder perspectives",
     "totalHours": 8,
+    "objectiveIds": ["obj-2", "obj-1", "obj-3"],
     "objectives": [
       "Conduct systematic thematic analysis of interview data",
       "Identify key themes connecting stakeholder experiences",
@@ -865,7 +866,36 @@
       {
         "description": "Read: Thematic analysis methods and organizational psychology applications",
         "hours": 1.5,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "Braun and Clarke's Six-Phase Framework for Thematic Analysis",
+            "source": "University of Auckland",
+            "url": "https://www.thematicanalysis.net/",
+            "relevance": "The foundational approach to rigorous thematic analysis in qualitative research",
+            "personalizationNote": "Anna, this provides the methodological rigor that bridges your Research Methods training with applied consulting work."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "Coding Qualitative Data: A Practical Guide",
+            "source": "Delve",
+            "url": "https://www.youtube.com/watch?v=phXssQBCDls",
+            "duration": "18 min",
+            "relevance": "Step-by-step demonstration of coding interview data and developing themes",
+            "personalizationNote": "This shows how to apply systematic qualitative methods to real organizational data."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Organizational Psychology Frameworks for Process Analysis",
+            "relevance": "Personalized framework connecting your psychology background to stakeholder experience analysis",
+            "personalizationNote": "Created specifically for your project based on your coursework in Organizational Behavior and Research Methods",
+            "content": "As you conduct thematic analysis this week, use organizational psychology frameworks to deepen your interpretation:\n\n**Job Demands-Resources Model**\nLook at the onboarding process through this lens: What demands does it place on new employees (cognitive load, time pressure, uncertainty)? What resources does it provide (support, information, autonomy)? An imbalance predicts stress and early turnover.\n\n**Psychological Contract Theory**\nNew employees arrive with implicit expectations about what the organization will provide. Your interview themes may reveal where these psychological contracts are being violated during onboarding-broken promises, unmet expectations, or miscommunication about role scope.\n\n**Socialization Tactics**\nClassic research distinguishes between 'serial' socialization (learning from experienced mentors) and 'disjunctive' (figuring it out alone), 'investiture' (affirming newcomer identity) and 'divestiture' (breaking down to rebuild). Which tactics does Horizon use, and how do stakeholders experience them?\n\n**Questions for Your Analysis**\n- What themes reflect systemic organizational issues versus individual experiences?\n- Where do new employee experiences diverge from what managers intended?\n- What emotional undertones accompany different themes (frustration, confusion, alienation, resilience)?\n- How might equity considerations shape different employees' onboarding experiences?"
+          }
+        ]
       },
       {
         "description": "Develop comprehensive theme framework with psychological grounding",
@@ -881,10 +911,7 @@
       "examine": "How do organizational psychology theories help explain the stakeholder experiences you documented? What patterns reflect broader organizational dynamics?",
       "articulate": "What have you learned about connecting qualitative data to theoretical frameworks? How does this strengthen your applied research skills?"
     },
-    "naceCompetencyFocus": {
-      "primary": "critical-thinking",
-      "secondary": "communication"
-    }
+    "naceCompetencyFocus": ["critical-thinking", "communication"]
   },
   "alignment": {
     "frameworkElements": {

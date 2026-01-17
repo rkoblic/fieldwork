@@ -718,6 +718,7 @@
     "theme": "Completing Interviews and Process Documentation",
     "subtitle": "Synthesizing diverse perspectives into visual narrative",
     "totalHours": 6,
+    "objectiveIds": ["obj-2", "obj-3", "obj-1"],
     "objectives": [
       "Complete all stakeholder interviews using professional techniques",
       "Finalize current state visual documentation",
@@ -737,7 +738,36 @@
       {
         "description": "Read: Thematic analysis and storytelling with organizational data",
         "hours": 0.75,
-        "kolbPhase": "conceptualization"
+        "kolbPhase": "conceptualization",
+        "resources": [
+          {
+            "id": "res-1",
+            "type": "article",
+            "title": "How to Create Process Maps That Actually Get Used",
+            "source": "Harvard Business Review",
+            "url": "https://hbr.org/2019/06/how-to-create-process-maps-that-actually-get-used",
+            "relevance": "Practical guidance on creating visual process documentation that drives organizational action",
+            "personalizationNote": "Ben, this connects your visual design skills to creating process documentation that stakeholders will actually reference and use."
+          },
+          {
+            "id": "res-2",
+            "type": "video",
+            "title": "Visual Thinking for Business Communication",
+            "source": "LinkedIn Learning",
+            "url": "https://www.youtube.com/watch?v=rZ-5hfeDrT0",
+            "duration": "10 min",
+            "relevance": "Techniques for translating complex information into clear visual formats",
+            "personalizationNote": "This builds on your Visual Communication coursework to help you create process maps that tell a compelling story."
+          },
+          {
+            "id": "res-3",
+            "type": "ai-generated",
+            "title": "Visual Storytelling for Process Improvement",
+            "relevance": "Personalized framework connecting your communications training to process documentation",
+            "personalizationNote": "Created specifically for your project based on your coursework in Strategic Communication and Visual Communication",
+            "content": "Your digital media and visual communication background gives you a unique advantage in this consulting project. Here's how to leverage those skills:\n\n**Process as Story**\nThink of the onboarding process as a user journey with a beginning, middle, and end. Each stakeholder's experience is a character arc within that journey. Your process map should reveal where the narrative breaks down-where confusion, frustration, or abandonment occur.\n\n**Visual Hierarchy in Process Maps**\nNot all steps are equally important. Use visual weight (size, color, position) to distinguish critical decision points from routine steps. Highlight the pain points your stakeholders identified using visual emphasis techniques.\n\n**The Power of Before/After**\nYour eventual recommendations will be more compelling if the current state documentation clearly shows what's broken. Design your visuals now with an eye toward the transformation story you'll tell later.\n\n**Questions for Your Design**\n- How can you show the emotional experience of the process, not just the steps?\n- What visual metaphors might make abstract problems tangible (bottlenecks, loops, dead ends)?\n- How can your process map serve both as documentation and as a persuasive tool for change?"
+          }
+        ]
       },
       {
         "description": "Finalize process map design and begin coding interviews for themes",
@@ -754,10 +784,7 @@
       "examine": "How do you balance individual stories with systematic analysis? What narrative and visual techniques help communicate your findings most effectively?",
       "articulate": "What have you learned about combining visual and narrative communication in professional contexts? How does this add to your professional toolkit and portfolio?"
     },
-    "naceCompetencyFocus": {
-      "primary": "communication",
-      "secondary": "technology"
-    }
+    "naceCompetencyFocus": ["communication", "technology"]
   },
   "alignment": {
     "frameworkElements": {
