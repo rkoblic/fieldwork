@@ -621,7 +621,84 @@
           "objectivesMapped": [
             "obj-1",
             "obj-3"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "letter-grade",
+            "performanceLevels": [
+              { "id": "exemplary", "label": "Exemplary", "grade": "A", "points": 4 },
+              { "id": "proficient", "label": "Proficient", "grade": "B", "points": 3 },
+              { "id": "developing", "label": "Developing", "grade": "C", "points": 2 },
+              { "id": "beginning", "label": "Beginning", "grade": "D/F", "points": "0-1" }
+            ],
+            "criteria": [
+              {
+                "name": "Visual Communication",
+                "weight": "25%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Process visualization is exceptionally clear and innovative; complex workflow immediately understandable through masterful visual design",
+                  "proficient": "Process is clearly communicated visually; design choices support understanding",
+                  "developing": "Process is visualized but could be clearer; some design choices confuse rather than clarify",
+                  "beginning": "Visual communication is poor; process difficult to understand from the visualization"
+                }
+              },
+              {
+                "name": "Design Quality",
+                "weight": "20%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exemplary": "Demonstrates exceptional design skills; typography, color, layout, and visual hierarchy work together beautifully; portfolio showcase quality",
+                  "proficient": "Design is professional and polished; good use of design principles",
+                  "developing": "Design is adequate but lacks polish; inconsistencies in visual treatment",
+                  "beginning": "Design is unprofessional or distracting; poor use of design principles"
+                }
+              },
+              {
+                "name": "Process Accuracy",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Process documented with exceptional accuracy; captures nuances and variations; validated thoroughly by stakeholders",
+                  "proficient": "Process accurately represented; stakeholder validation confirms correctness",
+                  "developing": "Generally accurate but some errors or omissions; limited validation",
+                  "beginning": "Significant accuracy issues; process misrepresented or not validated"
+                }
+              },
+              {
+                "name": "Completeness",
+                "weight": "15%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Comprehensively documents all process elements including roles, handoffs, decision points, and exceptions",
+                  "proficient": "Documents all major process elements; complete picture of workflow",
+                  "developing": "Most elements present but some gaps; incomplete documentation",
+                  "beginning": "Missing major process elements; incomplete understanding evident"
+                }
+              },
+              {
+                "name": "Stakeholder Engagement",
+                "weight": "10%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exemplary": "Demonstrates exceptional stakeholder engagement; multiple perspectives incorporated and validation process well-documented",
+                  "proficient": "Good stakeholder engagement; validation process evident",
+                  "developing": "Some stakeholder input but engagement could be deeper",
+                  "beginning": "Minimal stakeholder engagement; validation lacking"
+                }
+              },
+              {
+                "name": "Portfolio Readiness",
+                "weight": "10%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exemplary": "Immediately portfolio-ready; demonstrates professional capabilities that would impress potential employers",
+                  "proficient": "Could be included in portfolio with minor adjustments; shows professional competence",
+                  "developing": "Would need significant revision before portfolio inclusion",
+                  "beginning": "Not suitable for professional portfolio in current state"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Stakeholder Interview Summary",

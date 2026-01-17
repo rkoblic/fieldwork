@@ -751,7 +751,84 @@
             "obj-1",
             "obj-2",
             "obj-4"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "pass-fail",
+            "performanceLevels": [
+              { "id": "exceeds", "label": "Exceeds Standard", "status": "Pass (Distinction)" },
+              { "id": "meets", "label": "Meets Standard", "status": "Pass" },
+              { "id": "approaching", "label": "Approaching Standard", "status": "Conditional" },
+              { "id": "not-yet", "label": "Not Yet Meeting", "status": "Not Pass" }
+            ],
+            "criteria": [
+              {
+                "name": "Research Methodology",
+                "weight": "15%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Methodology demonstrates sophisticated understanding; analytical choices are innovative, well-justified, and show mastery of research design",
+                  "meets": "Methodology is sound and appropriate; analytical choices are reasonable and adequately explained",
+                  "approaching": "Methodology present but needs strengthening; some gaps in justification or appropriateness",
+                  "not-yet": "Methodology unclear or inappropriate; requires significant revision before meeting competency standard"
+                }
+              },
+              {
+                "name": "Data Quality & Evidence",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Evidence selection is strategic and compelling; data organization demonstrates exceptional analytical thinking",
+                  "meets": "Findings appropriately supported by data; evidence is relevant and well-organized",
+                  "approaching": "Evidence present but could be stronger; some findings need better data support",
+                  "not-yet": "Evidence insufficient or inappropriate; major gaps in data support require revision"
+                }
+              },
+              {
+                "name": "Analysis & Interpretation",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1", "obj-4"],
+                "descriptors": {
+                  "exceeds": "Analysis reveals sophisticated insights; interpretations demonstrate deep understanding and connect theory to practice exceptionally well",
+                  "meets": "Analysis identifies meaningful patterns; interpretations are appropriate and connect to relevant concepts",
+                  "approaching": "Analysis present but interpretations need development; connections to theory could be stronger",
+                  "not-yet": "Analysis is insufficient; interpretations missing or inappropriate; revision required"
+                }
+              },
+              {
+                "name": "Communication Clarity",
+                "weight": "20%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exceeds": "Exceptionally clear communication; complex findings made accessible through excellent organization and writing",
+                  "meets": "Clear, professional communication; findings are well-organized and accessible",
+                  "approaching": "Communication generally clear but some sections need revision for clarity",
+                  "not-yet": "Communication unclear; significant revision needed for readers to understand findings"
+                }
+              },
+              {
+                "name": "Equity Considerations",
+                "weight": "15%",
+                "objectivesMapped": ["obj-4"],
+                "descriptors": {
+                  "exceeds": "Demonstrates sophisticated understanding of equity implications; analysis shows awareness of bias and inclusive practices",
+                  "meets": "Appropriate attention to equity considerations; demonstrates awareness of inclusive research practices",
+                  "approaching": "Some equity considerations present but analysis could be more thorough",
+                  "not-yet": "Equity considerations missing or insufficient; revision needed to meet competency standard"
+                }
+              },
+              {
+                "name": "Professional Quality",
+                "weight": "10%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exceeds": "Exceeds professional standards; formatting and presentation demonstrate exceptional attention to detail",
+                  "meets": "Meets professional standards; formatting is consistent and appropriate",
+                  "approaching": "Approaching professional standards; minor revisions needed",
+                  "not-yet": "Does not meet professional standards; significant formatting or presentation issues"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Final Analysis and Recommendations",

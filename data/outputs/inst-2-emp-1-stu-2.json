@@ -752,7 +752,84 @@
             "obj-2",
             "obj-3",
             "obj-4"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "pass-fail",
+            "performanceLevels": [
+              { "id": "exceeds", "label": "Exceeds Standard", "status": "Pass (Distinction)" },
+              { "id": "meets", "label": "Meets Standard", "status": "Pass" },
+              { "id": "approaching", "label": "Approaching Standard", "status": "Conditional" },
+              { "id": "not-yet", "label": "Not Yet Meeting", "status": "Not Pass" }
+            ],
+            "criteria": [
+              {
+                "name": "Data Storytelling",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Creates an exceptional narrative that transforms data into a compelling story; demonstrates mastery of storytelling with data",
+                  "meets": "Presents findings in a clear narrative structure that engages readers appropriately",
+                  "approaching": "Narrative elements present but story could be more engaging; revisions would strengthen impact",
+                  "not-yet": "Narrative structure missing or unclear; significant revision needed to meet competency standard"
+                }
+              },
+              {
+                "name": "Visual Design",
+                "weight": "20%",
+                "objectivesMapped": ["obj-2", "obj-3"],
+                "descriptors": {
+                  "exceeds": "Visualizations are innovative and exceptionally effective; demonstrates advanced design skills worthy of professional portfolio",
+                  "meets": "Visualizations are clear, professional, and effectively communicate findings",
+                  "approaching": "Visualizations present but design could be improved; minor revisions needed",
+                  "not-yet": "Visualizations ineffective or poorly designed; revision required to meet standard"
+                }
+              },
+              {
+                "name": "Audience Adaptation",
+                "weight": "15%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exceeds": "Masterfully adapts content for stakeholders; language and design choices perfectly match executive audience needs",
+                  "meets": "Appropriately adapts content for intended audience; language and complexity are well-matched",
+                  "approaching": "Some adaptation present but audience needs could be better addressed",
+                  "not-yet": "Content not appropriately adapted; revision needed to meet audience communication standards"
+                }
+              },
+              {
+                "name": "Inclusive Framing",
+                "weight": "15%",
+                "objectivesMapped": ["obj-4"],
+                "descriptors": {
+                  "exceeds": "Demonstrates sophisticated inclusive framing; equity considerations are woven throughout the narrative",
+                  "meets": "Appropriately includes equity considerations; inclusive framing evident in presentation",
+                  "approaching": "Some inclusive framing present but could be strengthened",
+                  "not-yet": "Inclusive framing missing or insufficient; revision needed"
+                }
+              },
+              {
+                "name": "Evidence Integration",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Evidence seamlessly supports narrative; data and interpretation work together to create compelling argument",
+                  "meets": "Evidence is well-integrated and clearly supports findings",
+                  "approaching": "Evidence present but integration could be smoother",
+                  "not-yet": "Evidence poorly integrated; revision needed to support findings appropriately"
+                }
+              },
+              {
+                "name": "Professional Polish",
+                "weight": "10%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exceeds": "Portfolio-ready quality demonstrating exceptional professional standards",
+                  "meets": "Meets professional standards appropriate for organizational presentation",
+                  "approaching": "Approaching professional standards; minor polish needed",
+                  "not-yet": "Does not meet professional standards; significant revision required"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Final Analysis and Recommendations",

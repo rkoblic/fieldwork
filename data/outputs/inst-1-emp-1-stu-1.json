@@ -622,7 +622,84 @@
             "obj-1",
             "obj-2",
             "obj-4"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "letter-grade",
+            "performanceLevels": [
+              { "id": "exemplary", "label": "Exemplary", "grade": "A", "points": 4 },
+              { "id": "proficient", "label": "Proficient", "grade": "B", "points": 3 },
+              { "id": "developing", "label": "Developing", "grade": "C", "points": 2 },
+              { "id": "beginning", "label": "Beginning", "grade": "D/F", "points": "0-1" }
+            ],
+            "criteria": [
+              {
+                "name": "Research Methodology",
+                "weight": "15%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Employs sophisticated, well-justified methodology with clear rationale for analytical choices; demonstrates advanced understanding of research design principles",
+                  "proficient": "Uses sound methodology appropriate to research questions; analytical choices are reasonable and adequately explained",
+                  "developing": "Methodology present but has gaps in justification; some analytical choices lack clear rationale",
+                  "beginning": "Methodology unclear, inappropriate, or missing significant elements; limited understanding of research design"
+                }
+              },
+              {
+                "name": "Data Quality & Evidence",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Findings strongly supported by comprehensive, well-organized data; evidence selection is strategic and compelling",
+                  "proficient": "Findings supported by appropriate data evidence; data organization is clear and logical",
+                  "developing": "Some findings lack sufficient data support; evidence could be better organized or more relevant",
+                  "beginning": "Findings weakly supported or unsupported by data; evidence is missing, disorganized, or inappropriate"
+                }
+              },
+              {
+                "name": "Analysis & Interpretation",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1", "obj-4"],
+                "descriptors": {
+                  "exemplary": "Analysis demonstrates sophisticated pattern recognition; interpretations are insightful and connect psychological principles to donor behavior",
+                  "proficient": "Analysis identifies meaningful patterns; interpretations appropriately apply relevant concepts to findings",
+                  "developing": "Analysis identifies basic patterns; interpretations are present but could be deeper or better connected to theory",
+                  "beginning": "Analysis is superficial or missing; interpretations are absent, unclear, or disconnected from evidence"
+                }
+              },
+              {
+                "name": "Communication Clarity",
+                "weight": "20%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exemplary": "Exceptionally clear writing that makes complex findings accessible; excellent organization guides reader through logical narrative",
+                  "proficient": "Clear, professional writing with good organization; findings are presented in accessible manner",
+                  "developing": "Writing is generally clear but some sections are confusing; organization could be improved",
+                  "beginning": "Writing is unclear or disorganized; reader struggles to understand findings or follow argument"
+                }
+              },
+              {
+                "name": "Critical Thinking & Next Steps",
+                "weight": "15%",
+                "objectivesMapped": ["obj-4"],
+                "descriptors": {
+                  "exemplary": "Demonstrates sophisticated critical evaluation of findings; identifies nuanced areas for investigation with clear strategic rationale",
+                  "proficient": "Shows sound critical thinking about findings; identifies appropriate areas for further investigation",
+                  "developing": "Some critical evaluation present; next steps identified but rationale could be stronger",
+                  "beginning": "Limited critical evaluation; next steps missing, vague, or not connected to findings"
+                }
+              },
+              {
+                "name": "Professional Quality",
+                "weight": "10%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exemplary": "Exceeds professional standards; formatting, citations, and presentation demonstrate exceptional attention to detail",
+                  "proficient": "Meets professional standards; formatting is consistent and appropriate for the context",
+                  "developing": "Approaches professional standards; some formatting inconsistencies or minor issues",
+                  "beginning": "Does not meet professional standards; significant formatting issues or unprofessional presentation"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Final Analysis and Recommendations",

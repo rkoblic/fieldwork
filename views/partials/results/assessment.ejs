@@ -1,4 +1,4 @@
-<div>
+<div x-data="{ rubricModalOpen: false, selectedDeliverable: null }">
   <div class="mb-8">
     <h2 class="text-2xl font-bold text-slate-900 mb-2">Assessment Strategy</h2>
     <p class="text-slate-600" x-text="$store.app.synthesisOutput?.assessment?.overview"></p>
@@ -196,6 +196,19 @@
               </template>
             </div>
           </div>
+
+          <!-- View Rubric Button (only for deliverables with rubrics) -->
+          <template x-if="del.rubric">
+            <div class="mt-4 pt-4 border-t border-slate-200">
+              <button @click="selectedDeliverable = del; rubricModalOpen = true"
+                      class="flex items-center gap-2 px-3 py-2 bg-amber-100 text-amber-700 rounded-lg hover:bg-amber-200 transition-colors text-sm font-medium">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                View Rubric
+              </button>
+            </div>
+          </template>
         </div>
       </template>
     </div>
@@ -353,6 +366,134 @@
                 </span>
           </template>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rubric Modal -->
+  <div x-show="rubricModalOpen"
+       class="fixed inset-0 z-50 flex items-center justify-center p-4"
+       @keydown.escape.window="rubricModalOpen = false">
+
+    <!-- Backdrop -->
+    <div x-show="rubricModalOpen"
+         class="absolute inset-0 bg-black/50"
+         @click="rubricModalOpen = false"></div>
+
+    <!-- Modal Panel -->
+    <div x-show="rubricModalOpen"
+         @click.stop
+         class="relative bg-white rounded-xl shadow-2xl ring-1 ring-slate-200 w-full max-w-5xl max-h-[90vh] overflow-hidden flex flex-col">
+
+      <!-- Modal Header -->
+      <div class="flex items-start justify-between px-6 py-4 border-b border-slate-200 bg-slate-50">
+        <div>
+          <div class="flex items-center gap-3">
+            <h3 class="text-lg font-semibold text-slate-900" x-text="selectedDeliverable?.name + ' Rubric'"></h3>
+            <span class="badge"
+                  :class="selectedDeliverable?.rubric?.gradingType === 'letter-grade' ? 'badge-blue' : 'badge-green'"
+                  x-text="selectedDeliverable?.rubric?.gradingType === 'letter-grade' ? 'Letter Grade' : 'Pass/Fail'">
+            </span>
+          </div>
+          <p class="text-sm text-slate-500 mt-1">
+            Due: Week <span x-text="selectedDeliverable?.dueWeek"></span> &bull; Weight: <span x-text="selectedDeliverable?.weight"></span>
+          </p>
+        </div>
+        <button @click="rubricModalOpen = false" class="p-2 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors">
+          <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Performance Level Legend -->
+      <div class="px-6 py-3 border-b border-slate-200 bg-white">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Performance Levels:</span>
+          <template x-for="level in selectedDeliverable?.rubric?.performanceLevels" :key="level.id">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
+                  :class="$store.app.getPerformanceLevelColor(level.id, selectedDeliverable?.rubric?.gradingType)">
+              <span x-text="level.label"></span>
+              <span class="text-xs opacity-75" x-text="level.grade ? '(' + level.grade + ')' : '(' + level.status + ')'"></span>
+            </span>
+          </template>
+        </div>
+      </div>
+
+      <!-- Modal Content -->
+      <div class="p-6 overflow-y-auto">
+        <template x-if="selectedDeliverable?.rubric">
+          <div>
+            <!-- Desktop Table View -->
+            <div class="hidden lg:block">
+              <table class="w-full text-sm border-collapse">
+                <thead>
+                  <tr class="bg-slate-50">
+                    <th class="text-left py-3 px-4 font-semibold text-slate-700 border border-slate-200 w-48">Criterion</th>
+                    <template x-for="level in selectedDeliverable.rubric.performanceLevels" :key="level.id">
+                      <th class="text-center py-3 px-4 font-semibold text-slate-700 border border-slate-200"
+                          :class="$store.app.getPerformanceLevelHeaderColor(level.id, selectedDeliverable.rubric.gradingType)"
+                          x-text="level.label">
+                      </th>
+                    </template>
+                  </tr>
+                </thead>
+                <tbody>
+                  <template x-for="criterion in selectedDeliverable.rubric.criteria" :key="criterion.name">
+                    <tr class="hover:bg-slate-50">
+                      <td class="py-3 px-4 border border-slate-200 align-top">
+                        <div class="font-medium text-slate-900" x-text="criterion.name"></div>
+                        <div class="text-xs text-slate-500 mt-1" x-text="'Weight: ' + criterion.weight"></div>
+                        <div class="flex flex-wrap gap-1 mt-2">
+                          <template x-for="objId in criterion.objectivesMapped" :key="objId">
+                            <span class="badge bg-primary-100 text-primary-700 text-xs" x-text="'LO ' + $store.app.getObjectiveNumber(objId)"></span>
+                          </template>
+                        </div>
+                      </td>
+                      <template x-for="level in selectedDeliverable.rubric.performanceLevels" :key="level.id">
+                        <td class="py-3 px-4 border border-slate-200 align-top text-slate-600 text-xs leading-relaxed"
+                            :class="$store.app.getPerformanceLevelCellColor(level.id, selectedDeliverable.rubric.gradingType)"
+                            x-text="criterion.descriptors[level.id]">
+                        </td>
+                      </template>
+                    </tr>
+                  </template>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Mobile Card View -->
+            <div class="lg:hidden space-y-4">
+              <template x-for="criterion in selectedDeliverable.rubric.criteria" :key="criterion.name">
+                <div class="border border-slate-200 rounded-lg overflow-hidden">
+                  <div class="bg-slate-50 px-4 py-3 border-b border-slate-200">
+                    <div class="font-medium text-slate-900" x-text="criterion.name"></div>
+                    <div class="flex items-center gap-3 mt-1">
+                      <span class="text-xs text-slate-500" x-text="'Weight: ' + criterion.weight"></span>
+                      <div class="flex flex-wrap gap-1">
+                        <template x-for="objId in criterion.objectivesMapped" :key="objId">
+                          <span class="badge bg-primary-100 text-primary-700 text-xs" x-text="'LO ' + $store.app.getObjectiveNumber(objId)"></span>
+                        </template>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="divide-y divide-slate-100">
+                    <template x-for="level in selectedDeliverable.rubric.performanceLevels" :key="level.id">
+                      <div class="px-4 py-3"
+                           :class="$store.app.getPerformanceLevelCellColor(level.id, selectedDeliverable.rubric.gradingType)">
+                        <div class="text-xs font-semibold mb-1"
+                             :class="$store.app.getPerformanceLevelTextColor(level.id, selectedDeliverable.rubric.gradingType)"
+                             x-text="level.label + (level.grade ? ' (' + level.grade + ')' : ' (' + level.status + ')')">
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed" x-text="criterion.descriptors[level.id]"></p>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </template>
       </div>
     </div>
   </div>

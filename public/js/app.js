@@ -281,6 +281,91 @@ document.addEventListener('alpine:init', () => {
         return `LO ${num}`;
       }
       return item;
+    },
+
+    // Get performance level badge color for rubric legend
+    getPerformanceLevelColor(levelId, gradingType) {
+      if (gradingType === 'letter-grade') {
+        const colors = {
+          'exemplary': 'bg-emerald-100 text-emerald-700',
+          'proficient': 'bg-blue-100 text-blue-700',
+          'developing': 'bg-amber-100 text-amber-700',
+          'beginning': 'bg-red-100 text-red-700'
+        };
+        return colors[levelId] || 'bg-slate-100 text-slate-700';
+      } else {
+        // pass-fail
+        const colors = {
+          'exceeds': 'bg-emerald-100 text-emerald-700',
+          'meets': 'bg-blue-100 text-blue-700',
+          'approaching': 'bg-amber-100 text-amber-700',
+          'not-yet': 'bg-red-100 text-red-700'
+        };
+        return colors[levelId] || 'bg-slate-100 text-slate-700';
+      }
+    },
+
+    // Get performance level header background color for rubric table
+    getPerformanceLevelHeaderColor(levelId, gradingType) {
+      if (gradingType === 'letter-grade') {
+        const colors = {
+          'exemplary': 'bg-emerald-50',
+          'proficient': 'bg-blue-50',
+          'developing': 'bg-amber-50',
+          'beginning': 'bg-red-50'
+        };
+        return colors[levelId] || 'bg-slate-50';
+      } else {
+        const colors = {
+          'exceeds': 'bg-emerald-50',
+          'meets': 'bg-blue-50',
+          'approaching': 'bg-amber-50',
+          'not-yet': 'bg-red-50'
+        };
+        return colors[levelId] || 'bg-slate-50';
+      }
+    },
+
+    // Get performance level cell background color for rubric table
+    getPerformanceLevelCellColor(levelId, gradingType) {
+      if (gradingType === 'letter-grade') {
+        const colors = {
+          'exemplary': 'bg-emerald-50/50',
+          'proficient': 'bg-blue-50/50',
+          'developing': 'bg-amber-50/50',
+          'beginning': 'bg-red-50/50'
+        };
+        return colors[levelId] || '';
+      } else {
+        const colors = {
+          'exceeds': 'bg-emerald-50/50',
+          'meets': 'bg-blue-50/50',
+          'approaching': 'bg-amber-50/50',
+          'not-yet': 'bg-red-50/50'
+        };
+        return colors[levelId] || '';
+      }
+    },
+
+    // Get performance level text color for mobile view
+    getPerformanceLevelTextColor(levelId, gradingType) {
+      if (gradingType === 'letter-grade') {
+        const colors = {
+          'exemplary': 'text-emerald-700',
+          'proficient': 'text-blue-700',
+          'developing': 'text-amber-700',
+          'beginning': 'text-red-700'
+        };
+        return colors[levelId] || 'text-slate-700';
+      } else {
+        const colors = {
+          'exceeds': 'text-emerald-700',
+          'meets': 'text-blue-700',
+          'approaching': 'text-amber-700',
+          'not-yet': 'text-red-700'
+        };
+        return colors[levelId] || 'text-slate-700';
+      }
     }
   });
 });

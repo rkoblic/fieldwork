@@ -620,7 +620,84 @@
           "objectivesMapped": [
             "obj-1",
             "obj-5"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "letter-grade",
+            "performanceLevels": [
+              { "id": "exemplary", "label": "Exemplary", "grade": "A", "points": 4 },
+              { "id": "proficient", "label": "Proficient", "grade": "B", "points": 3 },
+              { "id": "developing", "label": "Developing", "grade": "C", "points": 2 },
+              { "id": "beginning", "label": "Beginning", "grade": "D/F", "points": "0-1" }
+            ],
+            "criteria": [
+              {
+                "name": "Process Completeness",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Captures all process steps with exceptional thoroughness; includes edge cases, exceptions, and process variations that demonstrate deep understanding",
+                  "proficient": "Documents all major process steps comprehensively; captures the full workflow accurately",
+                  "developing": "Documents main process steps but missing some elements; gaps in coverage",
+                  "beginning": "Process documentation incomplete or missing major steps; significant gaps in understanding"
+                }
+              },
+              {
+                "name": "Role & Handoff Clarity",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Roles and responsibilities precisely defined; handoffs documented with exceptional clarity including triggers, inputs, and outputs",
+                  "proficient": "Roles clearly identified; handoffs well-documented and easy to follow",
+                  "developing": "Roles present but some ambiguity; handoffs could be clearer",
+                  "beginning": "Roles unclear or missing; handoffs poorly documented or confusing"
+                }
+              },
+              {
+                "name": "Visual Communication",
+                "weight": "20%",
+                "objectivesMapped": ["obj-5"],
+                "descriptors": {
+                  "exemplary": "Process map is visually exceptional; uses professional notation, clear hierarchy, and design that makes complex process immediately understandable",
+                  "proficient": "Process map is clear and professional; visual design supports understanding",
+                  "developing": "Process map is readable but visual design could be improved; some clutter or confusion",
+                  "beginning": "Process map is difficult to follow; poor visual design impedes understanding"
+                }
+              },
+              {
+                "name": "Stakeholder Validation",
+                "weight": "15%",
+                "objectivesMapped": ["obj-5"],
+                "descriptors": {
+                  "exemplary": "Demonstrates thorough validation process; incorporates feedback from multiple stakeholders and documents validation approach",
+                  "proficient": "Shows evidence of stakeholder validation; accuracy confirmed by relevant parties",
+                  "developing": "Some validation evidence but could be more thorough; limited stakeholder input",
+                  "beginning": "No evidence of validation; accuracy not confirmed or stakeholders not engaged"
+                }
+              },
+              {
+                "name": "Analytical Insight",
+                "weight": "15%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Map reveals insights about process inefficiencies, bottlenecks, or improvement opportunities; demonstrates analytical thinking",
+                  "proficient": "Map provides useful foundation for analysis; structure supports identification of issues",
+                  "developing": "Map is descriptive but limited analytical value; opportunities not highlighted",
+                  "beginning": "Map lacks analytical depth; purely descriptive without supporting further analysis"
+                }
+              },
+              {
+                "name": "Professional Quality",
+                "weight": "10%",
+                "objectivesMapped": ["obj-5"],
+                "descriptors": {
+                  "exemplary": "Consulting-quality deliverable; exceptional attention to detail, formatting, and overall presentation",
+                  "proficient": "Professional quality appropriate for client delivery; well-formatted and polished",
+                  "developing": "Approaching professional quality; some formatting or presentation issues",
+                  "beginning": "Does not meet professional standards; significant quality issues"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Stakeholder Interview Summary",

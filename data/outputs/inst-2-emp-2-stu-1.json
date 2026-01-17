@@ -749,7 +749,84 @@
           "objectivesMapped": [
             "obj-1",
             "obj-2"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "pass-fail",
+            "performanceLevels": [
+              { "id": "exceeds", "label": "Exceeds Standard", "status": "Pass (Distinction)" },
+              { "id": "meets", "label": "Meets Standard", "status": "Pass" },
+              { "id": "approaching", "label": "Approaching Standard", "status": "Conditional" },
+              { "id": "not-yet", "label": "Not Yet Meeting", "status": "Not Pass" }
+            ],
+            "criteria": [
+              {
+                "name": "Process Completeness",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Captures all process elements with exceptional thoroughness; includes edge cases, exceptions, and variations demonstrating deep understanding",
+                  "meets": "Documents all major process steps comprehensively; captures the full workflow accurately",
+                  "approaching": "Documents main steps but some elements missing; revision would strengthen completeness",
+                  "not-yet": "Significant gaps in process documentation; revision required to meet competency standard"
+                }
+              },
+              {
+                "name": "Role & Handoff Clarity",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Roles and handoffs documented with exceptional precision; includes inputs, outputs, and decision criteria throughout",
+                  "meets": "Roles clearly identified; handoffs well-documented and easy to follow",
+                  "approaching": "Roles present but some handoffs could be clearer; minor revisions needed",
+                  "not-yet": "Roles or handoffs unclear; revision required to meet standard"
+                }
+              },
+              {
+                "name": "Visual Communication",
+                "weight": "20%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exceeds": "Visual design is exceptional; uses professional notation and design that makes complex processes immediately understandable",
+                  "meets": "Process map is clear and professional; visual design supports understanding",
+                  "approaching": "Visualization is readable but design could be improved",
+                  "not-yet": "Visual communication is confusing; revision needed for clarity"
+                }
+              },
+              {
+                "name": "Stakeholder Validation",
+                "weight": "15%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exceeds": "Demonstrates thorough multi-stakeholder validation; documents validation process and incorporates diverse perspectives",
+                  "meets": "Shows evidence of stakeholder validation; accuracy confirmed appropriately",
+                  "approaching": "Some validation evidence but process could be more thorough",
+                  "not-yet": "Validation insufficient; revision needed to confirm accuracy"
+                }
+              },
+              {
+                "name": "Analytical Value",
+                "weight": "15%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Map reveals insights about inefficiencies and improvement opportunities; demonstrates sophisticated analytical thinking",
+                  "meets": "Map provides useful foundation for analysis; supports identification of issues",
+                  "approaching": "Map is descriptive but analytical value could be enhanced",
+                  "not-yet": "Limited analytical value; revision needed to support consulting objectives"
+                }
+              },
+              {
+                "name": "Professional Quality",
+                "weight": "10%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exceeds": "Consulting-quality deliverable demonstrating exceptional professional standards",
+                  "meets": "Professional quality appropriate for client delivery",
+                  "approaching": "Approaching professional standards; minor polish needed",
+                  "not-yet": "Does not meet professional standards; revision required"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Stakeholder Interview Summary",

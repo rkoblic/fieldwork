@@ -622,7 +622,84 @@
             "obj-1",
             "obj-2",
             "obj-3"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "letter-grade",
+            "performanceLevels": [
+              { "id": "exemplary", "label": "Exemplary", "grade": "A", "points": 4 },
+              { "id": "proficient", "label": "Proficient", "grade": "B", "points": 3 },
+              { "id": "developing", "label": "Developing", "grade": "C", "points": 2 },
+              { "id": "beginning", "label": "Beginning", "grade": "D/F", "points": "0-1" }
+            ],
+            "criteria": [
+              {
+                "name": "Data Storytelling",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Creates a compelling narrative arc that transforms data into an engaging story; reader is drawn through findings with clear purpose and momentum",
+                  "proficient": "Presents findings in a clear narrative structure; story elements are present and support understanding",
+                  "developing": "Some narrative elements present but story could be more engaging; findings feel more like a list than a story",
+                  "beginning": "No clear narrative structure; findings are presented without connection or engagement"
+                }
+              },
+              {
+                "name": "Visual Design Quality",
+                "weight": "20%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exemplary": "Visualizations are exceptionally well-designed, innovative, and effectively communicate complex patterns; demonstrates mastery of visual communication principles",
+                  "proficient": "Visualizations are clear, professional, and appropriate for the data; good use of design principles",
+                  "developing": "Visualizations are present but could be clearer or more polished; some design inconsistencies",
+                  "beginning": "Visualizations are missing, confusing, or poorly designed; impede rather than aid understanding"
+                }
+              },
+              {
+                "name": "Audience Adaptation",
+                "weight": "15%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exemplary": "Masterfully adapts content for non-technical stakeholders; language and examples resonate perfectly with board-level audience",
+                  "proficient": "Appropriately adapts content for intended audience; language is accessible and relevant",
+                  "developing": "Some adaptation for audience but occasional jargon or mismatched complexity",
+                  "beginning": "Content not adapted for audience; too technical, too simplistic, or missing the mark"
+                }
+              },
+              {
+                "name": "Evidence Integration",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exemplary": "Evidence is seamlessly integrated to support narrative; data and interpretation work together to build compelling argument",
+                  "proficient": "Evidence is well-integrated and clearly supports findings; good balance of data and interpretation",
+                  "developing": "Evidence present but integration could be smoother; some disconnect between data and narrative",
+                  "beginning": "Evidence poorly integrated or missing; findings unsupported or data dumped without interpretation"
+                }
+              },
+              {
+                "name": "Communication Clarity",
+                "weight": "15%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exemplary": "Writing is exceptionally clear, concise, and engaging; complex ideas communicated with elegance",
+                  "proficient": "Writing is clear and professional; ideas are communicated effectively",
+                  "developing": "Writing is generally clear but some sections confusing or verbose",
+                  "beginning": "Writing is unclear, disorganized, or impedes understanding"
+                }
+              },
+              {
+                "name": "Professional Polish",
+                "weight": "10%",
+                "objectivesMapped": ["obj-2"],
+                "descriptors": {
+                  "exemplary": "Portfolio-ready quality; exceptional attention to detail in formatting, layout, and overall presentation",
+                  "proficient": "Professional quality; formatting is consistent and appropriate",
+                  "developing": "Approaching professional quality; some formatting inconsistencies",
+                  "beginning": "Does not meet professional standards; significant formatting or presentation issues"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Final Analysis and Recommendations",

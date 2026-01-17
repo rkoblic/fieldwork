@@ -105,7 +105,7 @@ Each synthesis output (`data/outputs/*.json`) contains:
   "assessment": {
     "overview": "string",
     "weights": { "deliverables": 40, "presentation": 20, "reflections": 25, "employerEvaluation": 15 },
-    "deliverables": { "description", "items": [...] },
+    "deliverables": { "description", "items": [{ "name", "dueWeek", "weight", "criteria", "objectivesMapped", "rubric"?: {...} }] },
     "presentation": { "name", "description", "dueWeek", "weight", "criteria", "objectivesMapped" },
     "reflections": { "description", "schedule", "weight", "criteria", "objectivesMapped" },
     "employerEvaluation": { "description", "timing", "weight", "areas", "objectivesMapped" }
@@ -173,6 +173,66 @@ The sample week view includes:
 - **Alignment Matrix**: Shows which learning objectives map to which assessment components (moved prominently under weight cards)
 - **LO Badges**: Display as "LO 1", "LO 2", etc. with hover tooltips showing full objective text
 - **Component Details**: Evaluation criteria and objective mappings for each assessment type
+- **Evaluation Rubrics**: First project deliverable includes a "View Rubric" button opening a detailed analytical rubric modal
+
+## Evaluation Rubrics
+The first project deliverable includes an analytical rubric with 6 criteria. Rubrics adapt to the institution's grading approach:
+
+### Letter Grade (Westbrook - inst-1)
+| Level | Label | Grade | Description |
+|-------|-------|-------|-------------|
+| exemplary | Exemplary | A | Exceeds expectations; demonstrates mastery |
+| proficient | Proficient | B | Meets expectations with consistent quality |
+| developing | Developing | C | Approaches expectations; shows progress |
+| beginning | Beginning | D/F | Falls below expectations |
+
+### Pass/Fail (Pacific Coast - inst-2)
+| Level | Label | Status | Description |
+|-------|-------|--------|-------------|
+| exceeds | Exceeds Standard | Pass (Distinction) | Excellence beyond requirements |
+| meets | Meets Standard | Pass | Satisfies all competency requirements |
+| approaching | Approaching Standard | Conditional | Minor revisions needed |
+| not-yet | Not Yet Meeting | Not Pass | Revision required |
+
+### Rubric Criteria Structure
+Each rubric contains 6 criteria with weights totaling 100%:
+- **Research Methodology** (15%) - Analytical approach and justification
+- **Data Quality & Evidence** (20%) - Evidence selection and organization
+- **Analysis & Interpretation** (20%) - Pattern recognition and insight development
+- **Communication Clarity** (20%) - Writing quality and accessibility
+- **Critical Thinking & Next Steps** (15%) - Evaluation depth and forward planning
+- **Professional Quality** (10%) - Formatting and presentation standards
+
+### Rubric Data Structure
+```json
+{
+  "rubric": {
+    "gradingType": "letter-grade | pass-fail",
+    "performanceLevels": [
+      { "id": "exemplary", "label": "Exemplary", "grade": "A", "points": 4 }
+    ],
+    "criteria": [
+      {
+        "name": "Research Methodology",
+        "weight": "15%",
+        "objectivesMapped": ["obj-1"],
+        "descriptors": {
+          "exemplary": "Descriptor text...",
+          "proficient": "Descriptor text...",
+          "developing": "Descriptor text...",
+          "beginning": "Descriptor text..."
+        }
+      }
+    ]
+  }
+}
+```
+
+### Rubric Helper Functions in app.js
+- `getPerformanceLevelColor(levelId, gradingType)` - Badge colors for legend
+- `getPerformanceLevelHeaderColor(levelId, gradingType)` - Table header backgrounds
+- `getPerformanceLevelCellColor(levelId, gradingType)` - Table cell backgrounds
+- `getPerformanceLevelTextColor(levelId, gradingType)` - Mobile view text colors
 
 ## Alignment Tab Features
 - **FieldWork Framework**: Experiential competencies with descriptions of how they're addressed

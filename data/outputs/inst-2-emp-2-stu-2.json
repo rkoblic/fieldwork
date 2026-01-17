@@ -751,7 +751,84 @@
           "objectivesMapped": [
             "obj-1",
             "obj-3"
-          ]
+          ],
+          "rubric": {
+            "gradingType": "pass-fail",
+            "performanceLevels": [
+              { "id": "exceeds", "label": "Exceeds Standard", "status": "Pass (Distinction)" },
+              { "id": "meets", "label": "Meets Standard", "status": "Pass" },
+              { "id": "approaching", "label": "Approaching Standard", "status": "Conditional" },
+              { "id": "not-yet", "label": "Not Yet Meeting", "status": "Not Pass" }
+            ],
+            "criteria": [
+              {
+                "name": "Visual Communication",
+                "weight": "25%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Visual communication is exceptional; process is immediately understandable through masterful design choices and visual hierarchy",
+                  "meets": "Process is clearly communicated visually; design choices effectively support understanding",
+                  "approaching": "Process is visualized but clarity could be improved; minor design revisions needed",
+                  "not-yet": "Visual communication is unclear; revision required to meet competency standard"
+                }
+              },
+              {
+                "name": "Design Quality",
+                "weight": "20%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exceeds": "Demonstrates exceptional design skills; typography, color, and layout create portfolio-showcase quality work",
+                  "meets": "Design is professional and polished; demonstrates competent use of design principles",
+                  "approaching": "Design is adequate but lacks polish; improvements would strengthen impact",
+                  "not-yet": "Design quality insufficient; revision needed to meet professional standards"
+                }
+              },
+              {
+                "name": "Process Accuracy",
+                "weight": "20%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Process documented with exceptional accuracy; captures nuances and has thorough stakeholder validation",
+                  "meets": "Process accurately represented; stakeholder validation confirms correctness",
+                  "approaching": "Generally accurate but some elements need verification",
+                  "not-yet": "Accuracy issues present; revision and validation required"
+                }
+              },
+              {
+                "name": "Completeness",
+                "weight": "15%",
+                "objectivesMapped": ["obj-1"],
+                "descriptors": {
+                  "exceeds": "Comprehensively documents all process elements including roles, decisions, and exceptions",
+                  "meets": "Documents all major process elements; provides complete workflow picture",
+                  "approaching": "Most elements present but some gaps; additional documentation needed",
+                  "not-yet": "Missing major process elements; significant revision required"
+                }
+              },
+              {
+                "name": "Stakeholder Engagement",
+                "weight": "10%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exceeds": "Demonstrates exceptional stakeholder engagement; multiple perspectives incorporated and documented",
+                  "meets": "Good stakeholder engagement; validation process evident and appropriate",
+                  "approaching": "Some stakeholder input but engagement could be deeper",
+                  "not-yet": "Stakeholder engagement insufficient; more validation needed"
+                }
+              },
+              {
+                "name": "Portfolio Readiness",
+                "weight": "10%",
+                "objectivesMapped": ["obj-3"],
+                "descriptors": {
+                  "exceeds": "Immediately portfolio-ready; demonstrates capabilities that would impress employers",
+                  "meets": "Could be included in portfolio; shows professional competence",
+                  "approaching": "Would need some revision before portfolio inclusion",
+                  "not-yet": "Not suitable for portfolio without significant revision"
+                }
+              }
+            ]
+          }
         },
         {
           "name": "Stakeholder Interview Summary",
