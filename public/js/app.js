@@ -29,6 +29,53 @@ document.addEventListener('alpine:init', () => {
     customEmployer: null,
     customStudent: null,
 
+    // Blank templates for custom mode
+    blankInstitution: {
+      id: 'custom-inst',
+      name: '',
+      termLengthWeeks: null,
+      creditHours: null,
+      hoursPerWeek: null,
+      learnerLevel: '',
+      experienceLevel: '',
+      teamSize: '',
+      assessmentApproach: '',
+      learningOutcomes: [],
+      additionalNaceCompetencies: []
+    },
+
+    blankEmployer: {
+      id: 'custom-emp',
+      companyName: '',
+      industry: '',
+      projectTitle: '',
+      projectType: '',
+      projectBrief: '',
+      successCriteria: [],
+      deliverables: [],
+      timelineWeeks: null,
+      hoursPerWeek: '',
+      mentorSupport: '',
+      resourcesProvided: []
+    },
+
+    blankStudent: {
+      id: 'custom-stu',
+      name: '',
+      major: '',
+      minor: '',
+      year: '',
+      gpa: '',
+      resumeFileName: '',
+      extractedSkills: [],
+      relevantCoursework: [],
+      learningGoalsNarrative: '',
+      careerInterestsNarrative: ''
+    },
+
+    // Raw text for learning outcomes textarea (parsed on blur)
+    learningOutcomesText: '',
+
     // UI state
     isInitializing: true,
     isLoading: false,
@@ -77,10 +124,10 @@ document.addEventListener('alpine:init', () => {
         this.employers = employers;
         this.students = students;
 
-        // Initialize custom forms with first demo data as template
-        this.customInstitution = JSON.parse(JSON.stringify(institutions[0]));
-        this.customEmployer = JSON.parse(JSON.stringify(employers[0]));
-        this.customStudent = JSON.parse(JSON.stringify(students[0]));
+        // Initialize custom forms with blank templates
+        this.customInstitution = JSON.parse(JSON.stringify(this.blankInstitution));
+        this.customEmployer = JSON.parse(JSON.stringify(this.blankEmployer));
+        this.customStudent = JSON.parse(JSON.stringify(this.blankStudent));
 
       } catch (e) {
         console.error('Failed to load initial data:', e);
@@ -130,6 +177,10 @@ document.addEventListener('alpine:init', () => {
     // Load synthesis (called from animation component)
     async loadSynthesis() {
       this.isLoading = true;
+      // Ensure learning outcomes are parsed before synthesis
+      if (this.mode === 'custom') {
+        this.parseLearningOutcomes();
+      }
       try {
         if (this.mode === 'demo') {
           // Load pre-generated output
@@ -176,6 +227,7 @@ document.addEventListener('alpine:init', () => {
         if (inst) {
           this.customInstitution = JSON.parse(JSON.stringify(inst));
           this.customInstitution.id = 'custom-inst';
+          this.learningOutcomesText = (inst.learningOutcomes || []).join('\n');
         }
       } else if (type === 'employer') {
         const emp = this.employers.find(e => e.id === id);
@@ -190,6 +242,39 @@ document.addEventListener('alpine:init', () => {
           this.customStudent.id = 'custom-stu';
         }
       }
+    },
+
+    // Reset custom form to blank
+    resetCustomForm(type) {
+      if (type === 'institution') {
+        this.customInstitution = JSON.parse(JSON.stringify(this.blankInstitution));
+        this.learningOutcomesText = '';
+      } else if (type === 'employer') {
+        this.customEmployer = JSON.parse(JSON.stringify(this.blankEmployer));
+      } else if (type === 'student') {
+        this.customStudent = JSON.parse(JSON.stringify(this.blankStudent));
+      }
+    },
+
+    // Toggle NACE competency in array
+    toggleNaceCompetency(compId) {
+      if (!this.customInstitution.additionalNaceCompetencies) {
+        this.customInstitution.additionalNaceCompetencies = [];
+      }
+      const index = this.customInstitution.additionalNaceCompetencies.indexOf(compId);
+      if (index === -1) {
+        this.customInstitution.additionalNaceCompetencies.push(compId);
+      } else {
+        this.customInstitution.additionalNaceCompetencies.splice(index, 1);
+      }
+    },
+
+    // Parse learning outcomes from textarea text to array (called on blur)
+    parseLearningOutcomes() {
+      const outcomes = this.learningOutcomesText.split('\n')
+        .map(line => line.replace(/^\d+[\.\)]\s*/, '').trim())
+        .filter(line => line.length > 0);
+      this.customInstitution.learningOutcomes = outcomes;
     },
 
     // Helper to get NACE competency name by ID

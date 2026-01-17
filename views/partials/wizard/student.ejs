@@ -22,14 +22,23 @@
   <!-- Custom Mode Template Selector -->
   <div x-show="$store.app.mode === 'custom'" class="mb-6">
     <label class="label">Start from template (optional)</label>
-    <div class="flex gap-2">
+    <div class="flex flex-wrap gap-2">
       <template x-for="stu in $store.app.students" :key="stu.id">
         <button
           @click="$store.app.useAsTemplate('student', stu.id)"
-          class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          class="px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          :class="$store.app.customStudent?.name === stu.name
+            ? 'bg-primary-600 text-white'
+            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
           x-text="'Use ' + stu.name">
         </button>
       </template>
+      <button
+        x-show="$store.app.customStudent?.name"
+        @click="$store.app.resetCustomForm('student')"
+        class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-50 text-slate-500 hover:bg-slate-100 border border-slate-200 transition-colors">
+        Clear Form
+      </button>
     </div>
   </div>
 
