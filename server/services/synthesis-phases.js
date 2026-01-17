@@ -91,7 +91,8 @@ Generate 5-7 learning objectives that bridge these inputs.`;
   return parseJsonResponse(response.content[0].text);
 }
 
-// Phase 2: Assessment (backwards design - define how we'll measure success before curriculum)
+// Phase 2: Assessment Structure (backwards design - define how we'll measure success before curriculum)
+// Note: Rubric is generated in a separate phase for better quality
 async function generateAssessment(framework, institution, employer, student, objectives) {
   const systemPrompt = `You are an expert in experiential learning assessment. Design an assessment strategy following backwards design principles.
 
@@ -106,12 +107,9 @@ ASSESSMENT ARCHITECTURE (research-based weights):
 
 REQUIREMENTS:
 - Design 2-3 project deliverables spread across the term
-- For the FIRST deliverable ONLY, include a detailed rubric with:
-  - gradingType: "${institution.assessmentApproach === 'Letter Grade' ? 'letter-grade' : 'pass-fail'}"
-  - performanceLevels: For letter-grade use [exemplary/A, proficient/B, developing/C, beginning/D-F]. For pass-fail use [exceeds/Pass (Distinction), meets/Pass, approaching/Conditional, not-yet/Not Pass]
-  - 6 criteria covering methodology, data quality, analysis, communication, critical thinking, and professional quality
-  - Each criterion has name, weight (totaling 100%), objectivesMapped, and descriptors for each level
+- Do NOT include rubrics - those will be generated separately
 - Map each assessment component to relevant learning objectives
+- Include clear evaluation criteria for each component
 
 Respond ONLY with valid JSON:
 {
@@ -126,8 +124,7 @@ Respond ONLY with valid JSON:
           "dueWeek": number,
           "weight": "N%",
           "criteria": ["criterion 1", "criterion 2"],
-          "objectivesMapped": ["obj-N"],
-          "rubric": { ... } // ONLY for first deliverable
+          "objectivesMapped": ["obj-N"]
         }
       ]
     },
@@ -185,7 +182,121 @@ Create an assessment strategy that measures achievement of all objectives.`;
   return parseJsonResponse(response.content[0].text);
 }
 
-// Phase 3: Curriculum (designed to achieve assessment outcomes)
+// Phase 3: Rubric (detailed rubric for first deliverable)
+async function generateRubric(framework, institution, employer, student, objectives, deliverable) {
+  const gradingType = institution.assessmentApproach === 'Letter Grade' ? 'letter-grade' : 'pass-fail';
+
+  const performanceLevelsSpec = gradingType === 'letter-grade'
+    ? `Use these levels with exact IDs:
+  - { "id": "exemplary", "label": "Exemplary", "grade": "A", "points": 4 }
+  - { "id": "proficient", "label": "Proficient", "grade": "B", "points": 3 }
+  - { "id": "developing", "label": "Developing", "grade": "C", "points": 2 }
+  - { "id": "beginning", "label": "Beginning", "grade": "D/F", "points": 1 }`
+    : `Use these levels with exact IDs:
+  - { "id": "exceeds", "label": "Exceeds Standard", "status": "Pass (Distinction)", "points": 4 }
+  - { "id": "meets", "label": "Meets Standard", "status": "Pass", "points": 3 }
+  - { "id": "approaching", "label": "Approaching Standard", "status": "Conditional", "points": 2 }
+  - { "id": "not-yet", "label": "Not Yet Meeting", "status": "Not Pass", "points": 1 }`;
+
+  const descriptorKeys = gradingType === 'letter-grade'
+    ? '"exemplary", "proficient", "developing", "beginning"'
+    : '"exceeds", "meets", "approaching", "not-yet"';
+
+  const systemPrompt = `You are an expert in experiential learning assessment rubric design. Create a detailed analytical rubric for a project deliverable.
+
+CONTEXT:
+- Institution: ${institution.name}
+- Grading Approach: ${institution.assessmentApproach}
+- Student: ${student.name}, ${student.major} major${student.minor ? `, ${student.minor} minor` : ''}
+- Project: ${employer.projectTitle} at ${employer.companyName}
+- Industry: ${employer.industry}
+
+DELIVERABLE TO ASSESS:
+- Name: ${deliverable.name}
+- Due: Week ${deliverable.dueWeek}
+- Weight: ${deliverable.weight}
+- Criteria Overview: ${(deliverable.criteria || []).join(', ')}
+- Learning Objectives Mapped: ${(deliverable.objectivesMapped || []).join(', ')}
+
+RUBRIC REQUIREMENTS:
+1. Grading Type: "${gradingType}"
+2. Performance Levels (use these EXACT IDs):
+${performanceLevelsSpec}
+
+3. Create EXACTLY 6 criteria with these weights totaling 100%:
+   - Research Methodology (15%) - Analytical approach and justification
+   - Data Quality & Evidence (20%) - Evidence selection and organization
+   - Analysis & Interpretation (20%) - Pattern recognition and insight development
+   - Communication Clarity (20%) - Writing quality and accessibility
+   - Critical Thinking & Next Steps (15%) - Evaluation depth and forward planning
+   - Professional Quality (10%) - Formatting and presentation standards
+
+4. Each criterion must have:
+   - name: The criterion name
+   - weight: The weight as a string (e.g., "15%")
+   - objectivesMapped: Array of objective IDs this criterion assesses
+   - descriptors: Object with keys ${descriptorKeys}, each containing a detailed 2-3 sentence description
+
+5. CRITICAL: Each descriptor must be:
+   - Specific to the student's background (${student.major}, ${(student.extractedSkills || []).slice(0, 3).join(', ')})
+   - Relevant to the project context (${employer.industry}, ${employer.projectTitle})
+   - Clearly differentiated between performance levels
+   - Action-oriented and observable
+
+Respond ONLY with valid JSON (no markdown, no explanation):
+{
+  "rubric": {
+    "gradingType": "${gradingType}",
+    "performanceLevels": [
+      { "id": "...", "label": "...", ${gradingType === 'letter-grade' ? '"grade": "..."' : '"status": "..."'}, "points": ... }
+    ],
+    "criteria": [
+      {
+        "name": "Research Methodology",
+        "weight": "15%",
+        "objectivesMapped": ["obj-1"],
+        "descriptors": {
+          ${descriptorKeys.split(', ').map(k => `${k}: "Detailed descriptor text..."`).join(',\n          ')}
+        }
+      }
+    ]
+  }
+}`;
+
+  const objectivesText = objectives.learningObjectives.map(o => `${o.id}: ${o.text}`).join('\n');
+
+  const userPrompt = `Create a detailed rubric for "${deliverable.name}" that will be due in Week ${deliverable.dueWeek}.
+
+LEARNING OBJECTIVES TO ASSESS:
+${objectivesText}
+
+STUDENT BACKGROUND:
+- Name: ${student.name}
+- Major: ${student.major}${student.minor ? `, Minor: ${student.minor}` : ''}
+- Year: ${student.year}
+- Skills: ${toStringList(student.extractedSkills)}
+- Relevant Coursework: ${toStringList(student.relevantCoursework)}
+
+PROJECT CONTEXT:
+- Organization: ${employer.companyName}
+- Industry: ${employer.industry}
+- Project: ${employer.projectTitle}
+- Brief: ${employer.projectBrief}
+- Success Criteria: ${toStringList(employer.successCriteria)}
+
+Generate a rubric with descriptors personalized to ${student.name}'s ${student.major} background working on ${employer.projectTitle}. Each descriptor should reference relevant skills, terminology, or expectations appropriate for this specific context.`;
+
+  const response = await client.messages.create({
+    model: 'claude-sonnet-4-20250514',
+    max_tokens: 3000,
+    system: systemPrompt,
+    messages: [{ role: 'user', content: userPrompt }]
+  });
+
+  return parseJsonResponse(response.content[0].text);
+}
+
+// Phase 4: Curriculum (designed to achieve assessment outcomes)
 async function generateCurriculum(framework, institution, employer, student, objectives, assessmentSummary) {
   const systemPrompt = `You are an expert instructional designer. Create a week-by-week curriculum that prepares students to succeed in their assessments.
 
@@ -258,7 +369,7 @@ Design curriculum that builds skills progressively toward each deliverable.`;
   return parseJsonResponse(response.content[0].text);
 }
 
-// Phase 4: Sample Week (enhanced week with resources)
+// Phase 5: Sample Week (enhanced week with resources)
 async function generateSampleWeek(framework, institution, employer, student, objectives, baseWeek) {
   const systemPrompt = `You are an expert instructional designer. Create an enhanced sample week with detailed resources for the conceptualization activity.
 
@@ -350,7 +461,7 @@ Create an enhanced version with detailed resources for the conceptualization/rea
   return parseJsonResponse(response.content[0].text);
 }
 
-// Phase 5: Alignment (cross-reference all elements)
+// Phase 6: Alignment (cross-reference all elements)
 async function generateAlignment(framework, institution, employer, student, objectives, assessmentSummary, curriculumSummary) {
   const systemPrompt = `You are an expert in experiential learning program design. Create an alignment crosswalk showing how the learning experience connects to all stakeholder requirements.
 
@@ -444,6 +555,7 @@ function generateMetadata(institution, employer, student) {
 module.exports = {
   generateObjectives,
   generateAssessment,
+  generateRubric,
   generateCurriculum,
   generateSampleWeek,
   generateAlignment,

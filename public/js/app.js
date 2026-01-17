@@ -104,6 +104,7 @@ document.addEventListener('alpine:init', () => {
     synthesisPhases: [
       { id: 'objectives', label: 'Learning Objectives', status: 'pending', data: null, summary: null },
       { id: 'assessment', label: 'Assessment', status: 'pending', data: null, summary: null },
+      { id: 'rubric', label: 'Evaluation Rubric', status: 'pending', data: null, summary: null },
       { id: 'curriculum', label: 'Curriculum', status: 'pending', data: null, summary: null },
       { id: 'sample-week', label: 'Sample Week', status: 'pending', data: null, summary: null },
       { id: 'alignment', label: 'Alignment', status: 'pending', data: null, summary: null }
@@ -240,6 +241,7 @@ document.addEventListener('alpine:init', () => {
       this.synthesisPhases = [
         { id: 'objectives', label: 'Learning Objectives', status: 'pending', data: null, summary: null },
         { id: 'assessment', label: 'Assessment', status: 'pending', data: null, summary: null },
+        { id: 'rubric', label: 'Evaluation Rubric', status: 'pending', data: null, summary: null },
         { id: 'curriculum', label: 'Curriculum', status: 'pending', data: null, summary: null },
         { id: 'sample-week', label: 'Sample Week', status: 'pending', data: null, summary: null },
         { id: 'alignment', label: 'Alignment', status: 'pending', data: null, summary: null }
@@ -309,7 +311,7 @@ document.addEventListener('alpine:init', () => {
           this.synthesisPhases[0].status = 'complete';
         }
 
-        // Phase 2: Assessment
+        // Phase 2: Assessment Structure (no rubric)
         if (startFromPhase <= 1) {
           this.synthesisPhases[1].status = 'in-progress';
           const assessmentResult = await this.executePhaseWithRetry(async () => {
@@ -334,9 +336,45 @@ document.addEventListener('alpine:init', () => {
           this.synthesisPhases[1].status = 'complete';
         }
 
-        // Phase 3: Curriculum
+        // Phase 3: Rubric (for first deliverable)
         if (startFromPhase <= 2) {
           this.synthesisPhases[2].status = 'in-progress';
+          // Get the first deliverable to generate rubric for
+          const firstDeliverable = this.synthesisOutput.assessment.deliverables.items[0];
+
+          const rubricResult = await this.executePhaseWithRetry(async () => {
+            const response = await fetch('/api/synthesis/phase/rubric', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                ...inputs,
+                objectives: { learningObjectives: this.synthesisOutput.learningObjectives },
+                deliverable: {
+                  name: firstDeliverable.name,
+                  dueWeek: firstDeliverable.dueWeek,
+                  weight: firstDeliverable.weight,
+                  criteria: firstDeliverable.criteria,
+                  objectivesMapped: firstDeliverable.objectivesMapped
+                }
+              })
+            });
+            if (!response.ok) {
+              const err = await response.json();
+              throw new Error(err.message || 'Failed to generate rubric');
+            }
+            return response.json();
+          }, 2);
+
+          // Merge rubric into first deliverable
+          this.synthesisOutput.assessment.deliverables.items[0].rubric = rubricResult.rubric;
+          this.synthesisPhases[2].data = rubricResult;
+          this.synthesisPhases[2].summary = '6 criteria';
+          this.synthesisPhases[2].status = 'complete';
+        }
+
+        // Phase 4: Curriculum
+        if (startFromPhase <= 3) {
+          this.synthesisPhases[3].status = 'in-progress';
           const assessmentSummary = {
             deliverables: this.synthesisOutput.assessment.deliverables.items.map(d => ({
               name: d.name,
@@ -361,17 +399,17 @@ document.addEventListener('alpine:init', () => {
               throw new Error(err.message || 'Failed to generate curriculum');
             }
             return response.json();
-          }, 2);
+          }, 3);
 
           this.synthesisOutput.curriculum = curriculumResult.curriculum;
-          this.synthesisPhases[2].data = curriculumResult;
-          this.synthesisPhases[2].summary = `${curriculumResult.curriculum.weeks.length} weeks`;
-          this.synthesisPhases[2].status = 'complete';
+          this.synthesisPhases[3].data = curriculumResult;
+          this.synthesisPhases[3].summary = `${curriculumResult.curriculum.weeks.length} weeks`;
+          this.synthesisPhases[3].status = 'complete';
         }
 
-        // Phase 4: Sample Week
-        if (startFromPhase <= 3) {
-          this.synthesisPhases[3].status = 'in-progress';
+        // Phase 5: Sample Week
+        if (startFromPhase <= 4) {
+          this.synthesisPhases[4].status = 'in-progress';
           // Use week 4 (or mid-term week) as base
           const midWeekIndex = Math.min(3, this.synthesisOutput.curriculum.weeks.length - 1);
           const baseWeek = this.synthesisOutput.curriculum.weeks[midWeekIndex];
@@ -391,17 +429,17 @@ document.addEventListener('alpine:init', () => {
               throw new Error(err.message || 'Failed to generate sample week');
             }
             return response.json();
-          }, 3);
+          }, 4);
 
           this.synthesisOutput.sampleWeek = sampleWeekResult.sampleWeek;
-          this.synthesisPhases[3].data = sampleWeekResult;
-          this.synthesisPhases[3].summary = `Week ${sampleWeekResult.sampleWeek.weekNumber}`;
-          this.synthesisPhases[3].status = 'complete';
+          this.synthesisPhases[4].data = sampleWeekResult;
+          this.synthesisPhases[4].summary = `Week ${sampleWeekResult.sampleWeek.weekNumber}`;
+          this.synthesisPhases[4].status = 'complete';
         }
 
-        // Phase 5: Alignment
-        if (startFromPhase <= 4) {
-          this.synthesisPhases[4].status = 'in-progress';
+        // Phase 6: Alignment
+        if (startFromPhase <= 5) {
+          this.synthesisPhases[5].status = 'in-progress';
           const curriculumSummary = {
             weekThemes: this.synthesisOutput.curriculum.weeks.map(w => w.theme)
           };
@@ -429,12 +467,12 @@ document.addEventListener('alpine:init', () => {
               throw new Error(err.message || 'Failed to generate alignment');
             }
             return response.json();
-          }, 4);
+          }, 5);
 
           this.synthesisOutput.alignment = alignmentResult.alignment;
-          this.synthesisPhases[4].data = alignmentResult;
-          this.synthesisPhases[4].summary = 'Complete';
-          this.synthesisPhases[4].status = 'complete';
+          this.synthesisPhases[5].data = alignmentResult;
+          this.synthesisPhases[5].summary = 'Complete';
+          this.synthesisPhases[5].status = 'complete';
         }
 
         // All phases complete - go to results

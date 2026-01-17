@@ -68,10 +68,11 @@ fieldwork/
 | GET | `/api/synthesis/demo/:key` | Pre-generated output (e.g., `inst-1-emp-1-stu-1`) |
 | POST | `/api/synthesis/custom` | Claude API synthesis (legacy monolithic) |
 | POST | `/api/synthesis/phase/objectives` | Phase 1: Generate learning objectives |
-| POST | `/api/synthesis/phase/assessment` | Phase 2: Generate assessment strategy |
-| POST | `/api/synthesis/phase/curriculum` | Phase 3: Generate week-by-week curriculum |
-| POST | `/api/synthesis/phase/sample-week` | Phase 4: Generate enhanced sample week |
-| POST | `/api/synthesis/phase/alignment` | Phase 5: Generate alignment crosswalk |
+| POST | `/api/synthesis/phase/assessment` | Phase 2: Generate assessment structure (no rubric) |
+| POST | `/api/synthesis/phase/rubric` | Phase 3: Generate detailed rubric for first deliverable |
+| POST | `/api/synthesis/phase/curriculum` | Phase 4: Generate week-by-week curriculum |
+| POST | `/api/synthesis/phase/sample-week` | Phase 5: Generate enhanced sample week |
+| POST | `/api/synthesis/phase/alignment` | Phase 6: Generate alignment crosswalk |
 | POST | `/api/resume/extract-skills` | Upload resume and extract skills via Claude |
 
 ## Application Modes
@@ -79,15 +80,16 @@ fieldwork/
 - **Custom Mode**: Editable forms. Uses progressive multi-phase Claude API synthesis.
 
 ## Progressive Synthesis Architecture
-Custom mode uses a 5-phase progressive synthesis following backwards design principles:
+Custom mode uses a 6-phase progressive synthesis following backwards design principles:
 
 ### Phase Sequence
 ```
 1. Learning Objectives (foundation) → stored, passed to next
-2. Assessment (what students demonstrate) → stored, passed to next
-3. Curriculum (learning experiences) → stored, passed to next
-4. Sample Week (enhanced with resources) → stored, passed to next
-5. Alignment (cross-reference all elements) → complete
+2. Assessment Structure (4 components, no rubric) → stored, passed to next
+3. Evaluation Rubric (detailed rubric for first deliverable) → merged into assessment
+4. Curriculum (learning experiences) → stored, passed to next
+5. Sample Week (enhanced with resources) → stored, passed to next
+6. Alignment (cross-reference all elements) → complete
 ```
 
 ### Benefits
@@ -96,12 +98,14 @@ Custom mode uses a 5-phase progressive synthesis following backwards design prin
 - **Retry capability**: Failed phases can retry individually (keeps prior results)
 - **Partial results**: Users can view completed sections if synthesis fails midway
 - **Better quality**: Focused prompts produce more reliable output
+- **Better rubrics**: Dedicated rubric phase allows full focus on generating context-specific, personalized descriptors
 
 ### Frontend State
 ```javascript
 synthesisPhases: [
   { id: 'objectives', label: 'Learning Objectives', status: 'pending|in-progress|retrying|complete|failed', data: null, summary: null },
   { id: 'assessment', label: 'Assessment', status: '...', data: null, summary: null },
+  { id: 'rubric', label: 'Evaluation Rubric', status: '...', data: null, summary: null },
   { id: 'curriculum', label: 'Curriculum', status: '...', data: null, summary: null },
   { id: 'sample-week', label: 'Sample Week', status: '...', data: null, summary: null },
   { id: 'alignment', label: 'Alignment', status: '...', data: null, summary: null }
@@ -127,7 +131,7 @@ Tabs are ordered to reflect the backwards design pedagogy:
 ## Key Files
 - `public/js/app.js` - Alpine.js store managing wizard state, navigation, progressive synthesis orchestration
 - `server/services/claude.js` - Claude API prompt engineering and response parsing
-- `server/services/synthesis-phases.js` - 5 phase-specific prompt builders for progressive synthesis
+- `server/services/synthesis-phases.js` - 6 phase-specific prompt builders for progressive synthesis
 - `data/outputs/` - 8 pre-generated synthesis files for all demo combinations
 
 ## Environment Variables

@@ -33,7 +33,7 @@
       </div>
       <div class="flex justify-between mt-2 text-sm text-slate-500">
         <span x-text="$store.app.currentPhaseLabel"></span>
-        <span x-text="$store.app.completedPhasesCount + ' / 5'"></span>
+        <span x-text="$store.app.completedPhasesCount + ' / 6'"></span>
       </div>
     </div>
 
@@ -180,7 +180,7 @@
 function synthesisProgress() {
   return {
     get progressPercent() {
-      return Math.round((this.$store.app.completedPhasesCount / 5) * 100);
+      return Math.round((this.$store.app.completedPhasesCount / 6) * 100);
     },
     init() {
       // Watch for when we enter the synthesizing step
