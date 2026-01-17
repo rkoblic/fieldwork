@@ -1,0 +1,138 @@
+<div>
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-slate-900 mb-2">Institution Profile</h1>
+    <p class="text-slate-600">Academic settings and requirements for credit-bearing experiential learning.</p>
+  </div>
+
+  <!-- Demo Mode Switcher -->
+  <div x-show="$store.app.mode === 'demo'" class="mb-6">
+    <label class="label">Select Institution</label>
+    <div class="flex gap-2">
+      <template x-for="inst in $store.app.institutions" :key="inst.id">
+        <button
+          @click="$store.app.selectedInstitution = inst.id"
+          class="px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          :class="$store.app.selectedInstitution === inst.id ? 'bg-primary-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+          x-text="inst.name">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <!-- Custom Mode Template Selector -->
+  <div x-show="$store.app.mode === 'custom'" class="mb-6">
+    <label class="label">Start from template (optional)</label>
+    <div class="flex gap-2">
+      <template x-for="inst in $store.app.institutions" :key="inst.id">
+        <button
+          @click="$store.app.useAsTemplate('institution', inst.id)"
+          class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          x-text="'Use ' + inst.name">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <div class="card p-6">
+    <!-- Institution Name -->
+    <div class="mb-6">
+      <label class="label">Institution Name</label>
+      <input
+        type="text"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        :value="$store.app.activeInstitution?.name"
+        @input="$store.app.mode === 'custom' && ($store.app.customInstitution.name = $event.target.value)">
+    </div>
+
+    <!-- Term Settings -->
+    <div class="grid sm:grid-cols-3 gap-4 mb-6">
+      <div>
+        <label class="label">Term Length</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeInstitution?.termLengthWeeks + ' weeks'"
+          @input="$store.app.mode === 'custom' && ($store.app.customInstitution.termLengthWeeks = parseInt($event.target.value))">
+      </div>
+      <div>
+        <label class="label">Credit Hours</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeInstitution?.creditHours + ' credits'"
+          @input="$store.app.mode === 'custom' && ($store.app.customInstitution.creditHours = parseInt($event.target.value))">
+      </div>
+      <div>
+        <label class="label">Hours per Week</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeInstitution?.hoursPerWeek + ' hours'"
+          @input="$store.app.mode === 'custom' && ($store.app.customInstitution.hoursPerWeek = parseInt($event.target.value))">
+      </div>
+    </div>
+
+    <!-- Learner Settings -->
+    <div class="grid sm:grid-cols-3 gap-4 mb-6">
+      <div>
+        <label class="label">Learner Level</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeInstitution?.learnerLevel"
+          class="capitalize">
+      </div>
+      <div>
+        <label class="label">Experience Level</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeInstitution?.experienceLevel">
+      </div>
+      <div>
+        <label class="label">Assessment Approach</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeInstitution?.assessmentApproach">
+      </div>
+    </div>
+
+    <!-- Learning Outcomes -->
+    <div class="mb-6">
+      <label class="label">Learning Outcomes Required for Credit</label>
+      <div class="space-y-2">
+        <template x-for="(outcome, index) in $store.app.activeInstitution?.learningOutcomes" :key="index">
+          <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
+            <span class="w-6 h-6 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0" x-text="index + 1"></span>
+            <span class="text-slate-700 text-sm" x-text="outcome"></span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- NACE Competencies -->
+    <div>
+      <label class="label">Required NACE Competencies</label>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <template x-for="compId in $store.app.activeInstitution?.requiredNaceCompetencies" :key="compId">
+          <span class="badge badge-blue" x-text="$store.app.getNaceCompetencyName(compId)"></span>
+        </template>
+      </div>
+
+      <label class="label">Optional NACE Competencies</label>
+      <div class="flex flex-wrap gap-2">
+        <template x-for="compId in $store.app.activeInstitution?.optionalNaceCompetencies" :key="compId">
+          <span class="badge bg-slate-100 text-slate-700" x-text="$store.app.getNaceCompetencyName(compId)"></span>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>

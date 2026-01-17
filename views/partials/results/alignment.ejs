@@ -1,0 +1,129 @@
+<div>
+  <div class="mb-8">
+    <h2 class="text-2xl font-bold text-slate-900 mb-2">Alignment Crosswalk</h2>
+    <p class="text-slate-600">How this learning experience addresses all four synthesis inputs.</p>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-6">
+    <!-- FieldWork Framework -->
+    <div class="card p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-slate-900">FieldWork Framework</h3>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-sm font-semibold text-slate-700 mb-2">Kolb Phases Integration</h4>
+          <div class="space-y-2 text-sm">
+            <div class="flex items-start gap-2">
+              <span class="badge badge-blue flex-shrink-0">Experience</span>
+              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.experience"></span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="badge badge-green flex-shrink-0">Reflection</span>
+              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.reflection"></span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="badge badge-purple flex-shrink-0">Conceptualization</span>
+              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.conceptualization"></span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="badge badge-amber flex-shrink-0">Experimentation</span>
+              <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.experimentation"></span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-slate-700 mb-2">DEAL Reflections</h4>
+          <p class="text-sm text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.dealReflections"></p>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-slate-700 mb-2">Competencies</h4>
+          <p class="text-sm text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.competencies"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employer Success Criteria -->
+    <div class="card p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-slate-900">Employer Success Criteria</h3>
+      </div>
+
+      <div class="space-y-3">
+        <template x-for="item in $store.app.synthesisOutput?.alignment?.employerSuccessCriteria" :key="item.criterion">
+          <div class="p-3 bg-amber-50 rounded-lg border border-amber-100">
+            <div class="font-medium text-amber-900 text-sm mb-1" x-text="item.criterion"></div>
+            <div class="flex flex-wrap gap-1">
+              <template x-for="addr in item.addressedBy" :key="addr">
+                <span class="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded" x-text="addr"></span>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- Student Learning Goals -->
+    <div class="card p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-slate-900">Student Learning Goals</h3>
+      </div>
+
+      <div class="space-y-3">
+        <template x-for="item in $store.app.synthesisOutput?.alignment?.studentLearningGoals" :key="item.goal">
+          <div class="p-3 bg-violet-50 rounded-lg border border-violet-100">
+            <div class="font-medium text-violet-900 text-sm mb-1" x-text="item.goal"></div>
+            <div class="flex flex-wrap gap-1">
+              <template x-for="addr in item.addressedBy" :key="addr">
+                <span class="text-xs bg-violet-200 text-violet-800 px-2 py-0.5 rounded" x-text="addr"></span>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- Institutional Outcomes -->
+    <div class="card p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
+          <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-slate-900">Institutional Outcomes</h3>
+      </div>
+
+      <div class="space-y-3">
+        <template x-for="item in $store.app.synthesisOutput?.alignment?.institutionalOutcomes" :key="item.outcome">
+          <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-100">
+            <div class="font-medium text-emerald-900 text-sm mb-1" x-text="item.outcome"></div>
+            <div class="flex flex-wrap gap-1">
+              <template x-for="ev in item.evidence" :key="ev">
+                <span class="text-xs bg-emerald-200 text-emerald-800 px-2 py-0.5 rounded" x-text="ev"></span>
+              </template>
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>

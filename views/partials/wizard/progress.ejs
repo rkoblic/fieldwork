@@ -1,0 +1,52 @@
+<div class="bg-white border-b border-slate-200 sticky top-0 z-40">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-xl font-bold text-primary-600">FieldWork</div>
+      <div class="flex items-center gap-2">
+        <span class="text-sm text-slate-500" x-text="$store.app.mode === 'demo' ? 'Demo Mode' : 'Custom Mode'"></span>
+        <span class="badge" :class="$store.app.mode === 'demo' ? 'badge-blue' : 'badge-green'" x-text="$store.app.mode === 'demo' ? 'Demo' : 'Custom'"></span>
+      </div>
+    </div>
+
+    <!-- Progress Steps -->
+    <div class="flex items-center gap-2">
+      <template x-for="(step, index) in ['framework', 'institution', 'employer', 'student']" :key="step">
+        <div class="flex items-center">
+          <!-- Step indicator -->
+          <button
+            @click="$store.app.goToStep(step)"
+            :disabled="$store.app.currentStep === 'synthesizing'"
+            class="flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium transition-colors"
+            :class="{
+              'bg-primary-600 text-white': $store.app.currentStep === step,
+              'bg-primary-100 text-primary-700': $store.app.steps.indexOf($store.app.currentStep) > $store.app.steps.indexOf(step),
+              'bg-slate-100 text-slate-500': $store.app.steps.indexOf($store.app.currentStep) < $store.app.steps.indexOf(step),
+              'cursor-not-allowed opacity-50': $store.app.currentStep === 'synthesizing'
+            }">
+            <span class="w-5 h-5 rounded-full flex items-center justify-center text-xs"
+                  :class="{
+                    'bg-white/20': $store.app.currentStep === step,
+                    'bg-primary-600 text-white': $store.app.steps.indexOf($store.app.currentStep) > $store.app.steps.indexOf(step),
+                    'bg-slate-300': $store.app.steps.indexOf($store.app.currentStep) < $store.app.steps.indexOf(step)
+                  }">
+              <template x-if="$store.app.steps.indexOf($store.app.currentStep) > $store.app.steps.indexOf(step)">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+              </template>
+              <template x-if="$store.app.steps.indexOf($store.app.currentStep) <= $store.app.steps.indexOf(step)">
+                <span x-text="index + 1"></span>
+              </template>
+            </span>
+            <span class="hidden sm:inline capitalize" x-text="step"></span>
+          </button>
+
+          <!-- Connector -->
+          <template x-if="index < 3">
+            <div class="w-8 h-0.5 mx-1" :class="$store.app.steps.indexOf($store.app.currentStep) > index ? 'bg-primary-300' : 'bg-slate-200'"></div>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+</div>

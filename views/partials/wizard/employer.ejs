@@ -1,0 +1,150 @@
+<div>
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-slate-900 mb-2">Employer Project</h1>
+    <p class="text-slate-600">The authentic work context that creates value while enabling learning.</p>
+  </div>
+
+  <!-- Demo Mode Switcher -->
+  <div x-show="$store.app.mode === 'demo'" class="mb-6">
+    <label class="label">Select Project</label>
+    <div class="flex gap-2">
+      <template x-for="emp in $store.app.employers" :key="emp.id">
+        <button
+          @click="$store.app.selectedEmployer = emp.id"
+          class="px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          :class="$store.app.selectedEmployer === emp.id ? 'bg-primary-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+          x-text="emp.companyName">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <!-- Custom Mode Template Selector -->
+  <div x-show="$store.app.mode === 'custom'" class="mb-6">
+    <label class="label">Start from template (optional)</label>
+    <div class="flex gap-2">
+      <template x-for="emp in $store.app.employers" :key="emp.id">
+        <button
+          @click="$store.app.useAsTemplate('employer', emp.id)"
+          class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          x-text="'Use ' + emp.companyName">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <div class="card p-6">
+    <!-- Company Info -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div>
+        <label class="label">Company Name</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeEmployer?.companyName"
+          @input="$store.app.mode === 'custom' && ($store.app.customEmployer.companyName = $event.target.value)">
+      </div>
+      <div>
+        <label class="label">Industry</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeEmployer?.industry"
+          @input="$store.app.mode === 'custom' && ($store.app.customEmployer.industry = $event.target.value)">
+      </div>
+    </div>
+
+    <!-- Project Info -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div>
+        <label class="label">Project Title</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeEmployer?.projectTitle"
+          @input="$store.app.mode === 'custom' && ($store.app.customEmployer.projectTitle = $event.target.value)">
+      </div>
+      <div>
+        <label class="label">Project Type</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeEmployer?.projectType"
+          @input="$store.app.mode === 'custom' && ($store.app.customEmployer.projectType = $event.target.value)">
+      </div>
+    </div>
+
+    <!-- Project Brief -->
+    <div class="mb-6">
+      <label class="label">Project Brief</label>
+      <textarea
+        rows="4"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeEmployer?.projectBrief"
+        @input="$store.app.mode === 'custom' && ($store.app.customEmployer.projectBrief = $event.target.value)"></textarea>
+    </div>
+
+    <!-- Success Criteria -->
+    <div class="mb-6">
+      <label class="label">Success Criteria</label>
+      <div class="space-y-2">
+        <template x-for="(criterion, index) in $store.app.activeEmployer?.successCriteria" :key="index">
+          <div class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg border border-emerald-100">
+            <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span class="text-slate-700 text-sm" x-text="criterion"></span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- Deliverables -->
+    <div class="mb-6">
+      <label class="label">Expected Deliverables</label>
+      <div class="space-y-2">
+        <template x-for="(deliverable, index) in $store.app.activeEmployer?.deliverables" :key="index">
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
+            <span class="w-6 h-6 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0" x-text="index + 1"></span>
+            <span class="text-slate-700 text-sm" x-text="deliverable"></span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- Timeline & Support -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div>
+        <label class="label">Hours per Week</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeEmployer?.hoursPerWeek + ' hours'">
+      </div>
+      <div>
+        <label class="label">Mentor Support</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeEmployer?.mentorSupport">
+      </div>
+    </div>
+
+    <!-- Resources Provided -->
+    <div>
+      <label class="label">Resources Provided</label>
+      <div class="flex flex-wrap gap-2">
+        <template x-for="resource in $store.app.activeEmployer?.resourcesProvided" :key="resource">
+          <span class="badge badge-purple" x-text="resource"></span>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+<div>
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-slate-900 mb-2">FieldWork Framework</h1>
+    <p class="text-slate-600">The pedagogical architecture that ensures every experience is grounded in learning science.</p>
+  </div>
+
+  <!-- FieldWork Experiential Competencies -->
+  <div class="card p-6 mb-6">
+    <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+      <div class="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+        </svg>
+      </div>
+      FieldWork Experiential Learning Competencies
+    </h2>
+    <p class="text-sm text-slate-500 mb-4">These four competencies distinguish experiential learning from experiential activity:</p>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      <template x-for="comp in $store.app.framework?.experientialCompetencies" :key="comp.id">
+        <div class="bg-slate-50 rounded-lg p-4 border border-slate-200">
+          <h3 class="font-medium text-slate-900 mb-1" x-text="comp.name"></h3>
+          <p class="text-sm text-slate-600" x-text="comp.description"></p>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- NACE Competencies -->
+  <div class="card p-6 mb-6">
+    <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+      <div class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+        </svg>
+      </div>
+      NACE Career Readiness Competencies
+    </h2>
+    <p class="text-sm text-slate-500 mb-4">Industry-validated framework for professional skill development:</p>
+
+    <div class="grid sm:grid-cols-2 gap-3">
+      <template x-for="comp in $store.app.framework?.naceCompetencies" :key="comp.id">
+        <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors">
+          <div class="w-2 h-2 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div>
+            <h3 class="font-medium text-slate-900 text-sm" x-text="comp.name"></h3>
+            <p class="text-xs text-slate-500" x-text="comp.description"></p>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- Assessment Architecture -->
+  <div class="card p-6 mb-6">
+    <h2 class="text-lg font-semibold text-slate-900 mb-4 flex items-center gap-2">
+      <div class="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+        </svg>
+      </div>
+      Assessment Architecture
+    </h2>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+      <template x-for="item in $store.app.framework?.assessmentArchitecture" :key="item.id">
+        <div class="flex items-start gap-3">
+          <div class="w-10 h-10 bg-amber-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-medium text-slate-900" x-text="item.name"></h3>
+            <p class="text-sm text-slate-500" x-text="item.description"></p>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- Learning Strategies -->
+  <div class="grid sm:grid-cols-2 gap-6">
+    <!-- Kolb Cycle -->
+    <div class="card p-6">
+      <h2 class="text-lg font-semibold text-slate-900 mb-2" x-text="$store.app.framework?.learningStrategies?.kolbCycle?.name"></h2>
+      <p class="text-sm text-slate-500 mb-4" x-text="$store.app.framework?.learningStrategies?.kolbCycle?.description"></p>
+
+      <div class="space-y-3">
+        <template x-for="phase in $store.app.framework?.learningStrategies?.kolbCycle?.phases" :key="phase.id">
+          <div class="flex items-center gap-3">
+            <span class="badge"
+                  :class="{
+                    'badge-blue': phase.color === 'blue',
+                    'badge-green': phase.color === 'green',
+                    'badge-purple': phase.color === 'purple',
+                    'badge-amber': phase.color === 'amber'
+                  }"
+                  x-text="phase.name">
+            </span>
+            <span class="text-sm text-slate-600" x-text="phase.description"></span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- DEAL Model -->
+    <div class="card p-6">
+      <h2 class="text-lg font-semibold text-slate-900 mb-2" x-text="$store.app.framework?.learningStrategies?.dealModel?.name"></h2>
+      <p class="text-sm text-slate-500 mb-4" x-text="$store.app.framework?.learningStrategies?.dealModel?.description"></p>
+
+      <div class="space-y-3">
+        <template x-for="component in $store.app.framework?.learningStrategies?.dealModel?.components" :key="component.id">
+          <div class="bg-violet-50 rounded-lg p-3 border border-violet-100">
+            <h3 class="font-medium text-violet-900 text-sm" x-text="component.name"></h3>
+            <p class="text-xs text-violet-700" x-text="component.prompt"></p>
+          </div>
+        </template>
+      </div>
+    </div>
+  </div>
+</div>

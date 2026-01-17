@@ -1,0 +1,148 @@
+<div>
+  <div class="mb-8">
+    <h1 class="text-2xl font-bold text-slate-900 mb-2">Student Profile</h1>
+    <p class="text-slate-600">Individual learner information that enables personalized experience design.</p>
+  </div>
+
+  <!-- Demo Mode Switcher -->
+  <div x-show="$store.app.mode === 'demo'" class="mb-6">
+    <label class="label">Select Student</label>
+    <div class="flex gap-2">
+      <template x-for="stu in $store.app.students" :key="stu.id">
+        <button
+          @click="$store.app.selectedStudent = stu.id"
+          class="px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          :class="$store.app.selectedStudent === stu.id ? 'bg-primary-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'"
+          x-text="stu.name">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <!-- Custom Mode Template Selector -->
+  <div x-show="$store.app.mode === 'custom'" class="mb-6">
+    <label class="label">Start from template (optional)</label>
+    <div class="flex gap-2">
+      <template x-for="stu in $store.app.students" :key="stu.id">
+        <button
+          @click="$store.app.useAsTemplate('student', stu.id)"
+          class="px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors"
+          x-text="'Use ' + stu.name">
+        </button>
+      </template>
+    </div>
+  </div>
+
+  <div class="card p-6">
+    <!-- Basic Info -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div>
+        <label class="label">Name</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeStudent?.name"
+          @input="$store.app.mode === 'custom' && ($store.app.customStudent.name = $event.target.value)">
+      </div>
+      <div>
+        <label class="label">Major</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeStudent?.major"
+          @input="$store.app.mode === 'custom' && ($store.app.customStudent.major = $event.target.value)">
+      </div>
+      <div>
+        <label class="label">Minor</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeStudent?.minor"
+          @input="$store.app.mode === 'custom' && ($store.app.customStudent.minor = $event.target.value)">
+      </div>
+      <div>
+        <label class="label">Year</label>
+        <input
+          type="text"
+          :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+          :readonly="$store.app.mode === 'demo'"
+          :value="$store.app.activeStudent?.year"
+          @input="$store.app.mode === 'custom' && ($store.app.customStudent.year = $event.target.value)">
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="mb-6">
+      <label class="label">Skills & Experience</label>
+      <div class="space-y-2">
+        <template x-for="(skill, index) in $store.app.activeStudent?.skills" :key="index">
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
+            <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-slate-700 text-sm" x-text="skill"></span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- Relevant Coursework -->
+    <div class="mb-6">
+      <label class="label">Relevant Coursework</label>
+      <div class="flex flex-wrap gap-2">
+        <template x-for="course in $store.app.activeStudent?.relevantCoursework" :key="course">
+          <span class="badge badge-blue" x-text="course"></span>
+        </template>
+      </div>
+    </div>
+
+    <!-- Learning Goals -->
+    <div class="mb-6">
+      <label class="label">Learning Goals</label>
+      <div class="space-y-2">
+        <template x-for="(goal, index) in $store.app.activeStudent?.learningGoals" :key="index">
+          <div class="flex items-start gap-3 p-3 bg-violet-50 rounded-lg border border-violet-100">
+            <span class="w-6 h-6 bg-violet-200 text-violet-700 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0" x-text="index + 1"></span>
+            <span class="text-slate-700 text-sm" x-text="goal"></span>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <!-- Career Interests -->
+    <div>
+      <label class="label">Career Interests</label>
+      <textarea
+        rows="3"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeStudent?.careerInterests"
+        @input="$store.app.mode === 'custom' && ($store.app.customStudent.careerInterests = $event.target.value)"></textarea>
+    </div>
+  </div>
+
+  <!-- Synthesis Preview -->
+  <div class="mt-6 p-4 bg-gradient-to-r from-primary-50 to-violet-50 rounded-xl border border-primary-100">
+    <div class="flex items-start gap-4">
+      <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 shadow-sm">
+        <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 mb-1">Ready to Synthesize</h3>
+        <p class="text-sm text-slate-600">
+          Click "Generate Learning Experience" to create a personalized curriculum for
+          <span class="font-medium" x-text="$store.app.activeStudent?.name"></span>
+          working on
+          <span class="font-medium" x-text="$store.app.activeEmployer?.projectTitle"></span>
+          at
+          <span class="font-medium" x-text="$store.app.activeInstitution?.name"></span>.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

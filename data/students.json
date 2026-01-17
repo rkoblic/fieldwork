@@ -1,0 +1,59 @@
+{
+  "students": [
+    {
+      "id": "stu-1",
+      "name": "Anna Liu",
+      "major": "Psychology",
+      "minor": "Business Administration",
+      "year": "Junior",
+      "gpa": "3.6",
+      "skills": [
+        "Research methods and data analysis (SPSS)",
+        "Technical writing from lab reports",
+        "Survey design and administration",
+        "Basic statistics and hypothesis testing"
+      ],
+      "relevantCoursework": [
+        "Research Methods in Psychology",
+        "Statistics for Social Sciences",
+        "Organizational Behavior",
+        "Consumer Psychology"
+      ],
+      "learningGoals": [
+        "Develop professional presentation skills",
+        "Understand how organizations use data to make decisions",
+        "Build confidence communicating with senior professionals",
+        "Explore applications of psychology in business settings"
+      ],
+      "careerInterests": "Interested in HR, organizational consulting, or market research. Wants to understand how psychological principles apply in professional settings."
+    },
+    {
+      "id": "stu-2",
+      "name": "Ben Williams",
+      "major": "Communications",
+      "minor": "Digital Media",
+      "year": "Senior",
+      "gpa": "3.4",
+      "skills": [
+        "Strong written and verbal communication",
+        "Content creation and storytelling",
+        "Social media strategy and management",
+        "Basic graphic design (Canva, Adobe Creative Suite)",
+        "Interview and qualitative research skills"
+      ],
+      "relevantCoursework": [
+        "Strategic Communications",
+        "Media Writing",
+        "Public Relations Principles",
+        "Visual Communication"
+      ],
+      "learningGoals": [
+        "Gain experience with client-facing professional work",
+        "Learn to translate complex information for different audiences",
+        "Develop project management skills",
+        "Build a portfolio of professional work"
+      ],
+      "careerInterests": "Interested in corporate communications, PR, or content strategy roles. Wants to work in an environment where creativity combines with strategic thinking."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+<div class="py-16">
+  <div class="text-center mb-12">
+    <h1 class="text-2xl font-bold text-slate-900 mb-2">Generating Your Learning Experience</h1>
+    <p class="text-slate-600">Synthesizing inputs into a personalized curriculum...</p>
+  </div>
+
+  <div class="max-w-md mx-auto" x-data="synthesisAnimation()">
+    <!-- Progress bar -->
+    <div class="mb-8">
+      <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-primary-500 to-violet-500 rounded-full transition-all duration-500"
+             :style="'width: ' + progress + '%'"></div>
+      </div>
+      <div class="flex justify-between mt-2 text-sm text-slate-500">
+        <span x-text="currentStepLabel"></span>
+        <span x-text="progress + '%'"></span>
+      </div>
+    </div>
+
+    <!-- Synthesis steps -->
+    <div class="space-y-4">
+      <template x-for="(step, index) in steps" :key="index">
+        <div class="flex items-center gap-4 p-4 rounded-lg transition-colors"
+             :class="currentStep > index ? 'bg-primary-50' : currentStep === index ? 'bg-slate-100' : 'bg-slate-50'">
+          <!-- Icon -->
+          <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               :class="currentStep > index ? 'bg-primary-500 text-white' : currentStep === index ? 'bg-primary-100 text-primary-600' : 'bg-slate-200 text-slate-400'">
+            <template x-if="currentStep > index">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+            </template>
+            <template x-if="currentStep === index">
+              <div class="w-5 h-5 border-2 border-primary-600 border-t-transparent rounded-full animate-spin"></div>
+            </template>
+            <template x-if="currentStep < index">
+              <span class="text-sm font-medium" x-text="index + 1"></span>
+            </template>
+          </div>
+
+          <!-- Label -->
+          <div>
+            <div class="font-medium" :class="currentStep >= index ? 'text-slate-900' : 'text-slate-400'" x-text="step.label"></div>
+            <div class="text-sm" :class="currentStep >= index ? 'text-slate-500' : 'text-slate-300'" x-text="step.description"></div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+    <!-- Summary card -->
+    <div class="mt-8 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+      <div class="text-sm text-slate-500 mb-2">Creating experience for:</div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="badge badge-blue" x-text="$store.app.activeStudent?.name"></span>
+        <span class="text-slate-400">@</span>
+        <span class="badge badge-green" x-text="$store.app.activeInstitution?.name"></span>
+        <span class="text-slate-400">on</span>
+        <span class="badge badge-amber" x-text="$store.app.activeEmployer?.projectTitle"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function synthesisAnimation() {
+  return {
+    currentStep: 0,
+    progress: 0,
+    steps: [
+      { label: 'Applying FieldWork Framework', description: 'Integrating competencies and learning strategies' },
+      { label: 'Mapping Institutional Requirements', description: 'Aligning with credit and outcome standards' },
+      { label: 'Analyzing Employer Project', description: 'Extracting objectives and deliverables' },
+      { label: 'Personalizing for Student', description: 'Connecting to skills and goals' },
+      { label: 'Generating Learning Experience', description: 'Building curriculum and assessments' }
+    ],
+    get currentStepLabel() {
+      if (this.currentStep < this.steps.length) {
+        return this.steps[this.currentStep].label;
+      }
+      return 'Complete!';
+    },
+    init() {
+      this.runAnimation();
+    },
+    async runAnimation() {
+      const stepDuration = 600;
+      for (let i = 0; i <= this.steps.length; i++) {
+        await new Promise(resolve => setTimeout(resolve, stepDuration));
+        this.currentStep = i;
+        this.progress = Math.min(100, Math.round((i / this.steps.length) * 100));
+      }
+      // Trigger the actual synthesis load
+      await Alpine.store('app').loadSynthesis();
+    }
+  };
+}
+</script>

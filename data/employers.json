@@ -1,0 +1,59 @@
+{
+  "employers": [
+    {
+      "id": "emp-1",
+      "companyName": "Bridgewater Community Foundation",
+      "industry": "Nonprofit / Community Development",
+      "projectTitle": "Donor Engagement Strategy Research",
+      "projectType": "Research & Analysis",
+      "projectBrief": "We're a regional nonprofit that has seen donor retention decline over the past two years. We have three years of donor data but lack the capacity to analyze it. We need someone to help us understand donor patterns, identify at-risk segments, and develop recommendations for improving engagement. This project will directly inform our fundraising strategy for the coming year.",
+      "successCriteria": [
+        "Clear analysis of donor retention patterns with supporting data",
+        "Identification of 3-5 actionable donor segments",
+        "Evidence-based recommendations our development team can implement",
+        "A presentation our board can understand and act on"
+      ],
+      "deliverables": [
+        "Interim findings report (mid-term)",
+        "Final analysis with recommendations (near end of term)",
+        "Board presentation deck (final week)"
+      ],
+      "timelineWeeks": 12,
+      "hoursPerWeek": "6-8",
+      "mentorSupport": "Weekly 30-minute check-ins with Development Director",
+      "resourcesProvided": [
+        "Donor database access (anonymized)",
+        "Historical campaign data",
+        "Staff interviews as needed"
+      ]
+    },
+    {
+      "id": "emp-2",
+      "companyName": "Horizon Strategic Consulting",
+      "industry": "Professional Services / Consulting",
+      "projectTitle": "Client Onboarding Process Improvement",
+      "projectType": "Process Improvement",
+      "projectBrief": "Our client onboarding process has grown organically over five years and is now inconsistent across teams. We need someone to document our current process, interview stakeholders to identify pain points, research best practices, and propose improvements. The goal is a streamlined process that improves client satisfaction and reduces staff time spent on administrative tasks.",
+      "successCriteria": [
+        "Comprehensive documentation of current onboarding process",
+        "Stakeholder feedback synthesized into key themes",
+        "Research-backed recommendations for improvement",
+        "Implementation roadmap with prioritized action items"
+      ],
+      "deliverables": [
+        "Current state process map (early term)",
+        "Stakeholder interview summary (mid-term)",
+        "Best practices research brief (late-mid term)",
+        "Final recommendations and roadmap (final weeks)"
+      ],
+      "timelineWeeks": 15,
+      "hoursPerWeek": "8-10",
+      "mentorSupport": "Bi-weekly meetings with Operations Manager",
+      "resourcesProvided": [
+        "Access to internal documentation",
+        "Stakeholder interview scheduling support",
+        "Industry benchmarking data"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "institutions": [
+    {
+      "id": "inst-1",
+      "name": "Westbrook University",
+      "termLengthWeeks": 12,
+      "creditHours": 3,
+      "hoursPerWeek": 6,
+      "learnerLevel": "undergraduate",
+      "experienceLevel": "Junior/Senior standing",
+      "teamSize": "Individual",
+      "assessmentApproach": "Letter Grade (A-F)",
+      "learningOutcomes": [
+        "Apply disciplinary knowledge to solve real-world problems",
+        "Demonstrate professional communication skills in workplace settings",
+        "Reflect critically on personal and professional development",
+        "Collaborate effectively with professionals and stakeholders"
+      ],
+      "requiredNaceCompetencies": ["critical-thinking", "communication", "professionalism"],
+      "optionalNaceCompetencies": ["teamwork", "career-self-development"]
+    },
+    {
+      "id": "inst-2",
+      "name": "Pacific Coast College",
+      "termLengthWeeks": 15,
+      "creditHours": 4,
+      "hoursPerWeek": 8,
+      "learnerLevel": "undergraduate",
+      "experienceLevel": "Sophomore-Senior standing",
+      "teamSize": "Individual or Team",
+      "assessmentApproach": "Pass/Fail with Portfolio",
+      "learningOutcomes": [
+        "Integrate academic learning with professional practice",
+        "Develop career-relevant skills through applied projects",
+        "Articulate learning and growth through structured reflection",
+        "Demonstrate ethical and inclusive professional behavior"
+      ],
+      "requiredNaceCompetencies": ["critical-thinking", "communication", "career-self-development", "equity-inclusion"],
+      "optionalNaceCompetencies": ["leadership", "technology"]
+    }
+  ]
+}
