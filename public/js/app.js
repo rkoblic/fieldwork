@@ -201,6 +201,13 @@ document.addEventListener('alpine:init', () => {
       ];
       const comp = allComps.find(c => c.id === id);
       return comp ? comp.name : id;
+    },
+
+    // Helper to get Kolb phase name by ID
+    getKolbPhaseName(id) {
+      if (!id || !this.framework?.learningStrategies?.kolbCycle?.phases) return id;
+      const phase = this.framework.learningStrategies.kolbCycle.phases.find(p => p.id === id);
+      return phase ? phase.name : id;
     }
   });
 });

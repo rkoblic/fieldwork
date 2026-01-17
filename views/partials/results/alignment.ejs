@@ -21,19 +21,19 @@
           <h4 class="text-sm font-semibold text-slate-700 mb-2">Kolb Phases Integration</h4>
           <div class="space-y-2 text-sm">
             <div class="flex items-start gap-2">
-              <span class="badge badge-blue flex-shrink-0">Experience</span>
+              <span class="badge badge-blue flex-shrink-0" x-text="$store.app.getKolbPhaseName('experience')"></span>
               <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.experience"></span>
             </div>
             <div class="flex items-start gap-2">
-              <span class="badge badge-green flex-shrink-0">Reflection</span>
+              <span class="badge badge-green flex-shrink-0" x-text="$store.app.getKolbPhaseName('reflection')"></span>
               <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.reflection"></span>
             </div>
             <div class="flex items-start gap-2">
-              <span class="badge badge-purple flex-shrink-0">Conceptualization</span>
+              <span class="badge badge-purple flex-shrink-0" x-text="$store.app.getKolbPhaseName('conceptualization')"></span>
               <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.conceptualization"></span>
             </div>
             <div class="flex items-start gap-2">
-              <span class="badge badge-amber flex-shrink-0">Experimentation</span>
+              <span class="badge badge-amber flex-shrink-0" x-text="$store.app.getKolbPhaseName('experimentation')"></span>
               <span class="text-slate-600" x-text="$store.app.synthesisOutput?.alignment?.frameworkElements?.kolbPhases?.experimentation"></span>
             </div>
           </div>

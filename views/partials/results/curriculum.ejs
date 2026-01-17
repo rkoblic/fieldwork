@@ -10,10 +10,16 @@
   <!-- Kolb Phase Legend -->
   <div class="mb-6 flex flex-wrap gap-3">
     <span class="text-sm text-slate-500">Kolb Phases:</span>
-    <span class="badge badge-blue">Experience</span>
-    <span class="badge badge-green">Reflection</span>
-    <span class="badge badge-purple">Conceptualization</span>
-    <span class="badge badge-amber">Experimentation</span>
+    <template x-for="phase in $store.app.framework?.learningStrategies?.kolbCycle?.phases" :key="phase.id">
+      <span class="badge"
+            :class="{
+              'badge-blue': phase.color === 'blue',
+              'badge-green': phase.color === 'green',
+              'badge-purple': phase.color === 'purple',
+              'badge-amber': phase.color === 'amber'
+            }"
+            x-text="phase.name"></span>
+    </template>
   </div>
 
   <div class="space-y-3" x-data="{ expandedWeek: null }">
@@ -74,7 +80,7 @@
                             'badge-purple': activity.kolbPhase === 'conceptualization',
                             'badge-amber': activity.kolbPhase === 'experimentation'
                           }"
-                          x-text="activity.kolbPhase"></span>
+                          x-text="$store.app.getKolbPhaseName(activity.kolbPhase)"></span>
                     <span class="text-sm text-slate-700 flex-1" x-text="activity.description"></span>
                     <span class="text-sm text-slate-500" x-text="activity.hours + ' hr'"></span>
                   </div>

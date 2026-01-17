@@ -76,7 +76,7 @@
                             'badge-purple': activity.kolbPhase === 'conceptualization',
                             'badge-amber': activity.kolbPhase === 'experimentation'
                           }"
-                          x-text="activity.kolbPhase">
+                          x-text="$store.app.getKolbPhaseName(activity.kolbPhase)">
                     </span>
                   </div>
                   <div class="flex-1">
