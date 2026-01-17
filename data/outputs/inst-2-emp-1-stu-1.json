@@ -73,273 +73,656 @@
       {
         "weekNumber": 1,
         "theme": "Project Orientation and Research Design",
-        "objectives": ["Understand organizational context", "Establish research framework", "Develop project plan"],
-        "activities": [
-          {"description": "Project kickoff meeting with Development Director", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Review donor database and existing research", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Reflect on research approach and initial observations", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Nonprofit fundraising research methods", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Draft research plan and methodology", "hours": 1, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Understand organizational context",
+          "Establish research framework",
+          "Develop project plan"
         ],
-        "deliverables": ["Research plan with methodology"],
+        "activities": [
+          {
+            "description": "Project kickoff meeting with Development Director",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review donor database and existing research",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on research approach and initial observations",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Nonprofit fundraising research methods",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Draft research plan and methodology",
+            "hours": 1,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Research plan with methodology"
+        ],
         "dealReflection": {
           "describe": "What did you learn about the organization and its challenges? What research questions emerged?",
           "examine": "How do research methods from psychology apply in this nonprofit context? What ethical considerations arise?",
           "articulate": "What research skills do you expect to use? What new approaches might you need to learn?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "career-self-development"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "career-self-development"
+        ]
       },
       {
         "weekNumber": 2,
         "theme": "Data Assessment and Preparation",
-        "objectives": ["Assess data quality and completeness", "Prepare data for analysis", "Begin descriptive analysis"],
-        "activities": [
-          {"description": "Conduct comprehensive data quality assessment", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Data preparation and cleaning best practices", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Clean and prepare data for analysis", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Assess data quality and completeness",
+          "Prepare data for analysis",
+          "Begin descriptive analysis"
         ],
-        "deliverables": ["Data quality report"],
+        "activities": [
+          {
+            "description": "Conduct comprehensive data quality assessment",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Data preparation and cleaning best practices",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Clean and prepare data for analysis",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Data quality report"
+        ],
         "dealReflection": {
           "describe": "What data quality issues did you discover? How did you address them?",
           "examine": "How does working with real organizational data differ from course datasets? What compromises did you need to make?",
           "articulate": "What have you learned about applied data work? How does this inform your view of research careers?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "technology"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "technology"
+        ]
       },
       {
         "weekNumber": 3,
         "theme": "Exploratory Analysis",
-        "objectives": ["Conduct exploratory data analysis", "Identify initial patterns", "Refine research questions"],
-        "activities": [
-          {"description": "Perform exploratory statistical analysis", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in to discuss patterns", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Donor behavior research and segmentation theory", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Create initial visualizations and refine questions", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Conduct exploratory data analysis",
+          "Identify initial patterns",
+          "Refine research questions"
         ],
-        "deliverables": ["Exploratory analysis summary"],
+        "activities": [
+          {
+            "description": "Perform exploratory statistical analysis",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in to discuss patterns",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Donor behavior research and segmentation theory",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Create initial visualizations and refine questions",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Exploratory analysis summary"
+        ],
         "dealReflection": {
           "describe": "What patterns emerged from your exploratory analysis? What surprised you?",
           "examine": "How do statistical findings connect to theories of donor motivation? What psychological concepts seem relevant?",
           "articulate": "What have you learned about the interplay between data and theory? How does this shape your analytical approach?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "communication"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "communication"
+        ]
       },
       {
         "weekNumber": 4,
         "theme": "Segmentation Development",
-        "objectives": ["Develop donor segmentation framework", "Apply statistical methods", "Validate segments"],
-        "activities": [
-          {"description": "Apply segmentation methodology to data", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in: segment validation", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Advanced segmentation techniques and validation", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine and test segmentation approach", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Develop donor segmentation framework",
+          "Apply statistical methods",
+          "Validate segments"
         ],
-        "deliverables": ["Segmentation framework draft"],
+        "activities": [
+          {
+            "description": "Apply segmentation methodology to data",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in: segment validation",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Advanced segmentation techniques and validation",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine and test segmentation approach",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Segmentation framework draft"
+        ],
         "dealReflection": {
           "describe": "What segmentation approach did you use? How did you validate your segments?",
           "examine": "How do different segmentation methods produce different results? What are the tradeoffs?",
           "articulate": "What have you learned about making methodological decisions? How does this build research competence?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "technology"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "technology"
+        ]
       },
       {
         "weekNumber": 5,
         "theme": "Deep Pattern Analysis",
-        "objectives": ["Analyze retention patterns by segment", "Identify risk factors", "Develop predictive insights"],
-        "activities": [
-          {"description": "Conduct segment-level retention analysis", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Predictive analytics in nonprofit contexts", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Develop retention risk indicators", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Analyze retention patterns by segment",
+          "Identify risk factors",
+          "Develop predictive insights"
         ],
-        "deliverables": ["Retention pattern analysis"],
+        "activities": [
+          {
+            "description": "Conduct segment-level retention analysis",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Predictive analytics in nonprofit contexts",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop retention risk indicators",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Retention pattern analysis"
+        ],
         "dealReflection": {
           "describe": "What retention patterns did you identify? What distinguishes at-risk donors?",
           "examine": "How do you balance statistical significance with practical significance? What are the ethical considerations?",
           "articulate": "What have you learned about translating analysis into actionable insights?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "equity-inclusion"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "equity-inclusion"
+        ]
       },
       {
         "weekNumber": 6,
         "theme": "Equity and Inclusion Analysis",
-        "objectives": ["Examine equity dimensions in donor data", "Identify potential biases", "Develop inclusive recommendations"],
-        "activities": [
-          {"description": "Analyze demographic patterns and equity considerations", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in: discuss equity implications", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Equity in nonprofit fundraising and inclusive practices", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Document equity considerations for recommendations", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Examine equity dimensions in donor data",
+          "Identify potential biases",
+          "Develop inclusive recommendations"
         ],
-        "deliverables": ["Equity analysis memo"],
+        "activities": [
+          {
+            "description": "Analyze demographic patterns and equity considerations",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in: discuss equity implications",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Equity in nonprofit fundraising and inclusive practices",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Document equity considerations for recommendations",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Equity analysis memo"
+        ],
         "dealReflection": {
           "describe": "What equity patterns did you observe? What biases might exist in the data or current practices?",
           "examine": "How do issues of equity and inclusion intersect with fundraising practices? What ethical obligations arise?",
           "articulate": "What have you learned about incorporating equity considerations into professional recommendations?"
         },
-        "naceCompetencyFocus": ["equity-inclusion", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "equity-inclusion",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 7,
         "theme": "Stakeholder Engagement",
-        "objectives": ["Gather stakeholder perspectives", "Validate analytical findings", "Incorporate practitioner knowledge"],
-        "activities": [
-          {"description": "Conduct stakeholder interviews", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Synthesize interview insights with data findings", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Mixed methods research and practitioner engagement", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Integrate stakeholder perspectives into analysis", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Gather stakeholder perspectives",
+          "Validate analytical findings",
+          "Incorporate practitioner knowledge"
         ],
-        "deliverables": ["Stakeholder interview summary"],
+        "activities": [
+          {
+            "description": "Conduct stakeholder interviews",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Synthesize interview insights with data findings",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Mixed methods research and practitioner engagement",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Integrate stakeholder perspectives into analysis",
+            "hours": 3.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Stakeholder interview summary"
+        ],
         "dealReflection": {
           "describe": "What did you learn from stakeholder interviews? How did their perspectives complement your data analysis?",
           "examine": "How do you balance quantitative findings with qualitative insights? What does each contribute?",
           "articulate": "What have you learned about the value of multiple data sources and perspectives?"
         },
-        "naceCompetencyFocus": ["communication", "teamwork"]
+        "naceCompetencyFocus": [
+          "communication",
+          "teamwork"
+        ]
       },
       {
         "weekNumber": 8,
         "theme": "Interim Synthesis and Report",
-        "objectives": ["Synthesize findings to date", "Create interim report", "Present progress"],
-        "activities": [
-          {"description": "Write comprehensive interim findings report", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Present interim findings to Development Director", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Research report writing and presentation", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Incorporate feedback and plan final phase", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Synthesize findings to date",
+          "Create interim report",
+          "Present progress"
         ],
-        "deliverables": ["Interim findings report"],
+        "activities": [
+          {
+            "description": "Write comprehensive interim findings report",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Present interim findings to Development Director",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Research report writing and presentation",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Incorporate feedback and plan final phase",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interim findings report"
+        ],
         "dealReflection": {
           "describe": "How did you structure your interim report? What feedback did you receive?",
           "examine": "How do you communicate research findings to non-academic audiences? What adaptations are needed?",
           "articulate": "What have you learned about professional research communication?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 9,
         "theme": "Recommendation Development",
-        "objectives": ["Translate findings into recommendations", "Apply psychological principles", "Consider implementation"],
-        "activities": [
-          {"description": "Develop evidence-based recommendations", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in: review recommendations", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Applied psychology in organizational settings", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine recommendations for feasibility", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Translate findings into recommendations",
+          "Apply psychological principles",
+          "Consider implementation"
         ],
-        "deliverables": ["Draft recommendations"],
+        "activities": [
+          {
+            "description": "Develop evidence-based recommendations",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in: review recommendations",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Applied psychology in organizational settings",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine recommendations for feasibility",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft recommendations"
+        ],
         "dealReflection": {
           "describe": "What recommendations did you develop? How did psychological theory inform them?",
           "examine": "How do you balance ideal recommendations with organizational constraints?",
           "articulate": "What have you learned about applying psychology in professional settings?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "professionalism"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 10,
         "theme": "Implementation Planning",
-        "objectives": ["Prioritize recommendations", "Develop implementation approach", "Create metrics"],
-        "activities": [
-          {"description": "Create prioritized implementation roadmap", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Implementation science and change management", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Develop success metrics and evaluation plan", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Prioritize recommendations",
+          "Develop implementation approach",
+          "Create metrics"
         ],
-        "deliverables": ["Implementation roadmap"],
+        "activities": [
+          {
+            "description": "Create prioritized implementation roadmap",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Implementation science and change management",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop success metrics and evaluation plan",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Implementation roadmap"
+        ],
         "dealReflection": {
           "describe": "How did you prioritize recommendations? What implementation challenges did you anticipate?",
           "examine": "What factors affect successful implementation of research recommendations?",
           "articulate": "What have you learned about the gap between research findings and organizational change?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "career-self-development"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "career-self-development"
+        ]
       },
       {
         "weekNumber": 11,
         "theme": "Final Analysis Completion",
-        "objectives": ["Complete all analysis", "Finalize documentation", "Prepare final materials"],
-        "activities": [
-          {"description": "Complete and document all analysis", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Self-review for rigor and clarity", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Research documentation standards", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Create technical appendices", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete all analysis",
+          "Finalize documentation",
+          "Prepare final materials"
         ],
-        "deliverables": ["Complete analysis documentation"],
+        "activities": [
+          {
+            "description": "Complete and document all analysis",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Self-review for rigor and clarity",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Research documentation standards",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Create technical appendices",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Complete analysis documentation"
+        ],
         "dealReflection": {
           "describe": "How did you ensure your analysis was complete and well-documented?",
           "examine": "What are the standards for professional research documentation? How do they differ from academic requirements?",
           "articulate": "What have you learned about professional research standards?"
         },
-        "naceCompetencyFocus": ["professionalism", "technology"]
+        "naceCompetencyFocus": [
+          "professionalism",
+          "technology"
+        ]
       },
       {
         "weekNumber": 12,
         "theme": "Final Report Writing",
-        "objectives": ["Write comprehensive final report", "Integrate all components", "Ensure quality"],
-        "activities": [
-          {"description": "Write final comprehensive report", "hours": 4.5, "kolbPhase": "experience"},
-          {"description": "Review with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Executive report writing", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Revise based on feedback", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Write comprehensive final report",
+          "Integrate all components",
+          "Ensure quality"
         ],
-        "deliverables": ["Draft final report"],
+        "activities": [
+          {
+            "description": "Write final comprehensive report",
+            "hours": 7,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Executive report writing",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Revise based on feedback",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft final report"
+        ],
         "dealReflection": {
           "describe": "How did you structure your final report? What writing challenges did you face?",
           "examine": "How do you balance comprehensiveness with readability for professional audiences?",
           "articulate": "What have you learned about professional report writing?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 13,
         "theme": "Final Report Refinement",
-        "objectives": ["Polish final report", "Prepare presentation materials", "Complete documentation"],
-        "activities": [
-          {"description": "Finalize report with all revisions", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Quality review session", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Presentation design principles", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Begin presentation development", "hours": 3, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Polish final report",
+          "Prepare presentation materials",
+          "Complete documentation"
         ],
-        "deliverables": ["Final report", "Presentation draft"],
+        "activities": [
+          {
+            "description": "Finalize report with all revisions",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Quality review session",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Presentation design principles",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin presentation development",
+            "hours": 4.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final report",
+          "Presentation draft"
+        ],
         "dealReflection": {
           "describe": "What final refinements did you make? How did you approach presentation development?",
           "examine": "How do you translate a written report into an effective presentation?",
           "articulate": "What have you learned about communicating research through different formats?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 14,
         "theme": "Presentation Preparation",
-        "objectives": ["Complete presentation", "Practice delivery", "Prepare for Q&A"],
-        "activities": [
-          {"description": "Finalize board presentation", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Practice presentation and receive feedback", "hours": 1.5, "kolbPhase": "reflection"},
-          {"description": "Read: Board presentations and executive communication", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Refine and prepare for Q&A", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete presentation",
+          "Practice delivery",
+          "Prepare for Q&A"
         ],
-        "deliverables": ["Board presentation"],
+        "activities": [
+          {
+            "description": "Finalize board presentation",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Practice presentation and receive feedback",
+            "hours": 2.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Board presentations and executive communication",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine and prepare for Q&A",
+            "hours": 3.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Board presentation"
+        ],
         "dealReflection": {
           "describe": "How did you prepare for your board presentation? What feedback helped most?",
           "examine": "What's different about presenting to a board versus academic audiences?",
           "articulate": "What have you learned about executive-level communication?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 15,
         "theme": "Final Presentation and Reflection",
-        "objectives": ["Deliver board presentation", "Complete project handoff", "Reflect on learning journey"],
-        "activities": [
-          {"description": "Deliver final presentation to board", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Debrief with mentor", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Career development in applied psychology", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Complete comprehensive reflection and handoff", "hours": 4, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Deliver board presentation",
+          "Complete project handoff",
+          "Reflect on learning journey"
         ],
-        "deliverables": ["Board presentation (delivered)", "Project handoff", "Final comprehensive reflection", "Portfolio documentation"],
+        "activities": [
+          {
+            "description": "Deliver final presentation to board",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Debrief with mentor",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Career development in applied psychology",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Complete comprehensive reflection and handoff",
+            "hours": 6,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Board presentation (delivered)",
+          "Project handoff",
+          "Final comprehensive reflection",
+          "Portfolio documentation"
+        ],
         "dealReflection": {
           "describe": "How did your final presentation go? What was the board's response?",
           "examine": "Looking back at the entire project, how did your research and professional skills develop?",
           "articulate": "What are the most valuable competencies you developed? How will this experience shape your career path?"
         },
-        "naceCompetencyFocus": ["career-self-development", "communication"]
+        "naceCompetencyFocus": [
+          "career-self-development",
+          "communication"
+        ]
       }
     ]
   },
@@ -356,7 +739,11 @@
           "Appropriate equity considerations",
           "Professional quality"
         ],
-        "objectivesMapped": ["obj-1", "obj-2", "obj-4"]
+        "objectivesMapped": [
+          "obj-1",
+          "obj-2",
+          "obj-4"
+        ]
       },
       {
         "name": "Final Analysis and Recommendations",
@@ -368,7 +755,12 @@
           "Integration of psychological theory",
           "Inclusive recommendations"
         ],
-        "objectivesMapped": ["obj-1", "obj-2", "obj-3", "obj-4"]
+        "objectivesMapped": [
+          "obj-1",
+          "obj-2",
+          "obj-3",
+          "obj-4"
+        ]
       },
       {
         "name": "Board Presentation",
@@ -380,7 +772,11 @@
           "Professional delivery",
           "Effective Q&A handling"
         ],
-        "objectivesMapped": ["obj-2", "obj-3", "obj-6"]
+        "objectivesMapped": [
+          "obj-2",
+          "obj-3",
+          "obj-6"
+        ]
       }
     ],
     "reflections": {
@@ -394,9 +790,18 @@
       ]
     },
     "employerEvaluation": {
-      "timing": ["Mid-term (Week 8)", "Final (Week 15)"],
+      "timing": [
+        "Mid-term (Week 8)",
+        "Final (Week 15)"
+      ],
       "weight": "5%",
-      "areas": ["Research quality", "Professionalism", "Communication", "Initiative", "Ethical conduct"]
+      "areas": [
+        "Research quality",
+        "Professionalism",
+        "Communication",
+        "Initiative",
+        "Ethical conduct"
+      ]
     }
   },
   "sampleWeek": {
@@ -410,12 +815,30 @@
       "Develop predictive insights for practical application"
     ],
     "activities": [
-      {"description": "Conduct detailed segment-level retention analysis using statistical methods", "hours": 4, "kolbPhase": "experience"},
-      {"description": "Weekly mentor check-in: discuss patterns and methodology", "hours": 0.5, "kolbPhase": "reflection"},
-      {"description": "Read: Predictive analytics in nonprofit contexts and ethical considerations", "hours": 1.5, "kolbPhase": "conceptualization"},
-      {"description": "Develop retention risk indicators and early warning signals", "hours": 2, "kolbPhase": "experimentation"}
+      {
+        "description": "Conduct detailed segment-level retention analysis using statistical methods",
+        "hours": 4,
+        "kolbPhase": "experience"
+      },
+      {
+        "description": "Weekly mentor check-in: discuss patterns and methodology",
+        "hours": 0.5,
+        "kolbPhase": "reflection"
+      },
+      {
+        "description": "Read: Predictive analytics in nonprofit contexts and ethical considerations",
+        "hours": 1.5,
+        "kolbPhase": "conceptualization"
+      },
+      {
+        "description": "Develop retention risk indicators and early warning signals",
+        "hours": 2,
+        "kolbPhase": "experimentation"
+      }
     ],
-    "deliverables": ["Retention pattern analysis report"],
+    "deliverables": [
+      "Retention pattern analysis report"
+    ],
     "dealReflection": {
       "describe": "What retention patterns did you identify across segments? What distinguishes donors at risk of lapsing?",
       "examine": "How do you balance statistical significance with practical significance in organizational contexts? What ethical considerations arise in predictive modeling of donor behavior?",
@@ -438,22 +861,104 @@
       "competencies": "All FieldWork competencies plus emphasis on equity and inclusion through applied lens"
     },
     "employerSuccessCriteria": [
-      {"criterion": "Clear analysis of donor retention patterns with supporting data", "addressedBy": ["obj-1", "Interim Report", "Final Analysis"]},
-      {"criterion": "Identification of 3-5 actionable donor segments", "addressedBy": ["obj-1", "obj-3", "Segmentation framework"]},
-      {"criterion": "Evidence-based recommendations", "addressedBy": ["obj-3", "Final Analysis", "Implementation roadmap"]},
-      {"criterion": "Board-ready presentation", "addressedBy": ["obj-2", "Board Presentation"]}
+      {
+        "criterion": "Clear analysis of donor retention patterns with supporting data",
+        "addressedBy": [
+          "obj-1",
+          "Interim Report",
+          "Final Analysis"
+        ]
+      },
+      {
+        "criterion": "Identification of 3-5 actionable donor segments",
+        "addressedBy": [
+          "obj-1",
+          "obj-3",
+          "Segmentation framework"
+        ]
+      },
+      {
+        "criterion": "Evidence-based recommendations",
+        "addressedBy": [
+          "obj-3",
+          "Final Analysis",
+          "Implementation roadmap"
+        ]
+      },
+      {
+        "criterion": "Board-ready presentation",
+        "addressedBy": [
+          "obj-2",
+          "Board Presentation"
+        ]
+      }
     ],
     "studentLearningGoals": [
-      {"goal": "Develop professional presentation skills", "addressedBy": ["obj-2", "Board Presentation", "Interim presentation"]},
-      {"goal": "Understand how organizations use data to make decisions", "addressedBy": ["obj-1", "Stakeholder interviews", "Implementation planning"]},
-      {"goal": "Build confidence communicating with senior professionals", "addressedBy": ["obj-2", "obj-6", "Board presentation", "Mentor meetings"]},
-      {"goal": "Explore applications of psychology in business settings", "addressedBy": ["obj-3", "obj-5", "Recommendation development"]}
+      {
+        "goal": "Develop professional presentation skills",
+        "addressedBy": [
+          "obj-2",
+          "Board Presentation",
+          "Interim presentation"
+        ]
+      },
+      {
+        "goal": "Understand how organizations use data to make decisions",
+        "addressedBy": [
+          "obj-1",
+          "Stakeholder interviews",
+          "Implementation planning"
+        ]
+      },
+      {
+        "goal": "Build confidence communicating with senior professionals",
+        "addressedBy": [
+          "obj-2",
+          "obj-6",
+          "Board presentation",
+          "Mentor meetings"
+        ]
+      },
+      {
+        "goal": "Explore applications of psychology in business settings",
+        "addressedBy": [
+          "obj-3",
+          "obj-5",
+          "Recommendation development"
+        ]
+      }
     ],
     "institutionalOutcomes": [
-      {"outcome": "Integrate academic learning with professional practice", "evidence": ["Research methods application", "Psychology theory integration"]},
-      {"outcome": "Develop career-relevant skills through applied projects", "evidence": ["Analysis skills", "Presentation skills", "Professional communication"]},
-      {"outcome": "Articulate learning and growth through structured reflection", "evidence": ["DEAL reflections", "Final portfolio reflection"]},
-      {"outcome": "Demonstrate ethical and inclusive professional behavior", "evidence": ["Equity analysis", "Inclusive recommendations", "Ethical research practices"]}
+      {
+        "outcome": "Integrate academic learning with professional practice",
+        "evidence": [
+          "Research methods application",
+          "Psychology theory integration"
+        ]
+      },
+      {
+        "outcome": "Develop career-relevant skills through applied projects",
+        "evidence": [
+          "Analysis skills",
+          "Presentation skills",
+          "Professional communication"
+        ]
+      },
+      {
+        "outcome": "Articulate learning and growth through structured reflection",
+        "evidence": [
+          "DEAL reflections",
+          "Final portfolio reflection"
+        ]
+      },
+      {
+        "outcome": "Demonstrate ethical and inclusive professional behavior",
+        "evidence": [
+          "Equity analysis",
+          "Inclusive recommendations",
+          "Ethical research practices"
+        ]
+      }
     ]
   }
 }

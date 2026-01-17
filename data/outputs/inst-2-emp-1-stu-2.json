@@ -73,273 +73,656 @@
       {
         "weekNumber": 1,
         "theme": "Organizational Discovery and Communication Assessment",
-        "objectives": ["Understand organizational mission and communication context", "Assess current donor communication practices", "Develop project approach"],
-        "activities": [
-          {"description": "Project kickoff with Development Director", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Review donor communications, marketing materials, and annual reports", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Reflect on organizational voice and communication style", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Nonprofit communications strategy and donor engagement", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Draft project plan and communication strategy", "hours": 1, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Understand organizational mission and communication context",
+          "Assess current donor communication practices",
+          "Develop project approach"
         ],
-        "deliverables": ["Project plan with communication approach"],
+        "activities": [
+          {
+            "description": "Project kickoff with Development Director",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review donor communications, marketing materials, and annual reports",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on organizational voice and communication style",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Nonprofit communications strategy and donor engagement",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Draft project plan and communication strategy",
+            "hours": 1,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Project plan with communication approach"
+        ],
         "dealReflection": {
           "describe": "What did you learn about the organization's communication approach? What materials did you review?",
           "examine": "How does nonprofit communication differ from other contexts you've studied? What strategic principles apply?",
           "articulate": "What communication skills do you expect to use? What might you need to develop?"
         },
-        "naceCompetencyFocus": ["communication", "career-self-development"]
+        "naceCompetencyFocus": [
+          "communication",
+          "career-self-development"
+        ]
       },
       {
         "weekNumber": 2,
         "theme": "Data Exploration and Visual Discovery",
-        "objectives": ["Understand donor data landscape", "Begin identifying visual storytelling opportunities", "Develop data visualization approach"],
-        "activities": [
-          {"description": "Explore donor database with storytelling lens", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Data visualization and visual storytelling principles", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Create initial data visualization concepts", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Understand donor data landscape",
+          "Begin identifying visual storytelling opportunities",
+          "Develop data visualization approach"
         ],
-        "deliverables": ["Data exploration with visual concepts"],
+        "activities": [
+          {
+            "description": "Explore donor database with storytelling lens",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Data visualization and visual storytelling principles",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Create initial data visualization concepts",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Data exploration with visual concepts"
+        ],
         "dealReflection": {
           "describe": "What stories did you find in the data? What visualization approaches did you explore?",
           "examine": "How do visual communication principles apply to data presentation? What makes visualizations effective?",
           "articulate": "What have you learned about finding stories in data? How does this build your professional skills?"
         },
-        "naceCompetencyFocus": ["technology", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "technology",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 3,
         "theme": "Audience Analysis and Message Development",
-        "objectives": ["Analyze key stakeholder audiences", "Develop audience-specific messaging", "Create communication frameworks"],
-        "activities": [
-          {"description": "Conduct comprehensive audience analysis", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Discuss audience insights with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Audience segmentation and strategic messaging", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Develop key messages for different audiences", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Analyze key stakeholder audiences",
+          "Develop audience-specific messaging",
+          "Create communication frameworks"
         ],
-        "deliverables": ["Audience analysis and messaging framework"],
+        "activities": [
+          {
+            "description": "Conduct comprehensive audience analysis",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Discuss audience insights with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Audience segmentation and strategic messaging",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop key messages for different audiences",
+            "hours": 3.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Audience analysis and messaging framework"
+        ],
         "dealReflection": {
           "describe": "What audiences did you identify? How do their needs differ?",
           "examine": "How do concepts from Strategic Communications apply to nonprofit audiences?",
           "articulate": "What have you learned about audience-centered communication?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 4,
         "theme": "Interview Design and Stakeholder Engagement",
-        "objectives": ["Design interview protocol", "Begin stakeholder interviews", "Gather diverse perspectives"],
-        "activities": [
-          {"description": "Design and pilot interview approach", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in: discuss approach", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Qualitative research and interviewing techniques", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Begin conducting stakeholder interviews", "hours": 3.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Design interview protocol",
+          "Begin stakeholder interviews",
+          "Gather diverse perspectives"
         ],
-        "deliverables": ["Interview protocol and initial interviews"],
+        "activities": [
+          {
+            "description": "Design and pilot interview approach",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in: discuss approach",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Qualitative research and interviewing techniques",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin conducting stakeholder interviews",
+            "hours": 4.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview protocol and initial interviews"
+        ],
         "dealReflection": {
           "describe": "How did you design your interview approach? What techniques are you using?",
           "examine": "How do interview skills from journalism translate to organizational research?",
           "articulate": "What have you learned about professional interviewing?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 5,
         "theme": "Interviews and Equity Considerations",
-        "objectives": ["Complete stakeholder interviews", "Examine equity in donor engagement", "Identify diverse perspectives"],
-        "activities": [
-          {"description": "Continue stakeholder interviews with equity focus", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Reflect on equity themes emerging", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Equity in nonprofit communications and inclusive practices", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Document equity considerations", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete stakeholder interviews",
+          "Examine equity in donor engagement",
+          "Identify diverse perspectives"
         ],
-        "deliverables": ["Interview progress with equity notes"],
+        "activities": [
+          {
+            "description": "Continue stakeholder interviews with equity focus",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on equity themes emerging",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Equity in nonprofit communications and inclusive practices",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Document equity considerations",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview progress with equity notes"
+        ],
         "dealReflection": {
           "describe": "What equity themes emerged from interviews? Whose voices might be missing?",
           "examine": "How do issues of equity affect donor communication? What inclusive practices should guide recommendations?",
           "articulate": "What have you learned about incorporating equity into communication work?"
         },
-        "naceCompetencyFocus": ["equity-inclusion", "communication"]
+        "naceCompetencyFocus": [
+          "equity-inclusion",
+          "communication"
+        ]
       },
       {
         "weekNumber": 6,
         "theme": "Thematic Analysis and Story Development",
-        "objectives": ["Analyze interview data", "Develop narrative themes", "Create story framework"],
-        "activities": [
-          {"description": "Conduct thematic analysis of interviews", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in: discuss themes", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Narrative development and organizational storytelling", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Develop story framework from themes", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Analyze interview data",
+          "Develop narrative themes",
+          "Create story framework"
         ],
-        "deliverables": ["Thematic analysis with story framework"],
+        "activities": [
+          {
+            "description": "Conduct thematic analysis of interviews",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in: discuss themes",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Narrative development and organizational storytelling",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop story framework from themes",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Thematic analysis with story framework"
+        ],
         "dealReflection": {
           "describe": "What themes emerged? What stories do they tell?",
           "examine": "How do you create compelling narratives from interview data?",
           "articulate": "What have you learned about organizational storytelling?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 7,
         "theme": "Visual Storytelling Development",
-        "objectives": ["Create data visualizations", "Develop visual narrative", "Design communication materials"],
-        "activities": [
-          {"description": "Design key data visualizations", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Gather feedback on visual approach", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Design principles for impact communication", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Iterate on visual designs", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create data visualizations",
+          "Develop visual narrative",
+          "Design communication materials"
         ],
-        "deliverables": ["Visual design portfolio draft"],
+        "activities": [
+          {
+            "description": "Design key data visualizations",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Gather feedback on visual approach",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Design principles for impact communication",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Iterate on visual designs",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Visual design portfolio draft"
+        ],
         "dealReflection": {
           "describe": "What visualizations did you create? What design choices did you make?",
           "examine": "How do visual design principles enhance data communication?",
           "articulate": "What have you learned about visual storytelling?"
         },
-        "naceCompetencyFocus": ["technology", "communication"]
+        "naceCompetencyFocus": [
+          "technology",
+          "communication"
+        ]
       },
       {
         "weekNumber": 8,
         "theme": "Interim Report and Presentation",
-        "objectives": ["Create compelling interim report", "Present findings", "Gather feedback"],
-        "activities": [
-          {"description": "Write and design interim findings report", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Present interim findings", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Report design and presentation principles", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Incorporate feedback and plan next phase", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create compelling interim report",
+          "Present findings",
+          "Gather feedback"
         ],
-        "deliverables": ["Interim findings report"],
+        "activities": [
+          {
+            "description": "Write and design interim findings report",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Present interim findings",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Report design and presentation principles",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Incorporate feedback and plan next phase",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interim findings report"
+        ],
         "dealReflection": {
           "describe": "How did you design your report? What feedback did you receive?",
           "examine": "How do you balance visual appeal with information clarity?",
           "articulate": "What have you learned about professional report creation?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 9,
         "theme": "Recommendation Development",
-        "objectives": ["Develop communication recommendations", "Create implementation guidance", "Design supporting materials"],
-        "activities": [
-          {"description": "Develop detailed recommendations", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Change communication and stakeholder engagement", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Refine recommendations for feasibility", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Develop communication recommendations",
+          "Create implementation guidance",
+          "Design supporting materials"
         ],
-        "deliverables": ["Draft recommendations"],
+        "activities": [
+          {
+            "description": "Develop detailed recommendations",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Change communication and stakeholder engagement",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine recommendations for feasibility",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft recommendations"
+        ],
         "dealReflection": {
           "describe": "What recommendations did you develop? How did you ensure they're actionable?",
           "examine": "How do you make recommendations persuasive while practical?",
           "articulate": "What have you learned about professional recommendation development?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 10,
         "theme": "Communication Templates and Tools",
-        "objectives": ["Create reusable communication tools", "Develop templates for ongoing use", "Build sustainability into deliverables"],
-        "activities": [
-          {"description": "Design communication templates and tools", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Review tools with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Sustainable communication systems", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine tools based on feedback", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create reusable communication tools",
+          "Develop templates for ongoing use",
+          "Build sustainability into deliverables"
         ],
-        "deliverables": ["Communication toolkit"],
+        "activities": [
+          {
+            "description": "Design communication templates and tools",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review tools with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Sustainable communication systems",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine tools based on feedback",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Communication toolkit"
+        ],
         "dealReflection": {
           "describe": "What tools did you create? How will they help the organization ongoing?",
           "examine": "What makes communication tools sustainable and user-friendly?",
           "articulate": "What have you learned about creating lasting organizational value?"
         },
-        "naceCompetencyFocus": ["technology", "professionalism"]
+        "naceCompetencyFocus": [
+          "technology",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 11,
         "theme": "Implementation Planning",
-        "objectives": ["Create implementation roadmap", "Develop change communication strategy", "Plan rollout"],
-        "activities": [
-          {"description": "Develop implementation roadmap", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Implementation communication strategies", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Create change communication plan", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create implementation roadmap",
+          "Develop change communication strategy",
+          "Plan rollout"
         ],
-        "deliverables": ["Implementation roadmap"],
+        "activities": [
+          {
+            "description": "Develop implementation roadmap",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Implementation communication strategies",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Create change communication plan",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Implementation roadmap"
+        ],
         "dealReflection": {
           "describe": "How did you plan implementation? What communication needs arise?",
           "examine": "How does communication support organizational change?",
           "articulate": "What have you learned about implementation communication?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 12,
         "theme": "Final Report Development",
-        "objectives": ["Create comprehensive final report", "Integrate all components", "Ensure portfolio quality"],
-        "activities": [
-          {"description": "Write and design final report", "hours": 4.5, "kolbPhase": "experience"},
-          {"description": "Quality review", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Portfolio development strategies", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Refine for portfolio quality", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create comprehensive final report",
+          "Integrate all components",
+          "Ensure portfolio quality"
         ],
-        "deliverables": ["Draft final report"],
+        "activities": [
+          {
+            "description": "Write and design final report",
+            "hours": 7,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Quality review",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Portfolio development strategies",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine for portfolio quality",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft final report"
+        ],
         "dealReflection": {
           "describe": "How did you approach the final report design?",
           "examine": "What makes work portfolio-ready?",
           "articulate": "What have you learned about professional quality standards?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 13,
         "theme": "Final Report Completion",
-        "objectives": ["Complete final report", "Begin presentation development", "Finalize portfolio pieces"],
-        "activities": [
-          {"description": "Finalize report with mentor feedback", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Review session", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Executive presentation design", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Begin presentation and finalize portfolio", "hours": 3, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete final report",
+          "Begin presentation development",
+          "Finalize portfolio pieces"
         ],
-        "deliverables": ["Final report", "Portfolio pieces"],
+        "activities": [
+          {
+            "description": "Finalize report with mentor feedback",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review session",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Executive presentation design",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin presentation and finalize portfolio",
+            "hours": 4.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final report",
+          "Portfolio pieces"
+        ],
         "dealReflection": {
           "describe": "What final refinements did you make? What portfolio pieces are you most proud of?",
           "examine": "How did the project come together as a whole?",
           "articulate": "What have you learned about completing complex professional projects?"
         },
-        "naceCompetencyFocus": ["communication", "career-self-development"]
+        "naceCompetencyFocus": [
+          "communication",
+          "career-self-development"
+        ]
       },
       {
         "weekNumber": 14,
         "theme": "Board Presentation Development",
-        "objectives": ["Create compelling board presentation", "Practice delivery", "Prepare for executive audience"],
-        "activities": [
-          {"description": "Design board presentation", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Practice and feedback session", "hours": 1.5, "kolbPhase": "reflection"},
-          {"description": "Read: Board dynamics and executive communication", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Refine presentation", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create compelling board presentation",
+          "Practice delivery",
+          "Prepare for executive audience"
         ],
-        "deliverables": ["Board presentation"],
+        "activities": [
+          {
+            "description": "Design board presentation",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Practice and feedback session",
+            "hours": 2.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Board dynamics and executive communication",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine presentation",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Board presentation"
+        ],
         "dealReflection": {
           "describe": "How did you design your presentation for maximum impact?",
           "examine": "What's different about board-level communication?",
           "articulate": "What have you learned about executive presentations?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 15,
         "theme": "Final Presentation and Career Reflection",
-        "objectives": ["Deliver impactful presentation", "Complete project handoff", "Articulate career learning"],
-        "activities": [
-          {"description": "Deliver board presentation", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Debrief with mentor", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Career paths in strategic communications", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Complete portfolio and final reflection", "hours": 4, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Deliver impactful presentation",
+          "Complete project handoff",
+          "Articulate career learning"
         ],
-        "deliverables": ["Board presentation (delivered)", "Project handoff", "Professional portfolio", "Final comprehensive reflection"],
+        "activities": [
+          {
+            "description": "Deliver board presentation",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Debrief with mentor",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Career paths in strategic communications",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Complete portfolio and final reflection",
+            "hours": 6,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Board presentation (delivered)",
+          "Project handoff",
+          "Professional portfolio",
+          "Final comprehensive reflection"
+        ],
         "dealReflection": {
           "describe": "How did your presentation go? How did the board respond?",
           "examine": "Looking back, how did your communication skills and professional identity develop?",
           "articulate": "What are the key competencies you've developed? How will this experience shape your career in communications?"
         },
-        "naceCompetencyFocus": ["career-self-development", "communication"]
+        "naceCompetencyFocus": [
+          "career-self-development",
+          "communication"
+        ]
       }
     ]
   },
@@ -350,33 +733,76 @@
         "name": "Interim Findings Report",
         "dueWeek": 8,
         "weight": "25%",
-        "criteria": ["Compelling narrative", "Effective visualizations", "Professional design", "Inclusive framing"],
-        "objectivesMapped": ["obj-1", "obj-2", "obj-3", "obj-4"]
+        "criteria": [
+          "Compelling narrative",
+          "Effective visualizations",
+          "Professional design",
+          "Inclusive framing"
+        ],
+        "objectivesMapped": [
+          "obj-1",
+          "obj-2",
+          "obj-3",
+          "obj-4"
+        ]
       },
       {
         "name": "Final Analysis and Recommendations",
         "dueWeek": 13,
         "weight": "35%",
-        "criteria": ["Portfolio-ready quality", "Compelling storytelling", "Actionable recommendations", "Professional design"],
-        "objectivesMapped": ["obj-1", "obj-3", "obj-4", "obj-5"]
+        "criteria": [
+          "Portfolio-ready quality",
+          "Compelling storytelling",
+          "Actionable recommendations",
+          "Professional design"
+        ],
+        "objectivesMapped": [
+          "obj-1",
+          "obj-3",
+          "obj-4",
+          "obj-5"
+        ]
       },
       {
         "name": "Board Presentation",
         "dueWeek": 15,
         "weight": "20%",
-        "criteria": ["Engaging storytelling", "Professional delivery", "Executive-appropriate content", "Visual excellence"],
-        "objectivesMapped": ["obj-1", "obj-3", "obj-6"]
+        "criteria": [
+          "Engaging storytelling",
+          "Professional delivery",
+          "Executive-appropriate content",
+          "Visual excellence"
+        ],
+        "objectivesMapped": [
+          "obj-1",
+          "obj-3",
+          "obj-6"
+        ]
       }
     ],
     "reflections": {
       "schedule": "Weekly DEAL reflections plus comprehensive portfolio reflection",
       "weight": "15%",
-      "criteria": ["Portfolio development", "Career direction clarity", "Professional growth evidence", "Communication theory connections"]
+      "criteria": [
+        "Portfolio development",
+        "Career direction clarity",
+        "Professional growth evidence",
+        "Communication theory connections"
+      ]
     },
     "employerEvaluation": {
-      "timing": ["Mid-term (Week 8)", "Final (Week 15)"],
+      "timing": [
+        "Mid-term (Week 8)",
+        "Final (Week 15)"
+      ],
       "weight": "5%",
-      "areas": ["Communication quality", "Creativity", "Professionalism", "Initiative", "Inclusive practice"]
+      "areas": [
+        "Communication quality",
+        "Creativity",
+        "Professionalism",
+        "Initiative",
+        "Inclusive practice"
+      ]
     }
   },
   "sampleWeek": {
@@ -390,12 +816,30 @@
       "Design communication materials for multiple audiences"
     ],
     "activities": [
-      {"description": "Design key data visualizations using Canva and design tools", "hours": 4, "kolbPhase": "experience"},
-      {"description": "Gather feedback on visual approach from mentor and stakeholders", "hours": 0.5, "kolbPhase": "reflection"},
-      {"description": "Read: Design principles for impact communication and nonprofit contexts", "hours": 1.5, "kolbPhase": "conceptualization"},
-      {"description": "Iterate on visual designs based on feedback and principles", "hours": 2, "kolbPhase": "experimentation"}
+      {
+        "description": "Design key data visualizations using Canva and design tools",
+        "hours": 4,
+        "kolbPhase": "experience"
+      },
+      {
+        "description": "Gather feedback on visual approach from mentor and stakeholders",
+        "hours": 0.5,
+        "kolbPhase": "reflection"
+      },
+      {
+        "description": "Read: Design principles for impact communication and nonprofit contexts",
+        "hours": 1.5,
+        "kolbPhase": "conceptualization"
+      },
+      {
+        "description": "Iterate on visual designs based on feedback and principles",
+        "hours": 2,
+        "kolbPhase": "experimentation"
+      }
     ],
-    "deliverables": ["Visual design portfolio draft"],
+    "deliverables": [
+      "Visual design portfolio draft"
+    ],
     "dealReflection": {
       "describe": "What visualizations did you create this week? What design choices did you make and why?",
       "examine": "How do visual design principles from your coursework enhance data communication in nonprofit contexts? What makes visualizations both beautiful and effective?",
@@ -418,22 +862,108 @@
       "competencies": "All FieldWork competencies with emphasis on equity and inclusion through communication lens"
     },
     "employerSuccessCriteria": [
-      {"criterion": "Clear analysis of donor retention patterns", "addressedBy": ["obj-1", "obj-3", "Visual storytelling", "Reports"]},
-      {"criterion": "Identification of actionable donor segments", "addressedBy": ["obj-1", "Audience analysis", "Recommendations"]},
-      {"criterion": "Evidence-based recommendations", "addressedBy": ["obj-1", "obj-4", "Final recommendations"]},
-      {"criterion": "Board-ready presentation", "addressedBy": ["obj-1", "obj-3", "Board presentation"]}
+      {
+        "criterion": "Clear analysis of donor retention patterns",
+        "addressedBy": [
+          "obj-1",
+          "obj-3",
+          "Visual storytelling",
+          "Reports"
+        ]
+      },
+      {
+        "criterion": "Identification of actionable donor segments",
+        "addressedBy": [
+          "obj-1",
+          "Audience analysis",
+          "Recommendations"
+        ]
+      },
+      {
+        "criterion": "Evidence-based recommendations",
+        "addressedBy": [
+          "obj-1",
+          "obj-4",
+          "Final recommendations"
+        ]
+      },
+      {
+        "criterion": "Board-ready presentation",
+        "addressedBy": [
+          "obj-1",
+          "obj-3",
+          "Board presentation"
+        ]
+      }
     ],
     "studentLearningGoals": [
-      {"goal": "Gain experience with client-facing professional work", "addressedBy": ["obj-2", "obj-6", "Stakeholder engagement", "Presentations"]},
-      {"goal": "Learn to translate complex information for different audiences", "addressedBy": ["obj-1", "Audience analysis", "Multi-format deliverables"]},
-      {"goal": "Develop project management skills", "addressedBy": ["obj-6", "Project planning", "Timeline management"]},
-      {"goal": "Build a portfolio of professional work", "addressedBy": ["obj-3", "obj-5", "All deliverables", "Portfolio reflection"]}
+      {
+        "goal": "Gain experience with client-facing professional work",
+        "addressedBy": [
+          "obj-2",
+          "obj-6",
+          "Stakeholder engagement",
+          "Presentations"
+        ]
+      },
+      {
+        "goal": "Learn to translate complex information for different audiences",
+        "addressedBy": [
+          "obj-1",
+          "Audience analysis",
+          "Multi-format deliverables"
+        ]
+      },
+      {
+        "goal": "Develop project management skills",
+        "addressedBy": [
+          "obj-6",
+          "Project planning",
+          "Timeline management"
+        ]
+      },
+      {
+        "goal": "Build a portfolio of professional work",
+        "addressedBy": [
+          "obj-3",
+          "obj-5",
+          "All deliverables",
+          "Portfolio reflection"
+        ]
+      }
     ],
     "institutionalOutcomes": [
-      {"outcome": "Integrate academic learning with professional practice", "evidence": ["Communication theory application", "Design principles integration"]},
-      {"outcome": "Develop career-relevant skills through applied projects", "evidence": ["Portfolio development", "Professional deliverables", "Client work"]},
-      {"outcome": "Articulate learning and growth through structured reflection", "evidence": ["DEAL reflections", "Portfolio narrative", "Career articulation"]},
-      {"outcome": "Demonstrate ethical and inclusive professional behavior", "evidence": ["Equity considerations", "Inclusive design", "Diverse voice inclusion"]}
+      {
+        "outcome": "Integrate academic learning with professional practice",
+        "evidence": [
+          "Communication theory application",
+          "Design principles integration"
+        ]
+      },
+      {
+        "outcome": "Develop career-relevant skills through applied projects",
+        "evidence": [
+          "Portfolio development",
+          "Professional deliverables",
+          "Client work"
+        ]
+      },
+      {
+        "outcome": "Articulate learning and growth through structured reflection",
+        "evidence": [
+          "DEAL reflections",
+          "Portfolio narrative",
+          "Career articulation"
+        ]
+      },
+      {
+        "outcome": "Demonstrate ethical and inclusive professional behavior",
+        "evidence": [
+          "Equity considerations",
+          "Inclusive design",
+          "Diverse voice inclusion"
+        ]
+      }
     ]
   }
 }

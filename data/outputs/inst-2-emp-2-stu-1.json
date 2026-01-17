@@ -73,273 +73,655 @@
       {
         "weekNumber": 1,
         "theme": "Consulting Engagement and Organizational Assessment",
-        "objectives": ["Understand organizational context", "Establish consulting relationship", "Develop research approach"],
-        "activities": [
-          {"description": "Project kickoff with Operations Manager", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Review onboarding documentation and organizational materials", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Reflect on consulting role and initial observations", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Organizational consulting and process improvement methods", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Draft project approach and research methodology", "hours": 1, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Understand organizational context",
+          "Establish consulting relationship",
+          "Develop research approach"
         ],
-        "deliverables": ["Project approach document"],
+        "activities": [
+          {
+            "description": "Project kickoff with Operations Manager",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review onboarding documentation and organizational materials",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on consulting role and initial observations",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Organizational consulting and process improvement methods",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Draft project approach and research methodology",
+            "hours": 1,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Project approach document"
+        ],
         "dealReflection": {
           "describe": "What did you learn about the organization? What initial hypotheses do you have?",
           "examine": "How does consulting differ from academic research? What organizational behavior concepts seem relevant?",
           "articulate": "What skills do you expect to apply? What might you need to develop?"
         },
-        "naceCompetencyFocus": ["professionalism", "career-self-development"]
+        "naceCompetencyFocus": [
+          "professionalism",
+          "career-self-development"
+        ]
       },
       {
         "weekNumber": 2,
         "theme": "Current State Discovery",
-        "objectives": ["Observe current processes", "Document workflows", "Identify initial pain points"],
-        "activities": [
-          {"description": "Shadow and observe current onboarding activities", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Process mapping and workflow analysis", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Begin creating process documentation", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Observe current processes",
+          "Document workflows",
+          "Identify initial pain points"
         ],
-        "deliverables": ["Initial process observations"],
+        "activities": [
+          {
+            "description": "Shadow and observe current onboarding activities",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Process mapping and workflow analysis",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin creating process documentation",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Initial process observations"
+        ],
         "dealReflection": {
           "describe": "What did you observe about current processes? What patterns emerged?",
           "examine": "How do organizational psychology concepts help explain what you observed?",
           "articulate": "What have you learned about systematic observation in organizations?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "professionalism"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 3,
         "theme": "Process Mapping and Documentation",
-        "objectives": ["Complete process documentation", "Identify touchpoints and handoffs", "Map stakeholder involvement"],
-        "activities": [
-          {"description": "Create detailed process flow documentation", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Validate process map with stakeholders", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Human factors in process design", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine process documentation", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete process documentation",
+          "Identify touchpoints and handoffs",
+          "Map stakeholder involvement"
         ],
-        "deliverables": ["Draft process map"],
+        "activities": [
+          {
+            "description": "Create detailed process flow documentation",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Validate process map with stakeholders",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Human factors in process design",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine process documentation",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft process map"
+        ],
         "dealReflection": {
           "describe": "How did you document the process? What complexities did you discover?",
           "examine": "What human factors affect process adherence and effectiveness?",
           "articulate": "What have you learned about process analysis?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "communication"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "communication"
+        ]
       },
       {
         "weekNumber": 4,
         "theme": "Interview Design and Preparation",
-        "objectives": ["Design interview protocol", "Identify key informants", "Consider equity in participant selection"],
-        "activities": [
-          {"description": "Design semi-structured interview protocol", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: discuss approach", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Qualitative research methods and inclusive research practices", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Pilot and refine interview protocol", "hours": 3, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Design interview protocol",
+          "Identify key informants",
+          "Consider equity in participant selection"
         ],
-        "deliverables": ["Interview protocol", "Current state process map"],
+        "activities": [
+          {
+            "description": "Design semi-structured interview protocol",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: discuss approach",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Qualitative research methods and inclusive research practices",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Pilot and refine interview protocol",
+            "hours": 4,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview protocol",
+          "Current state process map"
+        ],
         "dealReflection": {
           "describe": "How did you design your interview approach? How did you ensure diverse perspectives?",
           "examine": "How do research ethics apply in organizational consulting?",
           "articulate": "What have you learned about designing inclusive research?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "equity-inclusion"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "equity-inclusion"
+        ]
       },
       {
         "weekNumber": 5,
         "theme": "Stakeholder Interviews - Phase 1",
-        "objectives": ["Begin stakeholder interviews", "Gather diverse perspectives", "Document observations"],
-        "activities": [
-          {"description": "Conduct initial stakeholder interviews", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Reflect on interview insights", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Interview analysis and note-taking methods", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Document and organize interview data", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Begin stakeholder interviews",
+          "Gather diverse perspectives",
+          "Document observations"
         ],
-        "deliverables": ["Interview progress documentation"],
+        "activities": [
+          {
+            "description": "Conduct initial stakeholder interviews",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on interview insights",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Interview analysis and note-taking methods",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Document and organize interview data",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview progress documentation"
+        ],
         "dealReflection": {
           "describe": "What perspectives did you gather? What themes are emerging?",
           "examine": "How do individual experiences reflect organizational patterns?",
           "articulate": "What have you learned about gathering stakeholder input?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 6,
         "theme": "Stakeholder Interviews - Phase 2",
-        "objectives": ["Complete stakeholder interviews", "Include diverse voices", "Identify equity considerations"],
-        "activities": [
-          {"description": "Complete remaining interviews with equity focus", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Equity in organizational processes and inclusive design", "hours": 2, "kolbPhase": "conceptualization"},
-          {"description": "Document equity considerations", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete stakeholder interviews",
+          "Include diverse voices",
+          "Identify equity considerations"
         ],
-        "deliverables": ["Interview completion with equity notes"],
+        "activities": [
+          {
+            "description": "Complete remaining interviews with equity focus",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Equity in organizational processes and inclusive design",
+            "hours": 3,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Document equity considerations",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview completion with equity notes"
+        ],
         "dealReflection": {
           "describe": "What equity considerations emerged? Whose voices might still be missing?",
           "examine": "How do organizational processes affect different stakeholders differently?",
           "articulate": "What have you learned about equity in organizational research?"
         },
-        "naceCompetencyFocus": ["equity-inclusion", "communication"]
+        "naceCompetencyFocus": [
+          "equity-inclusion",
+          "communication"
+        ]
       },
       {
         "weekNumber": 7,
         "theme": "Thematic Analysis",
-        "objectives": ["Analyze interview data systematically", "Identify key themes", "Connect to organizational psychology"],
-        "activities": [
-          {"description": "Conduct systematic thematic analysis", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Discuss emerging themes with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Thematic analysis methods and organizational psychology applications", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Develop theme framework", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Analyze interview data systematically",
+          "Identify key themes",
+          "Connect to organizational psychology"
         ],
-        "deliverables": ["Stakeholder interview summary"],
+        "activities": [
+          {
+            "description": "Conduct systematic thematic analysis",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Discuss emerging themes with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Thematic analysis methods and organizational psychology applications",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop theme framework",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Stakeholder interview summary"
+        ],
         "dealReflection": {
           "describe": "What key themes emerged? How did you approach analysis?",
           "examine": "How do organizational psychology theories help explain stakeholder experiences?",
           "articulate": "What have you learned about connecting data to theory?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "communication"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "communication"
+        ]
       },
       {
         "weekNumber": 8,
         "theme": "Interim Synthesis and Report",
-        "objectives": ["Synthesize findings", "Create interim report", "Present progress"],
-        "activities": [
-          {"description": "Write comprehensive interim report", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Present interim findings", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Consulting report writing", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Incorporate feedback", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Synthesize findings",
+          "Create interim report",
+          "Present progress"
         ],
-        "deliverables": ["Interim findings report"],
+        "activities": [
+          {
+            "description": "Write comprehensive interim report",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Present interim findings",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Consulting report writing",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Incorporate feedback",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interim findings report"
+        ],
         "dealReflection": {
           "describe": "How did you structure your interim report? What feedback did you receive?",
           "examine": "How do you communicate research findings in consulting contexts?",
           "articulate": "What have you learned about professional reporting?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 9,
         "theme": "Best Practices Research",
-        "objectives": ["Research industry best practices", "Benchmark approaches", "Identify applicable innovations"],
-        "activities": [
-          {"description": "Research client onboarding best practices", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Evidence-based practice and implementation science", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Synthesize applicable practices", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Research industry best practices",
+          "Benchmark approaches",
+          "Identify applicable innovations"
         ],
-        "deliverables": ["Best practices research brief"],
+        "activities": [
+          {
+            "description": "Research client onboarding best practices",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Evidence-based practice and implementation science",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Synthesize applicable practices",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Best practices research brief"
+        ],
         "dealReflection": {
           "describe": "What best practices did you identify? Which seem most applicable?",
           "examine": "How do you evaluate external practices for organizational fit?",
           "articulate": "What have you learned about evidence-based recommendations?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "technology"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "technology"
+        ]
       },
       {
         "weekNumber": 10,
         "theme": "Recommendation Development",
-        "objectives": ["Develop evidence-based recommendations", "Apply psychological principles", "Consider implementation"],
-        "activities": [
-          {"description": "Develop detailed recommendations", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Review recommendations with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Change management and organizational development", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine for feasibility", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Develop evidence-based recommendations",
+          "Apply psychological principles",
+          "Consider implementation"
         ],
-        "deliverables": ["Draft recommendations"],
+        "activities": [
+          {
+            "description": "Develop detailed recommendations",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review recommendations with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Change management and organizational development",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine for feasibility",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft recommendations"
+        ],
         "dealReflection": {
           "describe": "What recommendations did you develop? How did psychology inform them?",
           "examine": "How do you balance ideal solutions with organizational realities?",
           "articulate": "What have you learned about applied organizational psychology?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "professionalism"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 11,
         "theme": "Implementation Planning with Equity Lens",
-        "objectives": ["Create implementation roadmap", "Ensure equitable implementation", "Develop change strategy"],
-        "activities": [
-          {"description": "Develop implementation roadmap with equity considerations", "hours": 4, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Equitable change management and inclusive implementation", "hours": 1.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine implementation approach", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create implementation roadmap",
+          "Ensure equitable implementation",
+          "Develop change strategy"
         ],
-        "deliverables": ["Implementation roadmap"],
+        "activities": [
+          {
+            "description": "Develop implementation roadmap with equity considerations",
+            "hours": 6,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Equitable change management and inclusive implementation",
+            "hours": 2.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine implementation approach",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Implementation roadmap"
+        ],
         "dealReflection": {
           "describe": "How did you plan implementation? How did you address equity?",
           "examine": "What factors affect equitable implementation of organizational changes?",
           "articulate": "What have you learned about inclusive change management?"
         },
-        "naceCompetencyFocus": ["equity-inclusion", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "equity-inclusion",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 12,
         "theme": "Final Report Development",
-        "objectives": ["Create comprehensive final report", "Integrate all components", "Ensure professional quality"],
-        "activities": [
-          {"description": "Write comprehensive final report", "hours": 4.5, "kolbPhase": "experience"},
-          {"description": "Quality review", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Professional consulting deliverables", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Refine based on feedback", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create comprehensive final report",
+          "Integrate all components",
+          "Ensure professional quality"
         ],
-        "deliverables": ["Draft final report"],
+        "activities": [
+          {
+            "description": "Write comprehensive final report",
+            "hours": 7,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Quality review",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Professional consulting deliverables",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine based on feedback",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft final report"
+        ],
         "dealReflection": {
           "describe": "How did you structure your final report?",
           "examine": "What distinguishes professional consulting deliverables?",
           "articulate": "What have you learned about professional documentation?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 13,
         "theme": "Final Report Completion",
-        "objectives": ["Complete final report", "Prepare handoff materials", "Begin presentation development"],
-        "activities": [
-          {"description": "Finalize report and appendices", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Review session with mentor", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Executive presentation strategies", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Begin presentation development", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete final report",
+          "Prepare handoff materials",
+          "Begin presentation development"
         ],
-        "deliverables": ["Final recommendations and roadmap"],
+        "activities": [
+          {
+            "description": "Finalize report and appendices",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review session with mentor",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Executive presentation strategies",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin presentation development",
+            "hours": 3.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final recommendations and roadmap"
+        ],
         "dealReflection": {
           "describe": "What final refinements did you make?",
           "examine": "How did the project come together as a whole?",
           "articulate": "What have you learned about completing complex consulting projects?"
         },
-        "naceCompetencyFocus": ["professionalism", "communication"]
+        "naceCompetencyFocus": [
+          "professionalism",
+          "communication"
+        ]
       },
       {
         "weekNumber": 14,
         "theme": "Executive Presentation Development",
-        "objectives": ["Create compelling presentation", "Practice delivery", "Prepare for leadership audience"],
-        "activities": [
-          {"description": "Develop executive presentation", "hours": 3.5, "kolbPhase": "experience"},
-          {"description": "Practice and feedback session", "hours": 1.5, "kolbPhase": "reflection"},
-          {"description": "Read: Leadership communication and executive influence", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Refine presentation", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create compelling presentation",
+          "Practice delivery",
+          "Prepare for leadership audience"
         ],
-        "deliverables": ["Executive presentation"],
+        "activities": [
+          {
+            "description": "Develop executive presentation",
+            "hours": 5.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Practice and feedback session",
+            "hours": 2.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Leadership communication and executive influence",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine presentation",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Executive presentation"
+        ],
         "dealReflection": {
           "describe": "How did you design your presentation for leadership?",
           "examine": "What's different about executive-level communication?",
           "articulate": "What have you learned about leadership presentations?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 15,
         "theme": "Final Presentation and Career Reflection",
-        "objectives": ["Deliver impactful presentation", "Complete project handoff", "Articulate career direction"],
-        "activities": [
-          {"description": "Deliver final presentation to leadership", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Debrief with mentor", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Careers in organizational consulting and I-O psychology", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Complete final reflection and handoff", "hours": 4, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Deliver impactful presentation",
+          "Complete project handoff",
+          "Articulate career direction"
         ],
-        "deliverables": ["Final presentation (delivered)", "Project handoff", "Final comprehensive reflection"],
+        "activities": [
+          {
+            "description": "Deliver final presentation to leadership",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Debrief with mentor",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Careers in organizational consulting and I-O psychology",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Complete final reflection and handoff",
+            "hours": 6,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final presentation (delivered)",
+          "Project handoff",
+          "Final comprehensive reflection"
+        ],
         "dealReflection": {
           "describe": "How did your presentation go? What was leadership's response?",
           "examine": "Looking back, how did your understanding of organizational psychology in practice develop?",
           "articulate": "What are the key competencies you developed? How will this experience shape your career in organizational consulting or I-O psychology?"
         },
-        "naceCompetencyFocus": ["career-self-development", "communication"]
+        "naceCompetencyFocus": [
+          "career-self-development",
+          "communication"
+        ]
       }
     ]
   },
@@ -350,40 +732,89 @@
         "name": "Current State Process Map",
         "dueWeek": 4,
         "weight": "15%",
-        "criteria": ["Comprehensive documentation", "Stakeholder validation", "Professional quality", "Clear communication"],
-        "objectivesMapped": ["obj-1", "obj-2"]
+        "criteria": [
+          "Comprehensive documentation",
+          "Stakeholder validation",
+          "Professional quality",
+          "Clear communication"
+        ],
+        "objectivesMapped": [
+          "obj-1",
+          "obj-2"
+        ]
       },
       {
         "name": "Stakeholder Interview Summary",
         "dueWeek": 7,
         "weight": "20%",
-        "criteria": ["Systematic analysis", "Inclusive perspectives", "Clear themes", "Professional documentation"],
-        "objectivesMapped": ["obj-2", "obj-3", "obj-4"]
+        "criteria": [
+          "Systematic analysis",
+          "Inclusive perspectives",
+          "Clear themes",
+          "Professional documentation"
+        ],
+        "objectivesMapped": [
+          "obj-2",
+          "obj-3",
+          "obj-4"
+        ]
       },
       {
         "name": "Final Recommendations and Roadmap",
         "dueWeek": 13,
         "weight": "35%",
-        "criteria": ["Evidence-based recommendations", "Equity considerations", "Implementation feasibility", "Professional quality"],
-        "objectivesMapped": ["obj-1", "obj-3", "obj-4", "obj-5"]
+        "criteria": [
+          "Evidence-based recommendations",
+          "Equity considerations",
+          "Implementation feasibility",
+          "Professional quality"
+        ],
+        "objectivesMapped": [
+          "obj-1",
+          "obj-3",
+          "obj-4",
+          "obj-5"
+        ]
       },
       {
         "name": "Executive Presentation",
         "dueWeek": 15,
         "weight": "15%",
-        "criteria": ["Clear executive communication", "Compelling recommendations", "Professional delivery", "Effective Q&A"],
-        "objectivesMapped": ["obj-3", "obj-5"]
+        "criteria": [
+          "Clear executive communication",
+          "Compelling recommendations",
+          "Professional delivery",
+          "Effective Q&A"
+        ],
+        "objectivesMapped": [
+          "obj-3",
+          "obj-5"
+        ]
       }
     ],
     "reflections": {
       "schedule": "Weekly DEAL reflections plus comprehensive final reflection",
       "weight": "10%",
-      "criteria": ["Organizational psychology connections", "Professional growth", "Equity reflection", "Career articulation"]
+      "criteria": [
+        "Organizational psychology connections",
+        "Professional growth",
+        "Equity reflection",
+        "Career articulation"
+      ]
     },
     "employerEvaluation": {
-      "timing": ["Mid-term (Week 8)", "Final (Week 15)"],
+      "timing": [
+        "Mid-term (Week 8)",
+        "Final (Week 15)"
+      ],
       "weight": "5%",
-      "areas": ["Consulting skills", "Professionalism", "Communication", "Analytical quality", "Inclusive practice"]
+      "areas": [
+        "Consulting skills",
+        "Professionalism",
+        "Communication",
+        "Analytical quality",
+        "Inclusive practice"
+      ]
     }
   },
   "sampleWeek": {
@@ -397,12 +828,30 @@
       "Apply organizational psychology frameworks to interpret findings"
     ],
     "activities": [
-      {"description": "Conduct systematic thematic analysis of all interview data", "hours": 4, "kolbPhase": "experience"},
-      {"description": "Discuss emerging themes and patterns with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-      {"description": "Read: Thematic analysis methods and organizational psychology applications", "hours": 1.5, "kolbPhase": "conceptualization"},
-      {"description": "Develop comprehensive theme framework with psychological grounding", "hours": 2, "kolbPhase": "experimentation"}
+      {
+        "description": "Conduct systematic thematic analysis of all interview data",
+        "hours": 4,
+        "kolbPhase": "experience"
+      },
+      {
+        "description": "Discuss emerging themes and patterns with mentor",
+        "hours": 0.5,
+        "kolbPhase": "reflection"
+      },
+      {
+        "description": "Read: Thematic analysis methods and organizational psychology applications",
+        "hours": 1.5,
+        "kolbPhase": "conceptualization"
+      },
+      {
+        "description": "Develop comprehensive theme framework with psychological grounding",
+        "hours": 2,
+        "kolbPhase": "experimentation"
+      }
     ],
-    "deliverables": ["Stakeholder interview summary with thematic analysis"],
+    "deliverables": [
+      "Stakeholder interview summary with thematic analysis"
+    ],
     "dealReflection": {
       "describe": "What key themes emerged from your systematic analysis? How did you approach coding and theme development?",
       "examine": "How do organizational psychology theories help explain the stakeholder experiences you documented? What patterns reflect broader organizational dynamics?",
@@ -425,22 +874,107 @@
       "competencies": "All FieldWork competencies with emphasis on equity and inclusion through organizational lens"
     },
     "employerSuccessCriteria": [
-      {"criterion": "Comprehensive documentation of current onboarding process", "addressedBy": ["obj-1", "obj-2", "Process Map"]},
-      {"criterion": "Stakeholder feedback synthesized into key themes", "addressedBy": ["obj-2", "Interview Summary"]},
-      {"criterion": "Research-backed recommendations for improvement", "addressedBy": ["obj-1", "obj-3", "Final Recommendations"]},
-      {"criterion": "Implementation roadmap with prioritized action items", "addressedBy": ["obj-4", "Implementation Roadmap"]}
+      {
+        "criterion": "Comprehensive documentation of current onboarding process",
+        "addressedBy": [
+          "obj-1",
+          "obj-2",
+          "Process Map"
+        ]
+      },
+      {
+        "criterion": "Stakeholder feedback synthesized into key themes",
+        "addressedBy": [
+          "obj-2",
+          "Interview Summary"
+        ]
+      },
+      {
+        "criterion": "Research-backed recommendations for improvement",
+        "addressedBy": [
+          "obj-1",
+          "obj-3",
+          "Final Recommendations"
+        ]
+      },
+      {
+        "criterion": "Implementation roadmap with prioritized action items",
+        "addressedBy": [
+          "obj-4",
+          "Implementation Roadmap"
+        ]
+      }
     ],
     "studentLearningGoals": [
-      {"goal": "Develop professional presentation skills", "addressedBy": ["obj-3", "obj-5", "Executive Presentation", "Interim presentation"]},
-      {"goal": "Understand how organizations use data to make decisions", "addressedBy": ["obj-1", "obj-2", "Analysis", "Stakeholder interviews"]},
-      {"goal": "Build confidence communicating with senior professionals", "addressedBy": ["obj-3", "obj-5", "Client meetings", "Presentations"]},
-      {"goal": "Explore applications of psychology in business settings", "addressedBy": ["obj-1", "obj-6", "Recommendations", "Career reflection"]}
+      {
+        "goal": "Develop professional presentation skills",
+        "addressedBy": [
+          "obj-3",
+          "obj-5",
+          "Executive Presentation",
+          "Interim presentation"
+        ]
+      },
+      {
+        "goal": "Understand how organizations use data to make decisions",
+        "addressedBy": [
+          "obj-1",
+          "obj-2",
+          "Analysis",
+          "Stakeholder interviews"
+        ]
+      },
+      {
+        "goal": "Build confidence communicating with senior professionals",
+        "addressedBy": [
+          "obj-3",
+          "obj-5",
+          "Client meetings",
+          "Presentations"
+        ]
+      },
+      {
+        "goal": "Explore applications of psychology in business settings",
+        "addressedBy": [
+          "obj-1",
+          "obj-6",
+          "Recommendations",
+          "Career reflection"
+        ]
+      }
     ],
     "institutionalOutcomes": [
-      {"outcome": "Integrate academic learning with professional practice", "evidence": ["Organizational psychology application", "Research methods use"]},
-      {"outcome": "Develop career-relevant skills through applied projects", "evidence": ["Consulting skills", "Professional deliverables", "Client management"]},
-      {"outcome": "Articulate learning and growth through structured reflection", "evidence": ["DEAL reflections", "Career articulation", "Final reflection"]},
-      {"outcome": "Demonstrate ethical and inclusive professional behavior", "evidence": ["Equity analysis", "Inclusive recommendations", "Diverse voice inclusion"]}
+      {
+        "outcome": "Integrate academic learning with professional practice",
+        "evidence": [
+          "Organizational psychology application",
+          "Research methods use"
+        ]
+      },
+      {
+        "outcome": "Develop career-relevant skills through applied projects",
+        "evidence": [
+          "Consulting skills",
+          "Professional deliverables",
+          "Client management"
+        ]
+      },
+      {
+        "outcome": "Articulate learning and growth through structured reflection",
+        "evidence": [
+          "DEAL reflections",
+          "Career articulation",
+          "Final reflection"
+        ]
+      },
+      {
+        "outcome": "Demonstrate ethical and inclusive professional behavior",
+        "evidence": [
+          "Equity analysis",
+          "Inclusive recommendations",
+          "Diverse voice inclusion"
+        ]
+      }
     ]
   }
 }

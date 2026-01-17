@@ -73,219 +73,527 @@
       {
         "weekNumber": 1,
         "theme": "Project Discovery and Communication Planning",
-        "objectives": ["Understand organizational context and communication needs", "Establish client relationships", "Develop project communication approach"],
-        "activities": [
-          {"description": "Meet with Operations Manager for project kickoff", "hours": 1.5, "kolbPhase": "experience"},
-          {"description": "Review existing onboarding materials and communications", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Reflect on organizational communication style and needs", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Process documentation and visual communication strategies", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Draft project plan with communication milestones", "hours": 1, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Understand organizational context and communication needs",
+          "Establish client relationships",
+          "Develop project communication approach"
         ],
-        "deliverables": ["Project plan with communication strategy"],
+        "activities": [
+          {
+            "description": "Meet with Operations Manager for project kickoff",
+            "hours": 2.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review existing onboarding materials and communications",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on organizational communication style and needs",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Process documentation and visual communication strategies",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Draft project plan with communication milestones",
+            "hours": 1,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Project plan with communication strategy"
+        ],
         "dealReflection": {
           "describe": "What did you learn about the organization's communication style? What materials did you review?",
           "examine": "How do corporate communications differ from media or PR contexts? What strategic principles apply?",
           "articulate": "What communication skills do you expect to apply? What new skills might this project develop?"
         },
-        "naceCompetencyFocus": ["professionalism", "communication"]
+        "naceCompetencyFocus": [
+          "professionalism",
+          "communication"
+        ]
       },
       {
         "weekNumber": 2,
         "theme": "Process Observation and Visual Mapping",
-        "objectives": ["Observe and document current processes", "Begin creating visual process maps", "Identify communication touchpoints"],
-        "activities": [
-          {"description": "Shadow onboarding activities and document observations", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: share observations", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Visual process mapping and infographic design", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Create initial visual process map drafts", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Observe and document current processes",
+          "Begin creating visual process maps",
+          "Identify communication touchpoints"
         ],
-        "deliverables": ["Draft visual process map"],
+        "activities": [
+          {
+            "description": "Shadow onboarding activities and document observations",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: share observations",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Visual process mapping and infographic design",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Create initial visual process map drafts",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft visual process map"
+        ],
         "dealReflection": {
           "describe": "What did you observe about the current process? How did you approach visual documentation?",
           "examine": "How do visual communication principles apply to process documentation? What makes a process map clear and useful?",
           "articulate": "What have you learned about translating observations into visual formats? How does this build your portfolio skills?"
         },
-        "naceCompetencyFocus": ["technology", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "technology",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 3,
         "theme": "Interview Design and Stakeholder Engagement",
-        "objectives": ["Design interview approach", "Begin stakeholder interviews", "Practice professional interview techniques"],
-        "activities": [
-          {"description": "Design interview questions and approach", "hours": 1.5, "kolbPhase": "experience"},
-          {"description": "Conduct pilot interview and gather feedback", "hours": 0.75, "kolbPhase": "reflection"},
-          {"description": "Read: Professional interviewing techniques for research", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Begin conducting stakeholder interviews", "hours": 2.75, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Design interview approach",
+          "Begin stakeholder interviews",
+          "Practice professional interview techniques"
         ],
-        "deliverables": ["Interview protocol and initial interviews"],
+        "activities": [
+          {
+            "description": "Design interview questions and approach",
+            "hours": 2.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Conduct pilot interview and gather feedback",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Professional interviewing techniques for research",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin conducting stakeholder interviews",
+            "hours": 4,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview protocol and initial interviews"
+        ],
         "dealReflection": {
           "describe": "How did you design your interview approach? What techniques are you using?",
           "examine": "How do your interview skills from journalism coursework apply here? What's different about organizational research?",
           "articulate": "What have you learned about professional interviewing? How does this strengthen your communication skills?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 4,
         "theme": "Completing Interviews and Process Documentation",
-        "objectives": ["Complete stakeholder interviews", "Finalize current state visual documentation", "Begin identifying themes"],
-        "activities": [
-          {"description": "Complete remaining stakeholder interviews", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: discuss findings", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Thematic analysis and storytelling with data", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Finalize process map and begin theme analysis", "hours": 2.25, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete stakeholder interviews",
+          "Finalize current state visual documentation",
+          "Begin identifying themes"
         ],
-        "deliverables": ["Current state process map", "Week 4 DEAL reflection"],
+        "activities": [
+          {
+            "description": "Complete remaining stakeholder interviews",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: discuss findings",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Thematic analysis and storytelling with data",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Finalize process map and begin theme analysis",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Current state process map",
+          "Week 4 DEAL reflection"
+        ],
         "dealReflection": {
           "describe": "What stories are emerging from your interviews? What visual approaches worked best?",
           "examine": "How do you balance individual stories with systematic analysis? What narrative techniques help communicate findings?",
           "articulate": "What have you learned about combining visual and narrative communication? How does this add to your professional toolkit?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 5,
         "theme": "Theme Development and Story Creation",
-        "objectives": ["Synthesize interview findings into themes", "Develop compelling narrative around findings", "Create supporting visualizations"],
-        "activities": [
-          {"description": "Analyze and code interview data for themes", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Share emerging narrative with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Organizational storytelling and change communication", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Develop narrative framework and supporting visuals", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Synthesize interview findings into themes",
+          "Develop compelling narrative around findings",
+          "Create supporting visualizations"
         ],
-        "deliverables": ["Thematic analysis with narrative framework"],
+        "activities": [
+          {
+            "description": "Analyze and code interview data for themes",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Share emerging narrative with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Organizational storytelling and change communication",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop narrative framework and supporting visuals",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Thematic analysis with narrative framework"
+        ],
         "dealReflection": {
           "describe": "What themes emerged? How did you develop the narrative around your findings?",
           "examine": "How do you create compelling stories from organizational data? What makes findings memorable and actionable?",
           "articulate": "What have you learned about organizational storytelling? How might this skill apply in corporate communications roles?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 6,
         "theme": "Mid-Project Report and Presentation",
-        "objectives": ["Create engaging mid-project report", "Present findings visually and narratively", "Gather feedback for next phase"],
-        "activities": [
-          {"description": "Design and write stakeholder interview summary", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Present findings to Operations Manager", "hours": 0.75, "kolbPhase": "reflection"},
-          {"description": "Read: Client presentation and feedback integration", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Incorporate feedback and plan recommendations phase", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create engaging mid-project report",
+          "Present findings visually and narratively",
+          "Gather feedback for next phase"
         ],
-        "deliverables": ["Stakeholder interview summary"],
+        "activities": [
+          {
+            "description": "Design and write stakeholder interview summary",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Present findings to Operations Manager",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Client presentation and feedback integration",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Incorporate feedback and plan recommendations phase",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Stakeholder interview summary"
+        ],
         "dealReflection": {
           "describe": "How did you present your findings? What visual and narrative elements were most effective?",
           "examine": "How do you adapt your communication style for different professional audiences? What feedback strategies help improve your work?",
           "articulate": "What have you learned about client communication and feedback? How has your professional confidence grown?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 7,
         "theme": "Best Practices Research and Content Development",
-        "objectives": ["Research industry best practices", "Create compelling content about improvements", "Develop visual recommendations"],
-        "activities": [
-          {"description": "Research client onboarding best practices", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: discuss research approach", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Content strategy and recommendation communication", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Begin creating visual recommendation content", "hours": 2.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Research industry best practices",
+          "Create compelling content about improvements",
+          "Develop visual recommendations"
         ],
-        "deliverables": ["Best practices research brief"],
+        "activities": [
+          {
+            "description": "Research client onboarding best practices",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: discuss research approach",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Content strategy and recommendation communication",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Begin creating visual recommendation content",
+            "hours": 3.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Best practices research brief"
+        ],
         "dealReflection": {
           "describe": "What best practices did you discover? How are you presenting them visually?",
           "examine": "How do you make research findings engaging and actionable? What content strategies are most effective?",
           "articulate": "What have you learned about research-based content creation? How does this strengthen your portfolio?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "technology"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "technology"
+        ]
       },
       {
         "weekNumber": 8,
         "theme": "Recommendation Development and Design",
-        "objectives": ["Develop specific recommendations", "Create compelling visual presentations", "Design change communication approach"],
-        "activities": [
-          {"description": "Develop recommendations with visual support", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Review recommendations with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Change communication and visual persuasion", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Refine visual recommendations based on feedback", "hours": 2.25, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Develop specific recommendations",
+          "Create compelling visual presentations",
+          "Design change communication approach"
         ],
-        "deliverables": ["Draft recommendations with visuals"],
+        "activities": [
+          {
+            "description": "Develop recommendations with visual support",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review recommendations with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Change communication and visual persuasion",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine visual recommendations based on feedback",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft recommendations with visuals"
+        ],
         "dealReflection": {
           "describe": "What recommendations did you develop? How did you use visual design to support them?",
           "examine": "How do visuals enhance persuasion and understanding? What design principles are most effective?",
           "articulate": "What have you learned about visual communication for recommendations? How does this expand your professional capabilities?"
         },
-        "naceCompetencyFocus": ["communication", "technology"]
+        "naceCompetencyFocus": [
+          "communication",
+          "technology"
+        ]
       },
       {
         "weekNumber": 9,
         "theme": "Implementation Roadmap and Communication Plan",
-        "objectives": ["Create implementation roadmap", "Develop change communication strategy", "Design supporting materials"],
-        "activities": [
-          {"description": "Create prioritized implementation roadmap", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: review communication approach", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Change management communication strategies", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Develop change communication plan and materials", "hours": 2.25, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create implementation roadmap",
+          "Develop change communication strategy",
+          "Design supporting materials"
         ],
-        "deliverables": ["Implementation roadmap with communication plan"],
+        "activities": [
+          {
+            "description": "Create prioritized implementation roadmap",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: review communication approach",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Change management communication strategies",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop change communication plan and materials",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Implementation roadmap with communication plan"
+        ],
         "dealReflection": {
           "describe": "How did you structure the implementation roadmap? What communication materials did you create?",
           "examine": "How does strategic communication support organizational change? What role does timing play?",
           "articulate": "What have you learned about change communication? How might this skill apply in corporate communications careers?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 10,
         "theme": "Final Deliverable Production",
-        "objectives": ["Complete final recommendations document", "Ensure professional design quality", "Prepare handoff materials"],
-        "activities": [
-          {"description": "Finalize comprehensive recommendations document", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Quality review with mentor", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Professional document production standards", "hours": 0.5, "kolbPhase": "conceptualization"},
-          {"description": "Polish design and create appendices", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete final recommendations document",
+          "Ensure professional design quality",
+          "Prepare handoff materials"
         ],
-        "deliverables": ["Final recommendations and roadmap"],
+        "activities": [
+          {
+            "description": "Finalize comprehensive recommendations document",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Quality review with mentor",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Professional document production standards",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Polish design and create appendices",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final recommendations and roadmap"
+        ],
         "dealReflection": {
           "describe": "How did you approach the final document design? What quality standards did you apply?",
           "examine": "What distinguishes professional-quality deliverables? How do you ensure consistency and polish?",
           "articulate": "What have you learned about professional document production? How does this strengthen your portfolio?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 11,
         "theme": "Executive Presentation Development",
-        "objectives": ["Create compelling executive presentation", "Practice delivery and storytelling", "Prepare for Q&A"],
-        "activities": [
-          {"description": "Design executive presentation with visual storytelling", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Practice presentation and receive feedback", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Executive presentation and visual storytelling", "hours": 0.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine presentation and prepare talking points", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create compelling executive presentation",
+          "Practice delivery and storytelling",
+          "Prepare for Q&A"
         ],
-        "deliverables": ["Executive presentation"],
+        "activities": [
+          {
+            "description": "Design executive presentation with visual storytelling",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Practice presentation and receive feedback",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Executive presentation and visual storytelling",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine presentation and prepare talking points",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Executive presentation"
+        ],
         "dealReflection": {
           "describe": "How did you design your presentation for maximum impact? What storytelling techniques did you use?",
           "examine": "How do you create presentations that drive action? What balance of visual and verbal communication works best?",
           "articulate": "What have you learned about executive presentations? How has this prepared you for professional communication roles?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 12,
         "theme": "Final Presentation and Portfolio Completion",
-        "objectives": ["Deliver impactful final presentation", "Complete project handoff", "Finalize portfolio and reflection"],
-        "activities": [
-          {"description": "Deliver final presentation to leadership", "hours": 1.5, "kolbPhase": "experience"},
-          {"description": "Debrief with mentor on project experience", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Portfolio development and career positioning", "hours": 0.5, "kolbPhase": "conceptualization"},
-          {"description": "Complete portfolio pieces and final reflection", "hours": 3.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Deliver impactful final presentation",
+          "Complete project handoff",
+          "Finalize portfolio and reflection"
         ],
-        "deliverables": ["Final presentation (delivered)", "Project handoff", "Final reflection", "Portfolio pieces"],
+        "activities": [
+          {
+            "description": "Deliver final presentation to leadership",
+            "hours": 2.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Debrief with mentor on project experience",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Portfolio development and career positioning",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Complete portfolio pieces and final reflection",
+            "hours": 4.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final presentation (delivered)",
+          "Project handoff",
+          "Final reflection",
+          "Portfolio pieces"
+        ],
         "dealReflection": {
           "describe": "How did your final presentation go? What was the response to your recommendations?",
           "examine": "Looking back at the project, how did your communication skills evolve? What moments were most challenging and rewarding?",
           "articulate": "What are the key portfolio pieces from this project? How has this experience shaped your career direction in communications?"
         },
-        "naceCompetencyFocus": ["communication", "career-self-development"]
+        "naceCompetencyFocus": [
+          "communication",
+          "career-self-development"
+        ]
       }
     ]
   },
@@ -302,7 +610,10 @@
           "Accurate representation validated by stakeholders",
           "Portfolio-ready quality"
         ],
-        "objectivesMapped": ["obj-1", "obj-3"]
+        "objectivesMapped": [
+          "obj-1",
+          "obj-3"
+        ]
       },
       {
         "name": "Stakeholder Interview Summary",
@@ -314,7 +625,11 @@
           "Engaging visual design",
           "Professional writing quality"
         ],
-        "objectivesMapped": ["obj-1", "obj-2", "obj-3"]
+        "objectivesMapped": [
+          "obj-1",
+          "obj-2",
+          "obj-3"
+        ]
       },
       {
         "name": "Final Recommendations and Roadmap",
@@ -326,7 +641,11 @@
           "Clear implementation communication",
           "Portfolio-ready professional quality"
         ],
-        "objectivesMapped": ["obj-3", "obj-4", "obj-5"]
+        "objectivesMapped": [
+          "obj-3",
+          "obj-4",
+          "obj-5"
+        ]
       },
       {
         "name": "Executive Presentation",
@@ -338,7 +657,11 @@
           "Clear executive communication",
           "Effective Q&A handling"
         ],
-        "objectivesMapped": ["obj-1", "obj-4", "obj-5"]
+        "objectivesMapped": [
+          "obj-1",
+          "obj-4",
+          "obj-5"
+        ]
       }
     ],
     "reflections": {
@@ -352,9 +675,18 @@
       ]
     },
     "employerEvaluation": {
-      "timing": ["Mid-term (Week 6)", "Final (Week 12)"],
+      "timing": [
+        "Mid-term (Week 6)",
+        "Final (Week 12)"
+      ],
       "weight": "5%",
-      "areas": ["Communication quality", "Visual design", "Professionalism", "Initiative", "Client relationship"]
+      "areas": [
+        "Communication quality",
+        "Visual design",
+        "Professionalism",
+        "Initiative",
+        "Client relationship"
+      ]
     }
   },
   "sampleWeek": {
@@ -368,12 +700,31 @@
       "Begin identifying themes and narrative opportunities"
     ],
     "activities": [
-      {"description": "Complete remaining stakeholder interviews (2-3 sessions)", "hours": 2.5, "kolbPhase": "experience"},
-      {"description": "Bi-weekly mentor check-in: discuss findings and visual approach", "hours": 0.5, "kolbPhase": "reflection"},
-      {"description": "Read: Thematic analysis and storytelling with organizational data", "hours": 0.75, "kolbPhase": "conceptualization"},
-      {"description": "Finalize process map design and begin coding interviews for themes", "hours": 2.25, "kolbPhase": "experimentation"}
+      {
+        "description": "Complete remaining stakeholder interviews (2-3 sessions)",
+        "hours": 2.5,
+        "kolbPhase": "experience"
+      },
+      {
+        "description": "Bi-weekly mentor check-in: discuss findings and visual approach",
+        "hours": 0.5,
+        "kolbPhase": "reflection"
+      },
+      {
+        "description": "Read: Thematic analysis and storytelling with organizational data",
+        "hours": 0.75,
+        "kolbPhase": "conceptualization"
+      },
+      {
+        "description": "Finalize process map design and begin coding interviews for themes",
+        "hours": 2.25,
+        "kolbPhase": "experimentation"
+      }
     ],
-    "deliverables": ["Current state process map (visual)", "Week 4 DEAL reflection"],
+    "deliverables": [
+      "Current state process map (visual)",
+      "Week 4 DEAL reflection"
+    ],
     "dealReflection": {
       "describe": "What stories are emerging from your stakeholder interviews? What visual approaches worked best for documenting the process?",
       "examine": "How do you balance individual stories with systematic analysis? What narrative and visual techniques help communicate your findings most effectively?",
@@ -396,22 +747,109 @@
       "competencies": "All four FieldWork competencies: Purposeful Engagement through client work, Reflective Practice through DEAL model, Integrative Learning connecting to Communications coursework, Transfer Capacity through portfolio development"
     },
     "employerSuccessCriteria": [
-      {"criterion": "Comprehensive documentation of current onboarding process", "addressedBy": ["obj-1", "obj-3", "Process Map"]},
-      {"criterion": "Stakeholder feedback synthesized into key themes", "addressedBy": ["obj-2", "Interview Summary"]},
-      {"criterion": "Research-backed recommendations for improvement", "addressedBy": ["obj-3", "obj-4", "Final Recommendations"]},
-      {"criterion": "Implementation roadmap with prioritized action items", "addressedBy": ["obj-4", "Roadmap", "Communication Plan"]}
+      {
+        "criterion": "Comprehensive documentation of current onboarding process",
+        "addressedBy": [
+          "obj-1",
+          "obj-3",
+          "Process Map"
+        ]
+      },
+      {
+        "criterion": "Stakeholder feedback synthesized into key themes",
+        "addressedBy": [
+          "obj-2",
+          "Interview Summary"
+        ]
+      },
+      {
+        "criterion": "Research-backed recommendations for improvement",
+        "addressedBy": [
+          "obj-3",
+          "obj-4",
+          "Final Recommendations"
+        ]
+      },
+      {
+        "criterion": "Implementation roadmap with prioritized action items",
+        "addressedBy": [
+          "obj-4",
+          "Roadmap",
+          "Communication Plan"
+        ]
+      }
     ],
     "studentLearningGoals": [
-      {"goal": "Gain experience with client-facing professional work", "addressedBy": ["obj-2", "obj-5", "Client meetings", "Presentations"]},
-      {"goal": "Learn to translate complex information for different audiences", "addressedBy": ["obj-1", "obj-4", "Visual design", "Multi-audience materials"]},
-      {"goal": "Develop project management skills", "addressedBy": ["obj-5", "Project plan", "Timeline management"]},
-      {"goal": "Build a portfolio of professional work", "addressedBy": ["obj-3", "obj-6", "All visual deliverables", "Portfolio reflection"]}
+      {
+        "goal": "Gain experience with client-facing professional work",
+        "addressedBy": [
+          "obj-2",
+          "obj-5",
+          "Client meetings",
+          "Presentations"
+        ]
+      },
+      {
+        "goal": "Learn to translate complex information for different audiences",
+        "addressedBy": [
+          "obj-1",
+          "obj-4",
+          "Visual design",
+          "Multi-audience materials"
+        ]
+      },
+      {
+        "goal": "Develop project management skills",
+        "addressedBy": [
+          "obj-5",
+          "Project plan",
+          "Timeline management"
+        ]
+      },
+      {
+        "goal": "Build a portfolio of professional work",
+        "addressedBy": [
+          "obj-3",
+          "obj-6",
+          "All visual deliverables",
+          "Portfolio reflection"
+        ]
+      }
     ],
     "institutionalOutcomes": [
-      {"outcome": "Apply disciplinary knowledge to solve real-world problems", "evidence": ["Communication theory application", "Visual design principles", "Strategic recommendations"]},
-      {"outcome": "Demonstrate professional communication skills", "evidence": ["Document quality", "Presentation delivery", "Visual design", "Client feedback"]},
-      {"outcome": "Reflect critically on personal and professional development", "evidence": ["DEAL reflections", "Portfolio development", "Career reflection"]},
-      {"outcome": "Collaborate effectively with professionals and stakeholders", "evidence": ["Mentor evaluation", "Interview quality", "Client relationships"]}
+      {
+        "outcome": "Apply disciplinary knowledge to solve real-world problems",
+        "evidence": [
+          "Communication theory application",
+          "Visual design principles",
+          "Strategic recommendations"
+        ]
+      },
+      {
+        "outcome": "Demonstrate professional communication skills",
+        "evidence": [
+          "Document quality",
+          "Presentation delivery",
+          "Visual design",
+          "Client feedback"
+        ]
+      },
+      {
+        "outcome": "Reflect critically on personal and professional development",
+        "evidence": [
+          "DEAL reflections",
+          "Portfolio development",
+          "Career reflection"
+        ]
+      },
+      {
+        "outcome": "Collaborate effectively with professionals and stakeholders",
+        "evidence": [
+          "Mentor evaluation",
+          "Interview quality",
+          "Client relationships"
+        ]
+      }
     ]
   }
 }

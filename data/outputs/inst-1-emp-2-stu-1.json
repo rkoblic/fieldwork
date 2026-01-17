@@ -73,219 +73,526 @@
       {
         "weekNumber": 1,
         "theme": "Consulting Engagement and Discovery",
-        "objectives": ["Understand organizational context and consulting engagement", "Establish working relationships", "Develop project approach"],
-        "activities": [
-          {"description": "Meet with Operations Manager for project kickoff and context", "hours": 1.5, "kolbPhase": "experience"},
-          {"description": "Review existing onboarding documentation and materials", "hours": 2, "kolbPhase": "experience"},
-          {"description": "Reflect on consulting role and initial organizational observations", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Introduction to process improvement and consulting methodologies", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Draft project approach and stakeholder engagement plan", "hours": 1, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Understand organizational context and consulting engagement",
+          "Establish working relationships",
+          "Develop project approach"
         ],
-        "deliverables": ["Project approach document"],
+        "activities": [
+          {
+            "description": "Meet with Operations Manager for project kickoff and context",
+            "hours": 2.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review existing onboarding documentation and materials",
+            "hours": 3,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Reflect on consulting role and initial organizational observations",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Introduction to process improvement and consulting methodologies",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Draft project approach and stakeholder engagement plan",
+            "hours": 1,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Project approach document"
+        ],
         "dealReflection": {
           "describe": "What did you learn about the organization and its onboarding challenges? Who are the key stakeholders you'll be working with?",
           "examine": "How does the consulting context differ from academic research? What organizational behavior concepts seem relevant to this situation?",
           "articulate": "What consulting and research skills do you expect to apply? What new skills might you need to develop?"
         },
-        "naceCompetencyFocus": ["professionalism", "career-self-development"]
+        "naceCompetencyFocus": [
+          "professionalism",
+          "career-self-development"
+        ]
       },
       {
         "weekNumber": 2,
         "theme": "Current State Discovery",
-        "objectives": ["Map existing onboarding process", "Identify process touchpoints and handoffs", "Begin documenting pain points"],
-        "activities": [
-          {"description": "Shadow and document current onboarding activities", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: discuss observations", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Process mapping techniques and documentation methods", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Create initial process flow diagram", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Map existing onboarding process",
+          "Identify process touchpoints and handoffs",
+          "Begin documenting pain points"
         ],
-        "deliverables": ["Draft process flow diagram"],
+        "activities": [
+          {
+            "description": "Shadow and document current onboarding activities",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: discuss observations",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Process mapping techniques and documentation methods",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Create initial process flow diagram",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft process flow diagram"
+        ],
         "dealReflection": {
           "describe": "What did you observe about the current onboarding process? What documentation methods did you use?",
           "examine": "How do organizational structures and culture influence process design? What concepts from Organizational Behavior help explain what you're seeing?",
           "articulate": "What have you learned about translating observations into systematic documentation? How might this skill transfer to future work?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "professionalism"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 3,
         "theme": "Stakeholder Interview Design",
-        "objectives": ["Design interview protocol", "Identify key informants", "Begin conducting interviews"],
-        "activities": [
-          {"description": "Design semi-structured interview protocol", "hours": 1.5, "kolbPhase": "experience"},
-          {"description": "Pilot interview with Operations Manager for feedback", "hours": 0.75, "kolbPhase": "reflection"},
-          {"description": "Read: Qualitative research methods and interview techniques", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Refine protocol and begin stakeholder interviews", "hours": 2.75, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Design interview protocol",
+          "Identify key informants",
+          "Begin conducting interviews"
         ],
-        "deliverables": ["Interview protocol and initial interviews"],
+        "activities": [
+          {
+            "description": "Design semi-structured interview protocol",
+            "hours": 2.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Pilot interview with Operations Manager for feedback",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Qualitative research methods and interview techniques",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine protocol and begin stakeholder interviews",
+            "hours": 4,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Interview protocol and initial interviews"
+        ],
         "dealReflection": {
           "describe": "How did you design your interview protocol? What considerations shaped your approach?",
           "examine": "How do research methods skills from psychology apply in consulting contexts? What ethical considerations guide stakeholder interviews?",
           "articulate": "What have you learned about gathering qualitative data in organizations? How does this connect to your research methods training?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 4,
         "theme": "Stakeholder Interviews and Process Documentation",
-        "objectives": ["Complete stakeholder interviews", "Finalize current state documentation", "Begin identifying themes"],
-        "activities": [
-          {"description": "Conduct remaining stakeholder interviews", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: discuss interview insights", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Thematic analysis and qualitative data synthesis", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Complete process map and begin coding interview data", "hours": 2.25, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete stakeholder interviews",
+          "Finalize current state documentation",
+          "Begin identifying themes"
         ],
-        "deliverables": ["Current state process map", "Week 4 DEAL reflection"],
+        "activities": [
+          {
+            "description": "Conduct remaining stakeholder interviews",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: discuss interview insights",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Thematic analysis and qualitative data synthesis",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Complete process map and begin coding interview data",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Current state process map",
+          "Week 4 DEAL reflection"
+        ],
         "dealReflection": {
           "describe": "What themes are emerging from your interviews? What patterns do you see across stakeholders?",
           "examine": "How do individual perspectives vary based on role and position? What organizational psychology concepts help explain these differences?",
           "articulate": "What have you learned about synthesizing diverse stakeholder perspectives? How does this relate to concepts from your coursework?"
         },
-        "naceCompetencyFocus": ["communication", "critical-thinking"]
+        "naceCompetencyFocus": [
+          "communication",
+          "critical-thinking"
+        ]
       },
       {
         "weekNumber": 5,
         "theme": "Analysis and Theme Development",
-        "objectives": ["Complete thematic analysis of interviews", "Identify key pain points and opportunities", "Prioritize improvement areas"],
-        "activities": [
-          {"description": "Complete coding and thematic analysis of interview data", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Validate themes with select stakeholders", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Root cause analysis and process improvement frameworks", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Develop pain point prioritization framework", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Complete thematic analysis of interviews",
+          "Identify key pain points and opportunities",
+          "Prioritize improvement areas"
         ],
-        "deliverables": ["Thematic analysis summary"],
+        "activities": [
+          {
+            "description": "Complete coding and thematic analysis of interview data",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Validate themes with select stakeholders",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Root cause analysis and process improvement frameworks",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop pain point prioritization framework",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Thematic analysis summary"
+        ],
         "dealReflection": {
           "describe": "What key themes emerged from your analysis? How did you prioritize pain points?",
           "examine": "How do you distinguish symptoms from root causes in organizational processes? What psychological factors influence process adherence?",
           "articulate": "What have you learned about analytical approaches to organizational problems? How might these skills apply in HR or consulting careers?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "communication"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "communication"
+        ]
       },
       {
         "weekNumber": 6,
         "theme": "Mid-Project Synthesis and Check-in",
-        "objectives": ["Compile interview and analysis findings", "Present mid-project status", "Gather feedback for recommendation phase"],
-        "activities": [
-          {"description": "Compile stakeholder interview summary document", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Present findings to Operations Manager", "hours": 0.75, "kolbPhase": "reflection"},
-          {"description": "Read: Consulting presentation and client communication", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Incorporate feedback and plan recommendation phase", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Compile interview and analysis findings",
+          "Present mid-project status",
+          "Gather feedback for recommendation phase"
         ],
-        "deliverables": ["Stakeholder interview summary"],
+        "activities": [
+          {
+            "description": "Compile stakeholder interview summary document",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Present findings to Operations Manager",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Consulting presentation and client communication",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Incorporate feedback and plan recommendation phase",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Stakeholder interview summary"
+        ],
         "dealReflection": {
           "describe": "How did you present your findings? What feedback did you receive?",
           "examine": "How do you communicate findings that might be sensitive or challenging? What role does trust play in consulting relationships?",
           "articulate": "What have you learned about professional client communication? How has this experience built your confidence?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 7,
         "theme": "Best Practices Research",
-        "objectives": ["Research industry best practices", "Benchmark against leading approaches", "Identify applicable innovations"],
-        "activities": [
-          {"description": "Research client onboarding best practices in consulting", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: discuss research findings", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Industry benchmarking and best practice adoption", "hours": 1, "kolbPhase": "conceptualization"},
-          {"description": "Synthesize research into applicable recommendations", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Research industry best practices",
+          "Benchmark against leading approaches",
+          "Identify applicable innovations"
         ],
-        "deliverables": ["Best practices research brief"],
+        "activities": [
+          {
+            "description": "Research client onboarding best practices in consulting",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: discuss research findings",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Industry benchmarking and best practice adoption",
+            "hours": 1.5,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Synthesize research into applicable recommendations",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Best practices research brief"
+        ],
         "dealReflection": {
           "describe": "What best practices did you identify? Which seem most applicable to this organization?",
           "examine": "How do you evaluate whether external practices will work in a specific organizational context? What factors affect successful adoption?",
           "articulate": "What have you learned about balancing research with practical applicability? How does this connect to evidence-based practice concepts?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "technology"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "technology"
+        ]
       },
       {
         "weekNumber": 8,
         "theme": "Recommendation Development",
-        "objectives": ["Develop specific improvement recommendations", "Consider implementation feasibility", "Create supporting rationale"],
-        "activities": [
-          {"description": "Develop detailed recommendations with rationale", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Review recommendations with Operations Manager", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Change management and recommendation implementation", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Refine recommendations based on feasibility feedback", "hours": 2.25, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Develop specific improvement recommendations",
+          "Consider implementation feasibility",
+          "Create supporting rationale"
         ],
-        "deliverables": ["Draft recommendations document"],
+        "activities": [
+          {
+            "description": "Develop detailed recommendations with rationale",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review recommendations with Operations Manager",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Change management and recommendation implementation",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine recommendations based on feasibility feedback",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Draft recommendations document"
+        ],
         "dealReflection": {
           "describe": "What recommendations did you develop? How did you assess their feasibility?",
           "examine": "What organizational factors affect whether recommendations get implemented? How do change management principles apply?",
           "articulate": "What have you learned about developing actionable recommendations? How does this differ from academic recommendations?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "professionalism"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 9,
         "theme": "Implementation Roadmap Development",
-        "objectives": ["Prioritize recommendations", "Develop implementation timeline", "Identify success metrics"],
-        "activities": [
-          {"description": "Create prioritized implementation roadmap", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Bi-weekly mentor check-in: review roadmap approach", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Project planning and implementation metrics", "hours": 0.75, "kolbPhase": "conceptualization"},
-          {"description": "Develop metrics and measurement approach", "hours": 2.25, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Prioritize recommendations",
+          "Develop implementation timeline",
+          "Identify success metrics"
         ],
-        "deliverables": ["Implementation roadmap draft"],
+        "activities": [
+          {
+            "description": "Create prioritized implementation roadmap",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Bi-weekly mentor check-in: review roadmap approach",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Project planning and implementation metrics",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Develop metrics and measurement approach",
+            "hours": 3,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Implementation roadmap draft"
+        ],
         "dealReflection": {
           "describe": "How did you prioritize recommendations? What criteria did you use for sequencing?",
           "examine": "How do organizational readiness and capacity affect implementation planning? What psychological factors influence change adoption?",
           "articulate": "What have you learned about planning organizational change? How might these skills apply in organizational consulting or HR roles?"
         },
-        "naceCompetencyFocus": ["critical-thinking", "professionalism"]
+        "naceCompetencyFocus": [
+          "critical-thinking",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 10,
         "theme": "Final Deliverable Development",
-        "objectives": ["Compile final recommendations and roadmap", "Create comprehensive documentation", "Prepare handoff materials"],
-        "activities": [
-          {"description": "Write final recommendations and roadmap document", "hours": 3, "kolbPhase": "experience"},
-          {"description": "Review draft with Operations Manager", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Consulting deliverable best practices", "hours": 0.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine based on feedback", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Compile final recommendations and roadmap",
+          "Create comprehensive documentation",
+          "Prepare handoff materials"
         ],
-        "deliverables": ["Final recommendations and roadmap document"],
+        "activities": [
+          {
+            "description": "Write final recommendations and roadmap document",
+            "hours": 4.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Review draft with Operations Manager",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Consulting deliverable best practices",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine based on feedback",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final recommendations and roadmap document"
+        ],
         "dealReflection": {
           "describe": "How did you structure your final deliverable? What makes it actionable for the organization?",
           "examine": "What distinguishes a useful consulting deliverable from an academic paper? How do you ensure sustainable impact?",
           "articulate": "What have you learned about creating professional deliverables? How does this add to your portfolio?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 11,
         "theme": "Presentation Development",
-        "objectives": ["Create executive presentation", "Practice delivery", "Prepare for questions"],
-        "activities": [
-          {"description": "Develop executive presentation of findings and recommendations", "hours": 2.5, "kolbPhase": "experience"},
-          {"description": "Practice presentation and gather feedback", "hours": 1, "kolbPhase": "reflection"},
-          {"description": "Read: Executive presentation strategies", "hours": 0.5, "kolbPhase": "conceptualization"},
-          {"description": "Refine presentation and prepare for Q&A", "hours": 2, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Create executive presentation",
+          "Practice delivery",
+          "Prepare for questions"
         ],
-        "deliverables": ["Executive presentation"],
+        "activities": [
+          {
+            "description": "Develop executive presentation of findings and recommendations",
+            "hours": 4,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Practice presentation and gather feedback",
+            "hours": 1.5,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Executive presentation strategies",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Refine presentation and prepare for Q&A",
+            "hours": 2.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Executive presentation"
+        ],
         "dealReflection": {
           "describe": "How did you design your presentation for an executive audience? What key messages did you emphasize?",
           "examine": "How do you adapt your communication for senior leadership? What makes recommendations persuasive at the executive level?",
           "articulate": "What have you learned about executive communication? How has this experience prepared you for future professional presentations?"
         },
-        "naceCompetencyFocus": ["communication", "professionalism"]
+        "naceCompetencyFocus": [
+          "communication",
+          "professionalism"
+        ]
       },
       {
         "weekNumber": 12,
         "theme": "Final Presentation and Reflection",
-        "objectives": ["Deliver final presentation to leadership", "Complete project handoff", "Reflect on learning and career development"],
-        "activities": [
-          {"description": "Deliver final presentation to leadership team", "hours": 1.5, "kolbPhase": "experience"},
-          {"description": "Debrief with mentor on project and experience", "hours": 0.5, "kolbPhase": "reflection"},
-          {"description": "Read: Career paths in organizational consulting and HR", "hours": 0.5, "kolbPhase": "conceptualization"},
-          {"description": "Complete final reflection and project handoff", "hours": 3.5, "kolbPhase": "experimentation"}
+        "objectives": [
+          "Deliver final presentation to leadership",
+          "Complete project handoff",
+          "Reflect on learning and career development"
         ],
-        "deliverables": ["Final presentation (delivered)", "Project handoff package", "Final comprehensive reflection"],
+        "activities": [
+          {
+            "description": "Deliver final presentation to leadership team",
+            "hours": 2.5,
+            "kolbPhase": "experience"
+          },
+          {
+            "description": "Debrief with mentor on project and experience",
+            "hours": 1,
+            "kolbPhase": "reflection"
+          },
+          {
+            "description": "Read: Career paths in organizational consulting and HR",
+            "hours": 1,
+            "kolbPhase": "conceptualization"
+          },
+          {
+            "description": "Complete final reflection and project handoff",
+            "hours": 4.5,
+            "kolbPhase": "experimentation"
+          }
+        ],
+        "deliverables": [
+          "Final presentation (delivered)",
+          "Project handoff package",
+          "Final comprehensive reflection"
+        ],
         "dealReflection": {
           "describe": "How did your final presentation go? What questions did leadership ask?",
           "examine": "Looking back at the project, how did your understanding of organizational dynamics evolve? What moments were most challenging?",
           "articulate": "What are the most valuable skills and insights you gained? How has this experience shaped your career interests in organizational consulting or HR?"
         },
-        "naceCompetencyFocus": ["communication", "career-self-development"]
+        "naceCompetencyFocus": [
+          "communication",
+          "career-self-development"
+        ]
       }
     ]
   },
@@ -302,7 +609,10 @@
           "Professional visual presentation",
           "Accuracy validated by stakeholders"
         ],
-        "objectivesMapped": ["obj-1", "obj-5"]
+        "objectivesMapped": [
+          "obj-1",
+          "obj-5"
+        ]
       },
       {
         "name": "Stakeholder Interview Summary",
@@ -314,7 +624,10 @@
           "Balanced representation of perspectives",
           "Professional documentation"
         ],
-        "objectivesMapped": ["obj-2", "obj-3"]
+        "objectivesMapped": [
+          "obj-2",
+          "obj-3"
+        ]
       },
       {
         "name": "Final Recommendations and Roadmap",
@@ -326,7 +639,11 @@
           "Realistic feasibility assessment",
           "Professional consulting quality"
         ],
-        "objectivesMapped": ["obj-3", "obj-4", "obj-5"]
+        "objectivesMapped": [
+          "obj-3",
+          "obj-4",
+          "obj-5"
+        ]
       },
       {
         "name": "Executive Presentation",
@@ -338,7 +655,11 @@
           "Professional delivery",
           "Effective Q&A handling"
         ],
-        "objectivesMapped": ["obj-3", "obj-4", "obj-5"]
+        "objectivesMapped": [
+          "obj-3",
+          "obj-4",
+          "obj-5"
+        ]
       }
     ],
     "reflections": {
@@ -352,9 +673,18 @@
       ]
     },
     "employerEvaluation": {
-      "timing": ["Mid-term (Week 6)", "Final (Week 12)"],
+      "timing": [
+        "Mid-term (Week 6)",
+        "Final (Week 12)"
+      ],
       "weight": "5%",
-      "areas": ["Professionalism", "Analytical quality", "Communication", "Initiative", "Client relationship management"]
+      "areas": [
+        "Professionalism",
+        "Analytical quality",
+        "Communication",
+        "Initiative",
+        "Client relationship management"
+      ]
     }
   },
   "sampleWeek": {
@@ -368,12 +698,31 @@
       "Begin identifying patterns and themes in qualitative data"
     ],
     "activities": [
-      {"description": "Conduct remaining stakeholder interviews (2-3 interviews)", "hours": 2.5, "kolbPhase": "experience"},
-      {"description": "Bi-weekly mentor check-in: discuss interview insights and emerging patterns", "hours": 0.5, "kolbPhase": "reflection"},
-      {"description": "Read: Thematic analysis and qualitative data synthesis techniques", "hours": 0.75, "kolbPhase": "conceptualization"},
-      {"description": "Complete process map and begin coding interview data for themes", "hours": 2.25, "kolbPhase": "experimentation"}
+      {
+        "description": "Conduct remaining stakeholder interviews (2-3 interviews)",
+        "hours": 2.5,
+        "kolbPhase": "experience"
+      },
+      {
+        "description": "Bi-weekly mentor check-in: discuss interview insights and emerging patterns",
+        "hours": 0.5,
+        "kolbPhase": "reflection"
+      },
+      {
+        "description": "Read: Thematic analysis and qualitative data synthesis techniques",
+        "hours": 0.75,
+        "kolbPhase": "conceptualization"
+      },
+      {
+        "description": "Complete process map and begin coding interview data for themes",
+        "hours": 2.25,
+        "kolbPhase": "experimentation"
+      }
     ],
-    "deliverables": ["Current state process map", "Week 4 DEAL reflection"],
+    "deliverables": [
+      "Current state process map",
+      "Week 4 DEAL reflection"
+    ],
     "dealReflection": {
       "describe": "What themes are emerging from your stakeholder interviews? What patterns do you see across different roles and perspectives?",
       "examine": "How do individual perspectives vary based on organizational role and position? What concepts from Organizational Behavior help explain these variations?",
@@ -396,22 +745,106 @@
       "competencies": "All four FieldWork competencies: Purposeful Engagement through authentic consulting work, Reflective Practice through DEAL model, Integrative Learning connecting to Psychology/OB coursework, Transfer Capacity through career-focused reflection"
     },
     "employerSuccessCriteria": [
-      {"criterion": "Comprehensive documentation of current onboarding process", "addressedBy": ["obj-1", "Current State Process Map"]},
-      {"criterion": "Stakeholder feedback synthesized into key themes", "addressedBy": ["obj-2", "Stakeholder Interview Summary"]},
-      {"criterion": "Research-backed recommendations for improvement", "addressedBy": ["obj-3", "Best Practices Research", "Final Recommendations"]},
-      {"criterion": "Implementation roadmap with prioritized action items", "addressedBy": ["obj-4", "Final Recommendations and Roadmap"]}
+      {
+        "criterion": "Comprehensive documentation of current onboarding process",
+        "addressedBy": [
+          "obj-1",
+          "Current State Process Map"
+        ]
+      },
+      {
+        "criterion": "Stakeholder feedback synthesized into key themes",
+        "addressedBy": [
+          "obj-2",
+          "Stakeholder Interview Summary"
+        ]
+      },
+      {
+        "criterion": "Research-backed recommendations for improvement",
+        "addressedBy": [
+          "obj-3",
+          "Best Practices Research",
+          "Final Recommendations"
+        ]
+      },
+      {
+        "criterion": "Implementation roadmap with prioritized action items",
+        "addressedBy": [
+          "obj-4",
+          "Final Recommendations and Roadmap"
+        ]
+      }
     ],
     "studentLearningGoals": [
-      {"goal": "Develop professional presentation skills", "addressedBy": ["obj-5", "Executive Presentation", "Mentor check-ins"]},
-      {"goal": "Understand how organizations use data to make decisions", "addressedBy": ["obj-1", "obj-4", "Process analysis", "Stakeholder interviews"]},
-      {"goal": "Build confidence communicating with senior professionals", "addressedBy": ["obj-2", "obj-5", "Interviews", "Final Presentation"]},
-      {"goal": "Explore applications of psychology in business settings", "addressedBy": ["obj-3", "obj-6", "OB applications", "Change management"]}
+      {
+        "goal": "Develop professional presentation skills",
+        "addressedBy": [
+          "obj-5",
+          "Executive Presentation",
+          "Mentor check-ins"
+        ]
+      },
+      {
+        "goal": "Understand how organizations use data to make decisions",
+        "addressedBy": [
+          "obj-1",
+          "obj-4",
+          "Process analysis",
+          "Stakeholder interviews"
+        ]
+      },
+      {
+        "goal": "Build confidence communicating with senior professionals",
+        "addressedBy": [
+          "obj-2",
+          "obj-5",
+          "Interviews",
+          "Final Presentation"
+        ]
+      },
+      {
+        "goal": "Explore applications of psychology in business settings",
+        "addressedBy": [
+          "obj-3",
+          "obj-6",
+          "OB applications",
+          "Change management"
+        ]
+      }
     ],
     "institutionalOutcomes": [
-      {"outcome": "Apply disciplinary knowledge to solve real-world problems", "evidence": ["OB theory application", "Research methods use", "Recommendation quality"]},
-      {"outcome": "Demonstrate professional communication skills", "evidence": ["Interview quality", "Report writing", "Executive presentation"]},
-      {"outcome": "Reflect critically on personal and professional development", "evidence": ["DEAL reflections", "Career exploration", "Final reflection"]},
-      {"outcome": "Collaborate effectively with professionals and stakeholders", "evidence": ["Mentor evaluation", "Stakeholder relationships", "Client communication"]}
+      {
+        "outcome": "Apply disciplinary knowledge to solve real-world problems",
+        "evidence": [
+          "OB theory application",
+          "Research methods use",
+          "Recommendation quality"
+        ]
+      },
+      {
+        "outcome": "Demonstrate professional communication skills",
+        "evidence": [
+          "Interview quality",
+          "Report writing",
+          "Executive presentation"
+        ]
+      },
+      {
+        "outcome": "Reflect critically on personal and professional development",
+        "evidence": [
+          "DEAL reflections",
+          "Career exploration",
+          "Final reflection"
+        ]
+      },
+      {
+        "outcome": "Collaborate effectively with professionals and stakeholders",
+        "evidence": [
+          "Mentor evaluation",
+          "Stakeholder relationships",
+          "Client communication"
+        ]
+      }
     ]
   }
 }
