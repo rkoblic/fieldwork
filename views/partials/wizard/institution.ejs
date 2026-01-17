@@ -108,14 +108,11 @@
     <!-- Learning Outcomes -->
     <div class="mb-6">
       <label class="label">Learning Outcomes Required for Credit</label>
-      <div class="space-y-2">
-        <template x-for="(outcome, index) in $store.app.activeInstitution?.learningOutcomes" :key="index">
-          <div class="flex items-start gap-3 p-3 bg-slate-50 rounded-lg">
-            <span class="w-6 h-6 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0" x-text="index + 1"></span>
-            <span class="text-slate-700 text-sm" x-text="outcome"></span>
-          </div>
-        </template>
-      </div>
+      <textarea
+        rows="5"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeInstitution?.learningOutcomes?.map((o, i) => (i + 1) + '. ' + o).join('\n')"></textarea>
     </div>
 
     <!-- NACE Competencies -->

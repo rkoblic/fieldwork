@@ -77,39 +77,31 @@
     <!-- Skills -->
     <div class="mb-6">
       <label class="label">Skills & Experience</label>
-      <div class="space-y-2">
-        <template x-for="(skill, index) in $store.app.activeStudent?.skills" :key="index">
-          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
-            <svg class="w-5 h-5 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span class="text-slate-700 text-sm" x-text="skill"></span>
-          </div>
-        </template>
-      </div>
+      <textarea
+        rows="4"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeStudent?.skills?.map(s => '• ' + s).join('\n')"></textarea>
     </div>
 
     <!-- Relevant Coursework -->
     <div class="mb-6">
       <label class="label">Relevant Coursework</label>
-      <div class="flex flex-wrap gap-2">
-        <template x-for="course in $store.app.activeStudent?.relevantCoursework" :key="course">
-          <span class="badge badge-blue" x-text="course"></span>
-        </template>
-      </div>
+      <textarea
+        rows="2"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeStudent?.relevantCoursework?.join(', ')"></textarea>
     </div>
 
     <!-- Learning Goals -->
     <div class="mb-6">
       <label class="label">Learning Goals</label>
-      <div class="space-y-2">
-        <template x-for="(goal, index) in $store.app.activeStudent?.learningGoals" :key="index">
-          <div class="flex items-start gap-3 p-3 bg-violet-50 rounded-lg border border-violet-100">
-            <span class="w-6 h-6 bg-violet-200 text-violet-700 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0" x-text="index + 1"></span>
-            <span class="text-slate-700 text-sm" x-text="goal"></span>
-          </div>
-        </template>
-      </div>
+      <textarea
+        rows="4"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeStudent?.learningGoals?.map((g, i) => (i + 1) + '. ' + g).join('\n')"></textarea>
     </div>
 
     <!-- Career Interests -->

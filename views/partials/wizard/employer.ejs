@@ -92,29 +92,21 @@
     <!-- Success Criteria -->
     <div class="mb-6">
       <label class="label">Success Criteria</label>
-      <div class="space-y-2">
-        <template x-for="(criterion, index) in $store.app.activeEmployer?.successCriteria" :key="index">
-          <div class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg border border-emerald-100">
-            <svg class="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-            </svg>
-            <span class="text-slate-700 text-sm" x-text="criterion"></span>
-          </div>
-        </template>
-      </div>
+      <textarea
+        rows="4"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeEmployer?.successCriteria?.map(c => '• ' + c).join('\n')"></textarea>
     </div>
 
     <!-- Deliverables -->
     <div class="mb-6">
       <label class="label">Expected Deliverables</label>
-      <div class="space-y-2">
-        <template x-for="(deliverable, index) in $store.app.activeEmployer?.deliverables" :key="index">
-          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-lg">
-            <span class="w-6 h-6 bg-amber-100 text-amber-700 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0" x-text="index + 1"></span>
-            <span class="text-slate-700 text-sm" x-text="deliverable"></span>
-          </div>
-        </template>
-      </div>
+      <textarea
+        rows="4"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeEmployer?.deliverables?.map((d, i) => (i + 1) + '. ' + d).join('\n')"></textarea>
     </div>
 
     <!-- Timeline & Support -->
@@ -140,11 +132,11 @@
     <!-- Resources Provided -->
     <div>
       <label class="label">Resources Provided</label>
-      <div class="flex flex-wrap gap-2">
-        <template x-for="resource in $store.app.activeEmployer?.resourcesProvided" :key="resource">
-          <span class="badge badge-purple" x-text="resource"></span>
-        </template>
-      </div>
+      <textarea
+        rows="2"
+        :class="$store.app.mode === 'demo' ? 'input-readonly' : 'input'"
+        :readonly="$store.app.mode === 'demo'"
+        x-text="$store.app.activeEmployer?.resourcesProvided?.join(', ')"></textarea>
     </div>
   </div>
 </div>
