@@ -7,7 +7,8 @@
       "minor": "Business Administration",
       "year": "Junior",
       "gpa": "3.6",
-      "skills": [
+      "resumeFileName": "Anna_Liu_Resume.pdf",
+      "extractedSkills": [
         "Research methods and data analysis (SPSS)",
         "Technical writing from lab reports",
         "Survey design and administration",
@@ -19,13 +20,8 @@
         "Organizational Behavior",
         "Consumer Psychology"
       ],
-      "learningGoals": [
-        "Develop professional presentation skills",
-        "Understand how organizations use data to make decisions",
-        "Build confidence communicating with senior professionals",
-        "Explore applications of psychology in business settings"
-      ],
-      "careerInterests": "Interested in HR, organizational consulting, or market research. Wants to understand how psychological principles apply in professional settings."
+      "learningGoalsNarrative": "I want to develop stronger presentation skills because I get nervous speaking in front of groups. I'm also really curious about how organizations actually use data to make decisions—we talk about it in class but I want to see it in practice. I'd love to build more confidence talking with senior professionals and figure out how my psychology background could apply in a business setting.",
+      "careerInterestsNarrative": "I'm exploring careers in HR, organizational consulting, or market research. I've always been fascinated by what motivates people and how groups work together. I want to find a role where I can use psychological principles to help organizations and the people in them thrive."
     },
     {
       "id": "stu-2",
@@ -34,7 +30,8 @@
       "minor": "Digital Media",
       "year": "Senior",
       "gpa": "3.4",
-      "skills": [
+      "resumeFileName": "Ben_Williams_Resume.pdf",
+      "extractedSkills": [
         "Strong written and verbal communication",
         "Content creation and storytelling",
         "Social media strategy and management",
@@ -47,13 +44,8 @@
         "Public Relations Principles",
         "Visual Communication"
       ],
-      "learningGoals": [
-        "Gain experience with client-facing professional work",
-        "Learn to translate complex information for different audiences",
-        "Develop project management skills",
-        "Build a portfolio of professional work"
-      ],
-      "careerInterests": "Interested in corporate communications, PR, or content strategy roles. Wants to work in an environment where creativity combines with strategic thinking."
+      "learningGoalsNarrative": "I want real experience working with actual clients, not just classroom simulations. I need to get better at taking complex or technical information and making it accessible for different audiences. I also want to improve my project management abilities—keeping track of multiple deliverables and deadlines. Most importantly, I want to graduate with professional work samples I can show employers.",
+      "careerInterestsNarrative": "I'm targeting corporate communications, PR agencies, or in-house content strategy roles. I want a career that lets me be creative but also think strategically about how messages land with different audiences. I'm drawn to fast-paced environments where I can see the impact of my work."
     }
   ]
 }
