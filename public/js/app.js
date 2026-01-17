@@ -585,7 +585,8 @@ document.addEventListener('alpine:init', () => {
 
         const response = await fetch('/api/resume/extract-skills', {
           method: 'POST',
-          body: formData
+          body: formData,
+          cache: 'no-store'
         });
 
         if (!response.ok) {

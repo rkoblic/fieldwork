@@ -209,7 +209,8 @@
                 type="file"
                 class="hidden"
                 accept=".pdf,.doc,.docx"
-                @change="$store.app.uploadResume($event.target.files[0])">
+                x-ref="resumeInput"
+                @change="$store.app.uploadResume($event.target.files[0]); $event.target.value = ''">
             </label>
           </div>
 
