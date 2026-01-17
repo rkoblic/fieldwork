@@ -14,6 +14,24 @@ function parseJsonResponse(content) {
   return JSON.parse(jsonStr.trim());
 }
 
+// Helper to normalize array-or-string fields to string (for prompts)
+// Custom mode stores textarea values as strings; demo mode has arrays
+function toStringList(value) {
+  if (!value) return '';
+  if (Array.isArray(value)) {
+    return value.join('; ');
+  }
+  return String(value);
+}
+
+// Helper to normalize to array (split by newlines if string)
+function toArray(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value;
+  // Split by newlines and filter empty lines
+  return String(value).split('\n').map(s => s.trim()).filter(s => s.length > 0);
+}
+
 // Phase 1: Learning Objectives
 async function generateObjectives(framework, institution, employer, student) {
   const systemPrompt = `You are an expert instructional designer specializing in experiential learning. Generate learning objectives for a field placement experience.
@@ -47,17 +65,17 @@ Respond ONLY with valid JSON (no markdown, no explanation):
 
 INSTITUTION: ${institution.name}
 - Term: ${institution.termLengthWeeks} weeks, ${institution.hoursPerWeek} hours/week
-- Learning Outcomes: ${(institution.learningOutcomes || []).join('; ')}
+- Learning Outcomes: ${toStringList(institution.learningOutcomes)}
 
 EMPLOYER PROJECT: ${employer.projectTitle} at ${employer.companyName}
 - Industry: ${employer.industry}
-- Success Criteria: ${(employer.successCriteria || []).join('; ')}
-- Expected Deliverables: ${(employer.deliverables || []).join('; ')}
+- Success Criteria: ${toStringList(employer.successCriteria)}
+- Expected Deliverables: ${toStringList(employer.deliverables)}
 
 STUDENT: ${student.name}
 - Major: ${student.major}${student.minor ? `, Minor: ${student.minor}` : ''}
 - Year: ${student.year}
-- Skills: ${(student.extractedSkills || []).join(', ')}
+- Skills: ${toStringList(student.extractedSkills)}
 - Learning Goals: ${student.learningGoalsNarrative || 'Not specified'}
 - Career Interests: ${student.careerInterestsNarrative || 'Not specified'}
 
@@ -150,8 +168,8 @@ INSTITUTION: ${institution.name}
 - Credit Hours: ${institution.creditHours}
 
 EMPLOYER PROJECT: ${employer.projectTitle}
-- Expected Deliverables: ${(employer.deliverables || []).join('; ')}
-- Success Criteria: ${(employer.successCriteria || []).join('; ')}
+- Expected Deliverables: ${toStringList(employer.deliverables)}
+- Success Criteria: ${toStringList(employer.successCriteria)}
 
 STUDENT: ${student.name} (${student.major})
 
@@ -213,8 +231,8 @@ Respond ONLY with valid JSON:
 STUDENT: ${student.name}
 - Major: ${student.major}${student.minor ? `, Minor: ${student.minor}` : ''}
 - Background: ${student.year} year student
-- Skills: ${(student.extractedSkills || []).join(', ')}
-- Relevant Coursework: ${(student.relevantCoursework || []).join(', ')}
+- Skills: ${toStringList(student.extractedSkills)}
+- Relevant Coursework: ${toStringList(student.relevantCoursework)}
 
 EMPLOYER PROJECT: ${employer.projectTitle} at ${employer.companyName}
 - Brief: ${employer.projectBrief}
@@ -312,7 +330,7 @@ ${JSON.stringify(baseWeek, null, 2)}
 
 STUDENT CONTEXT:
 - Major: ${student.major}${student.minor ? `, Minor: ${student.minor}` : ''}
-- Relevant Coursework: ${(student.relevantCoursework || []).join(', ')}
+- Relevant Coursework: ${toStringList(student.relevantCoursework)}
 - Learning Goals: ${student.learningGoalsNarrative}
 
 PROJECT: ${employer.projectTitle} - ${employer.projectBrief}
@@ -376,19 +394,23 @@ Respond ONLY with valid JSON:
 
   const objectivesText = objectives.learningObjectives.map(o => `${o.id}: ${o.text}`).join('\n');
 
+  // Convert to arrays for numbered lists
+  const successCriteriaArr = toArray(employer.successCriteria);
+  const learningOutcomesArr = toArray(institution.learningOutcomes);
+
   const userPrompt = `Create alignment crosswalk for this learning experience:
 
 LEARNING OBJECTIVES:
 ${objectivesText}
 
 EMPLOYER SUCCESS CRITERIA:
-${(employer.successCriteria || []).map((c, i) => `${i + 1}. ${c}`).join('\n')}
+${successCriteriaArr.map((c, i) => `${i + 1}. ${c}`).join('\n') || 'Not specified'}
 
 STUDENT LEARNING GOALS:
 ${student.learningGoalsNarrative || 'Develop professional skills and apply academic knowledge'}
 
 INSTITUTIONAL OUTCOMES:
-${(institution.learningOutcomes || []).map((o, i) => `${i + 1}. ${o}`).join('\n')}
+${learningOutcomesArr.map((o, i) => `${i + 1}. ${o}`).join('\n') || 'Not specified'}
 
 ASSESSMENT DELIVERABLES:
 ${assessmentSummary.deliverables.map(d => `- ${d.name} (Week ${d.dueWeek})`).join('\n')}
