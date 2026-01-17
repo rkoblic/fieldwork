@@ -1,10 +1,17 @@
 <div class="py-16">
   <div class="text-center mb-8">
     <h1 class="text-2xl font-bold text-slate-900 mb-2">Generating Your Learning Experience</h1>
-    <p class="text-slate-600">Synthesizing inputs into a personalized curriculum...</p>
+    <p class="text-slate-600">
+      <template x-if="$store.app.mode === 'demo'">
+        <span>Loading pre-generated synthesis...</span>
+      </template>
+      <template x-if="$store.app.mode === 'custom'">
+        <span>Synthesizing inputs using AI (this may take a minute)...</span>
+      </template>
+    </p>
   </div>
 
-  <div class="max-w-md mx-auto" x-data="synthesisAnimation()">
+  <div class="max-w-md mx-auto" x-data="synthesisProgress()">
     <!-- Summary card - shows what's being created -->
     <div class="mb-8 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
       <div class="text-sm text-slate-500 mb-2 text-center">Creating experience for:</div>
@@ -22,85 +29,178 @@
     <div class="mb-8">
       <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
         <div class="h-full bg-gradient-to-r from-primary-500 to-violet-500 rounded-full transition-all duration-500"
-             :style="'width: ' + progress + '%'"></div>
+             :style="'width: ' + progressPercent + '%'"></div>
       </div>
       <div class="flex justify-between mt-2 text-sm text-slate-500">
-        <span x-text="currentStepLabel"></span>
-        <span x-text="progress + '%'"></span>
+        <span x-text="$store.app.currentPhaseLabel"></span>
+        <span x-text="$store.app.completedPhasesCount + ' / 5'"></span>
       </div>
     </div>
 
-    <!-- Synthesis steps -->
-    <div class="space-y-4">
-      <template x-for="(step, index) in steps" :key="index">
-        <div class="flex items-center gap-4 p-4 rounded-lg transition-colors"
-             :class="currentStep > index ? 'bg-primary-50' : currentStep === index ? 'bg-slate-100' : 'bg-slate-50'">
-          <!-- Icon -->
+    <!-- Synthesis phases -->
+    <div class="space-y-3">
+      <template x-for="(phase, index) in $store.app.synthesisPhases" :key="phase.id">
+        <div class="flex items-center gap-4 p-4 rounded-lg transition-all duration-300"
+             :class="{
+               'bg-primary-50 border border-primary-200': phase.status === 'complete',
+               'bg-blue-50 border border-blue-200': phase.status === 'in-progress',
+               'bg-amber-50 border border-amber-200': phase.status === 'retrying',
+               'bg-red-50 border border-red-200': phase.status === 'failed',
+               'bg-slate-50 border border-slate-200': phase.status === 'pending'
+             }">
+          <!-- Status Icon -->
           <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
-               :class="currentStep > index ? 'bg-primary-500 text-white' : currentStep === index ? 'bg-primary-100 text-primary-600' : 'bg-slate-200 text-slate-400'">
-            <template x-if="currentStep > index">
+               :class="{
+                 'bg-primary-500 text-white': phase.status === 'complete',
+                 'bg-blue-100 text-blue-600': phase.status === 'in-progress',
+                 'bg-amber-100 text-amber-600': phase.status === 'retrying',
+                 'bg-red-100 text-red-600': phase.status === 'failed',
+                 'bg-slate-200 text-slate-400': phase.status === 'pending'
+               }">
+            <!-- Completed -->
+            <template x-if="phase.status === 'complete'">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
             </template>
-            <template x-if="currentStep === index">
-              <div class="w-5 h-5 border-2 border-primary-600 border-t-transparent rounded-full animate-spin"></div>
+            <!-- In Progress -->
+            <template x-if="phase.status === 'in-progress'">
+              <div class="w-5 h-5 border-2 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
             </template>
-            <template x-if="currentStep < index">
+            <!-- Retrying -->
+            <template x-if="phase.status === 'retrying'">
+              <svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+            </template>
+            <!-- Failed -->
+            <template x-if="phase.status === 'failed'">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+              </svg>
+            </template>
+            <!-- Pending -->
+            <template x-if="phase.status === 'pending'">
               <span class="text-sm font-medium" x-text="index + 1"></span>
             </template>
           </div>
 
-          <!-- Label -->
-          <div>
-            <div class="font-medium" :class="currentStep >= index ? 'text-slate-900' : 'text-slate-400'" x-text="step.label"></div>
-            <div class="text-sm" :class="currentStep >= index ? 'text-slate-500' : 'text-slate-300'" x-text="step.description"></div>
+          <!-- Label and Status -->
+          <div class="flex-1 min-w-0">
+            <div class="font-medium"
+                 :class="{
+                   'text-slate-900': phase.status !== 'pending',
+                   'text-slate-400': phase.status === 'pending'
+                 }"
+                 x-text="phase.label"></div>
+            <div class="text-sm"
+                 :class="{
+                   'text-primary-600': phase.status === 'complete',
+                   'text-blue-600': phase.status === 'in-progress',
+                   'text-amber-600': phase.status === 'retrying',
+                   'text-red-600': phase.status === 'failed',
+                   'text-slate-300': phase.status === 'pending'
+                 }">
+              <template x-if="phase.status === 'complete' && phase.summary">
+                <span x-text="phase.summary"></span>
+              </template>
+              <template x-if="phase.status === 'in-progress'">
+                <span>Generating...</span>
+              </template>
+              <template x-if="phase.status === 'retrying'">
+                <span>Retrying...</span>
+              </template>
+              <template x-if="phase.status === 'failed'">
+                <span>Failed</span>
+              </template>
+              <template x-if="phase.status === 'pending'">
+                <span>Waiting...</span>
+              </template>
+            </div>
           </div>
         </div>
       </template>
     </div>
+
+    <!-- Error state with retry options -->
+    <template x-if="$store.app.synthesisError">
+      <div class="mt-8 p-4 bg-red-50 border border-red-200 rounded-lg">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+          </svg>
+          <div class="flex-1">
+            <h4 class="font-medium text-red-800">Synthesis Error</h4>
+            <p class="text-sm text-red-700 mt-1" x-text="$store.app.synthesisError"></p>
+          </div>
+        </div>
+
+        <div class="mt-4 flex flex-col sm:flex-row gap-2">
+          <button @click="$store.app.retrySynthesis()"
+                  class="btn-primary flex-1 justify-center"
+                  :disabled="$store.app.isLoading">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+            </svg>
+            Retry Failed Phase
+          </button>
+          <template x-if="$store.app.completedPhasesCount > 0">
+            <button @click="$store.app.viewPartialResults()"
+                    class="btn-secondary flex-1 justify-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+              </svg>
+              View Partial Results
+            </button>
+          </template>
+          <button @click="$store.app.startOver()"
+                  class="btn-secondary flex-1 justify-center">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            Start Over
+          </button>
+        </div>
+      </div>
+    </template>
+
+    <!-- Info text for custom mode -->
+    <template x-if="$store.app.mode === 'custom' && !$store.app.synthesisError">
+      <div class="mt-6 text-center text-sm text-slate-500">
+        <p>Each phase generates a specific part of your learning experience.</p>
+        <p class="mt-1">Results appear progressively as each phase completes.</p>
+      </div>
+    </template>
   </div>
 </div>
 
 <script>
-function synthesisAnimation() {
+function synthesisProgress() {
   return {
-    currentStep: 0,
-    progress: 0,
-    steps: [
-      { label: 'Applying FieldWork Framework', description: 'Integrating competencies and learning strategies' },
-      { label: 'Mapping Institutional Requirements', description: 'Aligning with credit and outcome standards' },
-      { label: 'Analyzing Employer Project', description: 'Extracting objectives and deliverables' },
-      { label: 'Personalizing for Student', description: 'Connecting to skills and goals' },
-      { label: 'Generating Learning Experience', description: 'Building curriculum and assessments' }
-    ],
-    get currentStepLabel() {
-      if (this.currentStep < this.steps.length) {
-        return this.steps[this.currentStep].label;
-      }
-      return 'Complete!';
+    get progressPercent() {
+      return Math.round((this.$store.app.completedPhasesCount / 5) * 100);
     },
     init() {
-      // Only start animation when we're actually on the synthesizing step
+      // Watch for when we enter the synthesizing step
       this.$watch('$store.app.currentStep', (step) => {
-        if (step === 'synthesizing' && this.currentStep === 0 && this.progress === 0) {
-          this.runAnimation();
+        if (step === 'synthesizing') {
+          // Reset phases and start synthesis
+          if (this.$store.app.mode === 'custom') {
+            this.$store.app.resetSynthesisPhases();
+          }
+          this.$store.app.loadSynthesis();
         }
       });
-      // Also check if we're already on the synthesizing step when initialized
+
+      // Check if we're already on synthesizing step when component mounts
       if (Alpine.store('app').currentStep === 'synthesizing') {
-        this.runAnimation();
+        if (Alpine.store('app').mode === 'custom') {
+          Alpine.store('app').resetSynthesisPhases();
+        }
+        Alpine.store('app').loadSynthesis();
       }
-    },
-    async runAnimation() {
-      const stepDuration = 600;
-      for (let i = 0; i <= this.steps.length; i++) {
-        await new Promise(resolve => setTimeout(resolve, stepDuration));
-        this.currentStep = i;
-        this.progress = Math.min(100, Math.round((i / this.steps.length) * 100));
-      }
-      // Trigger the actual synthesis load
-      await Alpine.store('app').loadSynthesis();
     }
   };
 }

@@ -19,7 +19,8 @@ fieldwork/
 │   │   └── api.js            # Data + synthesis endpoints
 │   └── services/
 │       ├── claude.js         # Claude API integration
-│       └── synthesis.js      # Mock vs real routing
+│       ├── synthesis.js      # Mock vs real routing
+│       └── synthesis-phases.js # Progressive multi-phase synthesis
 ├── views/
 │   ├── index.ejs             # Main shell
 │   └── partials/
@@ -65,16 +66,68 @@ fieldwork/
 | GET | `/api/data/employers` | Demo employer projects |
 | GET | `/api/data/students` | Demo student profiles |
 | GET | `/api/synthesis/demo/:key` | Pre-generated output (e.g., `inst-1-emp-1-stu-1`) |
-| POST | `/api/synthesis/custom` | Claude API synthesis |
+| POST | `/api/synthesis/custom` | Claude API synthesis (legacy monolithic) |
+| POST | `/api/synthesis/phase/objectives` | Phase 1: Generate learning objectives |
+| POST | `/api/synthesis/phase/assessment` | Phase 2: Generate assessment strategy |
+| POST | `/api/synthesis/phase/curriculum` | Phase 3: Generate week-by-week curriculum |
+| POST | `/api/synthesis/phase/sample-week` | Phase 4: Generate enhanced sample week |
+| POST | `/api/synthesis/phase/alignment` | Phase 5: Generate alignment crosswalk |
 | POST | `/api/resume/extract-skills` | Upload resume and extract skills via Claude |
 
 ## Application Modes
 - **Demo Mode**: All fields locked, users switch between pre-configured profiles. Uses pre-generated synthesis outputs.
-- **Custom Mode**: Editable forms. Uses Claude API when data differs from demo templates.
+- **Custom Mode**: Editable forms. Uses progressive multi-phase Claude API synthesis.
+
+## Progressive Synthesis Architecture
+Custom mode uses a 5-phase progressive synthesis following backwards design principles:
+
+### Phase Sequence
+```
+1. Learning Objectives (foundation) → stored, passed to next
+2. Assessment (what students demonstrate) → stored, passed to next
+3. Curriculum (learning experiences) → stored, passed to next
+4. Sample Week (enhanced with resources) → stored, passed to next
+5. Alignment (cross-reference all elements) → complete
+```
+
+### Benefits
+- **Real progress feedback**: Each phase completes visibly (no fake animation)
+- **Vercel compatible**: Each API call <10s (Hobby plan timeout)
+- **Retry capability**: Failed phases can retry individually (keeps prior results)
+- **Partial results**: Users can view completed sections if synthesis fails midway
+- **Better quality**: Focused prompts produce more reliable output
+
+### Frontend State
+```javascript
+synthesisPhases: [
+  { id: 'objectives', label: 'Learning Objectives', status: 'pending|in-progress|retrying|complete|failed', data: null, summary: null },
+  { id: 'assessment', label: 'Assessment', status: '...', data: null, summary: null },
+  { id: 'curriculum', label: 'Curriculum', status: '...', data: null, summary: null },
+  { id: 'sample-week', label: 'Sample Week', status: '...', data: null, summary: null },
+  { id: 'alignment', label: 'Alignment', status: '...', data: null, summary: null }
+]
+```
+
+### Helper Functions in app.js
+- `runProgressiveSynthesis(startFromPhase)` - Orchestrates sequential API calls
+- `executePhaseWithRetry(phaseFn, phaseIndex, maxRetries)` - Retry logic (up to 2 retries)
+- `retrySynthesis()` - Retry from failed phase
+- `viewPartialResults()` - Navigate to results with incomplete data
+- `isTabAvailable(tabId)` - Check if tab has data for progressive unlocking
+- `resetSynthesisPhases()` - Reset all phases to pending state
+
+### Results Tab Order (Backwards Design)
+Tabs are ordered to reflect the backwards design pedagogy:
+1. Learning Objectives
+2. Assessment
+3. Curriculum
+4. Sample Week
+5. Alignment
 
 ## Key Files
-- `public/js/app.js` - Alpine.js store managing wizard state, navigation, and data
+- `public/js/app.js` - Alpine.js store managing wizard state, navigation, progressive synthesis orchestration
 - `server/services/claude.js` - Claude API prompt engineering and response parsing
+- `server/services/synthesis-phases.js` - 5 phase-specific prompt builders for progressive synthesis
 - `data/outputs/` - 8 pre-generated synthesis files for all demo combinations
 
 ## Environment Variables

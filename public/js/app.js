@@ -100,6 +100,17 @@ document.addEventListener('alpine:init', () => {
     resumeUploading: false,
     resumeError: null,
 
+    // Progressive synthesis state (backwards design order)
+    synthesisPhases: [
+      { id: 'objectives', label: 'Learning Objectives', status: 'pending', data: null, summary: null },
+      { id: 'assessment', label: 'Assessment', status: 'pending', data: null, summary: null },
+      { id: 'curriculum', label: 'Curriculum', status: 'pending', data: null, summary: null },
+      { id: 'sample-week', label: 'Sample Week', status: 'pending', data: null, summary: null },
+      { id: 'alignment', label: 'Alignment', status: 'pending', data: null, summary: null }
+    ],
+    synthesisError: null,
+    failedPhaseIndex: null,
+
     // Computed helpers
     get currentStepIndex() {
       return this.steps.indexOf(this.currentStep);
@@ -192,42 +203,314 @@ document.addEventListener('alpine:init', () => {
       }
     },
 
-    // Load synthesis (called from animation component)
+    // Load synthesis (called from synthesizing component)
     async loadSynthesis() {
       this.isLoading = true;
+      this.synthesisError = null;
+      this.failedPhaseIndex = null;
+
       // Ensure learning outcomes are parsed before synthesis
       if (this.mode === 'custom') {
         this.parseLearningOutcomes();
       }
+
       try {
         if (this.mode === 'demo') {
-          // Load pre-generated output
+          // Load pre-generated output - no progressive synthesis needed
           const outputKey = `${this.selectedInstitution}-${this.selectedEmployer}-${this.selectedStudent}`;
           const response = await fetch(`/api/synthesis/demo/${outputKey}`);
           if (!response.ok) throw new Error('Synthesis not found');
           this.synthesisOutput = await response.json();
+          // Mark all phases complete for demo mode
+          this.synthesisPhases.forEach(p => p.status = 'complete');
+          this.currentStep = 'results';
         } else {
-          // Call Claude API for custom synthesis
-          const response = await fetch('/api/synthesis/custom', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              framework: this.framework,
-              institution: this.customInstitution,
-              employer: this.customEmployer,
-              student: this.customStudent
-            })
-          });
-          if (!response.ok) throw new Error('Synthesis failed');
-          this.synthesisOutput = await response.json();
+          // Progressive synthesis for custom mode
+          await this.runProgressiveSynthesis();
         }
-        this.currentStep = 'results';
       } catch (e) {
         console.error('Synthesis error:', e);
-        this.error = 'Failed to generate learning experience';
-        this.currentStep = 'student'; // Go back to last input step
+        this.error = e.message || 'Failed to generate learning experience';
       }
       this.isLoading = false;
+    },
+
+    // Reset synthesis phases to pending state
+    resetSynthesisPhases() {
+      this.synthesisPhases = [
+        { id: 'objectives', label: 'Learning Objectives', status: 'pending', data: null, summary: null },
+        { id: 'assessment', label: 'Assessment', status: 'pending', data: null, summary: null },
+        { id: 'curriculum', label: 'Curriculum', status: 'pending', data: null, summary: null },
+        { id: 'sample-week', label: 'Sample Week', status: 'pending', data: null, summary: null },
+        { id: 'alignment', label: 'Alignment', status: 'pending', data: null, summary: null }
+      ];
+      this.synthesisError = null;
+      this.failedPhaseIndex = null;
+    },
+
+    // Execute a phase with retry logic
+    async executePhaseWithRetry(phaseFn, phaseIndex, maxRetries = 2) {
+      for (let attempt = 0; attempt <= maxRetries; attempt++) {
+        try {
+          return await phaseFn();
+        } catch (error) {
+          if (attempt < maxRetries) {
+            this.synthesisPhases[phaseIndex].status = 'retrying';
+            await new Promise(resolve => setTimeout(resolve, 1000 * (attempt + 1)));
+            continue;
+          }
+          throw error;
+        }
+      }
+    },
+
+    // Progressive synthesis orchestration
+    async runProgressiveSynthesis(startFromPhase = 0) {
+      const inputs = {
+        framework: this.framework,
+        institution: this.customInstitution,
+        employer: this.customEmployer,
+        student: this.customStudent
+      };
+
+      // Initialize synthesis output if starting fresh
+      if (startFromPhase === 0) {
+        this.synthesisOutput = {
+          metadata: {
+            institutionId: inputs.institution.id || 'custom-inst',
+            employerId: inputs.employer.id || 'custom-emp',
+            studentId: inputs.student.id || 'custom-stu',
+            generatedAt: new Date().toISOString(),
+            termLengthWeeks: inputs.institution.termLengthWeeks
+          }
+        };
+      }
+
+      try {
+        // Phase 1: Learning Objectives
+        if (startFromPhase <= 0) {
+          this.synthesisPhases[0].status = 'in-progress';
+          const objectivesResult = await this.executePhaseWithRetry(async () => {
+            const response = await fetch('/api/synthesis/phase/objectives', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(inputs)
+            });
+            if (!response.ok) {
+              const err = await response.json();
+              throw new Error(err.message || 'Failed to generate objectives');
+            }
+            return response.json();
+          }, 0);
+
+          this.synthesisOutput.learningObjectives = objectivesResult.learningObjectives;
+          this.synthesisPhases[0].data = objectivesResult;
+          this.synthesisPhases[0].summary = `${objectivesResult.learningObjectives.length} objectives`;
+          this.synthesisPhases[0].status = 'complete';
+        }
+
+        // Phase 2: Assessment
+        if (startFromPhase <= 1) {
+          this.synthesisPhases[1].status = 'in-progress';
+          const assessmentResult = await this.executePhaseWithRetry(async () => {
+            const response = await fetch('/api/synthesis/phase/assessment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                ...inputs,
+                objectives: { learningObjectives: this.synthesisOutput.learningObjectives }
+              })
+            });
+            if (!response.ok) {
+              const err = await response.json();
+              throw new Error(err.message || 'Failed to generate assessment');
+            }
+            return response.json();
+          }, 1);
+
+          this.synthesisOutput.assessment = assessmentResult.assessment;
+          this.synthesisPhases[1].data = assessmentResult;
+          this.synthesisPhases[1].summary = `${assessmentResult.assessment.deliverables.items.length} deliverables`;
+          this.synthesisPhases[1].status = 'complete';
+        }
+
+        // Phase 3: Curriculum
+        if (startFromPhase <= 2) {
+          this.synthesisPhases[2].status = 'in-progress';
+          const assessmentSummary = {
+            deliverables: this.synthesisOutput.assessment.deliverables.items.map(d => ({
+              name: d.name,
+              dueWeek: d.dueWeek,
+              weight: d.weight
+            })),
+            weights: this.synthesisOutput.assessment.weights
+          };
+
+          const curriculumResult = await this.executePhaseWithRetry(async () => {
+            const response = await fetch('/api/synthesis/phase/curriculum', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                ...inputs,
+                objectives: { learningObjectives: this.synthesisOutput.learningObjectives },
+                assessmentSummary
+              })
+            });
+            if (!response.ok) {
+              const err = await response.json();
+              throw new Error(err.message || 'Failed to generate curriculum');
+            }
+            return response.json();
+          }, 2);
+
+          this.synthesisOutput.curriculum = curriculumResult.curriculum;
+          this.synthesisPhases[2].data = curriculumResult;
+          this.synthesisPhases[2].summary = `${curriculumResult.curriculum.weeks.length} weeks`;
+          this.synthesisPhases[2].status = 'complete';
+        }
+
+        // Phase 4: Sample Week
+        if (startFromPhase <= 3) {
+          this.synthesisPhases[3].status = 'in-progress';
+          // Use week 4 (or mid-term week) as base
+          const midWeekIndex = Math.min(3, this.synthesisOutput.curriculum.weeks.length - 1);
+          const baseWeek = this.synthesisOutput.curriculum.weeks[midWeekIndex];
+
+          const sampleWeekResult = await this.executePhaseWithRetry(async () => {
+            const response = await fetch('/api/synthesis/phase/sample-week', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                ...inputs,
+                objectives: { learningObjectives: this.synthesisOutput.learningObjectives },
+                baseWeek
+              })
+            });
+            if (!response.ok) {
+              const err = await response.json();
+              throw new Error(err.message || 'Failed to generate sample week');
+            }
+            return response.json();
+          }, 3);
+
+          this.synthesisOutput.sampleWeek = sampleWeekResult.sampleWeek;
+          this.synthesisPhases[3].data = sampleWeekResult;
+          this.synthesisPhases[3].summary = `Week ${sampleWeekResult.sampleWeek.weekNumber}`;
+          this.synthesisPhases[3].status = 'complete';
+        }
+
+        // Phase 5: Alignment
+        if (startFromPhase <= 4) {
+          this.synthesisPhases[4].status = 'in-progress';
+          const curriculumSummary = {
+            weekThemes: this.synthesisOutput.curriculum.weeks.map(w => w.theme)
+          };
+          const assessmentSummary = {
+            deliverables: this.synthesisOutput.assessment.deliverables.items.map(d => ({
+              name: d.name,
+              dueWeek: d.dueWeek,
+              weight: d.weight
+            }))
+          };
+
+          const alignmentResult = await this.executePhaseWithRetry(async () => {
+            const response = await fetch('/api/synthesis/phase/alignment', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                ...inputs,
+                objectives: { learningObjectives: this.synthesisOutput.learningObjectives },
+                assessmentSummary,
+                curriculumSummary
+              })
+            });
+            if (!response.ok) {
+              const err = await response.json();
+              throw new Error(err.message || 'Failed to generate alignment');
+            }
+            return response.json();
+          }, 4);
+
+          this.synthesisOutput.alignment = alignmentResult.alignment;
+          this.synthesisPhases[4].data = alignmentResult;
+          this.synthesisPhases[4].summary = 'Complete';
+          this.synthesisPhases[4].status = 'complete';
+        }
+
+        // All phases complete - go to results
+        this.currentStep = 'results';
+
+      } catch (error) {
+        console.error('Progressive synthesis error:', error);
+        // Find which phase failed
+        const failedIndex = this.synthesisPhases.findIndex(p => p.status === 'in-progress' || p.status === 'retrying');
+        if (failedIndex >= 0) {
+          this.synthesisPhases[failedIndex].status = 'failed';
+          this.failedPhaseIndex = failedIndex;
+        }
+        this.synthesisError = error.message || 'Synthesis failed';
+        throw error;
+      }
+    },
+
+    // Retry synthesis from failed phase
+    async retrySynthesis() {
+      if (this.failedPhaseIndex === null) return;
+
+      this.isLoading = true;
+      this.synthesisError = null;
+      const retryFrom = this.failedPhaseIndex;
+      this.failedPhaseIndex = null;
+
+      try {
+        await this.runProgressiveSynthesis(retryFrom);
+      } catch (e) {
+        console.error('Retry failed:', e);
+      }
+
+      this.isLoading = false;
+    },
+
+    // View partial results (go to results with incomplete data)
+    viewPartialResults() {
+      if (this.synthesisOutput && this.synthesisOutput.learningObjectives) {
+        this.currentStep = 'results';
+      }
+    },
+
+    // Check if a tab has data available
+    isTabAvailable(tabId) {
+      if (this.mode === 'demo') return true;
+      if (!this.synthesisOutput) return false;
+
+      switch (tabId) {
+        case 'objectives':
+          return !!this.synthesisOutput.learningObjectives;
+        case 'assessment':
+          return !!this.synthesisOutput.assessment;
+        case 'curriculum':
+          return !!this.synthesisOutput.curriculum;
+        case 'sample-week':
+          return !!this.synthesisOutput.sampleWeek;
+        case 'alignment':
+          return !!this.synthesisOutput.alignment;
+        default:
+          return false;
+      }
+    },
+
+    // Get completed phase count
+    get completedPhasesCount() {
+      return this.synthesisPhases.filter(p => p.status === 'complete').length;
+    },
+
+    // Get current phase label
+    get currentPhaseLabel() {
+      const inProgress = this.synthesisPhases.find(p => p.status === 'in-progress' || p.status === 'retrying');
+      if (inProgress) return inProgress.label;
+      const failed = this.synthesisPhases.find(p => p.status === 'failed');
+      if (failed) return `${failed.label} (Failed)`;
+      return 'Complete';
     },
 
     // Start over
@@ -236,6 +519,7 @@ document.addEventListener('alpine:init', () => {
       this.synthesisOutput = null;
       this.resultsActiveTab = 'objectives';
       this.error = null;
+      this.resetSynthesisPhases();
     },
 
     // Copy demo data to custom forms

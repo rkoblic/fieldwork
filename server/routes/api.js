@@ -93,6 +93,89 @@ router.post('/synthesis/custom', async (req, res) => {
   }
 });
 
+// Progressive synthesis phase endpoints
+const synthesisPhases = require('../services/synthesis-phases');
+
+// Phase 1: Generate Learning Objectives
+router.post('/synthesis/phase/objectives', async (req, res) => {
+  try {
+    const { framework, institution, employer, student } = req.body;
+    const result = await synthesisPhases.generateObjectives(framework, institution, employer, student);
+    res.json(result);
+  } catch (error) {
+    console.error('Phase 1 (objectives) error:', error);
+    res.status(500).json({
+      error: 'Failed to generate objectives',
+      message: error.message,
+      phase: 'objectives'
+    });
+  }
+});
+
+// Phase 2: Generate Assessment
+router.post('/synthesis/phase/assessment', async (req, res) => {
+  try {
+    const { framework, institution, employer, student, objectives } = req.body;
+    const result = await synthesisPhases.generateAssessment(framework, institution, employer, student, objectives);
+    res.json(result);
+  } catch (error) {
+    console.error('Phase 2 (assessment) error:', error);
+    res.status(500).json({
+      error: 'Failed to generate assessment',
+      message: error.message,
+      phase: 'assessment'
+    });
+  }
+});
+
+// Phase 3: Generate Curriculum
+router.post('/synthesis/phase/curriculum', async (req, res) => {
+  try {
+    const { framework, institution, employer, student, objectives, assessmentSummary } = req.body;
+    const result = await synthesisPhases.generateCurriculum(framework, institution, employer, student, objectives, assessmentSummary);
+    res.json(result);
+  } catch (error) {
+    console.error('Phase 3 (curriculum) error:', error);
+    res.status(500).json({
+      error: 'Failed to generate curriculum',
+      message: error.message,
+      phase: 'curriculum'
+    });
+  }
+});
+
+// Phase 4: Generate Sample Week
+router.post('/synthesis/phase/sample-week', async (req, res) => {
+  try {
+    const { framework, institution, employer, student, objectives, baseWeek } = req.body;
+    const result = await synthesisPhases.generateSampleWeek(framework, institution, employer, student, objectives, baseWeek);
+    res.json(result);
+  } catch (error) {
+    console.error('Phase 4 (sample-week) error:', error);
+    res.status(500).json({
+      error: 'Failed to generate sample week',
+      message: error.message,
+      phase: 'sample-week'
+    });
+  }
+});
+
+// Phase 5: Generate Alignment
+router.post('/synthesis/phase/alignment', async (req, res) => {
+  try {
+    const { framework, institution, employer, student, objectives, assessmentSummary, curriculumSummary } = req.body;
+    const result = await synthesisPhases.generateAlignment(framework, institution, employer, student, objectives, assessmentSummary, curriculumSummary);
+    res.json(result);
+  } catch (error) {
+    console.error('Phase 5 (alignment) error:', error);
+    res.status(500).json({
+      error: 'Failed to generate alignment',
+      message: error.message,
+      phase: 'alignment'
+    });
+  }
+});
+
 // Resume upload and skill extraction
 router.post('/resume/extract-skills', upload.single('resume'), async (req, res) => {
   try {
