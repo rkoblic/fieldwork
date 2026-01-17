@@ -16,11 +16,14 @@
     </h2>
     <p class="text-sm text-slate-500 mb-4">These four competencies distinguish experiential learning from experiential activity:</p>
 
-    <div class="grid sm:grid-cols-2 gap-4">
+    <div class="grid sm:grid-cols-2 gap-3">
       <template x-for="comp in $store.app.framework?.experientialCompetencies" :key="comp.id">
-        <div class="bg-slate-50 rounded-lg p-4 border border-slate-200">
-          <h3 class="font-medium text-slate-900 mb-1" x-text="comp.name"></h3>
-          <p class="text-sm text-slate-600" x-text="comp.description"></p>
+        <div class="flex items-start gap-3 p-3 rounded-lg bg-primary-50 border border-primary-100">
+          <div class="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0"></div>
+          <div>
+            <h3 class="font-medium text-slate-900 text-sm" x-text="comp.name"></h3>
+            <p class="text-xs text-slate-500" x-text="comp.description"></p>
+          </div>
         </div>
       </template>
     </div>
