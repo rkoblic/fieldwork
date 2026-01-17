@@ -1,10 +1,23 @@
 <div class="py-16">
-  <div class="text-center mb-12">
+  <div class="text-center mb-8">
     <h1 class="text-2xl font-bold text-slate-900 mb-2">Generating Your Learning Experience</h1>
     <p class="text-slate-600">Synthesizing inputs into a personalized curriculum...</p>
   </div>
 
   <div class="max-w-md mx-auto" x-data="synthesisAnimation()">
+    <!-- Summary card - shows what's being created -->
+    <div class="mb-8 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
+      <div class="text-sm text-slate-500 mb-2 text-center">Creating experience for:</div>
+      <div class="flex items-center justify-center gap-2 flex-wrap">
+        <span class="badge badge-blue" x-text="$store.app.activeStudent?.name"></span>
+        <span class="text-slate-400">@</span>
+        <span class="badge badge-green" x-text="$store.app.activeInstitution?.name"></span>
+      </div>
+      <div class="flex items-center justify-center mt-2">
+        <span class="badge badge-amber" x-text="$store.app.activeEmployer?.projectTitle"></span>
+      </div>
+    </div>
+
     <!-- Progress bar -->
     <div class="mb-8">
       <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
@@ -45,18 +58,6 @@
           </div>
         </div>
       </template>
-    </div>
-
-    <!-- Summary card -->
-    <div class="mt-8 p-4 bg-white rounded-xl border border-slate-200 shadow-sm">
-      <div class="text-sm text-slate-500 mb-2">Creating experience for:</div>
-      <div class="flex items-center gap-2 flex-wrap">
-        <span class="badge badge-blue" x-text="$store.app.activeStudent?.name"></span>
-        <span class="text-slate-400">@</span>
-        <span class="badge badge-green" x-text="$store.app.activeInstitution?.name"></span>
-        <span class="text-slate-400">on</span>
-        <span class="badge badge-amber" x-text="$store.app.activeEmployer?.projectTitle"></span>
-      </div>
     </div>
   </div>
 </div>
