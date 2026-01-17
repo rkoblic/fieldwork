@@ -729,19 +729,19 @@
           {
             "id": "res-1",
             "type": "article",
-            "title": "Using Data to Make Better Decisions in Nonprofits",
+            "title": "Using Data for Action and for Impact",
             "source": "Stanford Social Innovation Review",
-            "url": "https://ssir.org/articles/entry/using_data_to_make_better_decisions",
-            "relevance": "Explores how nonprofits can move from data collection to actionable insights",
+            "url": "https://ssir.org/articles/entry/using_data_for_action_and_for_impact",
+            "relevance": "Explores how nonprofits can leverage data for both immediate operations and demonstrating lasting social change",
             "personalizationNote": "Anna, this connects your research methods training to the practical challenge of making data meaningful for organizational stakeholders."
           },
           {
             "id": "res-2",
             "type": "video",
-            "title": "Storytelling with Data: A Data Visualization Guide",
+            "title": "Storytelling with Data: Celebrating a Decade of Data Storytelling",
             "source": "Cole Nussbaumer Knaflic",
-            "url": "https://www.youtube.com/watch?v=8EMW7io4rSI",
-            "duration": "18 min",
+            "url": "https://www.youtube.com/live/99zlHv1fNdw",
+            "duration": "58 min",
             "relevance": "Learn techniques for presenting analytical findings clearly to non-technical audiences",
             "personalizationNote": "This will help you translate your statistical analysis into visual stories the Development Director and board can quickly understand."
           },
