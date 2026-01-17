@@ -727,80 +727,104 @@
     ]
   },
   "assessment": {
-    "overview": "Assessment uses pass/fail with portfolio evaluation, emphasizing demonstrated competence in research, communication, and professional development.",
-    "deliverables": [
-      {
-        "name": "Interim Findings Report",
-        "dueWeek": 8,
-        "weight": "25%",
-        "criteria": [
-          "Sound research methodology",
-          "Clear presentation of findings",
-          "Appropriate equity considerations",
-          "Professional quality"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Final Analysis and Recommendations",
-        "dueWeek": 13,
-        "weight": "35%",
-        "criteria": [
-          "Rigorous analytical approach",
-          "Evidence-based recommendations",
-          "Integration of psychological theory",
-          "Inclusive recommendations"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-3",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Board Presentation",
-        "dueWeek": 15,
-        "weight": "20%",
-        "criteria": [
-          "Clear executive communication",
-          "Compelling presentation of findings",
-          "Professional delivery",
-          "Effective Q&A handling"
-        ],
-        "objectivesMapped": [
-          "obj-2",
-          "obj-3",
-          "obj-6"
-        ]
-      }
-    ],
+    "overview": "Assessment uses pass/fail with portfolio evaluation, emphasizing demonstrated competence in research and communication through deliverables, a culminating board presentation, reflective practice, and employer evaluation.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating research competency and ability to translate analytical findings into actionable recommendations.",
+      "items": [
+        {
+          "name": "Interim Findings Report",
+          "dueWeek": 8,
+          "weight": "15%",
+          "criteria": [
+            "Sound research methodology",
+            "Clear presentation of findings",
+            "Appropriate equity considerations",
+            "Professional quality"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-4"
+          ]
+        },
+        {
+          "name": "Final Analysis and Recommendations",
+          "dueWeek": 13,
+          "weight": "25%",
+          "criteria": [
+            "Rigorous analytical approach",
+            "Evidence-based recommendations",
+            "Integration of psychological theory",
+            "Inclusive recommendations"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-3",
+            "obj-4"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Board Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to communicate research findings to executive audiences.",
+      "dueWeek": 15,
+      "weight": "20%",
+      "criteria": [
+        "Clear executive communication",
+        "Compelling presentation of findings",
+        "Professional delivery",
+        "Effective Q&A handling"
+      ],
+      "objectivesMapped": [
+        "obj-2",
+        "obj-3",
+        "obj-6"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect research practice to academic learning and articulate professional growth.",
       "schedule": "Weekly DEAL reflections plus comprehensive final reflection",
-      "weight": "15%",
+      "weight": "25%",
       "criteria": [
         "Depth of self-reflection",
         "Connections to academic learning",
         "Evidence of professional growth",
         "Career direction articulation"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates research quality and professional workplace behaviors from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 8)",
         "Final (Week 15)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Research quality",
         "Professionalism",
         "Communication",
         "Initiative",
         "Ethical conduct"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

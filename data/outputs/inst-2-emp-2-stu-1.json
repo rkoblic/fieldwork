@@ -726,94 +726,118 @@
     ]
   },
   "assessment": {
-    "overview": "Pass/fail with portfolio emphasis, assessing demonstrated competence in organizational research, consulting skills, and inclusive practice.",
-    "deliverables": [
-      {
-        "name": "Current State Process Map",
-        "dueWeek": 4,
-        "weight": "15%",
-        "criteria": [
-          "Comprehensive documentation",
-          "Stakeholder validation",
-          "Professional quality",
-          "Clear communication"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2"
-        ]
-      },
-      {
-        "name": "Stakeholder Interview Summary",
-        "dueWeek": 7,
-        "weight": "20%",
-        "criteria": [
-          "Systematic analysis",
-          "Inclusive perspectives",
-          "Clear themes",
-          "Professional documentation"
-        ],
-        "objectivesMapped": [
-          "obj-2",
-          "obj-3",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Final Recommendations and Roadmap",
-        "dueWeek": 13,
-        "weight": "35%",
-        "criteria": [
-          "Evidence-based recommendations",
-          "Equity considerations",
-          "Implementation feasibility",
-          "Professional quality"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Executive Presentation",
-        "dueWeek": 15,
-        "weight": "15%",
-        "criteria": [
-          "Clear executive communication",
-          "Compelling recommendations",
-          "Professional delivery",
-          "Effective Q&A"
-        ],
-        "objectivesMapped": [
-          "obj-3",
-          "obj-5"
-        ]
-      }
-    ],
+    "overview": "Pass/fail with portfolio emphasis, assessing demonstrated competence in organizational research and consulting skills through deliverables, a culminating executive presentation, reflective practice, and employer evaluation.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating consulting competency and ability to analyze and improve organizational processes.",
+      "items": [
+        {
+          "name": "Current State Process Map",
+          "dueWeek": 4,
+          "weight": "10%",
+          "criteria": [
+            "Comprehensive documentation",
+            "Stakeholder validation",
+            "Professional quality",
+            "Clear communication"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2"
+          ]
+        },
+        {
+          "name": "Stakeholder Interview Summary",
+          "dueWeek": 7,
+          "weight": "10%",
+          "criteria": [
+            "Systematic analysis",
+            "Inclusive perspectives",
+            "Clear themes",
+            "Professional documentation"
+          ],
+          "objectivesMapped": [
+            "obj-2",
+            "obj-3",
+            "obj-4"
+          ]
+        },
+        {
+          "name": "Final Recommendations and Roadmap",
+          "dueWeek": 13,
+          "weight": "20%",
+          "criteria": [
+            "Evidence-based recommendations",
+            "Equity considerations",
+            "Implementation feasibility",
+            "Professional quality"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-3",
+            "obj-4",
+            "obj-5"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Executive Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to communicate consulting findings to leadership audiences.",
+      "dueWeek": 15,
+      "weight": "20%",
+      "criteria": [
+        "Clear executive communication",
+        "Compelling recommendations",
+        "Professional delivery",
+        "Effective Q&A"
+      ],
+      "objectivesMapped": [
+        "obj-3",
+        "obj-5"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect consulting practice to organizational psychology and articulate professional growth.",
       "schedule": "Weekly DEAL reflections plus comprehensive final reflection",
-      "weight": "10%",
+      "weight": "25%",
       "criteria": [
         "Organizational psychology connections",
         "Professional growth",
         "Equity reflection",
         "Career articulation"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates consulting skills and inclusive practices from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 8)",
         "Final (Week 15)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Consulting skills",
         "Professionalism",
         "Communication",
         "Analytical quality",
         "Inclusive practice"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

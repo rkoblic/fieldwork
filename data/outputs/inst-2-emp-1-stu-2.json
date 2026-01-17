@@ -727,81 +727,105 @@
     ]
   },
   "assessment": {
-    "overview": "Pass/fail assessment with portfolio emphasis, focusing on demonstrated communication competencies and professional development.",
-    "deliverables": [
-      {
-        "name": "Interim Findings Report",
-        "dueWeek": 8,
-        "weight": "25%",
-        "criteria": [
-          "Compelling narrative",
-          "Effective visualizations",
-          "Professional design",
-          "Inclusive framing"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-3",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Final Analysis and Recommendations",
-        "dueWeek": 13,
-        "weight": "35%",
-        "criteria": [
-          "Portfolio-ready quality",
-          "Compelling storytelling",
-          "Actionable recommendations",
-          "Professional design"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Board Presentation",
-        "dueWeek": 15,
-        "weight": "20%",
-        "criteria": [
-          "Engaging storytelling",
-          "Professional delivery",
-          "Executive-appropriate content",
-          "Visual excellence"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3",
-          "obj-6"
-        ]
-      }
-    ],
+    "overview": "Pass/fail assessment with portfolio emphasis, focusing on demonstrated communication competencies through deliverables, a culminating board presentation, reflective practice, and employer evaluation.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating communication competency and creating portfolio-ready professional work.",
+      "items": [
+        {
+          "name": "Interim Findings Report",
+          "dueWeek": 8,
+          "weight": "15%",
+          "criteria": [
+            "Compelling narrative",
+            "Effective visualizations",
+            "Professional design",
+            "Inclusive framing"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-3",
+            "obj-4"
+          ]
+        },
+        {
+          "name": "Final Analysis and Recommendations",
+          "dueWeek": 13,
+          "weight": "25%",
+          "criteria": [
+            "Portfolio-ready quality",
+            "Compelling storytelling",
+            "Actionable recommendations",
+            "Professional design"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-3",
+            "obj-4",
+            "obj-5"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Board Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to engage executive audiences through compelling storytelling.",
+      "dueWeek": 15,
+      "weight": "20%",
+      "criteria": [
+        "Engaging storytelling",
+        "Professional delivery",
+        "Executive-appropriate content",
+        "Visual excellence"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-3",
+        "obj-6"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect communication practice to theory and build their professional portfolio.",
       "schedule": "Weekly DEAL reflections plus comprehensive portfolio reflection",
-      "weight": "15%",
+      "weight": "25%",
       "criteria": [
         "Portfolio development",
         "Career direction clarity",
         "Professional growth evidence",
         "Communication theory connections"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates communication skills and professional behaviors from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 8)",
         "Final (Week 15)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Communication quality",
         "Creativity",
         "Professionalism",
         "Initiative",
         "Inclusive practice"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

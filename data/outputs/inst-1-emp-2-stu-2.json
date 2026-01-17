@@ -598,94 +598,118 @@
     ]
   },
   "assessment": {
-    "overview": "Assessment emphasizes communication and visual design competencies through professional deliverables, reflective practice, and employer evaluation.",
-    "deliverables": [
-      {
-        "name": "Current State Process Map",
-        "dueWeek": 4,
-        "weight": "15%",
-        "criteria": [
-          "Clear visual communication of process",
-          "Professional design quality",
-          "Accurate representation validated by stakeholders",
-          "Portfolio-ready quality"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3"
-        ]
-      },
-      {
-        "name": "Stakeholder Interview Summary",
-        "dueWeek": 6,
-        "weight": "20%",
-        "criteria": [
-          "Compelling narrative presentation",
-          "Clear thematic analysis",
-          "Engaging visual design",
-          "Professional writing quality"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-3"
-        ]
-      },
-      {
-        "name": "Final Recommendations and Roadmap",
-        "dueWeek": 10,
-        "weight": "35%",
-        "criteria": [
-          "Persuasive recommendation presentation",
-          "High-quality visual design",
-          "Clear implementation communication",
-          "Portfolio-ready professional quality"
-        ],
-        "objectivesMapped": [
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Executive Presentation",
-        "dueWeek": 12,
-        "weight": "15%",
-        "criteria": [
-          "Compelling visual storytelling",
-          "Professional delivery",
-          "Clear executive communication",
-          "Effective Q&A handling"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-4",
-          "obj-5"
-        ]
-      }
-    ],
+    "overview": "Assessment emphasizes communication and visual design competencies through professional deliverables, a culminating presentation showcasing executive communication, reflective practice, and employer evaluation.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating communication and visual design competency, creating portfolio-ready professional work.",
+      "items": [
+        {
+          "name": "Current State Process Map",
+          "dueWeek": 4,
+          "weight": "10%",
+          "criteria": [
+            "Clear visual communication of process",
+            "Professional design quality",
+            "Accurate representation validated by stakeholders",
+            "Portfolio-ready quality"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-3"
+          ]
+        },
+        {
+          "name": "Stakeholder Interview Summary",
+          "dueWeek": 6,
+          "weight": "10%",
+          "criteria": [
+            "Compelling narrative presentation",
+            "Clear thematic analysis",
+            "Engaging visual design",
+            "Professional writing quality"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-3"
+          ]
+        },
+        {
+          "name": "Final Recommendations and Roadmap",
+          "dueWeek": 10,
+          "weight": "20%",
+          "criteria": [
+            "Persuasive recommendation presentation",
+            "High-quality visual design",
+            "Clear implementation communication",
+            "Portfolio-ready professional quality"
+          ],
+          "objectivesMapped": [
+            "obj-3",
+            "obj-4",
+            "obj-5"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Executive Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to engage executive audiences through compelling visual storytelling.",
+      "dueWeek": 12,
+      "weight": "20%",
+      "criteria": [
+        "Compelling visual storytelling",
+        "Professional delivery",
+        "Clear executive communication",
+        "Effective Q&A handling"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-4",
+        "obj-5"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect communication practice to theory and articulate professional growth.",
       "schedule": "Weekly DEAL reflections submitted each Friday",
-      "weight": "10%",
+      "weight": "25%",
       "criteria": [
         "Connections to communication theory",
         "Portfolio development reflection",
         "Professional skill growth",
         "Career direction clarity"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates communication and design skills from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 6)",
         "Final (Week 12)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Communication quality",
         "Visual design",
         "Professionalism",
         "Initiative",
         "Client relationship"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

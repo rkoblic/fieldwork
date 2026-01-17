@@ -728,95 +728,119 @@
     ]
   },
   "assessment": {
-    "overview": "Pass/fail with portfolio emphasis, assessing demonstrated communication competencies, visual design skills, and professional development.",
-    "deliverables": [
-      {
-        "name": "Current State Process Map",
-        "dueWeek": 4,
-        "weight": "15%",
-        "criteria": [
-          "Visual clarity and design quality",
-          "Comprehensive documentation",
-          "Professional presentation",
-          "Portfolio-ready quality"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3"
-        ]
-      },
-      {
-        "name": "Stakeholder Interview Summary",
-        "dueWeek": 7,
-        "weight": "20%",
-        "criteria": [
-          "Compelling narrative",
-          "Inclusive representation",
-          "Professional design",
-          "Clear themes"
-        ],
-        "objectivesMapped": [
-          "obj-2",
-          "obj-3",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Final Recommendations and Roadmap",
-        "dueWeek": 13,
-        "weight": "35%",
-        "criteria": [
-          "Portfolio-ready quality",
-          "Compelling visual design",
-          "Actionable recommendations",
-          "Inclusive framing"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Executive Presentation",
-        "dueWeek": 15,
-        "weight": "15%",
-        "criteria": [
-          "Visual storytelling excellence",
-          "Professional delivery",
-          "Executive-appropriate content",
-          "Effective Q&A"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3",
-          "obj-5"
-        ]
-      }
-    ],
+    "overview": "Pass/fail with portfolio emphasis, assessing demonstrated communication and visual design competencies through deliverables, a culminating executive presentation, reflective practice, and employer evaluation.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating communication and visual design competency, creating portfolio-ready professional work.",
+      "items": [
+        {
+          "name": "Current State Process Map",
+          "dueWeek": 4,
+          "weight": "10%",
+          "criteria": [
+            "Visual clarity and design quality",
+            "Comprehensive documentation",
+            "Professional presentation",
+            "Portfolio-ready quality"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-3"
+          ]
+        },
+        {
+          "name": "Stakeholder Interview Summary",
+          "dueWeek": 7,
+          "weight": "10%",
+          "criteria": [
+            "Compelling narrative",
+            "Inclusive representation",
+            "Professional design",
+            "Clear themes"
+          ],
+          "objectivesMapped": [
+            "obj-2",
+            "obj-3",
+            "obj-4"
+          ]
+        },
+        {
+          "name": "Final Recommendations and Roadmap",
+          "dueWeek": 13,
+          "weight": "20%",
+          "criteria": [
+            "Portfolio-ready quality",
+            "Compelling visual design",
+            "Actionable recommendations",
+            "Inclusive framing"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-3",
+            "obj-4",
+            "obj-5"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Executive Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to engage executive audiences through visual storytelling excellence.",
+      "dueWeek": 15,
+      "weight": "20%",
+      "criteria": [
+        "Visual storytelling excellence",
+        "Professional delivery",
+        "Executive-appropriate content",
+        "Effective Q&A"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-3",
+        "obj-5"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect communication practice to theory and build their professional portfolio.",
       "schedule": "Weekly DEAL reflections plus comprehensive portfolio reflection",
-      "weight": "10%",
+      "weight": "25%",
       "criteria": [
         "Portfolio development",
         "Career direction clarity",
         "Professional growth",
         "Communication theory connections"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates visual design and communication skills from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 8)",
         "Final (Week 15)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Visual design quality",
         "Communication effectiveness",
         "Professionalism",
         "Initiative",
         "Inclusive practice"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

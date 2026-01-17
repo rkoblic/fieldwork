@@ -597,93 +597,117 @@
     ]
   },
   "assessment": {
-    "overview": "Assessment emphasizes analytical rigor and professional consulting skills through deliverables, reflective practice demonstrating growth, and employer evaluation of consulting behaviors.",
-    "deliverables": [
-      {
-        "name": "Current State Process Map",
-        "dueWeek": 4,
-        "weight": "15%",
-        "criteria": [
-          "Comprehensive documentation of process steps",
-          "Clear identification of roles and handoffs",
-          "Professional visual presentation",
-          "Accuracy validated by stakeholders"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Stakeholder Interview Summary",
-        "dueWeek": 6,
-        "weight": "20%",
-        "criteria": [
-          "Systematic thematic analysis",
-          "Clear articulation of pain points",
-          "Balanced representation of perspectives",
-          "Professional documentation"
-        ],
-        "objectivesMapped": [
-          "obj-2",
-          "obj-3"
-        ]
-      },
-      {
-        "name": "Final Recommendations and Roadmap",
-        "dueWeek": 10,
-        "weight": "35%",
-        "criteria": [
-          "Evidence-based recommendations",
-          "Clear implementation prioritization",
-          "Realistic feasibility assessment",
-          "Professional consulting quality"
-        ],
-        "objectivesMapped": [
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Executive Presentation",
-        "dueWeek": 12,
-        "weight": "15%",
-        "criteria": [
-          "Clear executive communication",
-          "Compelling recommendation presentation",
-          "Professional delivery",
-          "Effective Q&A handling"
-        ],
-        "objectivesMapped": [
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      }
-    ],
+    "overview": "Assessment emphasizes analytical rigor and professional consulting skills through deliverables, a culminating presentation showcasing executive communication, reflective practice demonstrating growth, and employer evaluation of consulting behaviors.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating consulting competency and ability to analyze and improve organizational processes.",
+      "items": [
+        {
+          "name": "Current State Process Map",
+          "dueWeek": 4,
+          "weight": "10%",
+          "criteria": [
+            "Comprehensive documentation of process steps",
+            "Clear identification of roles and handoffs",
+            "Professional visual presentation",
+            "Accuracy validated by stakeholders"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-5"
+          ]
+        },
+        {
+          "name": "Stakeholder Interview Summary",
+          "dueWeek": 6,
+          "weight": "10%",
+          "criteria": [
+            "Systematic thematic analysis",
+            "Clear articulation of pain points",
+            "Balanced representation of perspectives",
+            "Professional documentation"
+          ],
+          "objectivesMapped": [
+            "obj-2",
+            "obj-3"
+          ]
+        },
+        {
+          "name": "Final Recommendations and Roadmap",
+          "dueWeek": 10,
+          "weight": "20%",
+          "criteria": [
+            "Evidence-based recommendations",
+            "Clear implementation prioritization",
+            "Realistic feasibility assessment",
+            "Professional consulting quality"
+          ],
+          "objectivesMapped": [
+            "obj-3",
+            "obj-4",
+            "obj-5"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Executive Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to communicate consulting findings and recommendations to leadership audiences.",
+      "dueWeek": 12,
+      "weight": "20%",
+      "criteria": [
+        "Clear executive communication",
+        "Compelling recommendation presentation",
+        "Professional delivery",
+        "Effective Q&A handling"
+      ],
+      "objectivesMapped": [
+        "obj-3",
+        "obj-4",
+        "obj-5"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect consulting practice to organizational behavior theory and articulate professional growth.",
       "schedule": "Weekly DEAL reflections submitted each Friday",
-      "weight": "10%",
+      "weight": "25%",
       "criteria": [
         "Connections to organizational behavior theory",
         "Evidence of professional skill development",
         "Thoughtful career reflection",
         "Growth over time"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates consulting skills and professional workplace behaviors from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 6)",
         "Final (Week 12)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Professionalism",
         "Analytical quality",
         "Communication",
         "Initiative",
         "Client relationship management"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

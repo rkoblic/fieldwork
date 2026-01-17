@@ -598,81 +598,105 @@
     ]
   },
   "assessment": {
-    "overview": "Assessment emphasizes communication competencies demonstrated through professional deliverables, reflective practice showing growth, and employer evaluation of professional performance.",
-    "deliverables": [
-      {
-        "name": "Interim Findings Report",
-        "dueWeek": 6,
-        "weight": "25%",
-        "criteria": [
-          "Clear and engaging presentation of findings",
-          "Effective data visualizations",
-          "Audience-appropriate language and design",
-          "Professional formatting and layout"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-3"
-        ]
-      },
-      {
-        "name": "Final Analysis and Recommendations",
-        "dueWeek": 10,
-        "weight": "35%",
-        "criteria": [
-          "Compelling data narrative throughout",
-          "High-quality visualizations and design",
-          "Clear, actionable recommendations",
-          "Professional portfolio-ready quality"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-3",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Board Presentation",
-        "dueWeek": 12,
-        "weight": "20%",
-        "criteria": [
-          "Engaging storytelling with data",
-          "Appropriate executive-level content",
-          "Professional delivery and presence",
-          "Effective visual design"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-3",
-          "obj-4",
-          "obj-5"
-        ]
-      }
-    ],
+    "overview": "Assessment emphasizes communication competencies demonstrated through professional deliverables, a culminating presentation showcasing executive communication skills, reflective practice showing growth, and employer evaluation of professional performance.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating communication competency and ability to create compelling data narratives.",
+      "items": [
+        {
+          "name": "Interim Findings Report",
+          "dueWeek": 6,
+          "weight": "15%",
+          "criteria": [
+            "Clear and engaging presentation of findings",
+            "Effective data visualizations",
+            "Audience-appropriate language and design",
+            "Professional formatting and layout"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-3"
+          ]
+        },
+        {
+          "name": "Final Analysis and Recommendations",
+          "dueWeek": 10,
+          "weight": "25%",
+          "criteria": [
+            "Compelling data narrative throughout",
+            "High-quality visualizations and design",
+            "Clear, actionable recommendations",
+            "Professional portfolio-ready quality"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-3",
+            "obj-4"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Board Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to engage executive audiences through compelling data storytelling.",
+      "dueWeek": 12,
+      "weight": "20%",
+      "criteria": [
+        "Engaging storytelling with data",
+        "Appropriate executive-level content",
+        "Professional delivery and presence",
+        "Effective visual design"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-3",
+        "obj-4",
+        "obj-5"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect communication practice to theory and articulate professional growth.",
       "schedule": "Weekly DEAL reflections submitted each Friday",
-      "weight": "15%",
+      "weight": "25%",
       "criteria": [
         "Thoughtful analysis of communication experiences",
         "Connections to communication theory and coursework",
         "Evidence of skill development and growth",
         "Portfolio reflection quality"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates professional communication skills and workplace competencies from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 6)",
         "Final (Week 12)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Communication quality",
         "Professionalism",
         "Creativity",
         "Initiative",
         "Responsiveness"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },

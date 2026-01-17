@@ -598,80 +598,104 @@
     ]
   },
   "assessment": {
-    "overview": "Assessment combines project deliverables demonstrating analytical competence, structured reflections showing learning and growth, and employer evaluation of professional performance.",
-    "deliverables": [
-      {
-        "name": "Interim Findings Report",
-        "dueWeek": 6,
-        "weight": "25%",
-        "criteria": [
-          "Clear presentation of analytical methodology",
-          "Preliminary findings supported by data evidence",
-          "Identification of areas requiring further investigation",
-          "Professional formatting and clear writing"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-4"
-        ]
-      },
-      {
-        "name": "Final Analysis and Recommendations",
-        "dueWeek": 11,
-        "weight": "35%",
-        "criteria": [
-          "Comprehensive analysis of donor retention patterns",
-          "Clear, actionable donor segments identified",
-          "Evidence-based recommendations with prioritization",
-          "Professional documentation and presentation"
-        ],
-        "objectivesMapped": [
-          "obj-1",
-          "obj-2",
-          "obj-4",
-          "obj-5"
-        ]
-      },
-      {
-        "name": "Board Presentation",
-        "dueWeek": 12,
-        "weight": "20%",
-        "criteria": [
-          "Clear communication of complex findings",
-          "Appropriate content for board-level audience",
-          "Professional presentation delivery",
-          "Effective response to questions"
-        ],
-        "objectivesMapped": [
-          "obj-2",
-          "obj-3",
-          "obj-5"
-        ]
-      }
-    ],
+    "overview": "Assessment combines project deliverables demonstrating analytical competence, a culminating presentation showcasing communication skills, structured reflections showing learning and growth, and employer evaluation of professional performance.",
+    "weights": {
+      "deliverables": 40,
+      "presentation": 20,
+      "reflections": 25,
+      "employerEvaluation": 15
+    },
+    "deliverables": {
+      "description": "Tangible artifacts demonstrating analytical competency and ability to translate data into actionable insights.",
+      "items": [
+        {
+          "name": "Interim Findings Report",
+          "dueWeek": 6,
+          "weight": "15%",
+          "criteria": [
+            "Clear presentation of analytical methodology",
+            "Preliminary findings supported by data evidence",
+            "Identification of areas requiring further investigation",
+            "Professional formatting and clear writing"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-4"
+          ]
+        },
+        {
+          "name": "Final Analysis and Recommendations",
+          "dueWeek": 11,
+          "weight": "25%",
+          "criteria": [
+            "Comprehensive analysis of donor retention patterns",
+            "Clear, actionable donor segments identified",
+            "Evidence-based recommendations with prioritization",
+            "Professional documentation and presentation"
+          ],
+          "objectivesMapped": [
+            "obj-1",
+            "obj-2",
+            "obj-4",
+            "obj-5"
+          ]
+        }
+      ]
+    },
+    "presentation": {
+      "name": "Board Presentation",
+      "description": "Communication is a core NACE competency. This culminating presentation demonstrates ability to synthesize and communicate complex findings to executive audiences.",
+      "dueWeek": 12,
+      "weight": "20%",
+      "criteria": [
+        "Clear communication of complex findings",
+        "Appropriate content for board-level audience",
+        "Professional presentation delivery",
+        "Effective response to questions"
+      ],
+      "objectivesMapped": [
+        "obj-2",
+        "obj-3",
+        "obj-5"
+      ]
+    },
     "reflections": {
+      "description": "Reflections are the key mechanism for learning transfer, helping students connect experiences to concepts and articulate professional growth.",
       "schedule": "Weekly DEAL reflections submitted each Friday",
-      "weight": "15%",
+      "weight": "25%",
       "criteria": [
         "Depth and specificity in describing experiences",
         "Meaningful connections to prior learning and theory",
         "Evidence of growth and developing professional identity",
         "Honest self-assessment and actionable insights"
+      ],
+      "objectivesMapped": [
+        "obj-1",
+        "obj-2",
+        "obj-3",
+        "obj-4",
+        "obj-5",
+        "obj-6"
       ]
     },
     "employerEvaluation": {
+      "description": "Employer feedback validates professional behavior and workplace competencies from the practitioner perspective.",
       "timing": [
         "Mid-term (Week 6)",
         "Final (Week 12)"
       ],
-      "weight": "5%",
+      "weight": "15%",
       "areas": [
         "Professionalism",
         "Quality of work",
         "Communication",
         "Initiative",
         "Responsiveness to feedback"
+      ],
+      "objectivesMapped": [
+        "obj-5",
+        "obj-6"
       ]
     }
   },
